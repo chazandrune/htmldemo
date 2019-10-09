@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>员工-我的-通讯录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/mui.indexedlist.css" />
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+html,
+body {height: 100%; overflow:hidden;}
+.mui-bar {-webkit-box-shadow: none;box-shadow: none;}
+.dial-btn{ right:40px !important}
+</style>
+</head>
+
+<body>
+<!--<header class="mui-bar mui-bar-nav">
+<a class="mui-action-back mui-icon mui-icon-arrowleft"></a>
+<h1 class="mui-title">排名</h1>
+</header>-->
+
+<!--<div class="sortandsearch" style="top:0px;">
+<a class="sort-item ease-3" href="#popover_0">所属<i class="iconfont icon-xiala"></i></a>
+<a class="sort-item ease-3" href="#popover_1">职位<i class="iconfont icon-xiala"></i></a>
+<form><div class="mui-input-row mui-search ease-3"><input type="search" class="mui-input-clear" placeholder="搜索"></div></form>
+</div>-->
+
+		<div class="mui-content">
+			<div id='list' class="mui-indexed-list">
+				<div class="mui-indexed-list-search mui-input-row mui-search">
+					<input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索">
+				</div>
+				<div class="mui-indexed-list-bar">
+					<a>A</a>
+					<a>B</a>
+					<a>C</a>
+					<a>D</a>
+					<a>E</a>
+					<a>F</a>
+					<a>G</a>
+					<a>H</a>
+					<a>I</a>
+					<a>J</a>
+					<a>K</a>
+					<a>L</a>
+					<a>M</a>
+					<a>N</a>
+					<a>O</a>
+					<a>P</a>
+					<a>Q</a>
+					<a>R</a>
+					<a>S</a>
+					<a>T</a>
+					<a>U</a>
+					<a>V</a>
+					<a>W</a>
+					<a>X</a>
+					<a>Y</a>
+					<a>Z</a>
+				</div>
+				<div class="mui-indexed-list-alert"></div>
+				<div class="mui-indexed-list-inner">
+					<div class="mui-indexed-list-empty-alert">没有数据</div>
+					<ul class="mui-table-view" id="list-tongxunlu">
+						<li data-group="A" class="mui-table-view-divider mui-indexed-list-group">A</li>
+						<li data-value="ake" data-tags="ake" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">阿克<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13211111111</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13211111111"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="aiqi" data-tags="aiqi" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">艾奇<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13222222222</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13222222222"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="anxin" data-tags="anxin" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">安鑫<span class="font12 txt-888 ml10">实小创</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13233333333</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13233333333"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="anyang" data-tags="anyang" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">安阳<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13244444444</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13244444444"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="B" class="mui-table-view-divider mui-indexed-list-group">B</li>
+						<li data-value="beian" data-tags="beian" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">备案<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13211111111</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13211111111"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="bate" data-tags="bate" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">巴特<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13222222222</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13222222222"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="beibei" data-tags="beibei" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">贝贝<span class="font12 txt-888 ml10">实小创</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13233333333</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13233333333"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="bangbang" data-tags="bangbang" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">棒棒<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13244444444</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13244444444"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="C" class="mui-table-view-divider mui-indexed-list-group">C</li>
+						<li data-value="cuilu" data-tags="cuilu" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">崔璐<span class="font12 txt-888 ml10">实小妹</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13222222222</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13222222222"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="changbaishan" data-tags="changbaishan" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">长白山<span class="font12 txt-888 ml10">实小创</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13233333333</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13233333333"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="chenglong" data-tags="chenglong" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">成龙<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13244444444</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13244444444"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="D" class="mui-table-view-divider mui-indexed-list-group">D</li>
+						<li data-value="dongmingzhu" data-tags="dongmingzhu" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">董明珠<span class="font12 txt-888 ml10">实小创</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13233333333</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13233333333"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="dongdong" data-tags="dongdong" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">东东<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13244444444</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13244444444"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="E" class="mui-table-view-divider mui-indexed-list-group">E</li>
+						<li data-value="erzi" data-tags="erzi" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">儿子<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>13244444444</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="13244444444"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="G" class="mui-table-view-divider mui-indexed-list-group">G</li>
+						<li data-value="gonglinna" data-tags="gonglinna" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">龚琳娜<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>17012341234</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="17012341234"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="gongmaojun" data-tags="gongmaojun" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">公茂军<span class="font12 txt-888 ml10">实小创</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>185112112</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="185112112"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="H" class="mui-table-view-divider mui-indexed-list-group">H</li>
+						<li data-value="huangbo" data-tags="huangbo" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">黄渤<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="huanglei" data-tags="huanglei" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">黄磊<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="huanglei" data-tags="huanglei" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">胡军<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="J" class="mui-table-view-divider mui-indexed-list-group">J</li>
+						<li data-value="junmalv" data-tags="junmalv" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">君麻吕<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="L" class="mui-table-view-divider mui-indexed-list-group">L</li>
+						<li data-value="liuranran" data-tags="liuranran" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">刘冉冉<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="M" class="mui-table-view-divider mui-indexed-list-group">M</li>
+						<li data-value="mayun" data-tags="mayun" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">马云<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="mahuateng" data-tags="mahuateng" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">马化腾<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="meichaofeng" data-tags="meichaofeng" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">梅超风<span class="font12 txt-888 ml10">实小妹</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="N" class="mui-table-view-divider mui-indexed-list-group">N</li>
+						<li data-value="niugensheng" data-tags="niugensheng" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">牛根生<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="niumowang" data-tags="niumowang" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">牛魔王<span class="font12 txt-888 ml10">实小创</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="P" class="mui-table-view-divider mui-indexed-list-group">P</li>
+						<li data-value="panweibo" data-tags="panweibo" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">潘玮柏<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="pengliyuan" data-tags="pengliyuan" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">彭丽媛<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="R" class="mui-table-view-divider mui-indexed-list-group">R</li>
+						<li data-value="renzhiqiang" data-tags="renzhiqiang" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">任志强<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="renzhong" data-tags="renzhong" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">任重<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="S" class="mui-table-view-divider mui-indexed-list-group">S</li>
+						<li data-value="suning" data-tags="suning" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">苏宁<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="suboer" data-tags="suboer" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">苏泊尔<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="sudanhong" data-tags="sudanhong" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">苏丹红<span class="font12 txt-888 ml10">实小妹</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="suyoupeng" data-tags="suyoupeng" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">苏有朋<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15812341234</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15812341234"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="T" class="mui-table-view-divider mui-indexed-list-group">T</li>
+						<li data-value="tangyan" data-tags="tangyan" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">唐嫣<span class="font12 txt-888 ml10">实小妹</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="tangguoqiang" data-tags="tangguoqiang" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">唐国强<span class="font12 txt-888 ml10">实小妹</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="tongdawei" data-tags="tongdawei" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">佟大为<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="tuhonggang" data-tags="tuhonggang" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">屠洪刚<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15812341234</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15812341234"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="W" class="mui-table-view-divider mui-indexed-list-group">W</li>
+						<li data-value="wangziru" data-tags="wangziru" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">王自如<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="wangjing" data-tags="wangjing" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">王静<span class="font12 txt-888 ml10">实小妹</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="wangsicong" data-tags="wangsicong" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">王思聪<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="wangjunkai" data-tags="wangjunkai" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">王俊凯<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15812341234</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15812341234"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="wangluodan" data-tags="wangluodan" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">王珞丹<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15812341234</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15812341234"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="wangfei" data-tags="wangfei" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">王菲<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15812341234</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15812341234"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="wangjie" data-tags="wangjie" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">王杰<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15812341234</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15812341234"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="wanganshi" data-tags="wagnanshi" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">王安石<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15812341234</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15812341234"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="wangbaoqiang" data-tags="wangbaoqiang" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">王宝强<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15812341234</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15812341234"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="X" class="mui-table-view-divider mui-indexed-list-group">X</li>
+						<li data-value="ximenqing" data-tags="ximenqing" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">西门庆<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="xiaojingteng" data-tags="xiaojingteng" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">萧敬腾<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="xujinglei" data-tags="xujinglei" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">徐静蕾<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="xuxian" data-tags="xuxian" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">许仙<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="Y" class="mui-table-view-divider mui-indexed-list-group">Y</li>
+						<li data-value="yanyan" data-tags="yanyan" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">闫妍<span class="font12 txt-888 ml10">实小妹</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="yaoming" data-tags="yaoming" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">姚明<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="yewen" data-tags="yewen" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">叶问<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="yizhongtian" data-tags="yizhongtian" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">易中天<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-group="Z" class="mui-table-view-divider mui-indexed-list-group">Z</li>
+						<li data-value="zhaoliying" data-tags="zhaoliying" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">赵丽颖<span class="font12 txt-888 ml10">实小妹</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="zengyike" data-tags="zengyike" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">曾轶可<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="zhengchenggong" data-tags="zhengchenggong" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">郑成功<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="zhujun" data-tags="zhujun" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">朱军<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="zhouhongyi" data-tags="zhouhongyi" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">周鸿祎<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="zhoujielun" data-tags="zhoujielun" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">周杰伦<span class="font12 txt-888 ml10">设计师</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+						<li data-value="zhouxingchi" data-tags="zhouxingchi" class="mui-table-view-cell mui-indexed-list-item">
+                        	<h4 class="mui-ellipsis">周星驰<span class="font12 txt-888 ml10">客户经理</span></h4>
+                            <p class="mui-ellipsis"><i class="iconfont icon-mobilefill mr5"></i>15032143214</p>
+                            <a href="#dial" class="mui-btn mui-btn-link dial-btn" dialnum="15032143214"><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+                        </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+<div id="dial" class="mui-popover mui-popover-action mui-popover-bottom">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a id="dial-btn-true" href="tel:13212341234">拨打电话：13212341234</a></li>
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#dial"><b>取消</b></a></li>
+    </ul>
+</div>
+
+
+<script src="js/mui.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script src="js/mui.indexedlist.js"></script>
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+});
+
+mui.ready(function() {
+	var header = document.querySelector('header.mui-bar');
+	var list = document.getElementById('list');
+	//calc hieght
+	list.style.height = (document.body.offsetHeight /*- header.offsetHeight*/) + 'px';
+	//create
+	window.indexedList = new mui.IndexedList(list);
+});
+
+mui('#list-tongxunlu').on('tap','.dial-btn',function(){
+	var dialnum = this.getAttribute('dialnum');
+	document.getElementById('dial-btn-true').href = "tel:"+ dialnum;
+	document.getElementById('dial-btn-true').innerHTML = "拨打电话："+ dialnum;
+})
+
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

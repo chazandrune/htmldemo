@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html style=" font-size:100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>新居开荒</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/mui.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/mui.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript" src="js/payfor.js"></script>
+<script type="text/javascript" src="rating/jquery.raty.min.js"></script>
+</head>
+
+<body class="page-service-yuyue">
+
+<!--导航 手机版start-->
+<div class="bottombar">
+	<ul class="clearfix">
+		<li><a href="###" class="btn btn_middle btn_blue radius-5 ease-1" onClick="$('#form1').submit();">确认提交</a></li>
+	</ul>
+</div>
+<!--导航手机版end-->
+
+
+<!--主体start-->
+<div class="mainbody" style="top:0rem; bottom:.6rem; left:0; right:0;">
+	<div class="blank10"></div>
+	
+<!--表单 start-->
+<form id="form1" method="post">
+<ul class="ul_view mb10">
+	<li class="ul_view_cell"><a href="#addlist" class="ul_view_cell_a" id="add_cur">
+		<h1><i class="icon_ebn icon-local mr5"></i>服务地址</h1>
+		<input type="hidden" name="add" style="display:none;" />
+		<i class="iconfont arrow txt-blue">&#xe610;</i>
+	</a></li>
+</ul>
+<ul class="ul_view ul_view_group mb10">
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a">
+		<h1><i class="icon_ebn icon-time mr5"></i>服务时间</h1>
+	</div></li>
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a ul_view_cell_a_swiper">
+		<div class="swiper-container" id="swiper-weeks">
+			<div class="swiper-wrapper"></div>
+		</div>
+		<a href="###" class="prev swiper-arrow"><i class="iconfont">&#xe60f;</i></a>
+		<a href="###" class="next swiper-arrow"><i class="iconfont">&#xe610;</i></a>
+	</div></li>
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a ul_view_cell_a_times">
+		<div class="times-container" id="times"></div>
+	</div></li>
+</ul>
+<ul class="ul_view ul_view_group">
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1><i class="icon_ebn icon-order mr5"></i>服务类型<span class="fr txt-888 fs12">新居开荒</span></h1>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<div class="text_box beizhu_box" >
+			<input type="text" placeholder="请输入需要服务的平米数" />
+		</div>
+		<i class="arrow">㎡</i>
+	</div></li>
+</ul>
+<input type="submit" style="display:none;">
+</form>
+<!--表单 end-->
+<!--注意start-->
+<div class="text_box pad10 mb10">
+	<div class="fs12 txt-888"></div>
+</div>
+<div class="blank10"></div>
+<div class="blank10"></div>
+<!--注意end-->
+
+
+
+
+
+
+</div>
+<!--主体end-->
+
+
+
+
+
+
+
+
+<div id="ayilist" class="mui-modal">
+<header class="head-phone">
+	<h1>选择阿姨</h1>
+</header>
+<div class="mainbody" style="top:.4rem; bottom:0rem; left:0; right:0;">
+	<ul class="ul_view ul_ayilist">
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<a href="my-ayi.html" class="pic avatar radius-circle"><img class="radius-circle" src="images/avatar_ayi.jpg" /></a>
+			<div class="txt">
+				<h1 class="name">李阿姨</h1>
+				<div class="inlineblock star-rating" data-number="4"></div><span class="ml10 txt-888">服务200次</span>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<a href="my-ayi.html" class="pic avatar radius-circle"><img class="radius-circle" src="images/avatar_ayi.jpg" /></a>
+			<div class="txt">
+				<h1 class="name">李阿姨</h1>
+				<div class="inlineblock star-rating" data-number="4"></div><span class="ml10 txt-888">服务200次</span>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<a href="my-ayi.html" class="pic avatar radius-circle"><img class="radius-circle" src="images/avatar_ayi.jpg" /></a>
+			<div class="txt">
+				<h1 class="name">李阿姨</h1>
+				<div class="inlineblock star-rating" data-number="4"></div><span class="ml10 txt-888">服务200次</span>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<a href="my-ayi.html" class="pic avatar radius-circle"><img class="radius-circle" src="images/avatar_ayi.jpg" /></a>
+			<div class="txt">
+				<h1 class="name">李阿姨</h1>
+				<div class="inlineblock star-rating" data-number="4"></div><span class="ml10 txt-888">服务200次</span>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+	</ul>
+</div>
+</div>
+
+
+<div id="addlist" class="mui-modal">
+<header class="head-phone">
+	<h1>选择地址</h1>
+</header>
+<div class="mainbody" style="top:.4rem; bottom:0rem; left:0; right:0;">
+	<ul class="ul_view ul_addlist">
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+	</ul>
+	<div class="blank10"></div>
+	<div class="pad10">
+		<a href="my-address-article.html" class="btn btn_submit btn_middle btn_blue radius-5" style="width:100%;">新增地址</a>
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//数量增减
+var amount = {
+	min:0,
+	max:99,
+	reduce:function(obj){
+		var x = parseFloat($(obj).html());
+		if(x > this.min){
+			$(obj).prev().removeClass("disabled")
+			$(obj).next().removeClass("disabled")
+			x= x-1;
+			$(obj).html(x);
+			$(obj).attr("data-amount",x);
+			$(obj).siblings("input").val(x)
+		}else{
+			//比最小值还小的情况
+			$(obj).prev().addClass("disabled")
+		}
+	},
+	add:function(obj){
+		var x = parseFloat($(obj).html());
+		if(x < this.max){
+			$(obj).prev().removeClass("disabled")
+			$(obj).next().removeClass("disabled")
+			x= x+1;
+			$(obj).html(x);
+			$(obj).attr("data-amount",x);
+			$(obj).siblings("input").val(x)
+		}else{
+			//比最大值还大的情况
+			$(obj).next().addClass("disabled")
+		}
+	}
+}
+</script>
+
+
+<script type="text/javascript">
+//选择阿姨弹窗
+$("#ayilist .ul_ayilist .ul_view_cell_a").on('click',function(){
+	var ayi_name = $(this).find(".name").html();
+	$("#ayilist .ul_ayilist .ul_view_cell_a").removeClass("current");
+	$(this).addClass("current");
+	$("#ayi_cur p").remove();
+	$("#ayi_cur").append('<p class="fs12 mar0 text-overflow"><i class="icon_ebn mr5"></i>'+ayi_name+'</p>');
+	$("#ayi_cur input").val(ayi_name);
+	$("#ayilist").removeClass("mui-active");
+})
+
+//选择地址弹窗
+$("#addlist .ul_addlist .ul_view_cell_a").on('click',function(){
+	var add_location = $(this).find(".location").html();
+	$("#addlist .ul_addlist .ul_view_cell_a").removeClass("current");
+	$(this).addClass("current");
+	$("#add_cur p").remove();
+	$("#add_cur").append('<p class="fs12 mar0 text-overflow"><i class="icon_ebn mr5"></i>'+add_location+'</p>');
+	$("#add_cur input").val(add_location);
+	$("#addlist").removeClass("mui-active");
+})
+
+//星级评分效果
+$('.star-rating').raty({
+	path: 'rating/img',
+	space: false,
+	//target: '#hint',
+	//targetKeep: true,
+	//targetType: 'number',
+	//targetFormat: '{score}分',
+	score: function(){
+		return $(this).attr('data-number');
+	},
+	readOnly:true
+});
+
+
+</script>
+
+<script type="text/javascript">
+//时长增减
+var numbox = {
+	min:2,
+	max:6,
+	reduce:function(obj){
+		var x = parseFloat($(obj).html());
+		if(x > this.min){
+			$(obj).prev().removeClass("disabled")
+			$(obj).next().removeClass("disabled")
+			x= x-0.5;
+			$(obj).html(x+"小时");
+			$(obj).attr("data-shichang",x);
+			$(obj).siblings("input").val(x)
+			updatetimes();
+			yuyuetime();
+			choosetime_init();
+		}else{
+			//比最小值还小的情况
+			$(obj).prev().addClass("disabled")
+		}
+	},
+	add:function(obj){
+		var x = parseFloat($(obj).html());
+		if(x < this.max){
+			$(obj).prev().removeClass("disabled")
+			$(obj).next().removeClass("disabled")
+			x= x+0.5;
+			$(obj).html(x+"小时");
+			$(obj).attr("data-shichang",x);
+			$(obj).siblings("input").val(x)
+			updatetimes();
+			yuyuetime();
+			choosetime_init();
+		}else{
+			//比最大值还大的情况
+			$(obj).next().addClass("disabled")
+		}
+	}
+}
+</script>
+<script>
+//日期时间输出函数
+function updatetimes(){
+	function addDate(dd,dadd){
+		var a = new Date(dd)
+		a = a.valueOf()
+		a = a + dadd * 24 * 60 * 60 * 1000
+		a = new Date(a)
+		return a;
+	}
+	$("#swiper-weeks .swiper-wrapper").html("");
+	$("#times").html("");
+	var time_shangban = 8; //开始时间 上班时间 默认为8点，若为8点半，则是8.5
+	var time_xiaban = 20; //结束时间 下班时间 默认为晚上20点，若为8点半，则是8.5
+	var nowDate=new Date();
+	var startweek = nowDate.getDay();
+	var startyear = nowDate.getYear()+1;
+	var startmonth = nowDate.getMonth()+1;
+	var startdate = nowDate.getDate();
+	//如果今日已经接近下班时间 则从第二天开始输出
+	if(nowDate.getHours()>=time_xiaban-2){
+		startweek=startweek+1;
+		var NextNow = addDate(startmonth+"/"+startdate,1);
+		startmonth = NextNow.getMonth()+1;
+		startdate = NextNow.getDate();
+	}
+	for( m = 0;m<7;m++){
+		if(startweek>=7){startweek = 0}
+		switch(startweek)
+		{
+			case 0:
+				var titleDay = "周日";
+				break;
+			case 1:
+				var titleDay = "周一";
+				break;
+			case 2:
+				var titleDay = "周二";
+				break;
+			case 3:
+				var titleDay = "周三";
+				break;
+			case 4:
+				var titleDay = "周四";
+				break;
+			case 5:
+				var titleDay = "周五";
+				break;
+			case 6:
+				var titleDay = "周六";
+				break;
+		}
+		if(startweek == nowDate.getDay() && m==0 ){
+			titleDay = "今天"
+		}else if(startweek == nowDate.getDay()+1){
+			titleDay = "明天"
+		}else{}
+		dom_week = $('<div class="swiper-slide" data-week="'+startweek+'" onClick="chooseday(this)"><h1 class="day">'+titleDay+'</h1><p class="date">'+startmonth+'月'+startdate+'日</p></div>').appendTo("#swiper-weeks .swiper-wrapper");
+		$('#swiper-weeks .swiper-slide:eq(0)').addClass("on"); 
+		dom_times = $('<div class="times_box times_box_'+startweek+'">').appendTo("#times");
+		$('.times_box:eq(0)').show(); //当前星期的显示
+		time_s = time_shangban; //开始时间 上班时间 
+		//已半个小时为单位，计算一天工作时长的份数
+		var total_pers = parseFloat(time_xiaban-time_s)/0.5;
+		for(n=0 ; n< total_pers  ; n++){
+			if(String(time_s).indexOf(".") + 1>0){
+				var time_s_output = parseInt(time_s)+":30";
+			}else{
+				var time_s_output = parseInt(time_s)+":00";
+			};
+			dom_times_time = $('<span class="li"><input type="checkbox" name="time" value="'+titleDay+time_s_output+'"/><span class="click_item" data-s="'+time_s+'" data-day="'+titleDay+'" onClick="choosetime(this)">'+time_s_output+'</span></span>').appendTo(dom_times);
+			time_s = time_s +0.5;
+		}
+		var NextNow = addDate(startmonth+"/"+startdate,1);
+		startmonth = NextNow.getMonth()+1;
+		startdate = NextNow.getDate();
+		console.log(NextNow);
+		startweek ++;
+	}
+		
+	//滑动星期
+	var weekswiper = new Swiper("#swiper-weeks",{
+		nextButton:".ul_view_cell_a_swiper .next",
+		prevButton:".ul_view_cell_a_swiper .prev",
+		slidesPerView:4,
+		spaceBetween:0,
+		loop:false
+	});
+	
+}
+updatetimes();
+
+//输出点选的预约时间列表js
+function yuyuetime(){
+	//循环输出让预约时间罗列显示在下方列表中
+	$("#yuyuetimes").html("");
+	$("#times .click_item.current").each(function(){
+		var cur_d = $(this).attr("data-day");
+		var cur_s = $(this).attr("data-s");
+		var cur_e = $(this).attr("data-e");
+		if(String(cur_s).indexOf(".") + 1>0){
+			var cur_s_output = parseInt(cur_s)+":30";
+		}else{
+			var cur_s_output = parseInt(cur_s)+":00";
+		};
+		if(String(cur_e).indexOf(".") + 1>0){
+			var cur_e_output = parseInt(cur_e)+":30";
+		}else{
+			var cur_e_output = parseInt(cur_e)+":00";
+		};
+		$("#yuyuetimes").append('<p>每'+cur_d+' '+cur_s_output+'-'+cur_e_output+'</p>');
+	})
+}
+
+//点击星期切换时间js
+function chooseday(obj){
+	var nn = $(obj).attr("data-week");
+	$(obj).siblings().removeClass("on");
+	$(obj).addClass("on");
+	$("#times .times_box").hide();
+	$("#times .times_box_"+nn).show();
+}
+
+//根据当下时间对可选时间段初始化js
+function choosetime_init(){
+	var time_xiaban = 20; //结束时间 下班时间 默认为晚上20点，若为8点半，则是8.5
+	var nowDate=new Date();
+	var nowTime_d = nowDate.getDay();
+	var nowTime_h = nowDate.getHours();
+	var nowTime_m = nowDate.getMinutes();
+	$('.times_box input').each(function(){
+		if($(this).prop('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	//判断 如果接近下班时间 从第二天开始显示， 就不用对今天已过去的时间段添加不可点击状态
+	if(nowDate.getHours()>=time_xiaban-parseFloat($("#num_html_1").attr('data-shichang'))-0.5){
+
+	}else{
+		$('.times_box_'+nowTime_d+' .li .click_item').each(function(){
+			if(parseInt($(this).attr("data-s")) <= nowTime_h){
+				$(this).addClass("disabled");
+			}
+		})
+	}
+}
+choosetime_init();
+
+//点击时间js
+function choosetime(obj){
+	var nowDate=new Date();
+	var nowTime_d = nowDate.getDay();
+	var nowTime_h = nowDate.getHours();
+	var nowTime_m = nowDate.getMinutes();
+	var fuwushichang = parseFloat($("#num_html_1").attr('data-shichang'));
+	var this_s = $(obj).attr("data-s") ;
+	var this_e = $(obj).attr("data-e") ;
+	if($(obj).prev().prop('checked')){
+		//点击取消选中的情况
+	}else if($(obj).hasClass("disabled")){
+		$(obj).prev().prop('checked',false);
+		$(obj).removeClass('current');
+	}else{
+		//点击选中的情况
+		var thisparent = $(obj).parent().parent().parent();
+		var fuwushichang = parseFloat($("#num_html_1").attr('data-shichang'));
+		thisparent.find(".click_item").each(function(){
+			$(this).prev().prop('checked',false);
+			$(this).removeClass('current');
+		})
+		$(obj).prev().prop('checked',true);
+		$(obj).addClass('current');
+	}
+	yuyuetime();
+	choosetime_init();
+}
+
+</script>
+
+<script>
+$(function(){
+	/*单选 custom-js*/
+	$('.radio_box input').each(function(){
+		if($(this).attr('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.radio_box .radio_item').on('click',function(){
+		if($(this).prev().attr('checked')){
+			//$(this).prev().attr('checked',false);
+			//$(this).parent().parent().find('.radio_item').removeClass('current');
+		}else{
+			$(this).prev().attr('checked',true);
+			$(this).parent().parent().find('.radio_item').removeClass('current');
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+
+</script>
+<script>
+$(function(){
+	/*多选 custom-js*/
+	$('.switch_box input').each(function(){
+		if($(this).prop('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.switch_box .switch_item').click(function(){
+		if($(this).prev().prop('checked')){
+			$(this).prev().prop('checked',false);
+			$(this).removeClass('current');
+		}else{
+			$(this).prev().prop('checked',true);
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+</script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

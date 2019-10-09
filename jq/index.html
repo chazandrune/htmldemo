@@ -1,0 +1,1231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>常用特效整理</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/scrollspy.js"></script>
+<style>
+.demo_title{ height:80px; line-height:80px; padding:50px 10px 0;}
+</style>
+</head>
+
+<body  data-spy="scroll" data-target=".submenu" data-offset="58">
+<!--滚动监听end-->
+<style>
+#scroll-submenu{ height: 59px; overflow: hidden; background-color: #f8f8f8;}
+#scroll-submenu .scroll{ position: fixed; top: 0; left:0; padding-top: 10px; margin-top:0; z-index: 1000;}
+/* 二级菜单 固定顶部*/
+.submenu{ background-color: #f8f8f8; padding-top: 10px; text-align: center; width:100%; border-bottom:1px #dbdbdb solid;}
+.submenu .menus{ height: 48px; line-height: 48px; overflow: hidden; margin: 0; padding:0; }
+.submenu .item{ padding:0 20px; display: block; float:left;}
+.submenu .item a{ display: block; font-size: 14px; height: 48px; color: #9f9f9f;}
+.submenu .item a:hover{ color:#111;}
+.submenu .active a{ color: #111; border-bottom:3px #0089d1 solid; height:45px; cursor: pointer;}
+</style>
+<script>
+$(function() {
+	// 点击平滑滚动锚链接
+    $("#scroll-submenu .item a").click(function() {
+        var num = $(this).parents(".item").index();
+        var scroll = $($(this).attr("href")).offset().top - 10;  //点击锚链接后滚动的偏移量
+        $("html,body").animate({scrollTop: scroll}, 500);
+        return false;
+    });
+
+    // 滚动监测
+    if (window.innerWidth > 700) {
+        window.onscroll = function() {
+            var scroll_top_now = $(window).scrollTop(); //当前滚动条距离
+            var scroll_top_start = 0;                 //滚动条触发事件的距离
+            //二级菜单浮动
+            if (scroll_top_now > scroll_top_start) {
+                $("#scroll-submenu .submenu").addClass("scroll");
+            } else {
+                $("#scroll-submenu .submenu").removeClass("scroll");
+            };			
+			
+        };
+    }
+
+    // 回到顶部
+    $(".btn-top").click(function() {
+        $("html,body").animate({scrollTop: 0}, 600);
+    });
+
+})
+</script>
+<!--滚动监听菜单 start-->
+<div id="scroll-submenu" class="mar0">
+    <div class="submenu">
+    	<div class="w1200 mar0">
+        <div class="menus">
+            
+<span class="item active"><a href="#hengxiangdaohang">横向导航</a></span>
+<span class="item"><a href="#shuxiangdaohang">竖向导航</a></span>
+<span class="item"><a href="#qiehuantuqianhou">切换图前后</a></span>
+<span class="item"><a href="#qiehuantu">切换图</a></span>
+<span class="item"><a href="#gundong">滚动</a></span>
+<span class="item"><a href="#xuanxiangka">选项卡</a></span>
+<span class="item"><a href="#cebiandaohang">侧边伸缩导航</a></span>
+<span class="item"><a href="#dengxiang">灯箱+滚动条</a></span>
+<span class="item"><a href="#pubu">瀑布流+懒加载</a></span>
+
+        </div>
+        </div>
+    </div>
+</div>
+<!--滚动监听菜单 end-->
+
+
+
+
+
+
+<!--常用切换start-->
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+
+<!--导航 横向 start-->
+<div id="hengxiangdaohang" >
+<h1 class="demo_title">横向导航</h1>
+<style>
+#nav_heng{ width:100%;height:50px; background:#09F; position:relative;}
+.nav_heng{z-index:999;}
+.nav_heng ul{zoom:1;}
+.nav_heng .nLi{position:relative;float:left;display:inline;z-index:999;}
+.nav_heng .nLi h3{float:left;}
+.nav_heng .nLi:last-child{background:none;}
+.nav_heng .nLi h3 a{display:block;width:110px;height:50px;line-height:50px;color:#fff;font-size:14px;text-align:center;font-weight:normal;}
+.nav_heng .nLi h3 a:hover{color:#fff;background:#06F;}
+.nav_heng .on h3 a{color:#fff;background-color:#06F;}
+.nav_heng .hassub.on h3 a{background-image:url(images/nav_sanjiao_cur.png);background-position:bottom center;background-repeat:no-repeat;}
+.nav_heng .sub{display:none;left:0;top:50px;width:1200px;position:absolute;line-height:50px;z-index:999;}
+.nav_heng .sub li{zoom:1;float:left;}
+.nav_heng .sub a{display:block;padding:0 20px;color:#333;}
+.nav_heng .sub a:hover{color:#ff6600;}
+.nav_con .sub_bg{position:absolute;top:50px;left:0;z-index:998;height:50px;width:100%;display:none;background:#f3f3f3;}
+</style>
+<div class="nav_con" id="nav_heng">
+<div class="nav_heng">
+    <ul class="clearfix">
+        <li class="nLi hassub"><h3><a href="###">南宫概况</a></h3>
+            <ul class="sub">
+                <li><a href="###">南宫简介</a></li>
+                <li><a href="###">景区概况</a></li>
+                <li><a href="###">王佐镇概况</a></li>
+                <li><a href="###">数字景区</a></li>
+            </ul>
+        </li>
+        <li class="nLi hassub"><h3><a href="###">南宫旅游</a></h3>
+            <ul class="sub">
+                <li><a href="###">南宫景点</a></li>
+                <li><a href="###">南宫温泉</a></li>
+                <li><a href="###">南宫住宿</a></li>
+                <li><a href="###">南宫美食</a></li>
+                <li><a href="###">南宫特产</a></li>
+            </ul>
+        </li>
+        <li class="nLi"><h3><a href="###">限时优惠</a></h3></li>
+        <li class="nLi"><h3><a href="###">景区攻略</a></h3></li>
+        <li class="nLi"><h3><a href="###">南宫相册</a></h3></li>
+        <li class="nLi"><h3><a href="###">景区导航</a></h3></li>
+        <li class="nLi hassub"><h3><a href="###">联系南宫</a></h3>
+            <ul class="sub" style="left:-200px;">
+                <li><a href="###">招贤纳士</a></li>
+                <li><a href="###">联系我们</a></li>
+                <li><a href="###">在线留言</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="sub_bg"></div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('.nav_heng .hassub').hover(function(){
+		$('#nav_heng .sub_bg').stop(true,true).slideDown(100);
+	},function(){
+		$('#nav_heng .sub_bg').stop(true,true).slideUp(100);
+	})
+})
+	$(".nav_heng").slide({ 
+		type:"menu", // 效果类型，针对菜单/导航而引入的参数（默认slide）
+		titCell:".nLi", //鼠标触发对象
+		targetCell:".sub", //titCell里面包含的要显示/消失的对象
+		effect:"slideDown", //targetCell下拉效果
+		delayTime:50 , //效果时间
+		defaultPlay:false,
+		triggerTime:0, //鼠标延迟触发时间（默认150）
+		returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+	});
+</script>
+</div>
+<!--导航 横向 end-->
+
+
+
+
+
+
+
+
+
+
+
+<!--导航 竖向 start-->
+<div id="shuxiangdaohang">
+<h1 class="demo_title">竖向导航</h1>
+<style>
+/*导航*/
+#nav_shu{height:50px;z-index:999;line-height:48px;zoom:1; background-color:#484848; }
+.nav_shu { z-index:999;}
+.nav_shu ul{}
+.nav_shu .nLi{position:relative;float:left;display:inline;z-index:999;}
+.nav_shu .nLi h3{ float:left;}
+.nav_shu .nLi:last-child{background:none;}
+.nav_shu .nLi h3 a{display:block;  width:107px;height:50px;line-height:50px;color:#fff;font-size:14px;text-align:center; font-weight:normal; overflow:hidden; position:relative;
+-moz-text-shadow:0 1px 0px rgba(0,0,0,.5);
+-webkit-text-shadow:0 1px 0px rgba(0,0,0,.5);
+text-shadow:0 1px 0px rgba(0,0,0,.5);}
+.nav_shu .nLi.cur h3 a{ background-image:url(images/icon_sanjiao_cur.png); background-position:bottom center; background-repeat:no-repeat;}
+.nav_shu .nLi h3 a:hover{ background-image:none;}
+.nav_shu .nLi h3 a span{ display:block; position:absolute; width:100%; height:100%;}
+.nav_shu .nLi h3 a span.default{ top:0; left:0;}
+.nav_shu .nLi h3 a span.hover{ top:50px; left:0;}
+.nav_shu .nLi.on h3 a{background-color:#3a3a3a; background-image:none;}
+.nav_shu .nLi.on h3 a .default{ top:-50px;
+filter: alpha(opacity=00);/* internet explorer */
+-khtml-opacity: 0;     /* khtml, old safari */
+-moz-opacity: 0;      /* mozilla, netscape */
+opacity: 0;}
+.nav_shu .nLi.on h3 a .hover{ top:0;}
+.nav_shu .sub{display:none;left:0px; top:50px; width:100%; position:absolute;background:url(images/alpha_black50.png) repeat; line-height:40px;z-index:999; text-align:center; padding:5px 0; }
+.nav_shu .sub li{ zoom:1;}
+.nav_shu .sub a{display:block;color:#fff; white-space:nowrap; font-size:14px;}
+.nav_shu .sub a:hover{color:#00a0ea;}
+
+</style>
+<div class="nav_con" id="nav_shu">
+<div class="nav_shu">
+    <ul class="clearfix nav">
+        <li class="nLi hassub"><h3><a href="###"><span class="default ease-3">关于VP</span><span class="hover ease-1">ABOUT</span></a></h3>
+            <ul class="sub" style="width:;">
+                <li><a href="###">集团简介</a></li>
+                <li><a href="###">企业文化</a></li>
+                <li><a href="###">集团架构</a></li>
+            </ul>
+        </li>
+        <li class="nLi hassub"><h3><a href="###"><span class="default ease-3">VP业务</span><span class="hover ease-1">SERVICE</span></a></h3>
+            <ul class="sub" style="width:;">
+                <li><a href="###">公关策划</a></li>
+                <li><a href="###">营销推广</a></li>
+                <li><a href="###">影视制作</a></li>
+                <li><a href="###">音频制作</a></li>
+                <li><a href="###">品诺教育</a></li>
+            </ul>
+        </li>
+        <li class="nLi hassub"><h3><a href="###"><span class="default ease-3">VP业务</span><span class="hover ease-1">SERVICE</span></a></h3>
+            <ul class="sub" style="width:;">
+                <li><a href="###">公关策划</a></li>
+                <li><a href="###">营销推广</a></li>
+                <li><a href="###">影视制作</a></li>
+                <li><a href="###">音频制作</a></li>
+                <li><a href="###">品诺教育</a></li>
+            </ul>
+        </li>
+        <li class="nLi hassub"><h3><a href="###"><span class="default ease-3">VP业务</span><span class="hover ease-1">SERVICE</span></a></h3>
+            <ul class="sub" style="width:;">
+                <li><a href="###">公关策划</a></li>
+                <li><a href="###">营销推广</a></li>
+                <li><a href="###">影视制作</a></li>
+                <li><a href="###">音频制作</a></li>
+                <li><a href="###">品诺教育</a></li>
+            </ul>
+        </li>
+        <li class="nLi"><h3><a href="lianxiVP.html"><span class="default ease-3">联系VP</span><span class="hover ease-1">CONTACT</span></a></h3></li>
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+	$(".nav_shu").slide({ 
+		type:"menu", // 效果类型，针对菜单/导航而引入的参数（默认slide）
+		titCell:".nLi", //鼠标触发对象
+		targetCell:".sub", //titCell里面包含的要显示/消失的对象
+		effect:"slideDown", //targetCell下拉效果
+		delayTime:100 , //效果时间
+		defaultPlay:false,
+		triggerTime:0, //鼠标延迟触发时间（默认150）
+		returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+	});
+</script>
+</div>
+<!--导航 竖向 end-->
+
+
+
+
+
+<!--切换图 可见前后start-->
+<div id="qiehuantuqianhou">
+<h1 class="demo_title">切换图 可见前后图</h1>
+<style type="text/css">
+.slider_qianhou{width:100%;min-width:1000px;height:350px;position:relative;overflow:hidden;background:#fff;text-align:center;}
+.slider_qianhou .bd{width:1000px;position:absolute;left:50%;margin-left:-500px}
+.slider_qianhou .bd li{width:1000px;overflow:hidden;}
+.slider_qianhou .bd li img{display:block;width:1000px;height:350px;}
+.slider_qianhou .tempWrap{overflow:visible !important}
+.slider_qianhou .tempWrap ul{margin-left:-1000px !important;}
+.slider_qianhou .hd{position:absolute;width:100%;left:0;z-index:1;height:8px;bottom:20px;text-align:center;}
+.slider_qianhou .hd li{display:inline-block;*display:inline;zoom:1;width:8px;height:8px;line-height:99px;overflow:hidden;background:#333;margin:0 5px;cursor:pointer;filter:alpha(opacity=60);opacity:0.6;}
+.slider_qianhou .hd li.on{background:#f00;filter:alpha(opacity=100);opacity:1;}
+.slider_qianhou .pnBtn{position:absolute;z-index:1;top:0;width:100%;height:335px;cursor:pointer;}
+.slider_qianhou .prev{left:-50%;margin-left:-500px;}
+.slider_qianhou .next{left:50%;margin-left:500px;}
+.slider_qianhou .pnBtn .blackBg{display:block;position:absolute;left:0;top:0;width:100%;height:350px;background:#000;filter:alpha(opacity=50);opacity:0.5;}
+.slider_qianhou .pnBtn .arrow{display:none;position:absolute;top:0;z-index:1;width:60px;height:350px;}
+.slider_qianhou .pnBtn .arrow:hover{filter:alpha(opacity=60);opacity:0.6;}
+.slider_qianhou .prev .arrow{right:0;background:url(images/arrow_left.png) no-repeat center;}
+.slider_qianhou .next .arrow{left:0;background:url(images/arrow_right.png) no-repeat center;}
+</style>
+<div class="slider_qianhou">
+    <div class="bd">
+        <ul>
+            <li><a href="#"><img src="images/banner_1000_350_01.jpg" /></a></li>
+            <li> <a href="#"><img src="images/banner_1000_350_03.jpg" /> </a> </li>
+            <li> <a href="#"><img src="images/banner_1000_350_02.jpg" /> </a> </li>
+            <li> <a href="#"> <img src="images/banner_1000_350_04.jpg" /> </a> </li>
+        </ul>
+    </div>
+    <div class="hd">
+        <ul><li></li><li></li><li></li><li></li></ul>
+    </div>
+    <div class="pnBtn prev"><span class="blackBg"></span><a class="arrow" href="javascript:void(0)"></a></div>
+    <div class="pnBtn next"><span class="blackBg"></span><a class="arrow" href="javascript:void(0)"></a></div>
+</div>
+<script type="text/javascript">
+$(".slider_qianhou .bd li").first().before(jQuery(".slider_qianhou .bd li").last());
+$(".slider_qianhou").hover(function(){
+		$(this).find(".arrow").stop(true, true).fadeIn(300)
+	},function() {
+		$(this).find(".arrow").fadeOut(300)
+	}
+);
+$(".slider_qianhou").slide({
+	titCell: ".hd ul li",
+	mainCell: ".bd ul",
+	effect: "leftLoop",
+	autoPlay: false,
+	vis: 3,
+	autoPage: false,
+	trigger: "click",
+	interTime: 2000,
+	endFun:function(i,c,slider, titCell, mainCell, targetCell, prevCell, nextCell){
+		$('.slider_qianhou .bd li').eq(i).addClass("enter").siblings().removeClass("enter");
+		$('.slider_qianhou .hd li.on').attr('data-num',i);
+		$("#swiper-huxing .clickitems").prop('class','clickitems clickitems_'+ i)
+	}
+});
+</script>
+</div>
+<!--切换图 可见前后end-->
+
+
+
+<!--切换图 常规start-->
+<div id="qiehuantu">
+<h1 class="demo_title">切换图 常规</h1>
+<style type="text/css">
+.slider_default{ width:1000px; height:350px; overflow:hidden; position:relative; background:#f8f8f8; }
+.slider_default .hd{ height:16px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+.slider_default .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.slider_default .hd ul li{ float:left; margin-right:2px;  width:14px; height:14px; font-size:12px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+.slider_default .hd ul li.on{ background:#f00; color:#fff; }
+.slider_default .bd{ position:relative; height:100%; z-index:0;   }
+.slider_default .bd li{ zoom:1; vertical-align:middle; }
+.slider_default .bd img{ width:100%; height:350px; display:block;  }
+
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+.slider_default .prev,
+.slider_default .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(images/arrow_left.png) no-repeat center;  filter:alpha(opacity=80);opacity:0.8;}
+.slider_default .next{ left:auto; right:3%; background:url(images/arrow_right.png) no-repeat center; }
+.slider_default .prev:hover,
+.slider_default .next:hover{ filter:alpha(opacity=100);opacity:1;}
+.slider_default .prevStop{ display:none;  }
+.slider_default .nextStop{ display:none;  }
+</style>
+<div class="slider_default">
+    <div class="bd">
+        <ul>
+            <li> <a href="#"> <img src="images/banner_1000_350_01.jpg" /> </a> </li>
+            <li> <a href="#"> <img src="images/banner_1000_350_03.jpg" /> </a> </li>
+            <li> <a href="#"> <img src="images/banner_1000_350_02.jpg" /> </a> </li>
+            <li> <a href="#"> <img src="images/banner_1000_350_04.jpg" /> </a> </li>
+        </ul>
+    </div>
+    <div class="hd">
+        <ul></ul>
+    </div>
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>
+</div>
+<script>
+$(".slider_default").slide({
+	titCell: ".hd ul",
+	autoPage: true,  //是否使用自动显示分页
+	mainCell:".bd ul",
+	targetCell:"", //table选项卡的 更多 时用
+	autoPlay:true,
+	effect:"fold",   //特效left,leftLoop,topLoop,top,fold,fade（支持响应窗口大小）,
+	easing:"easeOutCirc",  //缓动效果 easeInQuint,easeInBack,easeOutBounce,easeOutElastic
+	trigger:"mouseover",   //触发方式  mouseover,click
+	delayTime:1000,  //延迟时间
+	interTime:3000,  //间隔时间
+	pnLoop:false,   //前后按钮循环，默认true
+	mouseOverStop:true   //鼠标经过停止播放，默认true
+});
+</script>
+</div>
+<!--切换图 常规end-->
+
+
+
+
+<!--滚动 匀速start-->
+<div id="gundong">
+<h1 class="demo_title">滚动 匀速</h1>
+<style>
+/* 清大明星榜 */
+.stars{ background:#f8f8f8; height:345px; width:100%; }
+.stars .w1000{ position:relative; height:100%;}
+.stars .bt{ text-align:center; font-weight:normal; color:#333; height:60px; line-height:60px; padding-top:20px; margin-bottom:20px; font-size:26px;}
+.stars .nr{ width:100%; height:160px;}
+.stars .nr .stars_slide{ position:relative;}
+.slide_yunsu{ position:relative;}
+.slide_yunsu .tempWrap{ width:100% !important; overflow:hidden;}
+.slide_yunsu .arrow{ position:absolute; left:-50px; top:40px; display:none; width:45px; height:80px; background:#000 url(images/arrow_left.png) no-repeat center; z-index:99;
+filter: alpha(opacity=50);/* internet explorer */
+        -khtml-opacity: 0.5;     /* khtml, old safari */
+        -moz-opacity: 0.5;      /* mozilla, netscape */
+        opacity: 0.5;}
+.slide_yunsu .sNext{ left:auto; right:-50px; background:#000 url(images/arrow_right.png) no-repeat center;  }
+.slide_yunsu .sPrev:hover,.slide_yunsu .sNext:hover{
+	filter: alpha(opacity=80);/* internet explorer */
+        -khtml-opacity: 0.8;     /* khtml, old safari */
+        -moz-opacity: 0.8;      /* mozilla, netscape */
+        opacity: 0.8;}
+.slide_yunsu .bd li{  margin:0 20px 0 0; float:left; _display:inline; padding-bottom:10px; overflow:hidden; }
+.slide_yunsu .bd li .item{ display:block; width:150px; height:150px; position:relative; overflow:hidden;}
+.slide_yunsu .bd li .item .pic{ width:100%; height:100%; overflow:hidden; background-position:center; background-size:cover; background-repeat:no-repeat;}
+.slide_yunsu .bd li .item .pic img{ width:100%; height:auto;}
+.slide_yunsu .bd li .item .txt{  width:80%; padding:10% 10% 0; height:100%; position:absolute; left:0; right:0; top:158px;line-height:26px; overflow:hidden;   color:#fff; font-size:14px;background:url(images/alpha_black80.png) repeat;}
+.slide_yunsu .bd li .item:hover .txt{ top:0;}
+</style>
+<div class="stars">
+<div class="w1000 mar0">
+	<h1 class="bt">匀速滚动</h1>
+    <div class="nr">
+    	<div class="slide_yunsu" id="slide_yunsu">
+        	<div class="hd"></div>
+        	<div class="bd">
+            	<ul>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                </ul>
+            </div>
+            <a class="arrow sPrev" href="javascript:void(0)"></a>
+            <a class="arrow sNext" href="javascript:void(0)"></a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="stars">
+<div class="w1000 mar0">
+	<h1 class="bt">常规滚动</h1>
+    <div class="nr">
+    	<div class="slide_yunsu" id="slide_default">
+        	<div class="hd"></div>
+        	<div class="bd">
+            	<ul>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                	<li><a class="item" href="###">
+                    	<div class="pic"><img src="images/pic_01.jpg" /></div>
+                        <div class="txt ease-3">衡衡同学翠微小学5年级优等生</div>
+                    </a></li>
+                </ul>
+            </div>
+            <a class="arrow sPrev" href="javascript:void(0)"></a>
+            <a class="arrow sNext" href="javascript:void(0)"></a>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+	/* 鼠标悬停箭头按钮显示 */
+	$(".stars").hover(function(){
+		$(this).find(".arrow").stop(true,true).fadeIn(300)
+	},function(){
+		$(this).find(".arrow").fadeOut(300)
+	});
+	/* 滚动效果 */
+    $("#slide_yunsu").slide({
+        mainCell:".bd ul",
+		autoPage:true,
+        vis:6,  //可视个数
+		scroll:1, //一次滚动的个数
+        autoPlay:true,
+        interTime:50,   //50无缝滚动，3000常规滚动
+        prevCell:".sPrev",
+        nextCell:".sNext",
+        effect:"leftMarquee",  //leftMarquee无缝滚动，left，leftLoop常规滚动
+		pnLoop:true,   //前后按钮循环，默认true
+		mouseOverStop:true, //鼠标经过停止播放  true,false
+		trigger:"click" //触发方式  mouseover,click
+    });
+	/* 滚动效果 */
+    $("#slide_default").slide({
+        mainCell:".bd ul",
+		autoPage:true,
+        vis:6,  //可视个数
+		scroll:1, //一次滚动的个数
+        autoPlay:true,
+        interTime:3000,   //50无缝滚动，3000常规滚动
+        prevCell:".sPrev",
+        nextCell:".sNext",
+        effect:"leftLoop",  //leftMarquee无缝滚动，left，leftLoop常规滚动
+		pnLoop:true,   //前后按钮循环，默认true
+		mouseOverStop:true, //鼠标经过停止播放  true,false
+		trigger:"click" //触发方式  mouseover,click
+    });
+</script>
+</div>
+<!--滚动 匀速end-->
+
+
+
+<!--table选项卡切换start-->
+<div id="xuanxiangka">
+<h1 class="demo_title">table选项卡切换</h1>
+<style type="text/css">
+/* 本例子css */
+.slide_tab{ width:450px; border:1px solid #ddd; text-align:left;  }
+.slide_tab .hd{ height:30px; line-height:30px; background:#f4f4f4; padding:0 10px 0 20px;   border-bottom:1px solid #ddd;  position:relative; }
+.slide_tab .hd ul{ float:left;  position:absolute; left:20px;; height:32px;   }
+.slide_tab .hd ul li{ float:left; padding:0 15px; cursor:pointer;  }
+.slide_tab .hd ul li.on{ height:30px; color:#3c3c3c; background:#fff; border:1px solid #ddd; border-bottom:2px solid #fff; }
+.slide_tab .bd ul{ padding:15px;  zoom:1;  }
+.slide_tab .bd li{ height:24px; line-height:24px;   }
+.slide_tab .bd li .date{ float:right; color:#999;  }
+.slide_tab .hd .mores{ float:left; position:absolute; right:50px;}
+
+/* 下面是前/后按钮代码，如果不需要删除即可 */
+.slide_tab .arrow{  position:absolute; right:10px; top:0; }
+.slide_tab .arrow a{ display:block;  width:10px; height:20px; float:right; margin-right:5px; margin-top:5px;  overflow:hidden;
+	 cursor:pointer; background-color:#000; background-position:center; background-size:100%; background-repeat:no-repeat; }
+.slide_tab .arrow .prev{  background-image: url(images/arrow_left.png); }
+.slide_tab .arrow .next{  background-image: url(images/arrow_right.png); }
+.slide_tab .arrow .prevStop{ background-position:-60px 0; }
+.slide_tab .arrow .nextStop{ background-position:-60px -50px; }
+</style>
+<div class="slide_tab">
+  <div class="hd">
+      <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+      <span class="arrow"><a class="next"></a><a class="prev"></a></span>
+      <ul><li>教育</li><li>培训</li><li>出国</li></ul>
+      <div class="mores"> <a href="#">更多教育></a><a href="#">更多培训></a><a href="#">更多出国></a></div>
+  </div>
+  <div class="bd">
+      <ul>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">中国打破了世界软件巨头规则</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">口语：会说中文就能说英语！</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">农场摘菜不如在线学外语好玩</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">数理化老师竟也看学习资料？</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">学英语送ipad2,45天突破听说</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">学外语，上北外！</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">那些无法理解的荒唐事</a></li>
+      </ul>
+      <ul>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">名师教作文：３妙招巧写高分</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">耶鲁小子：教你备考SAT</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">施强：高端专业语言教学</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">数理化老师竟也看学习资料？</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">【推荐】名校英语方法曝光！</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">2012高考“考点”大曝光!!</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">涨价仍爆棚假日旅游冰火两重天</a></li>
+      </ul>
+      <ul>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">澳大利亚八大名校招生说明会</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">2012世界大学排名新鲜出炉</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">新加坡留学，国际双语课程</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">高考后留学日本名校随你选</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">教育培训行业优势资源推介</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">即刻预约今年最后一场教育展</a></li>
+          <li><span class="date">2011-11-11</span><a href="#" target="_blank">女友坚持警局完婚不抛弃</a></li>
+      </ul>
+  </div>
+</div>
+<script type="text/javascript">
+$(".slide_tab").slide({
+	titCell:".hd li",
+	mainCell:".bd",
+	targetCell:".mores a",
+	effect:"fade",  //效果 left,top,fade,fold,leftLoop,topLoop
+	trigger:"mouseover",  //触发方式 mouseover,click
+	easing:"easeOutCirc",  //缓动效果 swing,easeInQuint,easeInBack,easeOutBounce,easeOutElastic,
+	pnLoop:true,  //前后按钮循环  true,false
+	delayTime:500,   //效果速度
+	triggerTime:0,    //鼠标触发延时
+});
+</script>
+</div>
+<!--table选项卡切换end-->
+
+
+
+
+<!--侧边收缩展开导航start-->
+<div id="cebiandaohang">
+<h1 class="demo_title">侧边收缩展开导航</h1>
+<style type="text/css">
+/* 本例子css */
+.sideMenu1{  border:1px solid #ddd;  }
+.sideMenu1 h3{ height:32px; line-height:32px; padding-left:10px;  border-top:1px solid #e3e3e3; background:#f4f4f4; cursor:pointer;
+	font:normal 14px/32px "Microsoft YaHei";
+}
+.sideMenu1 h3 em{ float:right; display:block; width:40px; height:32px; cursor:pointer; }
+.sideMenu1 h3.on em{  }
+.sideMenu1 ul{ padding:8px 25px; color:#999; display:none; /* 默认都隐藏 */ }
+
+</style>
+<div class="sideMenu1" style="margin:0 auto">
+<h3><em></em>书签切换系列</h3>
+<ul>
+  <li>淘宝首页右侧公告</li>
+  <li>京东首页产品切换</li>
+  <li>苏宁易购首页品牌切换</li>
+  <li>1号店双重切换</li>
+  <li>腾讯健康频道切换</li>
+</ul>
+<h3 class="on"><em></em>幻灯片/焦点图系列</h3>
+<!-- 假设当前频道为“幻灯片/焦点图系列”，手动或后台程序添加titOnClassName类名（默认是'on'），相当于设置参数defaultIndex:1。若设置参数returnDefault:true，则鼠标移出.sideMen0.3秒可以返回当前频道 -->
+<ul>
+  <li>淘宝首页焦点图</li>
+  <li>腾讯娱乐频道焦点图</li>
+  <li>腾讯电影频道焦点图</li>
+  <li>网易游戏频道焦点图</li>
+  <li>易迅首页焦点图</li>
+</ul>
+<h3><em></em>带按钮切换</h3>
+<ul>
+  <li>淘宝首页今日活动</li>
+  <li>豆瓣读书频道</li>
+  <li>天猫首页品牌切换</li>
+  <li>格瓦拉首页活动进行中</li>
+  <li>腾讯博客图片滚动</li>
+</ul>
+</div><!-- sideMenu End -->
+<script type="text/javascript">
+	$(".sideMenu1").slide({
+		titCell:"h3", //鼠标触发对象
+		targetCell:"ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+		effect:"slideDown", //targetCell下拉效果
+		delayTime:300 , //效果时间
+		triggerTime:150, //鼠标延迟触发时间（默认150）
+		defaultPlay:false,//默认是否执行效果（默认true）
+		returnDefault:true, //鼠标从.sideMen移走后返回默认状态（默认false）
+		trigger:"click",
+	});
+</script>
+</div>
+<!--侧边收缩展开导航end-->
+
+
+<!--常用切换end-->
+
+
+<!--数量 可扩展性不太好 start-->
+<link rel="stylesheet" type="text/css" href="spinner/jquery.spinner.css" />
+<script type="text/javascript" src="spinner/jquery.spinner.js"></script>
+<input type="text" class="spinner" name="number" value='1'/>
+<script>
+$('.spinner').spinner();
+</script>
+<!--数量 end-->
+
+<!--单选radio美化（自己写的） start-->
+<style>
+.radio_box{text-align:center;}
+.radio_box ul{}
+.radio_box li{float:left;margin:0px 32px 20px 0;display:inline;}
+.radio_box input{ display:none; }
+.radio_box .radio_item{ display:block;line-height: 20px; width:210px; height:85px;color:#666;cursor:pointer; font-size:14px; border-width:1px ; border-color:#dbdbdb; border-style:solid;; background:#f8f8f8; background-position:right bottom;
+-webkit-border-radius:5px;
+-moz-border-radius: 5px;
+border-radius: 5px;}
+.radio_box .radio_item .name{ height:40px; line-height:40px; font-size:18px; padding-top:10px; font-weight:700;}
+.radio_box .radio_item .desc{ height:20px; line-height:20px; color:#888;}
+.radio_box .current{ border-color:#ff8a00; color:#ff8a00; background-color:#fff;}
+</style>
+<h1 class="demo_title">radio自定义美化，再次点击可取消选择</h1>
+<div class="radio_box">
+	<ul class="clearfix">
+		<li>
+			<input type="radio" name="design" value="">
+			<a href="javascript:void(0);" class="radio_item txt-c ease-1">
+				<h4 class="name">原创设计</h4>
+				<p class="desc">500元/面</p>
+			</a>
+		</li>
+		<li>
+			<input type="radio" name="design" value="" checked="checked">
+			<a href="javascript:void(0);" class="radio_item txt-c ease-1">
+				<h4 class="name">原创设计</h4>
+				<p class="desc">500元/面</p>
+			</a>
+		</li>
+	</ul>
+</div>
+<script>
+$(function(){
+	/*单选 custom-js*/
+	$('.radio_box input').each(function(){
+		if($(this).attr('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.radio_box .radio_item').click(function(){
+		if($(this).prev().attr('checked')){
+			$(this).prev().attr('checked',false);
+			$(this).parent().parent().find('.radio_item').removeClass('current');
+		}else{
+			$(this).prev().attr('checked',true);
+			$(this).parent().parent().find('.radio_item').removeClass('current');
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+</script>
+<!--单选radio美化（自己写的） end-->
+
+<!--多选checkbox美化（自己写的） start-->
+<style>
+.check_box{text-align:center;}
+.check_box ul{}
+.check_box li{float:left;margin:0px 32px 20px 0;display:inline;}
+.check_box input{ display:none; }
+.check_box .check_item{ display:block;line-height: 20px; width:210px; height:85px;color:#666;cursor:pointer; font-size:14px; border-width:1px ; border-color:#dbdbdb; border-style:solid;; background:#f8f8f8; background-position:right bottom;
+-webkit-border-radius:5px;
+-moz-border-radius: 5px;
+border-radius: 5px;}
+.check_box .check_item .name{ height:40px; line-height:40px; font-size:18px; padding-top:10px; font-weight:700;}
+.check_box .check_item .desc{ height:20px; line-height:20px; color:#888;}
+.check_box .current{ border-color:#ff8a00; color:#ff8a00; background-color:#fff;}
+</style>
+<h1 class="demo_title">checkbox自定义美化</h1>
+<div class="check_box">
+	<ul class="clearfix">
+		<li>
+			<input type="checkbox" name="check" value="">
+			<a href="javascript:void(0);" class="check_item txt-c ease-1">
+				<h4 class="name">原创设计</h4>
+				<p class="desc">500元/面</p>
+			</a>
+		</li>
+		<li>
+			<input type="checkbox" name="check" value="" checked="checked">
+			<a href="javascript:void(0);" class="check_item txt-c ease-1">
+				<h4 class="name">原创设计</h4>
+				<p class="desc">500元/面</p>
+			</a>
+		</li>
+	</ul>
+</div>
+<script>
+$(function(){
+	/*多选 custom-js*/
+	$('.check_box input').each(function(){
+		if($(this).attr('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.check_box .check_item').click(function(){
+		if($(this).prev().attr('checked')){
+			$(this).prev().attr('checked',false);
+			$(this).removeClass('current');
+		}else{
+			$(this).prev().attr('checked',true);
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+</script>
+<!--多选checkbox美化（自己写的） end-->
+
+<!--div的展开收缩（自己写的） start-->
+<style>
+.page-help .faq_item {margin:0 0 0;overflow:hidden}
+.page-help .faq_tit {height:60px;line-height:60px;background:#fff;border-bottom:1px dashed #dbdbdb;cursor:pointer; font-size:16px; color:#333;}
+.page-help .faq_item .faq_tit span {padding:1px 0 1px 16px;}
+.page-help .faq_item .faq_tit i{ display:block; float:right; height:60px; width:60px; line-height:60px; font-size:20px; font-weight:bold; text-align:center; color:#333;}
+.page-help .faq_item .faq_tit .jian{ display:none;}
+.page-help .faq_contain {padding:15px 16px 15px 16px;position:relative;display:none; background:#fff8ef;}
+.page-help .open {margin:0;padding:0 0 0;}
+.page-help .open .faq_contain {display:block;}
+.page-help .open .faq_tit{ color:#ff8a00;}
+.page-help .open .faq_tit .jia{ display:none;}
+.page-help .open .faq_tit .jian{ display:block;}
+</style>
+<div class="page-help">
+<div class="upanel">
+
+	<dl class="faq_item open">
+		<dt class="faq_tit"><span>1、如何注册？</span><i class="jian">-</i><i class="jia">+</i></dt>
+		<dd class="faq_contain">
+			<div class="text_box">
+				正文内容区<br>
+				在网站右上角点击"<a href="register.html">注册</a>"，进入注册页面后，填写账号、密码后即可完成注册。
+				正文内容区
+			</div>
+		</dd>
+	</dl>
+	<dl class="faq_item">
+		<dt class="faq_tit"><span>2、手机注册接收不到验证码？</span><i class="jian">-</i><i class="jia">+</i></dt>
+		<dd class="faq_contain">
+			<div class="text_box">
+				正文内容区<br>
+				请检查是否作为垃圾短信阻拦了；<br>若确认不是手机设置问题，重试后还是收不到验证码，可改用邮箱注册。
+				正文内容区
+			</div>
+		</dd>
+	</dl>
+	<dl class="faq_item">
+		<dt class="faq_tit"><span>3、商务经理是什么？</span><i class="jian">-</i><i class="jia">+</i></dt>
+		<dd class="faq_contain">
+			<div class="text_box">
+				正文内容区<br>
+				商务经理是邀请您注册，并且为您提供后续服务的云印商务人员。填写有效的商务经理编号，后续可不定期获得云印优惠和奖励。关于商务经理的填写事宜，您可以跟商务经理了解或者拨打云印客户支持热线：400-680-9111 进行了解。
+				正文内容区
+			</div>
+		</dd>
+	</dl>
+	<dl class="faq_item">
+		<dt class="faq_tit"><span>4、如何注册？</span><i class="jian">-</i><i class="jia">+</i></dt>
+		<dd class="faq_contain">
+			<div class="text_box">
+				正文内容区<br>
+				在网站右上角点击"<a href="register.html">注册</a>"，进入注册页面后，填写账号、密码后即可完成注册。
+				正文内容区
+			</div>
+		</dd>
+	</dl>
+	
+</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	//帮助中心点击展开
+	$(".upanel").delegate("dt.faq_tit", "click",
+	function(e) {
+		var s = $(this).closest(".faq_item");
+		s.hasClass("open") ? s.removeClass("open").siblings("dl.faq_item").removeClass("open") : s.addClass("open").siblings("dl.faq_item").removeClass("open")
+	});
+	var _hash = location.hash || "#0",
+	_index = parseInt(_hash.substring(1)) || 0;
+	if ($(".upanel dl.faq_item:eq(" + _index + ") dt.faq_tit").click(), _index > 0) {
+		var offset = $(".upanel dl.faq_item:eq(" + _index + ") dt.faq_tit").offset();
+		offset && offset.top && $("html, body").stop(!0, !0).animate({
+			scrollTop: offset.top - 36
+		},
+		300)
+	}
+})
+</script>
+<!--div的展开收缩（自己写的） end-->
+
+
+<!--灯箱效果+ 滚动条start-->
+<div id="dengxiang">
+<h1 class="demo_title">灯箱+滚动条</h1>
+<link type="text/css" rel="stylesheet" href="css/shadowbox.css" />
+<style>
+.demo_lightbox{ height:300px;width:99%;}
+.zScroll{ height:100%;  position:relative; overflow:hidden;}
+.icon_view{ background:url(images/icon_view_25_25_w.png) no-repeat center;}
+.icon_plus{ background:url(images/icon_plus_30_30_w.png) no-repeat center;}
+
+/*图文列表*/
+.pcitem{width: 280px;float:left; display:inline;margin-right: 20px;margin-bottom: 20px;}
+.pcitem .pic{ width:100%; height:180px; display:block; overflow:hidden;}
+.pcitem .pic a{ display:block; width:100%; height:100%; overflow:hidden; position:relative; background-color:#000;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;}
+.pcitem .pic a img{ width:100%; height:auto; }
+.pcitem .pic a .title{ position:absolute; width:100%; bottom:-60px; color:#888; z-index:1; height:60px;}
+.pcitem .pic a .title h1{ color:#fff; font-size:14px; padding:0 20px; height:30px; line-height:30px;}
+.pcitem .pic a .title p{ color:#888; font-size:12px; padding:0 20px; height:20px; line-height:20x;}
+.pcitem .pic a .icon{ display:block; position:absolute; left:50%; top:-50px; width:30px; height:30px; margin-left:-15px; z-index:1;}
+.pcitem .pic a:hover img{
+filter: alpha(opacity=30);/* internet explorer */
+-khtml-opacity: 0.3;     /* khtml, old safari */
+-moz-opacity: 0.3;      /* mozilla, netscape */
+opacity: 0.3;}
+.pcitem .pic a:hover .icon{ top:50%; margin-top:-15px;
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=4);
+-moz-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);}
+.pcitem .pic a:hover .title{bottom:0;}
+.pcitem .txt{ padding:20px 25px; background-color:#f8f8f8;}
+.pcitem .txt .pcitemhead{ font-size:18px; color:#333; margin-bottom:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.pcitem .txt .pcitemhead a{ color:#333;}
+.pcitem .txt .pcitemhead a:hover{ color:#c90101;}
+.pcitem .txt .pcitemdesc{ font-size:12px; color:#333; line-height:22px; height:70px; overflow:hidden;}
+
+</style>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/shadowbox.js" ></script>
+<script type="text/javascript">
+//灯箱（pc）
+Shadowbox.init({
+	handleOversize: "resize",
+	overlayColor:"#000", 
+	continuous:"true",
+	counterType:"default",
+	overlayOpacity:0.9,
+	modal:true
+	});
+</script>
+<div class="demo_lightbox">
+<div class="zScroll">
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="images/xiangmu_01.jpg" rel="shadowbox[1]" title="标题" class="ease-3"><em class="icon icon_plus ease-3"></em><img src="images/xiangmu_01.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="images/xiangmu_02.jpg" rel="shadowbox[1]" class="ease-3"><em class="icon icon_plus ease-3"></em><img src="images/xiangmu_02.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="images/xiangmu_03.jpg" rel="shadowbox[1]" class="ease-3"><em class="icon icon_plus ease-3"></em><img src="images/xiangmu_03.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="images/xiangmu_04.jpg" rel="shadowbox[1]" class="ease-3"><em class="icon icon_plus ease-3"></em><img src="images/xiangmu_04.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="images/banner_1000_350_01.jpg" rel="shadowbox[1]" class="ease-3"><em class="icon icon_plus ease-3"></em><img src="images/banner_1000_350_01.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="images/xiangmu_01.jpg" rel="shadowbox[1]" class="ease-3"><em class="icon icon_plus ease-3"></em><img src="images/xiangmu_01.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="images/xiangmu_02.jpg" rel="shadowbox[1]" class="ease-3"><em class="icon icon_plus ease-3"></em><img src="images/xiangmu_02.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="images/xiangmu_03.jpg" rel="shadowbox[1]" class="ease-3"><em class="icon icon_plus ease-3"></em><img src="images/xiangmu_03.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="article_image.html" class="ease-3"><em class="icon icon_view ease-3"></em>
+        <div class="title ease-3"><h1 class="text-overflow">酒店会议音响系统酒店会议音响系统酒店会议音响系统酒店会议音响系统</h1><p>2014-05-01 11:11</p></div>
+        <img src="images/pic_01.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="article_image.html" class="ease-3"><em class="icon icon_view ease-3"></em>
+        <div class="title ease-3"><h1 class="text-overflow">酒店会议音响系统酒店会议音响系统酒店会议音响系统酒店会议音响系统</h1><p>2014-05-01 11:11</p></div>
+        <img src="images/pic_01.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="article_image.html" class="ease-3"><em class="icon icon_view ease-3"></em>
+        <div class="title ease-3"><h1 class="text-overflow">酒店会议音响系统酒店会议音响系统酒店会议音响系统酒店会议音响系统</h1><p>2014-05-01 11:11</p></div>
+        <img src="images/pic_01.jpg" class="ease-3" /></a></div>
+    </div>
+    <div class="pcitem serviceitem">
+    	<div class="pic"><a href="article_image.html" class="ease-3"><em class="icon icon_view ease-3"></em>
+        <div class="title ease-3"><h1 class="text-overflow">酒店会议音响系统酒店会议音响系统酒店会议音响系统酒店会议音响系统</h1><p>2014-05-01 11:11</p></div>
+        <img src="images/pic_01.jpg" class="ease-3" /></a></div>
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+//滚动条
+$(".zScroll").niceScroll({  
+	cursorcolor:"#888888",  //滚动条颜色
+	cursoropacitymax:.5,   //滚动条透明度 
+	touchbehavior:true,  //是否允许触摸滚动
+	cursorwidth:"5px",   //滚动条宽度
+	cursorborder:"0",  	//滚动条边框
+	cursorborderradius:"5px"  //滚动条圆角
+}); 
+</script>
+</div>
+<!--灯箱效果+ 滚动条end-->
+
+
+
+
+
+
+<!--瀑布流+懒加载start-->
+<div id="pubu">
+<h1 class="demo_title">瀑布流+懒加载</h1>
+<style>
+/* 定义关键帧 */
+@-webkit-keyframes fade{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+@-moz-keyframes fade{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+@-ms-keyframes fade{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+@-o-keyframes fade{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+@keyframes fade{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+.list_jishi{ position:relative;padding-bottom:100px; }
+.list_jishi ul{ }
+.list_jishi li{ margin:0 4px 10px 0; }
+.list_jishi .item{ width:247px; min-height:300px;
+	-webkit-animation:fade 1s ease-out;
+	-moz-animation:fade 1s ease-out;
+	-ms-animation:fade 1s ease-out;
+	-o-animation:fade 1s ease-out;
+	animation:fade 1s ease-out;}
+.list_jishi .item .pic{ width:100%; background-color:#fff; border-bottom:3px #dbdbdb solid;}
+.list_jishi .item .pic a{ width:100%; height:100%; display:block;
+-webkit-transition:all 0.3s ease-out;
+-khtml-transition:all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;}
+.list_jishi .item .pic a img{ width:100%; height:auto !important;}
+.list_jishi .item .pic a:hover{
+filter: alpha(opacity=80); /* internet explorer */
+	-khtml-opacity: 0.8;     /* khtml, old safari */
+	-moz-opacity: 0.8;      /* mozilla, netscape */
+	opacity: 0.8;}
+.list_jishi .item .txt{ background-color:#f8f8f8; padding:10px;}
+.list_jishi .item .txt p{ padding-left:25px; line-height:22px; margin-bottom:5px; font-size:14px;}
+.list_jishi .item .txt .name{  font-size:18px; color:#333;}
+.list_jishi .item .txt .name a{ color:#333;}
+.list_jishi .item .txt .hope{   color:#333;}
+.list_jishi .item .txt .desc{   color:#888;}
+
+</style>
+<script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/blocksit.min.js"></script>
+<div class="list_jishi list_pubu" id="list_pubu">
+	<div class="item">
+        <div class="pic"><a href="#"><img class="lazy" src="images/pixel.gif" data-original="images/pic_yiren_01.jpg" alt="苏柏丽" /></a></div>
+        <div class="txt">
+            <p class="name"><a href="#">苏柏丽</a></p>
+            <p class="desc">香港国语配音演员、配音导演</p>
+        </div>
+    </div>
+	<div class="item">
+        <div class="pic"><a href="#"><img class="lazy" src="images/pixel.gif" data-original="images/pic_yiren_02.jpg" alt="苏柏丽" /></a></div>
+        <div class="txt">
+            <p class="name"><a href="#">何炅</a></p>
+            <p class="desc">中国内地主持人，北京外国语大学阿拉伯语系教师</p>
+        </div>
+    </div>
+	<div class="item">
+        <div class="pic"><a href="#"><img class="lazy" src="images/pixel.gif" data-original="images/pic_yiren_03.jpg" alt="苏柏丽" /></a></div>
+        <div class="txt">
+            <p class="name"><a href="#">宋英杰</a></p>
+            <p class="desc">中央电视台天气预报节目主持人</p>
+        </div>
+    </div>
+	<div class="item">
+        <div class="pic"><a href="#"><img class="lazy" src="images/pixel.gif" data-original="images/pic_yiren_04.jpg" alt="苏柏丽" /></a></div>
+        <div class="txt">
+            <p class="name"><a href="#">孙悦斌</a></p>
+            <p class="desc">中国著名的配音演员</p>
+        </div>
+    </div>
+</div>
+</div>
+<!--以下部分是滚动加载出来的部分 最好是每次加载四个start-->
+<div class="list_jishi list_pubu" id="list_pubu1" style="display:none;">
+	<div class="item">
+        <div class="pic"><a href="#"><img class="lazy" src="images/pixel.gif" data-original="images/pic_yiren_01.jpg" alt="苏柏丽" /></a></div>
+        <div class="txt">
+            <p class="name"><a href="#">苏柏丽</a></p>
+            <p class="desc">香港国语配音演员、配音导演</p>
+        </div>
+    </div>
+	<div class="item">
+        <div class="pic"><a href="#"><img class="lazy" src="images/pixel.gif" data-original="images/pic_yiren_02.jpg" alt="苏柏丽" /></a></div>
+        <div class="txt">
+            <p class="name"><a href="#">何炅</a></p>
+            <p class="desc">中国内地主持人，北京外国语大学阿拉伯语系教师</p>
+        </div>
+    </div>
+	<div class="item">
+        <div class="pic"><a href="#"><img class="lazy" src="images/pixel.gif" data-original="images/pic_yiren_03.jpg" alt="苏柏丽" /></a></div>
+        <div class="txt">
+            <p class="name"><a href="#">宋英杰</a></p>
+            <p class="desc">中央电视台天气预报节目主持人</p>
+        </div>
+    </div>
+	<div class="item">
+        <div class="pic"><a href="#"><img class="lazy" src="images/pixel.gif" data-original="images/pic_yiren_04.jpg" alt="苏柏丽" /></a></div>
+        <div class="txt">
+            <p class="name"><a href="#">孙悦斌</a></p>
+            <p class="desc">中国著名的配音演员</p>
+        </div>
+    </div>
+</div>
+<!--以上部分是滚动加载出来的部分 最好是每次加载四个start-->
+<script>
+/*瀑布流布局*/
+$(function(){
+	$('#list_pubu').BlocksIt({
+		numOfCol:4,
+		offsetX: 2,
+		offsetY: 5
+	});
+	$("img.lazy").lazyload({
+		effect:'fadeIn',		
+		load:function(){
+			$('#list_pubu').BlocksIt({
+				numOfCol:4,
+				offsetX: 2,
+				offsetY: 5
+			});
+		}
+	});	
+	
+	$(window).scroll(function(){
+		// 当滚动到最底部以上500像素时， 加载新内容
+		if ($(document).height() - $(this).scrollTop() - $(this).height()<500){
+			$('#list_pubu').append($("#list_pubu1").html());		
+			$("img.lazy").lazyload({	
+				load:function(){
+					$('#list_pubu').BlocksIt({
+						numOfCol:4,
+						offsetX: 2,
+						offsetY: 5
+					});
+				}
+			});
+		}
+	});
+	
+});
+</script>
+
+</div>
+<!--瀑布流+懒加载end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--主体start-->
+<div class="main">
+
+</div>
+<!--主体end-->
+
+<!--底部start-->
+<div class="foot">
+
+</div>
+<!--底部end-->
+
+
+
+</body>
+</html>

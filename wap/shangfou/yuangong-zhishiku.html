@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>员工-知识库</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.mui-bar-nav~.mui-content .mui-pull-top-pocket{}
+.sortandsearch{ position:relative; margin-bottom:10px;}
+#slider{ max-height:150px;}
+#slider .mui-slider-indicator{ text-align:right; padding:0 10px; bottom:4px;}
+#slider .mui-slider-indicator .mui-indicator{ background:#fff;width:8px; height:8px;margin:1px 2px;}
+#slider .mui-slider-indicator .mui-active.mui-indicator {background: #f39800;}
+.mui-table-view-cell.mui-collapse .mui-collapse-content{ padding:0 0 8px 15px;}
+.mui-table-view-cell.mui-collapse .mui-table-view .mui-table-view-cell:after {
+position: absolute;
+right: 0;
+bottom: 0;
+left: 30px;
+height: 0px;
+content: '';
+-webkit-transform: scaleY(.5);
+transform: scaleY(.5);
+background-color: #c8c7cc;
+}
+.mui-table-view-cell.mui-collapse .mui-table-view .mui-table-view-cell a{ padding:8px 0;}
+.mui-table-view-cell.mui-collapse .mui-table-view .mui-table-view-cell a.mui-active{ padding-left:0 !important; margin-left:-15px !important;}
+</style>
+</head>
+
+<body>
+<!--侧滑菜单容器-->
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+    <!--菜单部分-->
+    <aside id="offCanvasSide" class="mui-off-canvas-right">
+        <div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class="content">
+                    <p style="margin: 10px 15px;">
+                        <a data-href="yuangong-zhishiku-fabu.html" class="mui-btn mui-btn-yellow mui-btn-block" style="padding: 5px 20px;"><i class="iconfont icon-edit mr10"></i>我要发布</a>
+                    </p>
+                </div>
+                <ul class="mui-table-view mui-table-view-inverted">
+                    <li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">原创</a>
+                        	<ul class="mui-collapse-content mui-table-view" style="background:#242424;">
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">原创类一</a>
+                                </li>
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">原创类二</a>
+                                </li>
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">原创类三</a>
+                                </li>
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">原创类三</a>
+                                </li>
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">原创类三</a>
+                                </li>
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">原创类三</a>
+                                </li>
+                            </ul>
+					</li>
+                    <li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">官方</a>
+                        	<ul class="mui-collapse-content mui-table-view" style="background:#242424;">
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">钉钉类</a>
+                                </li>
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">OA手册</a>
+                                </li>
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">其他</a>
+                                </li>
+                            </ul>
+					</li>
+                    <li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">大类</a>
+                        	<ul class="mui-collapse-content mui-table-view" style="background:#242424;">
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">钉钉类</a>
+                                </li>
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">钉钉类</a>
+                                </li>
+                            	<li class="mui-table-view-cell">
+                                	<a class="mui-navigate-right" data-href="yuangong-zhishiku.html">钉钉类</a>
+                                </li>
+                            </ul>
+					</li>
+
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+<header class="mui-bar mui-bar-nav">
+<a data-href="yuangong-zhishiku-fabu.html" class="mui-icon mui-action-menu iconfont icon-edit mui-pull-left" style="margin-right:0px;"></a>
+<a id="offCanvasBtn" href="#offCanvasSide" class="mui-icon mui-action-menu iconfont icon-sort mui-pull-right"></a>
+<h1 class="mui-title">知识库</h1>
+
+</header>
+
+
+<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item" data-href="yuangong-paiming-shangjin.html"><i class="mui-icon iconfont icon-rank"></i><span class="mui-tab-label">排名</span></a>
+<a class="mui-tab-item" data-href="yuangong-hetong.html"><i class="mui-icon iconfont icon-form"></i><span class="mui-tab-label">合同</span></a>
+<a class="mui-tab-item mui-active" data-href="yuangong-zhishiku.html"><i class="mui-icon iconfont icon-read"></i><span class="mui-tab-label">知识库</span></a>
+<a class="mui-tab-item" data-href="yuangong-wode.html"><i class="mui-icon iconfont icon-my"></i><span class="mui-tab-label">我的</span></a>
+</nav>
+
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper" style="padding-top:44px;">
+<div class="mui-scroll">
+    <div id="slider" class="mui-slider" >
+        <div class="mui-slider-group mui-slider-loop">
+            <!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a data-href="yuangong-zhishiku-xiangqing.html">
+                    <img src="images/banner_02.jpg">
+                </a>
+            </div>
+            <!-- 第一张 -->
+            <div class="mui-slider-item">
+                <a data-href="yuangong-zhishiku-xiangqing.html">
+                    <img src="images/banner_01.jpg">
+                </a>
+            </div>
+            <!-- 第二张 -->
+            <div class="mui-slider-item">
+                <a data-href="yuangong-zhishiku-xiangqing.html">
+                    <img src="images/banner_02.jpg">
+                </a>
+            </div>
+            <!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+            <div class="mui-slider-item mui-slider-item-duplicate">
+                <a data-href="yuangong-zhishiku-xiangqing.html">
+                    <img src="images/banner_01.jpg">
+                </a>
+            </div>
+        </div>
+        <div class="mui-slider-indicator">
+            <div class="mui-indicator mui-active"></div>
+            <div class="mui-indicator"></div>
+        </div>
+    </div>
+<div class="sortandsearch">
+<a class="sort-item ease-3" href="#popover_0">排序<i class="iconfont icon-xiala"></i></a>
+<a class="sort-item ease-3" href="#popover_1">筛选<i class="iconfont icon-xiala"></i></a>
+<form><div class="mui-input-row mui-search ease-3"><input type="search" class="mui-input-clear" placeholder="搜索"></div></form>
+</div>
+	
+    <ul class="mui-table-view list-zhishiku">
+        <li class="mui-table-view-cell mui-media list-zhishiku-item">
+        	<a data-href="yuangong-zhishiku-xiangqing.html">
+            <img class="mui-media-object mui-pull-left" src="images/pic_01.jpg" alt="文章名称" />
+            <div class="mui-media-body">
+                <h5 class="title txt-333 mui-ellipsis">颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析</h5>
+                <p class="desc font12 mui-ellipsis-2">颠覆性思维——想别人所未想，做别人所未做颠覆性思维——想别人所未想，做别人所未做</p>
+                <div class="clearfix info txt-888 font12">
+                	<span class="mr10"><i class="mr5 iconfont icon-comment"></i>9</span>
+                	<span class="mr10"><i class="mr5 iconfont icon-favor"></i>9</span>
+                	<span class="txt-yellow mui-pull-right price"><i class="mr5 iconfont icon-recharge"></i>53.00</span>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media list-zhishiku-item">
+        	<a data-href="yuangong-zhishiku-xiangqing.html">
+            <img class="mui-media-object mui-pull-left" src="images/pic_01.jpg" alt="文章名称" />
+            <div class="mui-media-body">
+                <h5 class="title txt-333 mui-ellipsis">颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析</h5>
+                <p class="desc font12 mui-ellipsis-2">颠覆性思维——想别人所未想，做别人所未做颠覆性思维——想别人所未想，做别人所未做</p>
+                <div class="clearfix info txt-888 font12">
+                	<span class="mr10"><i class="mr5 iconfont icon-comment"></i>9</span>
+                	<span class="mr10"><i class="mr5 iconfont icon-favor"></i>9</span>
+                	<span class="txt-yellow mui-pull-right price"><i class="mr5 iconfont icon-recharge"></i>53.00</span>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media list-zhishiku-item">
+        	<a data-href="yuangong-zhishiku-xiangqing.html">
+            <img class="mui-media-object mui-pull-left" src="images/pic_01.jpg" alt="文章名称" />
+            <div class="mui-media-body">
+                <h5 class="title txt-333 mui-ellipsis">颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析</h5>
+                <p class="desc font12 mui-ellipsis-2">颠覆性思维——想别人所未想，做别人所未做颠覆性思维——想别人所未想，做别人所未做</p>
+                <div class="clearfix info txt-888 font12">
+                	<span class="mr10"><i class="mr5 iconfont icon-comment"></i>9</span>
+                	<span class="mr10"><i class="mr5 iconfont icon-favor"></i>9</span>
+                	<span class="txt-yellow mui-pull-right price"><i class="mr5 iconfont icon-recharge"></i>53.00</span>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="mui-table-view-cell mui-media list-zhishiku-item">
+        	<a data-href="yuangong-zhishiku-xiangqing.html">
+            <img class="mui-media-object mui-pull-left" src="images/pic_01.jpg" alt="文章名称" />
+            <div class="mui-media-body">
+                <h5 class="title txt-333 mui-ellipsis">颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析</h5>
+                <p class="desc font12 mui-ellipsis-2">颠覆性思维——想别人所未想，做别人所未做颠覆性思维——想别人所未想，做别人所未做</p>
+                <div class="clearfix info txt-888 font12">
+                	<span class="mr10"><i class="mr5 iconfont icon-comment"></i>9</span>
+                	<span class="mr10"><i class="mr5 iconfont icon-favor"></i>9</span>
+                	<span class="txt-yellow mui-pull-right price"><i class="mr5 iconfont icon-recharge"></i>53.00</span>
+                </div>
+            </div>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+
+    <!-- off-canvas backdrop -->
+    <div class="mui-off-canvas-backdrop"></div>
+</div>
+<!-- 主页面容器 end -->
+
+</div>
+
+
+
+<div id="popover_0" class="mui-popover popover-xiala">
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell"><a data-href="#">最近的</a></li>
+                <li class="mui-table-view-cell cur"><a data-href="#">最早的<span class="mui-icon mui-icon-checkmarkempty mui-pull-right"></span></a></li>
+                <li class="mui-table-view-cell"><a data-href="#">价格从低到高</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">价格从高到低</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="popover_1" class="mui-popover popover-xiala">
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell cur"><a data-href="#">客户经理<span class="mui-icon mui-icon-checkmarkempty mui-pull-right"></span></a></li>
+                <li class="mui-table-view-cell"><a data-href="#">设计师</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">实小创</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">实小妹</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">其他</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="js/mui.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+	 pullRefresh: {
+            container: '#pullrefresh', //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+            up: {
+                contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+                contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+                callback: add_more //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+            },
+			down: {
+				callback: pulldownRefresh
+			}
+        },
+});
+
+function pulldownRefresh() {
+		//这里写ajax
+	setTimeout(function() {
+		  if (true) {
+				  var nd = '<li class="mui-table-view-cell mui-media list-zhishiku-item mui-transitioning"><a data-href="yuangong-zhishiku-xiangqing.html"><img class="mui-media-object mui-pull-left" src="images/pic_01.jpg" alt="文章名称" /><div class="mui-media-body"><h5 class="title txt-333 mui-ellipsis">111颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析</h5><p class="desc font12 mui-ellipsis-2">颠覆性思维——想别人所未想，做别人所未做颠覆性思维——想别人所未想，做别人所未做</p><div class="clearfix info txt-888 font12"><span class="mr10"><i class="mr5 iconfont icon-comment"></i>9</span><span class="mr10"><i class="mr5 iconfont icon-favor"></i>9</span><span class="txt-yellow mui-pull-right price"><i class="mr5 iconfont icon-recharge"></i>53.00</span></div></div></a></li>';
+			  Zepto('.list-zhishiku').prepend(nd);
+			mui('#pullrefresh').pullRefresh().endPulldownToRefresh(false); //参数为true代表没有更多数据了。
+		} else {
+			mui('#pullrefresh').pullRefresh().endPulldownToRefresh(true); //参数为true代表没有更多数据了。
+		}
+	}, 1500)
+}
+
+function add_more() {
+		//这里写ajax
+	  if (false) {
+			  var nd = '<li class="mui-table-view-cell mui-media list-zhishiku-item mui-transitioning"><a data-href="yuangong-zhishiku-xiangqing.html"><img class="mui-media-object mui-pull-left" src="images/pic_01.jpg" alt="文章名称" /><div class="mui-media-body"><h5 class="title txt-333 mui-ellipsis">111颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析颠覆性思维浅析</h5><p class="desc font12 mui-ellipsis-2">颠覆性思维——想别人所未想，做别人所未做颠覆性思维——想别人所未想，做别人所未做</p><div class="clearfix info txt-888 font12"><span class="mr10"><i class="mr5 iconfont icon-comment"></i>9</span><span class="mr10"><i class="mr5 iconfont icon-favor"></i>9</span><span class="txt-yellow mui-pull-right price"><i class="mr5 iconfont icon-recharge"></i>53.00</span></div></div></a></li>';
+			  Zepto('.list-zhishiku').append(nd);
+		  mui('#pullrefresh').pullRefresh().endPullupToRefresh(false); //参数为true代表没有更多数据了。
+	  } else {
+		  mui('#pullrefresh').pullRefresh().endPullupToRefresh(true); //参数为true代表没有更多数据了。
+	  }
+}
+
+
+mui("#slider").slider({interval: 5000});
+
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

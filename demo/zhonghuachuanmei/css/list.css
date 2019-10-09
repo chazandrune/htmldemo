@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+
+.page{}
+.page .headline{ border-bottom:1px #dbdbdb solid; padding:30px 20px 10px;}
+.page .headline .title{ font-size:24px; color:#a82400; line-height:30px;}
+.page .headline .date{ height:30px; line-height:30px; font-size:14px; color:#888;}
+.page .bodyline{ padding:20px 0 90px;}
+
+.text_box{ font-size:14px; line-height:30px; color:#333; overflow:hidden;}
+.text_box img{ max-width:100%;_width: expression_r( document.body.clientWidth > 1000 ? "1000px" : "auto" ); height:auto;}
+.text_box a{ color:#a82400;}
+.text_box a:hover{ color:#e53d0f;}
+
+
+.page .bottomline{ position:relative; border-top:1px #dbdbdb solid; padding:20px 10px;}
+.page .bottomline .syyxyy{ font-size:14px; color:#333;}
+.page .bottomline .syyxyy p{ width:60%; line-height:26px; margin-bottom:5px;}
+.page .bottomline .syyxyy a{ color:#333;}
+.page .bottomline .syyxyy a:hover{ color:#a82400;}
+.page .bottomline .sharebox{position:absolute; right:10px; top:15px; line-height:36px; height:36px; font-size:14px; color:#888;}
+
+
+/*新闻*/
+.page-news .list{ padding:40px 0 0;}
+.page-news .list .item{ position:relative; padding:0 0 20px 160px;}
+.page-news .list .item p{ font-size:14px; line-height:30px;}
+.page-news .list .item .date{ width:100px; height:100px; background:#f3f3f3; color:#333; position:absolute; left:0; top:0;}
+.page-news .list .item .date h1{ font-size:50px; height:50px; line-height:50px; padding-top:10px;}
+.page-news .list .item .date p{ font-size:16px; height:40px; line-height:40px;}
+.page-news .list .item .title{ font-size:20px;}
+.page-news .list .item .title a:hover{ color:#e53d0f;}
+.page-news .list .item .desc{ height:60px; overflow:hidden; color:#888;}
+.page-news .list .item .line{ height:1px; background:#dbdbdb;}
+
+/*培训信息*/
+.page-training .list{ padding:40px 0 0;} 
+.page-training .headline{ padding:30px 0px 10px 0; }
+.page-training .headline .pic{ width:270px; overflow:hidden;}
+.page-training .headline .pic img{ width:100%; height:auto;}
+.page-training .headline .txt{ width:700px;}
+.page-training .headline .desc{ color:#888; font-size:14px; line-height:26px; height:52px; overflow:hidden; margin-bottom:30px;}
+
+/*导师团队*/
+.page-teachers .list{ padding:40px 0 0;} 
+.page-teachers .headline{ border-bottom:0;}
+.page-teachers .text_box{ padding-bottom:30px;}
+
+/*在线报名*/
+.bg_onlineregister{ position:fixed; left:0; top:0; width:100%; height:100%; z-index:1; background-image:url(../images/bg_onlineregister.jpg); background-size:cover; background-position:center;}
+.bg2_onlineregister{ position:fixed; right:10%; top:20%;}
+.page-onlineregister .main{ position:absolute; top:0; left:0; right:0; z-index:10;}
+.page-onlineregister .main .page{ padding:50px 0;}
+.page-onlineregister .page .bt h1,.page-onlineregister .page .bt h2{ color:#fff;}
+
+/*联系我们*/
+.bg_contact{ position:fixed;left:0; top:0; width:100%; height:100%; z-index:1; background-image:url(../images/bg_contact.jpg); background-size:cover; background-position:top center;}
+.page-contact .main{ position:absolute; top:0; left:0; right:0; z-index:10;}
+.page-contact .main .page{height:750px;}
+.page-contact .main .page .w1200{ position:relative; height:100%;}
+.page-contact .page .bt{ padding:20px 20px 0; margin-bottom:0;}
+.page-contact .page .bt h1,.page-contact .page .bt h2{ color:#fff;}
+.page-contact .page .con{ position:absolute; overflow:hidden;}
+.page-contact .page .con_01{ width:340px; height:100px; background:url(../images/alpha_red80.png) repeat; top:60px; left:180px}
+.page-contact .page .con_02{ width:340px; height:100px; background:url(../images/alpha_red80.png) repeat; top:360px; left:820px;}
+.page-contact .page .con_03{ width:300px; height:400px; background:url(../images/alpha_white80.png) repeat; top:60px; left:520px;}
+.page-contact .page .con_03 .nr{ padding:20px;}
+.page-contact .page .con_04{ width:480px; height:400px; top:160px; left:40px;}
+.page-contact .page .con_05{ width:440px; height:200px; top:460px; left:520px;}
+.page-contact .page .con .pic{ width:100%; height:100%; overflow:hidden; background:#000;}
+.page-contact .page .con .pic a img{
+-webkit-transition:all 2s ease-out;
+-khtml-transition:all 2s ease-out;
+-moz-transition: all 2s ease-out;
+-o-transition: all 2s ease-out;
+transition: all 2s ease-out;}
+.page-contact .page .con .pic a:hover img{
+filter: alpha(opacity=80);
+-khtml-opacity: 0.8;
+-moz-opacity: 0.8;
+opacity: 0.8;
+transform: scale(1.1,1.1);
+-webkit-transform: scale(1.1,1.1);
+-o-webkit-transform: scale(1.1,1.1);
+-moz-webkit-transform: scale(1.1,1.1);}
+.page-contact .page .con_06{ width:200px; height:200px; top:460px; left:960px;}
+.page-contact .page .con_06 .btn{ display:block; padding:0; width:100%; height:100%;}
+.page-contact .page .con_06 .btn h1{ padding-top:48px; height:60px; line-height:60px;}
+.page-contact .page .con_06 .btn h2{ height:50px; line-height:50px; font-size:20px;}
+.page-contact .page .con_06 .btn .iconfont{ font-size:50px;}
+
+
+/*分页*/
+.pagelist{ padding:20px 0px 50px; font-size:16px;}
+.pagelist li{ display:inline-block; *display:inline;*zoom:1; line-height:40px; padding:1px 16px; background:#fff; color:#333; margin-right:10px; font-size:14px;
+-webkit-border-radius:5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+behavior: url(ie-css3.htc);
+z-index: 5;
+-webkit-transition:all 0.1s ease-out;
+-khtml-transition:all 0.1s ease-out;
+-moz-transition: all 0.1s ease-out;
+-o-transition: all 0.1s ease-out;
+transition: all 0.1s ease-out;}
+.pagelist li a{ padding:0 3px;}
+.pagelist li a:hover{ color:#a82400;}
+.pagelist li.thisclass{ padding:1px 20px; color:#333; background:#f3f3f3;}
+
+
+
+
+
+
+
+
+
+
+
+

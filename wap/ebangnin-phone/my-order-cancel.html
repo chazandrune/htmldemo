@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html style=" font-size:100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>订单取消</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/mui.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/mui.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript" src="js/payfor.js"></script>
+<script type="text/javascript" src="rating/jquery.raty.min.js"></script>
+</head>
+
+<body class="page-service-yuyue">
+
+<!--导航 手机版start-->
+<div class="bottombar">
+	<ul class="clearfix">
+		<li><a href="###" class="btn btn_middle btn_blue radius-5 ease-1" onClick="$('#form1').submit();">提 交</a></li>
+	</ul>
+</div>
+<!--导航手机版end-->
+
+
+<!--主体start-->
+<div class="mainbody" style="top:0rem; bottom:.6rem; left:0; right:0;">
+	<div class="blank10"></div>
+	
+<!--表单 start-->
+<form id="form1" method="post">
+<ul class="ul_view ul_view_group mb10">
+	<li class="ul_view_cell"><div class="ul_view_cell_a" >
+			<div class="switch_box">
+				<ul class="ul">
+					<li class="li">
+						<input type="radio" name="reason" checked/>
+						<div class="switch_item"><h2>临时有事，改约</h2><i class="icon_ebn icon-checkbox"></i></div>
+					</li>
+					<li class="li">
+						<input type="radio" name="reason" />
+						<div class="switch_item"><h2>信息填写有误，重新下单</h2><i class="icon_ebn icon-checkbox"></i></div>
+					</li>
+					<li class="li">
+						<input type="radio" name="reason" />
+						<div class="switch_item"><h2>不需要服务了</h2><i class="icon_ebn icon-checkbox"></i></div>
+					</li>
+					<li class="li">
+						<input type="radio" name="reason" />
+						<div class="switch_item"><h2>其他</h2><i class="icon_ebn icon-checkbox"></i></div>
+					</li>
+				</ul>
+			</div>
+	</div></li>
+</ul>
+<input type="submit" style="display:none;">
+</form>
+<!--表单 end-->
+<!--注意start-->
+<div class="text_box pad10 mb10">
+	<div class="fs12 txt-888">如涉及到退款，将会在3-5个工作日返还</div>
+</div>
+<div class="blank10"></div>
+<div class="blank10"></div>
+<!--注意end-->
+
+
+
+
+
+
+</div>
+<!--主体end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(function(){
+	/*单选 custom-js*/
+	$('.switch_box input').each(function(){
+		if($(this).prop('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.switch_box .switch_item').click(function(){
+		if($(this).prev().prop('checked')){
+			//$(this).prev().prop('checked',false);
+			//$(this).removeClass('current');
+		}else{
+			$(this).prev().prop('checked',true);
+			$(this).parent().parent().find('.switch_item').removeClass('current');
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+</script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

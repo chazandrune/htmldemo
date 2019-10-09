@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html style=" font-size:100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>日常保洁-周期预约</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/mui.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/mui.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript" src="js/payfor.js"></script>
+<script type="text/javascript" src="rating/jquery.raty.min.js"></script>
+</head>
+
+<body class="page-service-yuyue">
+
+<!--头部 手机版start-->
+<header class="head-phone">
+	<ul class="clearfix tab">
+    	<li><a href="service-01-yuyue.html">
+            单次预约
+        </a></li>
+    	<li><a href="service-01-yuyue-zhouqi.html" class="on">
+            周期预约
+        </a></li>
+    </ul>
+</header>
+<!--头部 手机版end-->
+<!--导航 手机版start-->
+<div class="bottombar">
+	<ul class="clearfix">
+		<li><a href="###" class="btn btn_middle btn_blue radius-5 ease-1" onClick="$('#form1').submit();">确认提交</a></li>
+	</ul>
+</div>
+<!--导航手机版end-->
+
+
+<!--主体start-->
+<div class="mainbody" style="top:.4rem; bottom:.6rem; left:0; right:0;">
+	<div class="blank10"></div>
+	
+<!--表单 start-->
+<form id="form1" method="post">
+<ul class="ul_view mb10">
+	<li class="ul_view_cell"><a href="#addlist" class="ul_view_cell_a" id="add_cur">
+		<h1><i class="icon_ebn icon-local mr5"></i>服务地址</h1>
+		<input type="hidden" name="add" style="display:none;" />
+		<i class="iconfont arrow txt-blue">&#xe610;</i>
+	</a></li>
+	<li class="ul_view_cell"><a href="#ayilist" class="ul_view_cell_a" id="ayi_cur" >
+		<h1><i class="icon_ebn icon-ayi mr5"></i>选择阿姨</h1>
+		<input type="hidden" name="ayi" style="display:none;" />
+		<i class="iconfont arrow txt-blue">&#xe610;</i>
+	</a></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a" >
+		<input type="hidden" name="ayi" />
+		<div class="switch_box">
+			<ul class="ul">
+				<li class="li">
+					<input type="checkbox" name="" />
+					<div class="switch_item"><h1>是否接受派遣其他阿姨</h1><i class="icon_ebn icon-checkbox"></i></div>
+				</li>
+			</ul>
+		</div>
+	</div></li>
+</ul>
+<ul class="ul_view">
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a ul_view_cell_a_numbox">
+		<h1><i class="icon_ebn icon-miaobiao mr5"></i>服务时长</h1>
+		<div class="numbox inlineblock" >
+		  <a class="inlineblock reduce" onClick="numbox.reduce('#num_html_1')" href="javascript:void(0)">-</a>
+		  <span class="inlineblock num_html num_html_1" id="num_html_1" data-shichang="2">2</span>
+		  <a class="inlineblock add" onClick="numbox.add('#num_html_1')" href="javascript:void(0)">+</a>
+		  <input type="hidden" name="shichang" style="display:none;" />
+		</div>
+	</div></li>
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a">
+		<h1><i class="icon_ebn icon-time mr5"></i>服务时间</h1>
+	</div></li>
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a ul_view_cell_a_swiper">
+		<div class="swiper-container" id="swiper-weeks">
+			<div class="swiper-wrapper"></div>
+		</div>
+		<a href="###" class="prev swiper-arrow"><i class="iconfont">&#xe60f;</i></a>
+		<a href="###" class="next swiper-arrow"><i class="iconfont">&#xe610;</i></a>
+	</div></li>
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a ul_view_cell_a_times">
+		<div class="times-container" id="times"></div>
+	</div></li>
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a ul_view_cell_a_yuyuetime">
+		<i class="icon_ebn icon-calendar mr5"></i>
+		<div class="yuyuetime-container" id="yuyuetimes"></div>
+	</div></li>
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a ul_view_cell_a_zhouqi">
+		<h1><i class="icon_ebn icon-zhouqi mr5"></i>服务周期</h1>
+		<div class="blank10"></div>
+		<div class="radio_box">
+			<ul class="ul">
+				<li class="li">
+					<input type="radio" name="zhouqi" value="两周" checked/>
+					<span class="radio_item">两周</span>
+				</li>
+				<li class="li">
+					<input type="radio" name="zhouqi" value="三周" />
+					<span class="radio_item">三周</span>
+				</li>
+				<li class="li">
+					<input type="radio" name="zhouqi" value="一个月" />
+					<span class="radio_item">一个月</span>
+				</li>
+				<li class="li">
+					<input type="radio" name="zhouqi" value="两个月" />
+					<span class="radio_item">两个月</span>
+				</li>
+				<li class="li">
+					<input type="radio" name="zhouqi" value="三个月" />
+					<span class="radio_item">三个月</span>
+				</li>
+				<li class="li">
+					<input type="radio" name="zhouqi" value="四个月" />
+					<span class="radio_item">四个月</span>
+				</li>
+			</ul>
+		</div>
+	</div></li>
+</ul>
+<input type="submit" style="display:none;">
+</form>
+<!--表单 end-->
+<!--注意start-->
+<div class="text_box pad10 mb10">
+	<div class="fs12 txt-888">注：8:00-18:00每小时30元。18:00-21:00每小时35元</div>
+</div>
+<div class="blank10"></div>
+<div class="blank10"></div>
+<!--注意end-->
+
+
+
+
+
+
+</div>
+<!--主体end-->
+
+
+
+
+
+
+
+
+<div id="ayilist" class="mui-modal">
+<header class="head-phone">
+	<h1>选择阿姨</h1>
+</header>
+<div class="mainbody" style="top:.4rem; bottom:0rem; left:0; right:0;">
+	<ul class="ul_view ul_ayilist">
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<a href="my-ayi.html" class="pic avatar radius-circle"><img class="radius-circle" src="images/avatar_ayi.jpg" /></a>
+			<div class="txt">
+				<h1 class="name">李阿姨</h1>
+				<div class="inlineblock star-rating" data-number="4"></div><span class="ml10 txt-888">服务200次</span>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<a href="my-ayi.html" class="pic avatar radius-circle"><img class="radius-circle" src="images/avatar_ayi.jpg" /></a>
+			<div class="txt">
+				<h1 class="name">李阿姨</h1>
+				<div class="inlineblock star-rating" data-number="4"></div><span class="ml10 txt-888">服务200次</span>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<a href="my-ayi.html" class="pic avatar radius-circle"><img class="radius-circle" src="images/avatar_ayi.jpg" /></a>
+			<div class="txt">
+				<h1 class="name">李阿姨</h1>
+				<div class="inlineblock star-rating" data-number="4"></div><span class="ml10 txt-888">服务200次</span>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<a href="my-ayi.html" class="pic avatar radius-circle"><img class="radius-circle" src="images/avatar_ayi.jpg" /></a>
+			<div class="txt">
+				<h1 class="name">李阿姨</h1>
+				<div class="inlineblock star-rating" data-number="4"></div><span class="ml10 txt-888">服务200次</span>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+	</ul>
+</div>
+</div>
+
+
+<div id="addlist" class="mui-modal">
+<header class="head-phone">
+	<h1>选择地址</h1>
+</header>
+<div class="mainbody" style="top:.4rem; bottom:0rem; left:0; right:0;">
+	<ul class="ul_view ul_addlist">
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<div class="txt">
+				<h1 class="name">王语嫣（13212341234）</h1>
+				<p class="mar0 location">北京市朝阳区琳达海域广场2号楼1807</p>
+			</div>
+			<i class="iconfont txt-blue arrow">&#xe65a;</i>
+		</div></li>
+	</ul>
+	<div class="blank10"></div>
+	<div class="pad10">
+		<a href="my-address-article.html" class="btn btn_submit btn_middle btn_blue radius-5" style="width:100%;">新增地址</a>
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//选择阿姨弹窗
+$("#ayilist .ul_ayilist .ul_view_cell_a").on('click',function(){
+	var ayi_name = $(this).find(".name").html();
+	$("#ayilist .ul_ayilist .ul_view_cell_a").removeClass("current");
+	$(this).addClass("current");
+	$("#ayi_cur p").remove();
+	$("#ayi_cur").append('<p class="fs12 mar0 text-overflow"><i class="icon_ebn mr5"></i>'+ayi_name+'</p>');
+	$("#ayi_cur input").val(ayi_name);
+	$("#ayilist").removeClass("mui-active");
+})
+
+//选择地址弹窗
+$("#addlist .ul_addlist .ul_view_cell_a").on('click',function(){
+	var add_location = $(this).find(".location").html();
+	$("#addlist .ul_addlist .ul_view_cell_a").removeClass("current");
+	$(this).addClass("current");
+	$("#add_cur p").remove();
+	$("#add_cur").append('<p class="fs12 mar0 text-overflow"><i class="icon_ebn mr5"></i>'+add_location+'</p>');
+	$("#add_cur input").val(add_location);
+	$("#addlist").removeClass("mui-active");
+})
+
+//星级评分效果
+$('.star-rating').raty({
+	path: 'rating/img',
+	space: false,
+	//target: '#hint',
+	//targetKeep: true,
+	//targetType: 'number',
+	//targetFormat: '{score}分',
+	score: function(){
+		return $(this).attr('data-number');
+	},
+	readOnly:true
+});
+
+
+</script>
+
+<script type="text/javascript">
+//时长增减
+var numbox = {
+	min:2,
+	max:6,
+	reduce:function(obj){
+		var x = parseFloat($(obj).html());
+		if(x > this.min){
+			$(obj).prev().removeClass("disabled")
+			$(obj).next().removeClass("disabled")
+			x= x-0.5;
+			$(obj).html(x+"小时");
+			$(obj).attr("data-shichang",x);
+			$(obj).siblings("input").val(x)
+			updatetimes();
+			yuyuetime();
+		}else{
+			//比最小值还小的情况
+			$(obj).prev().addClass("disabled")
+		}
+	},
+	add:function(obj){
+		var x = parseFloat($(obj).html());
+		if(x < this.max){
+			$(obj).prev().removeClass("disabled")
+			$(obj).next().removeClass("disabled")
+			x= x+0.5;
+			$(obj).html(x+"小时");
+			$(obj).attr("data-shichang",x);
+			$(obj).siblings("input").val(x)
+			updatetimes();
+			yuyuetime();
+		}else{
+			//比最大值还大的情况
+			$(obj).next().addClass("disabled")
+		}
+	}
+}
+</script>
+<script>
+//日期时间输出函数
+function updatetimes(){
+	$("#swiper-weeks .swiper-wrapper").html("");
+	$("#times").html("");
+	var time_shangban = 8; //开始时间 上班时间 默认为8点，若为8点半，则是8.5
+	var time_xiaban = 20; //结束时间 下班时间 默认为晚上20点，若为8点半，则是8.5
+	var nowDate=new Date();
+	var startweek = nowDate.getDay();
+	//如果今日已经接近下班时间 则从第二天开始输出
+	//if(nowDate.getHours()>time_xiaban-parseFloat($("#num_html_1").attr('data-shichang'))){startweek=startweek+1}
+	for( m = 0;m<7;m++){
+		if(startweek>=7){startweek = 0}
+		switch(startweek)
+		{
+			case 0:
+				var titleDay = "周日";
+				break;
+			case 1:
+				var titleDay = "周一";
+				break;
+			case 2:
+				var titleDay = "周二";
+				break;
+			case 3:
+				var titleDay = "周三";
+				break;
+			case 4:
+				var titleDay = "周四";
+				break;
+			case 5:
+				var titleDay = "周五";
+				break;
+			case 6:
+				var titleDay = "周六";
+				break;
+		}
+		dom_week = $('<div class="swiper-slide" data-week="'+startweek+'" onClick="chooseday(this)"><span class="day">'+titleDay+'</span></div>').appendTo("#swiper-weeks .swiper-wrapper");
+		$('#swiper-weeks .swiper-slide[data-week='+nowDate.getDay()+']').addClass("on"); 
+		dom_times = $('<div class="times_box times_box_'+startweek+'">').appendTo("#times");
+		$('.times_box.times_box_'+nowDate.getDay()).show(); //当前星期的显示
+		time_s = time_shangban; //开始时间 上班时间 
+		//已半个小时为单位，计算一天工作时长的份数
+		var total_pers = parseFloat(time_xiaban-time_s)/0.5;
+		for(n=0 ; n< total_pers +1 - parseFloat($("#num_html_1").attr('data-shichang'))/0.5 ; n++){
+			time_e = time_s + parseFloat($("#num_html_1").attr('data-shichang'));
+			if(String(time_s).indexOf(".") + 1>0){
+				var time_s_output = parseInt(time_s)+":30";
+			}else{
+				var time_s_output = parseInt(time_s)+":00";
+			};
+			if(String(time_e).indexOf(".") + 1>0){
+				var time_e_output = parseInt(time_e)+":30";
+			}else{
+				var time_e_output = parseInt(time_e)+":00";
+			};
+			dom_times_time = $('<span class="li"><input type="checkbox" name="time" value="'+titleDay+time_s_output+'-'+time_e_output+'"/><span class="click_item" data-s="'+time_s+'" data-e="'+time_e+'" data-day="'+titleDay+'" onClick="choosetime(this)">'+time_s_output+'-'+time_e_output+'</span></span>').appendTo(dom_times);
+			time_s = time_s +0.5;
+		}
+		startweek ++;
+	}
+		
+	//滑动星期
+	var weekswiper = new Swiper("#swiper-weeks",{
+		nextButton:".ul_view_cell_a_swiper .next",
+		prevButton:".ul_view_cell_a_swiper .prev",
+		slidesPerView:4,
+		spaceBetween:0,
+		loop:false
+	});
+	
+}
+updatetimes();
+
+//输出点选的预约时间列表js
+function yuyuetime(){
+	//循环输出让预约时间罗列显示在下方列表中
+	$("#yuyuetimes").html("");
+	$("#times .click_item.current").each(function(){
+		var cur_d = $(this).attr("data-day");
+		var cur_s = $(this).attr("data-s");
+		var cur_e = $(this).attr("data-e");
+		if(String(cur_s).indexOf(".") + 1>0){
+			var cur_s_output = parseInt(cur_s)+":30";
+		}else{
+			var cur_s_output = parseInt(cur_s)+":00";
+		};
+		if(String(cur_e).indexOf(".") + 1>0){
+			var cur_e_output = parseInt(cur_e)+":30";
+		}else{
+			var cur_e_output = parseInt(cur_e)+":00";
+		};
+		$("#yuyuetimes").append('<p>每'+cur_d+' '+cur_s_output+'-'+cur_e_output+'</p>');
+	})
+}
+
+//点击星期切换时间js
+function chooseday(obj){
+	var nn = $(obj).attr("data-week");
+	$(obj).siblings().removeClass("on");
+	$(obj).addClass("on");
+	$("#times .times_box").hide();
+	$("#times .times_box_"+nn).show();
+}
+
+//根据当下时间对可选时间段初始化js
+function choosetime_init(){
+	var nowDate=new Date();
+	var nowTime_d = nowDate.getDay();
+	var nowTime_h = nowDate.getHours();
+	var nowTime_m = nowDate.getMinutes();
+	$('.times_box input').each(function(){
+		if($(this).prop('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	$('.times_box_'+nowTime_d+' .li .click_item').each(function(){
+		if(parseInt($(this).attr("data-s")) <= nowTime_h){
+			$(this).addClass("disabled");
+		}
+	})
+}
+
+//点击时间js
+function choosetime(obj){
+	var nowDate=new Date();
+	var nowTime_d = nowDate.getDay();
+	var nowTime_h = nowDate.getHours();
+	var nowTime_m = nowDate.getMinutes();
+	var fuwushichang = parseFloat($("#num_html_1").attr('data-shichang'));
+	var this_s = $(obj).attr("data-s") ;
+	var this_e = $(obj).attr("data-e") ;
+	if($(obj).prev().prop('checked')){
+		//点击取消选中的情况
+		$(obj).prev().prop('checked',false);
+		$(obj).removeClass('current');
+		var thisparent = $(obj).parent().parent();
+		var fuwushichang = parseFloat($("#num_html_1").attr('data-shichang'));
+		//点击取消选中的事件如下
+		thisparent.find(".click_item").each(function(){
+			if($(this).attr("data-s") > parseFloat(this_s)-fuwushichang && $(this).attr("data-s") <= parseFloat(this_s)){
+				$(this).removeClass("disabled");
+			}
+			if($(this).attr("data-e") >= parseFloat(this_e) && $(this).attr("data-e") < parseFloat(this_e)+fuwushichang){
+				$(this).removeClass("disabled");
+			}
+		})
+		//遍历让产生交集的时间段不可点选
+		thisparent.find(".click_item").each(function(){
+			var $this =$(this);
+			var this_ss =$(this).attr("data-s");
+			var this_ee =$(this).attr("data-e");
+			thisparent.find(".current").each(function(){
+				var this_sss = $(this).attr("data-s");
+				var this_eee = $(this).attr("data-e");
+				if(this_ss > parseFloat(this_sss)-fuwushichang && this_ss <= parseFloat(this_sss)){
+					$this.addClass("disabled");
+					$(this).removeClass("disabled");
+				};
+				if(this_ee >= parseFloat(this_eee) && this_ee < parseFloat(this_eee)+fuwushichang){
+					$this.addClass("disabled");
+					$(this).removeClass("disabled");
+				};
+			});
+		})
+	}else if($(obj).hasClass("disabled")){
+		$(obj).prev().prop('checked',false);
+		$(obj).removeClass('current');
+	}else{
+		//点击选中的情况
+		$(obj).prev().prop('checked',true);
+		console.log($(obj).attr("data-day"),$(obj).attr("data-s"),$(obj).attr("data-e"))
+		$(obj).addClass('current');
+		var thisparent = $(obj).parent().parent();
+		var fuwushichang = parseFloat($("#num_html_1").attr('data-shichang'));
+		//遍历让产生交集的时间段不可点选
+		thisparent.find(".click_item").each(function(){
+			if($(this).attr("data-s") > parseFloat(this_s)-fuwushichang && $(this).attr("data-s") <= parseFloat(this_s)){
+				$(this).addClass("disabled");
+			}
+			if($(this).attr("data-e") >= parseFloat(this_e) && $(this).attr("data-e") < parseFloat(this_e)+fuwushichang){
+				$(this).addClass("disabled");
+			}
+		})
+		$(obj).removeClass("disabled");
+	}
+	yuyuetime();
+}
+
+</script>
+
+<script>
+$(function(){
+	/*单选 custom-js*/
+	$('.radio_box input').each(function(){
+		if($(this).attr('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.radio_box .radio_item').on('click',function(){
+		if($(this).prev().attr('checked')){
+			//$(this).prev().attr('checked',false);
+			//$(this).parent().parent().find('.radio_item').removeClass('current');
+		}else{
+			$(this).prev().attr('checked',true);
+			$(this).parent().parent().find('.radio_item').removeClass('current');
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+
+</script>
+<script>
+$(function(){
+	/*多选 custom-js*/
+	$('.switch_box input').each(function(){
+		if($(this).prop('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.switch_box .switch_item').click(function(){
+		if($(this).prev().prop('checked')){
+			$(this).prev().prop('checked',false);
+			$(this).removeClass('current');
+		}else{
+			$(this).prev().prop('checked',true);
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+</script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

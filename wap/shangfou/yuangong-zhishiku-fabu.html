@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>员工-知识库-发布</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.feedback body {
+	background-color: #EFEFF4;
+}
+.feedback input,
+.feedback textarea {
+	border: none !important;
+}
+.feedback textarea {
+	height: 100px;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+.feedback .row {
+	width: 100%;
+	background-color: #fff;
+}
+.feedback p {
+	padding: 10px 15px 0;
+}
+.feedback .hidden {
+	display: none;
+}
+.feedback .image-list {
+	width: 100%;
+	height: 85px;
+	background-size: cover;
+	padding: 10px 10px;
+	overflow: hidden;
+}
+.feedback .image-item {
+	width: 65px;
+	height: 65px;
+	background-image: url(images/iconfont-tianjia.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	position: relative;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #e8e8e8;
+}
+.feedback .image-item input[type="file"] {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 0;
+}
+.feedback .image-item.space {
+	border: none;
+}
+.feedback .image-item .image-close {
+	position: absolute;
+	display: inline-block;
+	right: -6px;
+	top: -6px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 12px;
+	background-color: #FF5053;
+	color: #f3f3f3;
+	border: solid 1px #FF5053;
+	font-size: 9px;
+	font-weight: 200;
+	z-index: 1;
+}
+.feedback .image-item.space .image-close {
+	display: none;
+}
+#head {
+line-height: 40px;
+}
+#head-img1 {
+position: absolute;
+bottom: 10px;
+right: 40px;
+width: 40px;
+height: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="mui-bar mui-bar-nav">
+<a class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+<h1 class="mui-title">发布</h1>
+</header>
+
+<div class="mui-content mui-scroll-wrapper feedback">
+<div class="mui-scroll">
+<div class="mui-content">
+	<p>标题</p>
+	<div class="mui-input-row"><input type="text" placeholder="请输入标题"/></div>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell">
+            <a id="head" class="mui-navigate-right">封面图
+                <span class="mui-pull-right head">
+                    <img class="head-img mui-action-preview" id="head-img1" src="images/130x130.jpg"/>
+                    <input type="file"  filenum='1' style="position:absolute;bottom:00px;right:00px;width:100%;height:100%; opacity:0; -webkit-opacity:0;" accept="image/*"/>
+                </span>
+            </a>
+        </li>
+        <li class="mui-input-row">
+            <label><i class="iconfont icon-recharge txt-yellow mr10"></i>金额</label><input type="text" class="mui-text-right txt-yellow" placeholder="请输入"/>
+        </li>
+    </ul>
+    <p>描述</p>
+	<div class="row mui-input-row">
+        <textarea id="question" class="mui-input-clear question" placeholder="简单描述一下你的原创..."></textarea>
+    </div>
+    <p>描述</p>
+	<div class="row mui-input-row">
+        <textarea id="question" class="mui-input-clear question" placeholder="填写你要分享的内容..."></textarea>
+    </div>
+	<div class="mui-button-row mui-content-padded"><button type="submit" class=" mui-btn-block mui-btn-blue">提 交</button></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false //右滑关闭功能
+});
+ //初始化单页的区域滚动
+		mui('.mui-scroll-wrapper').scroll();
+
+</script>
+<script type="text/javascript" src="js/LocalResizeIMG.js"></script>
+<script type="text/javascript" src="js/patch/mobileBUGFix.mini.js"></script>
+<script type="text/javascript">
+	$('input[type=file]').on('tap',function(){
+		var num = $(this).attr('filenum');
+		var nextnum = parseInt(num) +1;
+		$(this).localResizeIMG({
+			width: 50,
+			quality:1,
+			success:function(result){
+				var img = new Image();
+				img.src = result.base64;
+				$('#head-img'+num).attr('src',img.src);
+				console.log(result);
+			}
+		})
+	})
+</script>
+
+
+</body>
+</html>

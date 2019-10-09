@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html style=" font-size:100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>礼品卡详情</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/mui.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script src="js/jquery1.72.min.js"></script>
+<script src="js/mui.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+</head>
+
+<body class="page-gift-article">
+
+<!--导航 手机版start-->
+<div class="bottombar">
+	<ul class="clearfix">
+		<li><a href="#info" class="btn btn_middle btn_blue radius-5 ease-1">立即购买</a></li>
+	</ul>
+</div>
+<!--导航手机版end-->
+
+
+
+
+
+<!--主体start-->
+<div class="mainbody" style="top:0rem; bottom:.6rem; left:0; right:0;">
+
+<!--banner start-->
+<div class="banner_index">
+	<div class="slider_default" id="indexslider">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="images/pic_gift_01.jpg"></div>
+			<div class="swiper-slide"><img src="images/pic_gift_01.jpg"></div>
+		</div>
+		<div class="hd">
+			<ul></ul>
+		</div>
+	</div>
+</div>
+<!--banner end-->
+
+<ul class="ul_view ul_view_group mb10">
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1>e帮您200元礼品充值卡 送礼必备</h1>
+		<h1><span class="txt-red">¥ 200.00</span></h1>
+	</div></li>
+	<li class="ul_view_cell"><a href="my-charge.html" class="ul_view_cell_a">
+		<h1>&nbsp;<span class="fr txt-blue mr20 fs12">充值享优惠</span></h1>
+		<i class="iconfont arrow txt-blue fs12">&#xe610;</i>
+	</a></li>
+</ul>
+
+
+
+
+
+<!--服务块start-->
+<ul class="ul_view mb10">
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<div class="text_box">
+		<!--正文开始start-->
+		<img src="images/pic_nr_00.jpg" />
+		<!--正文结束end-->
+		</div>
+	</div></li>
+</ul>
+<!--正文块end-->
+
+<!--正文块start-->
+<ul class="ul_view mb10">
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<div class="text_box">
+		<!--正文开始start-->
+		<img src="images/pic_nr_01.jpg" />
+		<!--正文结束end-->
+		</div>
+	</div></li>
+</ul>
+<!--正文块end-->
+
+
+
+</div>
+<!--主体end-->
+
+
+
+
+
+
+
+
+
+<div id="info" class="mui-popover mui-popover-action mui-popover-bottom">
+<div class="mainbody" style="top:auto; bottom:.6rem; left:0; right:0;">
+<form id="form1" method="post">
+<ul class="ul_view ul_view_group">
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1>礼品卡形式</h1>
+		<div class="blank10"></div>
+		<div class="beizhu_box">
+			<div class="switch_box">
+				<ul class="ul">
+					<li class="li">
+						<input type="radio" name="paytype" checked/>
+						<div class="switch_item"><h2>电子卡</h2><i class="icon_ebn icon-checkbox"></i></div>
+					</li>
+					<li class="li">
+						<input type="radio" name="paytype" />
+						<div class="switch_item"><h2>实体卡</h2><i class="icon_ebn icon-checkbox"></i></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div></li>
+	<li class="ul_view_cell"><div href="###" class="ul_view_cell_a ul_view_cell_a_numbox">
+		<h1>数量</h1>
+		<div class="numbox inlineblock" >
+		  <a class="inlineblock reduce disabled" onClick="amount.reduce('#amount_html_1')" href="javascript:void(0)">-</a>
+		  <span class="inlineblock num_html num_html_1" id="amount_html_1" data-amount="0">0</span>
+		  <a class="inlineblock add" onClick="amount.add('#amount_html_1')" href="javascript:void(0)">+</a>
+		  <input type="hidden" name="" style="display:none;" />
+		</div>
+	</div></li>
+</ul>
+<input type="submit" style="display:none;" />
+</form>
+</div>
+<!--导航 手机版start-->
+<div class="bottombar">
+	<ul class="clearfix">
+		<li><a href="order-gift.html" class="btn btn_middle btn_blue radius-5 ease-1" onClick="$('#form1').submit();">确认购买</a></li>
+	</ul>
+</div>
+<!--导航手机版end-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//首页手机版 js
+//banner phone
+var bannerswiper = new Swiper('#indexslider', {
+	pagination: '.banner_index .hd',
+	//paginationClickable: '.hd',
+	//effect: 'fade',
+	//fade:{crossFade: false},
+	autoplay: 2500,
+	autoplayDisableOnInteraction : false,
+	speed:1000,
+	loop:true
+});
+
+
+</script>
+<script>
+$(function(){
+	/*单选 custom-js*/
+	$('.switch_box input').each(function(){
+		if($(this).prop('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.switch_box .switch_item').click(function(){
+		if($(this).prev().prop('checked')){
+			//$(this).prev().prop('checked',false);
+			//$(this).removeClass('current');
+		}else{
+			$(this).prev().prop('checked',true);
+			$(this).parent().parent().find('.switch_item').removeClass('current');
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+</script>
+
+<script type="text/javascript">
+//数量增减
+var amount = {
+	min:0,
+	max:99,
+	reduce:function(obj){
+		var x = parseFloat($(obj).html());
+		if(x > this.min){
+			$(obj).prev().removeClass("disabled")
+			$(obj).next().removeClass("disabled")
+			x= x-1;
+			$(obj).html(x);
+			$(obj).attr("data-amount",x);
+			$(obj).siblings("input").val(x)
+		}else{
+			//比最小值还小的情况
+			$(obj).prev().addClass("disabled")
+		}
+	},
+	add:function(obj){
+		var x = parseFloat($(obj).html());
+		if(x < this.max){
+			$(obj).prev().removeClass("disabled")
+			$(obj).next().removeClass("disabled")
+			x= x+1;
+			$(obj).html(x);
+			$(obj).attr("data-amount",x);
+			$(obj).siblings("input").val(x)
+		}else{
+			//比最大值还大的情况
+			$(obj).next().addClass("disabled")
+		}
+	}
+}
+</script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

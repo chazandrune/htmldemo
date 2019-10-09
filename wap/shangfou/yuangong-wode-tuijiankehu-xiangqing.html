@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>员工-我的-推荐客户-详情</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.feedback body {
+	background-color: #EFEFF4;
+}
+.feedback input,
+.feedback textarea {
+	border: none !important;
+}
+.feedback textarea {
+	height: 100px;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+.feedback .row {
+	width: 100%;
+	background-color: #fff;
+}
+.feedback p {
+	padding: 10px 15px 0;
+}
+.feedback .hidden {
+	display: none;
+}
+.mui-input-row .mui-btn.btn-select{ width:50%; padding-right:40px; text-align:right; position:absolute; top:1px; right:0; border:0; color:#666; font-size:17px;}
+.huifangname{ background:#888}
+.huifangname-red{ background:#ff4747;}
+.huifangname-green{ background:#ff4747;}
+</style>
+</head>
+
+<body>
+
+
+
+<div class="mui-content mui-scroll-wrapper feedback">
+<div class="mui-scroll">
+	<div class="mui-table-view-cell huifangname-red">
+    <h4 class="txt-c txt-white">未回访</h4>
+    </div>
+
+	<div style=" padding:10px;background-color:#fff; position:relative;">
+    	<h6>合同编号：213782871  2015-05-01 11:32</h6>
+        <div class="clearfix"><h4 class="man-name txt-333 mui-pull-left"><i class="iconfont icon-peoplefill txt-888"></i>宋杨</h4></div>
+        <div class="clearfix"><h4 class="man-name txt-333 mui-pull-left"><i class="iconfont icon-mobilefill txt-888"></i>13212341234</h4></div>
+        <div class="clearfix"><h5 class="man-phone txt-333 mui-pull-left"><i class="iconfont icon-locationfill txt-888"></i>北京市西城区</h5></div>
+        <a href="#dial" class="mui-btn mui-btn-link" style="position:absolute; right:20px; top:40%; "><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+    </div>
+<form class="mui-content">
+	<p>房屋信息</p>
+	<div class="row mui-input-row mb20">
+        <p class="txt-333">康馨家园 90㎡ 一室一厅 毛坯房</p>
+    </div>
+    <ul class="mui-table-view mui-input-group">
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            <label>状态</label><button id='showUserPicker' class="mui-btn mui-btn-block btn-select" type='button'>未回访</button>
+            </div>
+        </li>
+    </ul>
+	<div class="mui-button-row mui-content-padded"><button type="submit" class=" mui-btn-block mui-btn-yellow">提 交</button></div>
+</form>
+</div>
+</div>
+
+
+
+
+
+<div id="dial" class="mui-popover mui-popover-action mui-popover-bottom">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="tel:13212341234">拨打电话：13212341234</a></li>
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#dial"><b>取消</b></a></li>
+    </ul>
+</div>
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false //右滑关闭功能
+});
+ //初始化单页的区域滚动
+mui('.mui-scroll-wrapper').scroll();
+
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//身材选单
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'ywj',
+						text: '未回访'
+					}, {
+						value: 'aaa',
+						text: '跟踪中'
+					}, {
+						value: 'lj',
+						text: '无意向'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+					var userResult = doc.getElementById('showUserPicker');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							userResult.innerText = JSON.stringify(items[0]['text']);
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+				});
+			})(mui, document);
+			
+			
+</script>
+
+
+</body>
+</html>

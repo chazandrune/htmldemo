@@ -1,0 +1,867 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no" />
+<title>媒体资讯-良业</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/custom-ui.css">
+<link type="text/css" rel="stylesheet" href="css/animate.min.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/response.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="js/jquery.roundabout2.js"></script>
+<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript" src="js/adjust.js"></script>
+<!--[if IE]><script type="text/javascript" src=”js/html5.js”></script>
+<script type="text/javascript" src="js/jquery.JPlaceholder.js"></script>
+<![endif]-->
+</head>
+
+<body class="page-news">
+<!--[if lte IE 9]>
+<div class="ie7_hints">温馨提示：您所使用的浏览器版本过低，为保证账户安全和浏览体验建议升级为最新版本浏览器</div>
+<![endif]-->
+
+<!--top start-->
+<div class="topbar">
+<div class="w1200 mar0 clearfix">
+	<div class="fl"><span>您好，欢迎进入良业官方网站</span></div>
+	<div class="fr">
+		<a href="20years.html" class="btn_20years"><img src="images/year20th.png" alt="逐光20年" /></a>
+		<a href="about.html">关于良业</a>
+		<a href="news.html">媒体资讯</a>
+	</div>
+	<div class="clr"></div>
+</div>
+</div>
+<!--top end-->
+
+
+
+<!--头部 手机版start-->
+<div class="head-phone phone fixed">
+<h1 class="text-overflow">
+<a href="index.html"><img src="images/logo-mobile.png"  alt="良业"/><i class="iconfont">&#xe63b;</i></a></h1>
+<a href="###" class="head-btn head-btn-r sidemenu_btn_01"><i class="iconfont">&#xe673;</i></a>
+</div>
+<div class="nav_mask phone"></div>
+<!--<ul class="nav_phone_ul phone">
+	<li><a href="###">关于我们</a></li>
+</ul>-->
+<script type="text/javascript">
+$(function(){
+	$('.menu_btn').click(function(){
+		$('.nav_mask').slideToggle(0);
+		$('.nav_phone_ul').slideToggle(300);
+		$('.menu_btn').toggleClass('on');
+		$('html').css('overflow-y','hidden');
+	});
+	$('.nav_mask').click(function(){
+		$('.nav_mask').slideToggle(0);
+		$('.nav_phone_ul').slideToggle(300);
+		$('.menu_btn').toggleClass('on');
+		$('html').css('overflow-y','auto');
+	});
+})
+</script>
+<!--头部 手机版end-->
+<!--导航 手机版start-->
+<!--<div class="bottombar phone">
+	<ul class="clearfix">
+    	<li><a href="index.html">
+        	<i class="iconfont">&#xe618;</i>
+            立即预约
+        </a></li>
+    	<li><a href="tel:400-105-9788">
+        	<i class="iconfont">&#xe66e;</i>
+            免费热线
+        </a></li>
+    </ul>
+</div>-->
+<!--导航手机版end-->
+<!--手机版 侧边分类及侧边搜索 start-->
+<script>
+$(function(){
+	$('.sidemenu_btn_01').click(function(){
+		$('.sidemenu_mask').fadeIn(300);
+		$('.sidemenu').animate({'right':'0%','opacity':'1'},500);
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','hidden');
+	});
+	$('.sidemenu_btn_02').click(function(){
+		$('.sidemenu_mask').fadeIn(300);
+		$('.sidesearch').animate({'bottom':'0%','opacity':'1'},500);
+		$('.searchinput_phone').focus();
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','hidden');
+	});
+	$('.sidemenu_mask').click(function(){
+		$('.sidemenu_mask').fadeOut(300);
+		$('.sidemenu').animate({'right':'-70%','opacity':'0'},500);
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','auto');
+	});
+	$('.sidemenu_close').click(function(){
+		$('.sidemenu_mask').fadeOut(300);
+		$('.sidemenu').animate({'right':'-70%','opacity':'0'},500);
+		$('.sidesearch').animate({'bottom':'100%','opacity':'0'},500);
+		$('.searchinput_phone').val("");
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','auto');
+	});
+})
+</script>
+<div class="sidemenu_mask phone"></div>
+<div class="sidemenu phone">
+	<div class="head-phone">
+		<h1><a href="20years.html"><img src="images/year20th@2x.png" alt="逐光20年" /></a></h1>
+		<a href="###" class="head-btn head-btn-r sidemenu_close"><i class="iconfont">&#xe613;</i></a>
+	</div>
+	<h3><a href="index.html">首页</a></h3>
+	<ul></ul>
+	<h3 class="hassub"><a href="zhanlve.html">战略<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="zhanlve-article.html" class="ease-1">服务内涵</a></li>
+		<li><a href="zhanlve-article.html" class="ease-1">主要载体</a></li>
+	</ul>
+	<h3 class="hassub"><a href="moshi.html">模式<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="moshi-article.html" class="ease-1">投资</a></li>
+		<li><a href="moshi-article.html" class="ease-1">建设</a></li>
+		<li><a href="moshi-article.html" class="ease-1">运营</a></li>
+	</ul>
+	<h3 class="hassub"><a href="jishu.html">技术<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="jishu-article.html" class="ease-1">技术集成</a></li>
+		<li><a href="jishu-article.html" class="ease-1">系统整合</a></li>
+	</ul>
+	<h3 class="hassub"><a href="guanli.html">管理<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="guanli-article.html" class="ease-1">平台整合</a></li>
+		<li><a href="guanli-article.html" class="ease-1">管理模式</a></li>
+		<li><a href="guanli-article.html" class="ease-1">文化理念</a></li>
+	</ul>
+	<h3 class="hassub"><a href="cases.html">业绩<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="cases-list.html" class="ease-1">基础光环境</a></li>
+		<li><a href="cases-list.html" class="ease-1">文旅光环境</a></li>
+		<li><a href="cases-list.html" class="ease-1">商业光环境</a></li>
+		<li><a href="cases-list.html" class="ease-1">办公光环境</a></li>
+		<li><a href="cases-list.html" class="ease-1">智慧光环境</a></li>
+	</ul>
+	<h3><a href="about.html">关于良业</a></h3>
+	<ul></ul>
+	<h3><a href="news.html">媒体资讯</a></h3>
+	<ul></ul>
+</div>
+<script type="text/javascript">
+/*jQuery(".sidemenu").slide({
+	titCell:"h3", //鼠标触发对象
+	targetCell:"ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+	effect:"slideDown", //targetCell下拉效果
+	delayTime:500 , //效果时间
+	triggerTime:100, //鼠标延迟触发时间（默认150）
+	defaultPlay:false,//默认是否执行效果（默认true）
+	returnDefault:true, //鼠标从.sideMen移走后返回默认状态（默认false）
+	trigger:"click"
+});*/
+/*$(".sidemenu .hassub").click(function(){
+	$(this).next('ul').stop(true,true).slideToggle();
+	$(this).stop(true,true).toggleClass("on");
+})*/
+</script>
+<!--手机版 侧边分类及侧边搜索 end-->
+
+
+
+
+
+
+
+
+<!--头部 & banner start-->
+<div class="section index_banner pc">
+
+<!--头部start-->
+<div class="head ease-3" id="head">
+<div class="w1200 clearfix mar0">
+	<div class="line"><div class="img"></div></div>
+	<div class="fl"><a class="logo" href="index.html" title="良业"><img src="images/logo.png" class="ease-3" alt="良业" /></a></div>
+	<a href="20years.html" class="btn_20years"><img src="images/year20th.png" alt="逐光20年" /></a>
+	<div class="fr">
+	<!--导航start-->
+	<div class="navbox">
+		<ul class="clearfix nav_shu">
+			<li class="nLi"><h3><a class="ease-1" href="index.html">首 页</a></h3>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="zhanlve.html">战 略</a></h3>
+				<ul class="sub">
+					<li><a href="zhanlve-article.html" class="ease-3">服务内涵</a></li>
+					<li><a href="zhanlve-article.html" class="ease-3">主要载体</a></li>
+				</ul>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="moshi.html">模 式</a></h3>
+				<ul class="sub">
+					<li><a href="moshi-article.html" class="ease-3">投资</a></li>
+					<li><a href="moshi-article.html" class="ease-3">建设</a></li>
+					<li><a href="moshi-article.html" class="ease-3">运营</a></li>
+				</ul>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="jishu.html">技 术</a></h3>
+				<ul class="sub">
+					<li><a href="jishu-article.html" class="ease-3">技术集成</a></li>
+					<li><a href="jishu-article.html" class="ease-3">系统整合</a></li>
+				</ul>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="guanli.html">管 理</a></h3>
+				<ul class="sub">
+					<li><a href="guanli-article.html" class="ease-3">平台整合</a></li>
+					<li><a href="guanli-article.html" class="ease-3">管理模式</a></li>
+					<li><a href="guanli-article.html" class="ease-3">文化理念</a></li>
+				</ul>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="cases.html">业 绩</a></h3>
+				<ul class="sub">
+					<li><a href="cases-list.html" class="ease-3">基础光环境</a></li>
+					<li><a href="cases-list.html" class="ease-3">文旅光环境</a></li>
+					<li><a href="cases-list.html" class="ease-3">商业光环境</a></li>
+					<li><a href="cases-list.html" class="ease-3">办公光环境</a></li>
+					<li><a href="cases-list.html" class="ease-3">智慧光环境</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--导航end-->
+	</div>
+</div>
+</div>
+<!--头部end-->
+
+
+<!--大切换图start-->
+<div id="indexslider">
+    <div class="swiper-wrapper">
+		
+        <div class="swiper-slide" style=" background-image:url(images/banner_news.jpg);"><a href="###"></a></div>
+		
+    </div>
+    <!--<div class="hd ease-3 txt-c">
+    	<ul></ul>
+    </div>
+    <a class="arrow prev ease-3 radius-5" href="javascript:void(0)"><i class="iconfont">&#xe60f;</i></a>
+    <a class="arrow next ease-3 radius-5" href="javascript:void(0)"><i class="iconfont">&#xe610;</i></a>-->
+</div>
+<!--大切换图start-->
+</div>
+<script type="text/javascript">
+//banner
+$(function(){
+	var mousetime = 0;
+	$(document).mousemove(function(){
+		clearInterval(mousetime);
+		$("#indexslider").find(".arrow").addClass('arrow_show');
+		$("#indexslider").find(".hd").addClass('hd_show');
+		mousetime = setInterval("$('#indexslider').click();",2000)
+	});
+	$("#indexslider").click(function(){
+		$(this).find('.arrow').removeClass('arrow_show');
+		$(this).find('.hd').removeClass('hd_show');
+	})
+})
+$("#indexslider").slide({
+	titCell: ".hd ul",
+	prevCell:'.prev',
+	nextCell:'.next',
+	autoPage: true,  //是否使用自动显示分页
+	mainCell:".swiper-wrapper",
+	autoPlay:true,
+	effect:"fold",   //特效left,leftLoop,topLoop,top,fade（支持响应窗口大小）,
+	easing:"easeOutCirc",  //缓动效果 easeInQuint,easeInBack,easeOutBounce,easeOutElastic
+	trigger:"click",   //触发方式  mouseover,click
+	delayTime:1000,  //延迟时间
+	interTime:5000,  //间隔时间
+	triggerTime:0,
+	pnLoop:true,   //前后按钮循环，默认true
+	mouseOverStop:true   //鼠标经过停止播放，默认true
+	/*startFun:function(i,c,slider, titCell, mainCell, targetCell, prevCell, nextCell){
+		$('#indexslider .swiper-wrapper .swiper-slide').eq(i).addClass("enter").siblings().removeClass("enter");
+	}*/
+});
+</script>
+<!--banner end-->
+
+
+<!--banner phone start-->
+<div class="section index_banner_phone phone">
+<!--大切换图start-->
+<div class="banner_index_phone">
+	<div class="slider_default" id="indexslider_phone">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide swiper-no-swiping" style="background-image:url(images/banner_news.jpg);"><a href="###"></a></div>
+		</div>
+		<!--<div class="hd txt-c">
+			<ul></ul>
+		</div>-->
+	</div>
+</div>
+<!--大切换图start-->
+</div>
+<script>
+//首页手机版 js
+//banner phone
+var bannerswiper = new Swiper('#indexslider_phone', {
+	pagination: '.banner_index_phone .hd',
+	//paginationClickable: '.hd',
+	//effect: 'fade',
+	//fade:{crossFade: false},
+	autoplay: false,
+	autoplayDisableOnInteraction : false,
+	speed:1000,
+	loop:true
+});
+</script>
+<!--banner phone start-->
+
+
+
+<!--辅页内容区 start-->
+<div class="con_fu">
+<div class="con_fu_inner mar0">
+	<em class="shadow shadow01"></em>
+	<em class="shadow shadow02"></em>
+	
+	<!--行业资讯 start-->
+	<div class="con_news clearfix">
+		<div class="con_txts">
+			<div class="bt">
+				<h1>行业资讯</h1>
+				<div class="morebox txt-r"><a href="news-list.html" class="more ease-3"><i class="iconfont">&#xe641;</i><span>查看更多</span></a></div>
+			</div>
+			<p class="desc">资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述</p>
+			<ul class="nr">
+				<li><i class="iconfont">&#xe610;</i><a href="news-article.html" class="ease-1">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a><span class="date">[ 2017-02-01 ]</span></li>
+				<li><i class="iconfont">&#xe610;</i><a href="news-article.html" class="ease-1">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a><span class="date">[ 2017-02-01 ]</span></li>
+				<li><i class="iconfont">&#xe610;</i><a href="news-article.html" class="ease-1">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a><span class="date">[ 2017-02-01 ]</span></li>
+			</ul>
+		</div>
+		<div class="con_pics">
+		
+			<!--轮播 start-->
+			<div class="slider_default pc">
+				<div class="bd">
+					<ul class="clearfix">
+						<li class="block">
+							<a href="news-article.html" class="item ease-3">
+								<div class="pic">
+									<div class="img ease-3" style=" background-image:url(images/pic_cases_03.jpg);"></div>
+								</div>
+							</a>
+						</li>
+						<li class="block">
+							<a href="news-article.html" class="item ease-3">
+								<div class="pic">
+									<div class="img ease-3" style=" background-image:url(images/pic_cases_02.jpg);"></div>
+								</div>
+							</a>
+						</li>
+						<li class="block">
+							<a href="news-article.html" class="item ease-3">
+								<div class="pic">
+									<div class="img ease-3" style=" background-image:url(images/pic_cases_01.jpg);"></div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hd"><ul></ul></div>
+				<a href="###" class="arrow ease-3 prev"><i class="iconfont">&#xe60f;</i></a>
+				<a href="###" class="arrow ease-3 next"><i class="iconfont">&#xe610;</i></a>
+			</div>
+			<!--轮播 end-->
+			
+			<!--轮播 phone start-->
+			<div class="swiper-container swiper-default phone" id="swiper-default-01">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style=" background-image:url(images/pic_cases_03.jpg);"><a href="##"></a></div>
+					<div class="swiper-slide" style=" background-image:url(images/pic_cases_02.jpg);"><a href="##"></a></div>
+					<div class="swiper-slide" style=" background-image:url(images/pic_cases_01.jpg);"><a href="##"></a></div>
+				</div>
+				<div class="hd"></div>
+				<a href="###" class="arrow ease-1 hPrev"><i class="iconfont">&#xe60f;</i></a>
+				<a href="###" class="arrow ease-1 hNext"><i class="iconfont">&#xe610;</i></a>
+			</div>
+			<!--轮播 phone end-->
+			
+		</div>
+		<div class="clr"></div>
+	</div>
+	<!--行业资讯 end-->
+	
+	<!--公司活动 start-->
+	<div class="con_news clearfix left">
+		<div class="con_txts">
+			<div class="bt">
+				<h1>公司活动</h1>
+				<div class="morebox txt-r"><a href="news-list.html" class="more ease-3"><i class="iconfont">&#xe641;</i><span>查看更多</span></a></div>
+			</div>
+			<p class="desc">资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述</p>
+			<ul class="nr">
+				<li><i class="iconfont">&#xe610;</i><a href="news-article.html" class="ease-1">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a><span class="date">[ 2017-02-01 ]</span></li>
+				<li><i class="iconfont">&#xe610;</i><a href="news-article.html" class="ease-1">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a><span class="date">[ 2017-02-01 ]</span></li>
+				<li><i class="iconfont">&#xe610;</i><a href="news-article.html" class="ease-1">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a><span class="date">[ 2017-02-01 ]</span></li>
+			</ul>
+		</div>
+		<div class="con_pics">
+
+			<!--轮播 start-->
+			<div class="slider_default pc">
+				<div class="bd">
+					<ul class="clearfix">
+						<li class="block">
+							<a href="news-article.html" class="item ease-3">
+								<div class="pic">
+									<div class="img ease-3" style=" background-image:url(images/pic_cases_01.jpg);"></div>
+								</div>
+							</a>
+						</li>
+						<li class="block">
+							<a href="news-article.html" class="item ease-3">
+								<div class="pic">
+									<div class="img ease-3" style=" background-image:url(images/pic_cases_02.jpg);"></div>
+								</div>
+							</a>
+						</li>
+						<li class="block">
+							<a href="news-article.html" class="item ease-3">
+								<div class="pic">
+									<div class="img ease-3" style=" background-image:url(images/pic_cases_03.jpg);"></div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hd"><ul></ul></div>
+				<a href="###" class="arrow ease-3 prev"><i class="iconfont">&#xe60f;</i></a>
+				<a href="###" class="arrow ease-3 next"><i class="iconfont">&#xe610;</i></a>
+			</div>
+			<!--轮播 end-->
+			
+			<!--轮播 phone start-->
+			<div class="swiper-container swiper-default phone" id="swiper-default-02">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style=" background-image:url(images/pic_cases_01.jpg);"><a href="##"></a></div>
+					<div class="swiper-slide" style=" background-image:url(images/pic_cases_02.jpg);"><a href="##"></a></div>
+					<div class="swiper-slide" style=" background-image:url(images/pic_cases_03.jpg);"><a href="##"></a></div>
+				</div>
+				<div class="hd"></div>
+				<a href="###" class="arrow ease-1 hPrev"><i class="iconfont">&#xe60f;</i></a>
+				<a href="###" class="arrow ease-1 hNext"><i class="iconfont">&#xe610;</i></a>
+			</div>
+			<!--轮播 phone end-->
+
+		</div>
+		<div class="clr"></div>
+	</div>
+	<!--公司活动 end-->
+	
+	<!--逐光小品 start-->
+	<div class="con_news clearfix">
+		<div class="con_txts">
+			<div class="bt">
+				<h1>逐光小品</h1>
+				<div class="morebox txt-r"><a href="news-list.html" class="more ease-3"><i class="iconfont">&#xe641;</i><span>查看更多</span></a></div>
+			</div>
+			<p class="desc">资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述资讯综述</p>
+			<ul class="nr">
+				<li><i class="iconfont">&#xe610;</i><a href="news-article.html" class="ease-1">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a><span class="date">[ 2017-02-01 ]</span></li>
+				<li><i class="iconfont">&#xe610;</i><a href="news-article.html" class="ease-1">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a><span class="date">[ 2017-02-01 ]</span></li>
+				<li><i class="iconfont">&#xe610;</i><a href="news-article.html" class="ease-1">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a><span class="date">[ 2017-02-01 ]</span></li>
+			</ul>
+		</div>
+		<div class="con_pics">
+
+			<!--轮播 start-->
+			<div class="slider_default pc">
+				<div class="bd">
+					<ul class="clearfix">
+						<li class="block">
+							<a href="news-article.html" class="item ease-3">
+								<div class="pic">
+									<div class="img ease-3" style=" background-image:url(images/pic_cases_03.jpg);"></div>
+								</div>
+							</a>
+						</li>
+						<li class="block">
+							<a href="news-article.html" class="item ease-3">
+								<div class="pic">
+									<div class="img ease-3" style=" background-image:url(images/pic_cases_05.jpg);"></div>
+								</div>
+							</a>
+						</li>
+						<li class="block">
+							<a href="news-article.html" class="item ease-3">
+								<div class="pic">
+									<div class="img ease-3" style=" background-image:url(images/pic_cases_04.jpg);"></div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hd"><ul></ul></div>
+				<a href="###" class="arrow ease-3 prev"><i class="iconfont">&#xe60f;</i></a>
+				<a href="###" class="arrow ease-3 next"><i class="iconfont">&#xe610;</i></a>
+			</div>
+			<!--轮播 end-->
+			
+			<!--轮播 phone start-->
+			<div class="swiper-container swiper-default phone" id="swiper-default-03">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style=" background-image:url(images/pic_cases_03.jpg);"><a href="##"></a></div>
+					<div class="swiper-slide" style=" background-image:url(images/pic_cases_05.jpg);"><a href="##"></a></div>
+					<div class="swiper-slide" style=" background-image:url(images/pic_cases_04.jpg);"><a href="##"></a></div>
+				</div>
+				<div class="hd"></div>
+				<a href="###" class="arrow ease-1 hPrev"><i class="iconfont">&#xe60f;</i></a>
+				<a href="###" class="arrow ease-1 hNext"><i class="iconfont">&#xe610;</i></a>
+			</div>
+			<!--轮播 phone end-->
+
+		</div>
+		<div class="clr"></div>
+	</div>
+	<!--逐光小品 end-->
+	
+</div>
+</div>
+<!--辅页内容区 end-->
+
+
+<!--图片新闻 start-->
+<div class="picnews con_news">
+	<div class="bt txt-c">
+		<h1 class="mb20"><i class="iconfont mr10">&#xe647;</i>图片新闻</h1>
+		<div class="morebox txt-c"><a href="news-list-pic.html" class="more ease-3"><i class="iconfont">&#xe641;</i><span>查看更多</span></a></div>
+	</div>
+	<div class="nr">
+		<div class="swiper-container slider_picnews" id="slider_picnews">
+			<div class="swiper-wrapper">
+			
+				<div class="swiper-slide list_picnews">
+					<ul class="picnews_group clearfix">
+						<li class="grid-item">
+							<a href="##" class="item" onclick="tanchupicnews('news-article-pic.html')">
+								<div class="pic" style="background-image:url(images/pic_cases_06.jpg);"></div>
+								<div class="cube"><i class="iconfont icon01">&#xe60a;</i><i class="iconfont icon02">&#xe60a;</i></div>
+								<div class="txt txt-c text-overflow">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</div>
+							</a>
+						</li>
+						<li class="grid-item">
+							<a href="##" class="item" onclick="tanchupicnews('news-article-pic.html')">
+								<div class="pic" style="background-image:url(images/pic_cases_05.jpg);"></div>
+								<div class="cube"><i class="iconfont icon01">&#xe60a;</i><i class="iconfont icon02">&#xe60a;</i></div>
+								<div class="txt txt-c text-overflow">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</div>
+							</a>
+						</li>
+						<li class="grid-item">
+							<a href="##" class="item" onclick="tanchupicnews('news-article-pic.html')">
+								<div class="pic" style="background-image:url(images/pic_cases_04.jpg);"></div>
+								<div class="cube"><i class="iconfont icon01">&#xe60a;</i><i class="iconfont icon02">&#xe60a;</i></div>
+								<div class="txt txt-c text-overflow">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</div>
+							</a>
+						</li>
+						<li class="grid-item">
+							<a href="##" class="item" onclick="tanchupicnews('news-article-pic.html')">
+								<div class="pic" style="background-image:url(images/pic_cases_03.jpg);"></div>
+								<div class="cube"><i class="iconfont icon01">&#xe60a;</i><i class="iconfont icon02">&#xe60a;</i></div>
+								<div class="txt txt-c text-overflow">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</div>
+							</a>
+						</li>
+						<li class="grid-item">
+							<a href="##" class="item" onclick="tanchupicnews('news-article-pic.html')">
+								<div class="pic" style="background-image:url(images/pic_cases_02.jpg);"></div>
+								<div class="cube"><i class="iconfont icon01">&#xe60a;</i><i class="iconfont icon02">&#xe60a;</i></div>
+								<div class="txt txt-c text-overflow">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</div>
+							</a>
+						</li>
+						<li class="grid-item">
+							<a href="##" class="item" onclick="tanchupicnews('news-article-pic.html')">
+								<div class="pic" style="background-image:url(images/pic_cases_01.jpg);"></div>
+								<div class="cube"><i class="iconfont icon01">&#xe60a;</i><i class="iconfont icon02">&#xe60a;</i></div>
+								<div class="txt txt-c text-overflow">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</div>
+							</a>
+						</li>
+						<li class="clr"></li>
+					</ul>
+				</div>
+				
+			</div>
+			<a href="###" class="arrow ease-3 radius-circle prev"><i class="iconfont">&#xe60f;</i></a>
+			<a href="###" class="arrow ease-3 radius-circle next"><i class="iconfont">&#xe610;</i></a>
+		</div>
+	</div>
+</div>
+<script>
+//图片新闻错落
+$(".picnews_group .grid-item:eq(0)").addClass("grid-item-w4");
+$(".picnews_group .grid-item:eq(1),.picnews_group .grid-item:eq(2)").addClass("grid-item-w3");
+//图片新闻轮播
+$("#slider_picnews").hover(function(){
+	$(this).find(".arrow").addClass('arrow_show');
+},function(){
+	$(this).find(".arrow").removeClass('arrow_show');
+});
+var slider_picnews = new Swiper('#slider_picnews', {
+	pagination: '.slider_picnews .hd',
+	//paginationClickable: '.hd',
+	//effect: 'fade',
+	//fade:{crossFade: false},
+	prevButton:'.slider_picnews .prev',
+	nextButton:'.slider_picnews .next',
+	autoplay: false,
+	autoplayDisableOnInteraction : false,
+	speed:1000,
+	loop:true
+});
+</script>
+<!--图片新闻 end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--footer start-->
+<div class="footer">
+
+<div class="foot">
+	<div class="w1200 mar0 clearfix">
+		<div class="foot_l">
+			<div class="foot_nav">
+				<a href="news-article.html" class="ease-1">法律条款</a>
+				<a href="contact.html" class="ease-1">联系我们</a>
+				<a href="join.html" class="ease-1">良人招聘</a>
+				<a href="download.html" class="ease-1">下载中心</a>
+			</div>
+			<div class="foot_infos">
+				<dl>
+					<dt><i class="iconfont">&#xe661;</i></dt>
+					<dd>官网：<a href="##" class="ease-1">www.landsky.cn</a></dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont">&#xe607;</i></dt>
+					<dd>电话：86-10-85862288</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont">&#xe662;</i></dt>
+					<dd>电话：86-10-85885958</dd>
+				</dl>
+			</div>
+			<div class="flinks">
+				<span class="title"><i class="iconfont mr10">&#xe688;</i>友情链接</span>
+				<a href="##" class="ease-1">中国照明网</a>
+				<a href="##" class="ease-1">阿拉丁照明网</a>
+				<a href="##" class="ease-1">携程网</a>
+				<a href="##" class="ease-1">去哪儿网</a>
+				<a href="##" class="ease-1">驴妈妈网</a>
+				<a href="##" class="ease-1">韩美林官方网站</a>
+			</div>
+		</div>
+		<div class="foot_r">
+			<a href="##" class="foot_logo"><img src="images/foot_logo.png" /></a>
+			<div class="functions">
+				<a href="##" class="item inlineblock ease-1 item_weixin"><i class="iconfont ease-1">&#xe609;</i><p class="ease-1">微信</p><div class="hide"><img src="images/erweima.jpg" /></div></a>
+				<a href="##" class="item inlineblock ease-1 item_mail"><i class="iconfont ease-1">&#xe60b;</i><p class="ease-1">邮箱</p></a>
+				<a href="##" class="item inlineblock ease-1 item_oa"><i class="iconfont ease-1">&#xe646;</i><p class="ease-1">OA</p></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div class="copyright">
+	<div class="w1200 mar0 clearfix">
+		<p class="txt-888 txt-c">版权所有 北京良业环境技术有限公司 Copyright © 2017 All Rights Reserved.  京ICP备13006032号-1</p>
+	</div>
+</div>
+<!--footer end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--右侧漂浮 公共 start-->
+<div class="fixed fixed_box fixed_box_r green">
+    <div class="item item_top item_open">
+        <a href="###" class="item_a ease-1">
+            <i class="icon iconfont">&#xe60d;</i>
+        </a>
+    </div>
+</div>
+<!--右侧漂浮 公共 end-->
+
+
+
+
+<!--图片新闻弹窗 start-->
+<script type="text/javascript">
+//图片新闻弹窗函数
+function tanchupicnews(url){
+	if(window.innerWidth > 767){
+		
+	var picnews = layer.open({
+		type: 2,
+		title: false,
+		closeBtn: 1,
+		fix: true,
+		offset: 'auto',
+		area: ['80%',"80%"],
+		shade: [0.7, '#000'],
+		skin: 'layui-layer-custom',
+		shadeClose: false,
+		scrollbar: false,
+		//maxmin: true,
+		//anim:2,
+		content: [url,'no'],
+		zIndex:9999
+	});
+	
+	}else{
+
+	var picnews = layer.open({
+		type: 2,
+		title: false,
+		closeBtn: 1,
+		fix: true,
+		offset: 'auto',
+		area: ['100%',"100%"],
+		shade: [0.7, '#000'],
+		skin: 'layui-layer-custom',
+		shadeClose: false,
+		scrollbar: false,
+		//maxmin: true,
+		//anim:2,
+		content: [url,'no'],
+		zIndex:9999
+	});
+		
+	}
+	//layer.full(nr);
+	$('.tc-closebtn').on('click',function(){
+		layer.close(picnews);
+	})
+}
+</script>
+<!--图片新闻弹窗 end-->
+
+
+
+
+<script type="text/javascript">
+/*限制描述文字长度*/
+$(function(){
+	var arrLinks = $(".con_txts .nr li a");
+	arrLinks.each(function(){
+		var s = $(this).text(),l=$(this).text().length,n=28; //设置字符长度为32个
+		if(l>n){
+			$(this).attr("title",s); //讲文本所有内容用a标签的title属性提示文本全部内容
+			s=$(this).text(s.substring(0,n)+"...");
+		}
+	});
+});
+
+/*新闻轮播*/
+$(".slider_default").hover(function(){
+	$(this).find(".arrow").addClass('arrow_show');
+},function(){
+	$(this).find(".arrow").removeClass('arrow_show');
+});
+//新闻切换
+$(".slider_default").slide({
+	titCell:".hd ul",
+	mainCell:".bd ul",
+	autoPage:true,
+	vis:1,  //可视个数
+	scroll:1, //一次滚动的个数
+	autoPlay:false,
+	interTime:5000,   //50无缝滚动，3000常规滚动
+	delayTime:1000,
+	prevCell:".prev",
+	nextCell:".next",
+	effect:"leftLoop",  //leftMarquee无缝滚动，left，leftLoop常规滚动
+	pnLoop:true,   //前后按钮循环，默认true
+	mouseOverStop:true, //鼠标经过停止播放  true,false
+	trigger:"click" //触发方式  mouseover,click
+});
+
+
+//新闻切换phone js
+var newsswiper1 = new Swiper('#swiper-default-01', {
+	pagination: '#swiper-default-01 .hd',
+	//paginationClickable: '.hd',
+	//effect: 'fade',
+	//fade:{crossFade: false},
+	prevButton:'#swiper-default-01 .hPrev',
+	nextButton:'#swiper-default-01 .hNext',
+	autoplay: 2500,
+	autoplayDisableOnInteraction : false,
+	speed:1000,
+	loop:true
+});
+var newsswiper2 = new Swiper('#swiper-default-02', {
+	pagination: '#swiper-default-02 .hd',
+	//paginationClickable: '.hd',
+	//effect: 'fade',
+	//fade:{crossFade: false},
+	prevButton:'#swiper-default-02 .hPrev',
+	nextButton:'#swiper-default-02 .hNext',
+	autoplay: 2500,
+	autoplayDisableOnInteraction : false,
+	speed:1000,
+	loop:true
+});
+var newsswiper3 = new Swiper('#swiper-default-03', {
+	pagination: '#swiper-default-03 .hd',
+	//paginationClickable: '.hd',
+	//effect: 'fade',
+	//fade:{crossFade: false},
+	prevButton:'#swiper-default-03 .hPrev',
+	nextButton:'#swiper-default-03 .hNext',
+	autoplay: 2500,
+	autoplayDisableOnInteraction : false,
+	speed:1000,
+	loop:true
+});
+
+</script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>

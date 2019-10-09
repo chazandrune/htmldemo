@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html style=" font-size:100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>礼品卡兑换</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/my.css">
+<script src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+</head>
+
+<body class="page-my-gift">
+
+<!--导航 手机版start-->
+<div class="bottombar">
+	<ul class="clearfix">
+    	<li><a href="###" class="btn btn_middle btn_yellow radius-5 ease-1" onClick="$('#form1').submit();">开始服务</a></li>
+		<!--下面是结束服务按钮-->
+    	<!--<li><a href="###" class="btn btn_middle btn_blue radius-5 ease-1">结束服务</a></li>-->
+    </ul>
+</div>
+<!--导航手机版end-->
+
+
+<!--主体start-->
+<div class="mainbody" style="top:.0rem; bottom:.6rem; left:0; right:0;">
+
+<div class="part-01 mb10">
+	<div class="my-head">
+		<div class="blank10"></div>
+		<div class="txt-c"><img class="logo" src="images/logo_white.png" /></div>
+		<div class="txt-c my-head-id fs16"><i class="icon_ebn icon-ayi-user-white mr5"></i>137****1356</div>
+		<div class="blank10"></div>
+		<div class="blank10"></div>
+		<div class="headbottom"></div>
+	</div>
+	<ul class="ul_view">
+		<li class="ul_view_cell"><div class="ul_view_cell_a"><h1><i class="icon_ebn icon-gift mr5"></i>礼品卡兑换</h1></div></li>
+	</ul>
+</div>
+
+<div class="login_box mb10">
+<form id="form1" method="post" onSubmit="return checkform();">
+<ul class="ul_view">
+	<li class="ul_view_cell">
+		<div class="form_item"><i class="icon_ebn icon-vip"></i><input type="text" class="input_text ease-1" id="gift_num" placeholder="请输入礼品卡号" /></div>
+	</li>
+	<li class="ul_view_cell">
+		<div class="form_item"><i class="icon_ebn icon-ayi-password"></i><input type="text" class="input_text ease-1" id="gift_psw" placeholder="请输入密码" /></div>
+	</li>
+</ul>
+<input type="submit" style="display:none;" />
+</form>
+</div>
+
+<!--服务块start-->
+<ul class="ul_view mb10">
+<li class="ul_view_cell">
+	<div class="blank10"></div>
+	<div class="nr pad10">
+		<div class="text_box">
+		<!--正文开始start-->
+		深度保洁服务为用户提供深层次，全方位的全屋彻底清洁，彻底清除居室中积累的灰尘、油渍、水垢，
+		让您的家焕然一新<br>
+		建议普通家庭每三个月使用一次，同时使用于出租屋及长期未打扫的房屋<br>
+		深度保洁服务为用户提供深层次，全方位的全屋彻底清洁，彻底清除居室中积累的灰尘、油渍、水垢，
+		让您的家焕然一新<br>
+		建议普通家庭每三个月使用一次，同时使用于出租屋及长期未打扫的房屋<br>
+		<!--正文结束end-->
+		</div>
+	</div>
+	<div class="blank10"></div>
+</li>
+</ul>
+<!--服务块end-->
+
+
+</div>
+<!--主体end-->
+
+
+
+
+
+
+
+
+
+
+<!--兑换成功弹窗start-->
+<div class="tc-box" id="tc-gift-suc" style="display:none;"><div class="pic"><a href="index.html" style="display:block;"><img src="images/gift_suc.png" style="display:block;"/></a></div></div>
+<!--兑换成功弹窗end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function checkform(){
+	var giftnum = $("#gift_num").val();
+	var giftpsw = $("#gift_psw").val();
+	if(giftnum == ''){
+		layer.msg('请输入礼品卡号');
+		return false;
+	}
+	if(giftpsw == ''){
+		layer.msg('请输入礼品卡密码')
+		return false;
+	}
+	layer.open({type:1,title:false,area:['2.8rem','auto'],content:$('#tc-gift-suc').html(),style:'background:none'})
+	return false;
+}
+</script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

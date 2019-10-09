@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<title>威智DEMO</title>
+<meta name="description" content="网站案例静态页面展示" />
+<meta name="keywords" content="静态页展示,网站制作,网站设计,定制网站建设,环宇威智,威智网络" />
+<meta name="author" content="环宇威智制作" />
+<link rel="apple-touch-icon" href="apple-touch-icon.jpg"/>
+<link type="text/css" rel="stylesheet" href="css/custom-ui.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("#login").click(function() {
+	
+		var action = $("#form1").attr('action');
+		var form_data = {
+			username: $("#username").val(),
+			password: $("#password").val(),
+			is_ajax: 1
+		};
+		
+		$.ajax({
+			type: "POST",
+			url: action,
+			data: form_data,
+			success: function(response)
+			{
+				if(response == 'success'){
+					layer.msg("登录成功");
+					setTimeout(function(){
+						layer.closeAll();
+						$("#username").val('');
+						$("#password").val('');
+					},1000)
+				}else{
+					layer.msg("登录失败");
+				}
+			}
+		});
+		
+		return false;
+	});
+	
+});
+</script>
+
+</head>
+
+<body>
+<!--头部start-->
+<div class="head">
+<div class="inner clearfix">
+    <div class="fl">
+        <h1>威智DEMO</h1><p>静态页面展示</p>
+    </div>
+    <div class="fr">
+    	<div class="nav">
+    	<a href="/jq">常用特效</a>
+    	<a href="###" onclick="layeropen()">锁定</a>
+        </div>
+    </div>
+</div>
+</div>
+<!--头部end-->
+
+<!--主体start-->
+<div class="main" id="slide_tab">
+
+<div class="hd txt-c">
+	<a href="###">电脑端</a>
+	<a href="###">移动端</a>
+</div>
+
+<div class="bd">
+	<!--pc项目 start-->
+	<div class="bd_item">
+	<ul class="clearfix">
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="beifangguojian">
+				<h1 class="title text-overflow">北方国建</h1>
+				<p class="date">2017/03</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="liangyehuanjing">
+				<h1 class="title text-overflow">良业</h1>
+				<p class="date">2017/02</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="xinde">
+				<h1 class="title text-overflow">信德（响应式）</h1>
+				<p class="date">2016/12</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="jiedaofu">
+				<h1 class="title text-overflow">洁道夫空气净化（响应式）</h1>
+				<p class="date">2016/11</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="jinruiyinxue">
+				<h1 class="title text-overflow">金瑞银雪</h1>
+				<p class="date">2016/11</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="naxieren">
+				<h1 class="title text-overflow">那些人</h1>
+				<p class="date">2016/09/29</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="fengchizhongchou">
+				<h1 class="title text-overflow">风驰众筹咨询（响应式）</h1>
+				<p class="date">2016/09/11</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="xuxie">
+				<h1 class="title text-overflow">续写男装</h1>
+				<p class="date">2016/08/30</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="langsiguoji">
+				<h1 class="title text-overflow">朗斯国际</h1>
+				<p class="date">2016/08</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="shuimutiangong">
+				<h1 class="title text-overflow">水木天工（响应式）</h1>
+				<p class="date">2016/05/26-2016/05/31</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="shunweitianchen">
+				<h1 class="title text-overflow">顺为天辰</h1>
+				<p class="date">2016/05/16-2016/05/17</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="jiedaofu-pc">
+				<h1 class="title text-overflow">洁道夫招商专题页（PC）</h1>
+				<p class="date">2016/04/12-2016/04/12</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="taijilonghe">
+				<h1 class="title text-overflow">泰基隆合</h1>
+				<p class="date">2016/02/24-2015/02/25</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="zhonghuachuanmei">
+				<h1 class="title text-overflow">中华传媒在线</h1>
+				<p class="date">2015/12/26-2015/12/28</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="3ayunduan">
+				<h1 class="title text-overflow">3A云端</h1>
+				<p class="date">2015/12/17-2015/12/23</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="dongfangangao">
+				<h1 class="title text-overflow">东方安高</h1>
+				<p class="date">2015/09/22 - 2015/09/23</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="hebeibangzi">
+				<h1 class="title text-overflow">河北梆子</h1>
+				<p class="date">2015/09/06 - 2015/09/07</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="xirancanyin">
+				<h1 class="title text-overflow">熙然餐饮</h1>
+				<p class="date">2015/09/01 - 2015/09/06</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="dingdangpei">
+				<h1 class="title text-overflow">叮当配</h1>
+				<p class="date">2015/08/19 - 2015/08/26</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="tianlejiye">
+				<h1 class="title text-overflow">天乐基业</h1>
+				<p class="date">-</p>
+			</a>
+		</div></li>
+	</ul>
+	</div>
+	<!--pc项目 end-->
+	<!--phone项目 start-->
+	<div class="bd_item">
+	<ul class="clearfix">
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="ebangnin-phone" data-duan="phone">
+				<h1 class="title text-overflow">e帮您（wechat）</h1>
+				<p class="date">2016/09-</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="keluoni-phone" data-duan="phone">
+				<h1 class="title text-overflow">克洛尼装饰（pad/phone）</h1>
+				<p class="date">2016/06/03-2016/06/07</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="jinpengdichan-phone" data-duan="phone">
+				<h1 class="title text-overflow">金鹏地产（phone）</h1>
+				<p class="date">2016/04/25-2016/04/25</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="jiedaofu-phone" data-duan="phone">
+				<h1 class="title text-overflow">洁道夫招商专题页（phone）</h1>
+				<p class="date">2016/04/12-2016/04/12</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="xinsanfu" data-duan="phone">
+				<h1 class="title text-overflow">鑫三芙</h1>
+				<p class="date">2016/03/17-2016/03/</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="yidefajia" data-duan="phone">
+				<h1 class="title text-overflow">意德法家</h1>
+				<p class="date">2016/03/15-2016/03/16</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="hywz2016" data-duan="phone">
+				<h1 class="title text-overflow">官网移动版</h1>
+				<p class="date">2016/03/01-2016/03/10</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="shangfou" data-duan="phone">
+				<h1 class="title text-overflow">爱打赏(原名赏否)</h1>
+				<p class="date">2015/10/26-</p>
+			</a>
+		</div></li>
+		<li><div class="item">
+			<a href="###" onclick="openthis(this)" data-name="MUI" data-duan="phone">
+				<h1 class="title text-overflow">MUI DEMO</h1>
+				<p class="date">--</p>
+			</a>
+		</div></li>
+	</ul>
+	</div>
+	<!--phone项目 end-->
+</div>
+
+</div>
+<!--主体end-->
+
+<!--底部start-->
+<div class="foot">
+<p>Copyright © 2015 <a href="http://www.huanyuweizhi.com/">北京环宇威智科技有限公司</a></p>
+</div>
+<!--底部end-->
+
+
+<!--登陆弹窗 start-->
+<div class="ctrl-box raduis-5" id="ctrl-box" style="display:none;">
+	<div class="title txt-c">登 录</div>
+	<div class="biaodan" id="content" >
+      <form id="form1"  name="form1" action="doLogin.php" method="post">
+        <table width="100%" cellspacing="0" border="0">
+            <tbody><tr>
+                <td align="center"><input type="text" class="input_text" name="username" id="username" style="width:182px;" placeholder="用户名"></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="password" class="input_text" name="password" id="password" style="width:182px;" placeholder="密码"></td>
+            </tr>
+        </tbody></table>
+        <table width="100%" cellspacing="0" border="0">
+            <tbody><tr>
+                <td class="txt-c"><button type="submit" class="btn btn_green" id="login" name="login">登 录</button><p><a class="box-closebtn txt-white">跳过</a></p></td>
+            </tr>
+        </tbody></table>
+      </form>
+    </div>
+</div>
+<!--登陆弹窗 end-->
+<script>
+layer.config({
+    skin: 'layui-layer-hui'
+});
+function layeropen(){
+	layer.closeAll();
+	var ctrl = layer.open({
+		type: 1,
+		title: false,
+		closeBtn: false,
+		area: ['320px', 'auto'],
+		shade: [1, '#000'],
+		skin: 'layui-layer-custom',
+		shadeClose: false,
+		scrollbar: false,
+		shift:6,
+		content: $('#ctrl-box'),
+		zIndex:9999,
+	});
+	$('.box-closebtn').on('click',function(){
+		layer.closeAll();
+	})
+}
+function openthis(i){
+	var name = $(i).attr('data-name');
+	var duan = $(i).attr('data-duan');
+	if(duan == 'phone'){
+		var src = '/wap/';
+	}else{
+		var src = '/demo/';
+	}
+	//20160809新增直接打开连接
+	window.location.href = src+name
+	//window.open(src+name);
+/*	var index = layer.open({
+		type: 2,
+		skin:'layui-layer',
+		content: src+name,
+		area: ['1000px', '195px'],
+		maxmin: false,
+		title:'预览',
+		move:false,
+		success:function(){
+			$('body').append('<a href="'+src+name+'" target=_blank class="xxx" style="color:#333;position:fixed;right:50px;top:0px;line-height:35px; height:35px;font-size:14px;z-index:99999999;cursor:pointer;">新窗口打开</a>')
+		},
+		end:function(){
+			$('.xxx').remove();
+			layer.closeAll();
+		}
+	});
+	layer.full(index);*/
+}
+
+//页面加载执行
+$(function(){
+	$("#slide_tab").slide({
+		titCell:'.hd a',
+		mainCell:'.bd',
+		trigger:'click',
+		delayTime:0,
+		interTime:0,
+		autoPlay:false,
+		effect:'fade'
+	})
+	//layeropen()
+})
+
+</script>
+</body>
+</html>

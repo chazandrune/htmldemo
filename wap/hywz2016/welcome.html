@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>欢迎来到环宇威智</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="环宇威智描述" />
+<meta name="keywords" content="环宇威智关键词" />
+<meta name="author" content="环宇威智制作" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+@-webkit-keyframes bouble {
+	0%, 60%, 75%, 90%, 100% {-webkit-animation-timing-function: cubic-bezier(.08,.68,.80,1);animation-timing-function: cubic-bezier(.08,.68,.70,1);}
+	0% {opacity: 0;	-webkit-transform: scale(0,0);transform: scale(0,0);}
+	30% {opacity: 1;-webkit-transform: scale(1.1,1.1);transform: scale(1.1,1.1);}
+	65% {-webkit-transform: scale(0.8,0.8);	transform: scale(0.8,0.8);}
+	80% {-webkit-transform: scale(1,1);	transform: scale(1,1);}
+}
+@-webkit-keyframes moveright {
+	0%, 60%, 75%, 90%, 100% {-webkit-animation-timing-function: cubic-bezier(.4,.41,.7,1.0);animation-timing-function:cubic-bezier(.4,.41,.7,1.0);	}
+	0% {opacity:0; -webkit-opacity:0;-webkit-transform: translate3d(-50px, 0, 0);transform: translate3d(-50px, 0, 0);}
+	100% {opacity:1; -webkit-opacity:1;	-webkit-transform: none;transform: none;}
+}
+@-webkit-keyframes moveleft {
+	0%, 60%, 75%, 90%, 100% {-webkit-animation-timing-function: cubic-bezier(.4,.41,.7,1.0);	animation-timing-function:cubic-bezier(.4,.41,.7,1.0);	}
+	0% {opacity:0; -webkit-opacity:0;-webkit-transform: translate3d(50px, 0, 0);transform: translate3d(50px, 0, 0);}
+	100% {opacity:1; -webkit-opacity:1;	-webkit-transform: none;transform: none;}
+}
+@-webkit-keyframes movedown {
+	0%, 60%, 75%, 90%, 100% {-webkit-animation-timing-function: cubic-bezier(.4,.41,.7,1.0);	animation-timing-function:cubic-bezier(.4,.41,.7,1.0);	}
+	0% {opacity:0; -webkit-opacity:0;-webkit-transform: translate3d(0, -50px, 0);transform: translate3d(0, -50px, 0);}
+	100% {opacity:1; -webkit-opacity:1;	-webkit-transform: none;transform: none;}
+}
+@-webkit-keyframes moveup {
+	0%, 60%, 75%, 90%, 100% {-webkit-animation-timing-function: cubic-bezier(.4,.41,.7,1.0);	animation-timing-function:cubic-bezier(.4,.41,.7,1.0);	}
+	0% {opacity:0; -webkit-opacity:0;-webkit-transform: translate3d(0, 50px, 0);transform: translate3d(0, 50px, 0);}
+	100% {opacity:1; -webkit-opacity:1;	-webkit-transform: none;transform: none;}
+}
+@-webkit-keyframes movemove {
+	0%, 60%, 75%, 90%, 100% {-webkit-animation-timing-function: cubic-bezier(.4,.41,.7,1.0);animation-timing-function:cubic-bezier(.4,.41,.7,1.0);	}
+	0% {-webkit-transform: translate3d(0px, 0, 0);transform: translate3d(0px, 0, 0);}
+	50% {-webkit-transform: translate3d(-50px, 0, 0);transform: translate3d(-50px, 0, 0);}
+	100% {-webkit-transform: none;transform: none;}
+}
+@-webkit-keyframes zoom {
+	0%, 60%, 75%, 90%, 100% {-webkit-animation-timing-function: cubic-bezier(.4,.41,.7,1.0);animation-timing-function:cubic-bezier(.4,.41,.7,1.0);}
+	0% {-webkit-transform: scale(1,1);transform: scale(1,1);}
+	50% {-webkit-transform: scale(1.3,1.3);transform: scale(1.3,1.3);}
+	100% {-webkit-transform: none;transform: none;}
+}
+
+.mui-slider{background-image:url(images/bg.jpg);background-size:cover; background-repeat:no-repeat; background-position:center;}
+.item-logo {width: 100%;height: 100%;position: relative; background-position:center; }
+.item-logo .logo {width: 100%;height: 200px; padding-top:30px; box-sizing:border-box;display: block;color: #fff;position: absolute;top: 45%;left: 0; margin-top:-100px;}
+.item-logo .logo img{}
+.item-logo .logo p{ margin-bottom:5px; line-height:20px;}
+.animate {position: absolute;left:0;top:0;bottom:0; right:0;width: 100%; height:100%;color: #fff;}
+.animated { text-align:center;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-play-state: paused;
+	-webkit-animation-fill-mode: both;
+}
+.animate .animated01 { 
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: 0s;
+}
+.animate .animated02 {
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: 0.8s;
+	display:block;
+}
+.animate .animated-img{position:absolute; left:0; right:0;} 
+.animate .animated-txt{ position:absolute; top:70%; left:0; right:0;} 
+
+.mui-operate{ background-color:transparent; padding:0 5px; height:50px;-webkit-box-shadow:none;box-shadow:none;position:absolute;bottom:20%; top:auto; left:0; right:0;}
+.mui-operate ul{padding:0; margin:0;}
+.mui-operate li{ list-style:none; float:left; width:100%; box-sizing:border-box; padding:0 5px;}
+.mui-operate li a{ width:100px; margin:0 auto; background:#01b751; border-color:#01b751;-webkit-animation: hue 60s infinite linear;animation: hue 60s infinite linear;}
+.animate .animated01-00{ position:absolute;
+	-webkit-animation-name: movedown;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .0s;
+	-webkit-animation-duration:1s;
+}
+.animate .animated01-01{ position:absolute;
+	-webkit-animation-name: moveright;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .8s;
+	-webkit-animation-duration:1s;
+}
+.animate .animated01-02{ position:absolute;
+	-webkit-animation-name: moveleft;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: 1.6s;
+	-webkit-animation-duration:1s;
+}
+.animate .animated02-01{ 
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .0s;
+}
+.animate .animated02-02{ 
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .3s;
+}
+.animate .animated03-01{ 
+	-webkit-animation-name: movemove;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .0s;
+}
+.animate .animated03-02{ 
+	-webkit-animation-name: zoom;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .1s;
+}
+.animate .animated03-03{ 
+	-webkit-animation-name: zoom;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .5s;
+}
+
+.mui-slider-indicator .mui-indicator{ background:rgba(0,0,0,.3);-webkit-box-shadow:none;box-shadow: none;}
+.mui-slider-indicator .mui-indicator.mui-active{-webkit-box-shadow: 0 0 1px 1px rgba(130,130,130,.7);box-shadow: 0 0 1px 1px rgba(130,130,130,.7);}
+/*变色动画*/
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+	-moz-filter: hue-rotate(0deg);
+	-o-filter: hue-rotate(0deg);
+	filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+	-moz-filter: hue-rotate(-360deg);
+	-o-filter: hue-rotate(-360deg);
+	filter: hue-rotate(-360deg);
+  }
+}
+/*变色元素*/
+#updating{color:#01b751;-webkit-animation: hue 60s infinite linear;animation: hue 60s infinite linear;  background-image: -webkit-linear-gradient(92deg,#01b751,#01b751); -webkit-background-clip: text;  -webkit-text-fill-color: transparent;}
+.spinner{background-color:#82b701; background-image:url(images/bg.png); background-position:center; background-size:cover;-webkit-animation: hue 60s infinite linear;animation: hue 60s infinite linear;}
+
+/*上一个下一个箭头*/
+@-webkit-keyframes gotobtn {
+0%,50%,100%{
+-webkit-transition-timing-function:cubic-bezier(.64,0,.37,1);
+-moz-transition-timing-function:cubic-bezier(.64,0,.37,1);
+-o-transition-timing-function:cubic-bezier(.64,0,.37,1);
+transition-timing-function:cubic-bezier(.64,0,.37,1);
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+0% {
+-webkit-transform: translate3d(3px, 0px, 0);
+-moz-transform: translate3d(3px, 0px, 0);
+-o-transform: translate3d(3px, 0px, 0);
+transform: translate3d(3px, 0px, 0);}
+50% {
+-webkit-transform: translate3d(-3px, -0px, 0);
+-moz-transform: translate3d(-3px, -0px, 0);
+-o-transform: translate3d(-3px, -0px, 0);
+transform: translate3d(-3px, -0px, 0);}
+100% {
+-webkit-transform: translate3d(3px, 0px, 0);
+-moz-transform: translate3d(3px, 0px, 0);
+-o-transform: translate3d(3px, 0px, 0);
+transform: translate3d(3px, 0px, 0);}
+}
+@keyframes gotobtn {
+0%,50%,100%{
+-webkit-transition-timing-function:cubic-bezier(.64,0,.37,1);
+-moz-transition-timing-function:cubic-bezier(.64,0,.37,1);
+-o-transition-timing-function:cubic-bezier(.64,0,.37,1);
+transition-timing-function:cubic-bezier(.64,0,.37,1);
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+0% {
+-webkit-transform: translate3d(3px, 0px, 0);
+-moz-transform: translate3d(3px, 0px, 0);
+-o-transform: translate3d(3px, 0px, 0);
+transform: translate3d(3px, 0px, 0);}
+50% {
+-webkit-transform: translate3d(-3px, -0px, 0);
+-moz-transform: translate3d(-3px, -0px, 0);
+-o-transform: translate3d(-3px, -0px, 0);
+transform: translate3d(-3px, -0px, 0);}
+100% {
+-webkit-transform: translate3d(3px, 0px, 0);
+-moz-transform: translate3d(3px, 0px, 0);
+-o-transform: translate3d(3px, 0px, 0);
+transform: translate3d(3px, 0px, 0);}
+}
+.btn_goto{display:block; width:50px; height:40px; position:absolute; line-height:40px; font-size:18px; color:#333; text-align:left;}
+.btn_goto.btn_go_l{ right:0; left:auto; top:50%;}
+.btn_goto.btn_go_r{ left:0; right:auto; top:50%;}
+.btn_goto .mui-icon{width:40px; height:40px; line-height:40px; position:absolute; right:0; top:50%; margin-top:-20px; font-size:18px;
+-webkit-animation-name:gotobtn;
+-moz-animation-name:gotobtn;
+-ms-animation-name:gotobtn;
+-o-animation-name:gotobtn;
+animation-name:gotobtn;
+-webkit-animation-iteration-count:infinite;
+-moz-animation-iteration-count:infinite;
+-o-animation-iteration-count:infinite;
+animation-iteration-count:infinite;
+-webkit-animation-play-state: running;}
+.btn_goto .mui-icon:nth-child(1){right:5px;
+-webkit-animation-delay:300ms;
+-moz-animation-delay:300ms;
+-o-animation-delay:300ms;
+animation-delay:300ms;}
+.btn_goto .mui-icon:nth-child(2){right:10px;
+-webkit-animation-delay:500ms;
+-moz-animation-delay:500ms;
+-o-animation-delay:500ms;
+animation-delay:500ms;}
+.btn_goto .mui-icon:nth-child(3){right:15px;
+-webkit-animation-delay:700ms;
+-moz-animation-delay:700ms;
+-o-animation-delay:700ms;
+animation-delay:700ms;}
+</style>
+</head>
+
+<body>
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+
+<!-- 侧边导航 start -->
+<aside id="offCanvasSide" class="mui-off-canvas-left">
+	<div id="offCanvasSideScroll" class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">Item 1</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">Item 2</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">Item 3</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">Item 4</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">Item 5</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">Item 6</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</aside>
+<!-- 侧边导航 end -->
+
+
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+<!--<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item mui-active" data-href="###"><i class="mui-icon iconfont icon-rank"></i><span class="mui-tab-label">服务</span></a>
+<a class="mui-tab-item" data-href="###"><i class="mui-icon iconfont icon-form"></i><span class="mui-tab-label">案例</span></a>
+<a class="mui-tab-item" data-href="###"><i class="mui-icon iconfont icon-read"></i><span class="mui-tab-label">关于</span></a>
+<a class="mui-tab-item" data-href="###"><i class="mui-icon iconfont icon-my"></i><span class="mui-tab-label">联络</span></a>
+</nav>-->
+
+<div class="mui-slider mui-fullscreen">
+    <div class="mui-slider-group">
+        <!-- 第一张 start-->
+        <div class="mui-slider-item">
+            <div class="item-logo">
+<!--<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+<div class="mui-scroll">
+<a class="mui-control-item mui-active" data-href="###"><i class="iconfont icon-rank"></i><span class="mui-tab-label">服务</span></a>
+<a class="mui-control-item" data-href="###"><i class="iconfont icon-form"></i><span class="mui-tab-label">案例</span></a>
+<a class="mui-control-item" data-href="###"><i class="iconfont icon-read"></i><span class="mui-tab-label">关于</span></a>
+<a class="mui-control-item" data-href="###"><i class="iconfont icon-my"></i><span class="mui-tab-label">联络</span></a>
+<a class="mui-control-item" data-href="###"><i class="iconfont icon-my"></i><span class="mui-tab-label">联络</span></a>
+<a class="mui-control-item" data-href="###"><i class="iconfont icon-my"></i><span class="mui-tab-label">联络</span></a>
+</div>
+</div>-->
+				<a href="###" class="btn_goto btn_go_l ease-1">
+					<i class="mui-icon mui-icon-arrowleft animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowleft animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowleft animated infinite hinge"></i>
+				</a>
+                <div id="tips-1" class="animate">
+                	<div class="animated animated-img animated01-00" style="top:20%;"><img src="images/logo-img.png"/></div>
+                    <div class="animated animated01-01" style="top:50%"><img src="images/banner_01-01.png" alt="用互联网思维颠覆你的行业" /></div>
+                    <div class="animated animated01-02" style="top:58%"><img src="images/banner_01-02.png" alt="用互联网思维颠覆你的行业" /></div>
+                    <div class="mui-operate">
+						<ul class="clearfix">
+							<li><a data-href="tel:4000341020" class="mui-btn mui-btn-yellow mui-btn-block">免费咨询</a></li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第一张 end -->
+        <!-- 第二张 start-->
+        <div class="mui-slider-item">
+            <div class="item-logo">
+				<a href="###" class="btn_goto btn_go_r ease-1">
+					<i class="mui-icon mui-icon-arrowright animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowright animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowright animated infinite hinge"></i>
+				</a>
+				<a href="###" class="btn_goto btn_go_l ease-1">
+					<i class="mui-icon mui-icon-arrowleft animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowleft animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowleft animated infinite hinge"></i>
+				</a>
+                <div id="tips-2" class="animate mui-hidden">
+                	<div class="animated animated-img animated01-00" style="top:10%;"><img src="images/xiaozhi_goku.png" /></div>
+                    <div class="animated animated01-01" style="top:50%"><img src="images/banner_02-01.png" alt="插上互联网+翅膀" /></div>
+                    <div class="animated animated01-02" style="top:58%"><img src="images/banner_02-02.png" alt="让企业翱翔" /></div>
+                    <div class="mui-operate">
+						<ul class="clearfix">
+							<li class="mui-pull-left"><a href="#share" class="mui-btn mui-btn-yellow mui-btn-block">免费咨询</a></li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第二张 end -->
+        <!-- 第三张 start-->
+        <div class="mui-slider-item">
+            <div class="item-logo">
+				<a href="###" class="btn_goto btn_go_r ease-1">
+					<i class="mui-icon mui-icon-arrowright animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowright animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowright animated infinite hinge"></i>
+				</a>
+				<a href="###" class="btn_goto btn_go_l ease-1">
+					<i class="mui-icon mui-icon-arrowleft animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowleft animated infinite hinge"></i>
+					<i class="mui-icon mui-icon-arrowleft animated infinite hinge"></i>
+				</a>
+                <div id="tips-3" class="animate mui-hidden">
+                	<div class="animated animated-img animated01-00" style="top:10%;"><img src="images/banner_03.png" /></div>
+                    <div class="animated animated01-01" style="top:50%"><img src="images/banner_03-01.png" alt="插上互联网+翅膀" /></div>
+                    <div class="animated animated01-02" style="top:58%"><img src="images/banner_03-02.png" alt="让企业翱翔" /></div>
+                    <div class="mui-operate">
+						<ul class="clearfix">
+							<li class="mui-pull-left"><a href="#share" class="mui-btn mui-btn-yellow mui-btn-block">免费咨询</a></li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第三张 end -->
+        <!-- 第四张 start-->
+        <div class="mui-slider-item" style="background:#fff;">
+            <div class="item-logo">
+                <div id="tips-4" class="animate mui-hidden">
+                	<div class="animated animated-img animated01-00" style="top:10%;"><img src="images/banner_03.png" /></div>
+                    <div class="animated animated01-01" style="top:50%"><img src="images/banner_03-01.png" alt="插上互联网+翅膀" /></div>
+                    <div class="animated animated01-02" style="top:58%"><img src="images/banner_03-02.png" alt="让企业翱翔" /></div>
+                    <div class="mui-operate">
+						<ul class="clearfix">
+							<li class="mui-pull-left"><a href="#share" class="mui-btn mui-btn-yellow mui-btn-block">免费咨询</a></li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第四张 end -->
+    </div>
+    <!--<div class="mui-slider-indicator">
+        <div class="mui-indicator mui-active"></div>
+    </div>-->
+</div>
+
+</div>
+<!-- 主页面容器 end -->
+
+</div>
+
+<div id="share" class="mui-popover mui-popover-action mui-popover-bottom">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="tel:4000341020">拨号：400-034-1020</a></li>
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#share"><b>取消</b></a></li>
+    </ul>
+</div>
+
+
+
+<script src="js/mui.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+});
+
+//图片切换时，触发动画
+document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+	//注意slideNumber是从0开始的；
+	var index = event.detail.slideNumber+1;
+	if(index==2||index==3){
+		var item = document.getElementById("tips-"+index);
+		if(item.classList.contains("mui-hidden")){
+			item.classList.remove("mui-hidden");
+			item.classList.add("guide-show");
+		}
+	}else if(index==4){
+		location.replace("index.html");
+	}
+});
+
+
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

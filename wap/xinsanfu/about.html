@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>公司介绍</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="站点描述" />
+<meta name="keywords" content="站点关键词" />
+<meta name="author" content="环宇威智制作" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<style>
+/*正文*/
+.headline{ padding:10px 10px 0;}
+.contentline{ border-top:2px #1e78dc solid; background-color:#fff; padding:10px; border-bottom:1px #dbdbdb solid;}
+
+</style>
+</head>
+
+<body>
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+
+<!-- 侧边导航 start -->
+<aside id="offCanvasSide" class="mui-off-canvas-left nav_side">
+	<div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<div class="title">
+				<a data-href="index.html" class="mui-navigate-right"><img src="images/logo-mobile-white.png" style="width:100%" /></a>
+			</div>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell">
+					<a data-href="index.html" class="mui-navigate-right">首页</a>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right">产品中心</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell"><a data-href="products.html" class="mui-navigate-right"><h5>五线谱电教板系列</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="products.html" class="mui-navigate-right"><h5>电钢管理控制系统</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="products.html" class="mui-navigate-right"><h5>MIDI作曲系统</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="products.html" class="mui-navigate-right"><h5>中小学常用乐器</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="products.html" class="mui-navigate-right"><h5>教学黑板系列</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="products.html" class="mui-navigate-right"><h5>键盘类乐器</h5></a></li>
+					</ul>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="news.html" class="mui-navigate-right">新闻中心</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="cases.html" class="mui-navigate-right">成功案例</a>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right">关于鑫三芙</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell"><a data-href="about.html" class="mui-navigate-right"><h5>公司介绍</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="contact.html" class="mui-navigate-right"><h5>联系我们</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="about.html" class="mui-navigate-right"><h5>招聘信息</h5></a></li>
+					</ul>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right">服务与支持</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell"><a data-href="services.html" class="mui-navigate-right"><h5>售后服务</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="services.html" class="mui-navigate-right"><h5>技术支持</h5></a></li>
+					</ul>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="message.html" class="mui-navigate-right">留言中心</a>
+				</li>
+			</ul>
+			<div class="copyright">
+				<p>版权所有<br>北京鑫三芙教学设备制造有限公司<br>Copyright © 2016 xinsanfu.com<br></p>
+			</div>
+		</div>
+	</div>
+</aside>
+<!-- 侧边导航 end -->
+
+
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+	<a href="#topPopover" class="mui-icon mui-icon-arrowdown mui-pull-right"></a>
+	<h1 class="mui-title">公司介绍</h1>
+</header>
+
+<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item" href="#offCanvasSide"><i class="mui-icon iconfont">&#xe601;</i><span class="mui-tab-label">网站导航</span></a>
+<a class="mui-tab-item" data-href="tel:010-62473181"><i class="mui-icon iconfont">&#xe605;</i><span class="mui-tab-label">联系电话</span></a>
+<a class="mui-tab-item" data-href="news.html"><i class="mui-icon iconfont">&#xe603;</i><span class="mui-tab-label">新闻中心</span></a>
+<a class="mui-tab-item" data-href="services.html"><i class="mui-icon iconfont">&#xe600;</i><span class="mui-tab-label">服务支持</span></a>
+</nav>
+
+<!--内容区域 start-->
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+	<div class="mui-scroll">
+		
+		<div class="contentline">
+			<div class="text_box txt-darkred">
+				<!--正文开始-->
+				<img src="images/pic_about.jpg" />
+				<P>　　北京鑫三芙 教学设备制造有限公司是专业从事音乐教学设备研发、设计、生产及销售的企业。通过十余年的不断充实和努力，公司成功推出了《五线谱电教板》、《五线谱教学黑板》、《多媒体音乐教学系统》等三大类音乐教学系列产品，产品覆盖全国各大中城市，代理经销商达300余家，并且产品还多次出口到香港、土耳其、台湾、韩国等国家和地区。同时公司还根据中国教育部《音乐教学仪器配备目录》为中小学提供各类优质音乐器材产品。</P>
+<P>　　公司占地三千余平方米，位于北京市海淀区永丰开发区，公司各层员工努力拼搏、各具特长。推出的各款产品广泛用于中小学及大专院校，在历年的中国教学仪器设备行业协会举办的“中国教学仪器设备展示会”和“中国国际乐器展览会”中独领风骚。</P>
+<P>　　公司秉承“质量第一、用户至上”的原则，多年来受到各界人士的认可，公司生产的“五线谱智能音乐电教板”连续五年被中国教学仪器设备行业协会列为推荐产品;连续六年通过了ISO9001质量管理体系认证，并且获得中国教学仪器设备行业协会“先进集体”称号。</P>
+<P>　　摒弃陈旧，突破传统设计风格，产品一路领先是我们推崇的至高理念。我们将把精细的制造工艺和杰出的创新意念精雕细刻于“三芙”牌的每一款产品中，服务于教育、服务于大众!</P>
+				<!--正文结束-->
+			</div>
+			<div class="blank"></div>
+		</div>
+		<div class="blank "></div>
+		
+		<div class="blank"></div>
+		<div class="blank"></div>
+		
+	</div>
+</div>
+<!--内容区域 end-->
+<!-- off-canvas backdrop -->
+<div class="mui-off-canvas-backdrop"></div>
+
+</div>
+<!-- 主页面容器 end --> 
+
+
+</div>
+
+
+
+<!--下拉菜单 start-->
+<div id="topPopover" class="mui-popover mui-popover-bottom popover-xiala">
+<div class="mui-scroll-wrapper">
+	<div class="mui-scroll">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<a data-href="about.html">公司介绍</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a data-href="contact.html">联系我们</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a data-href="about.html">招聘信息</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+<!--下拉菜单 end-->
+
+
+
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+});
+</script> 
+<script src="js/custom.js"></script> 
+
+
+</body>
+</html>

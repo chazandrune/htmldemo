@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>常用特效整理</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<style>
+.demo_title{ height:80px; line-height:80px; padding:50px 10px 0;}
+</style>
+</head>
+
+<body >
+
+<!--单选radio美化（自己写的） start-->
+<style>
+.radio_box{text-align:center;}
+.radio_box ul{}
+.radio_box li{float:left;margin:0px 32px 20px 0;display:inline;}
+.radio_box input{ display:none; }
+.radio_box .radio_item{ display:block;line-height: 20px; width:210px; height:85px;color:#666;cursor:pointer; font-size:14px; border-width:1px ; border-color:#dbdbdb; border-style:solid;; background:#f8f8f8; background-position:right bottom;
+-webkit-border-radius:5px;
+-moz-border-radius: 5px;
+border-radius: 5px;}
+.radio_box .radio_item .name{ height:40px; line-height:40px; font-size:18px; padding-top:10px; font-weight:700;}
+.radio_box .radio_item .desc{ height:20px; line-height:20px; color:#888;}
+.radio_box .current{ border-color:#ff8a00; color:#ff8a00; background-color:#fff;}
+</style>
+<h1 class="demo_title">radio自定义美化，再次点击可取消选择</h1>
+<div class="radio_box">
+	<ul class="clearfix">
+		<li>
+			<input type="radio" name="design" value="">
+			<a href="javascript:void(0);" class="radio_item txt-c ease-1">
+				<h4 class="name">原创设计</h4>
+				<p class="desc">500元/面</p>
+			</a>
+		</li>
+		<li>
+			<input type="radio" name="design" value="" checked="checked">
+			<a href="javascript:void(0);" class="radio_item txt-c ease-1">
+				<h4 class="name">原创设计</h4>
+				<p class="desc">500元/面</p>
+			</a>
+		</li>
+	</ul>
+</div>
+<script>
+$(function(){
+	/*单选 custom-js*/
+	$('.radio_box input').each(function(){
+		if($(this).attr('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.radio_box .radio_item').click(function(){
+		if($(this).prev().attr('checked')){
+			$(this).prev().attr('checked',false);
+			$(this).parent().parent().find('.radio_item').removeClass('current');
+		}else{
+			$(this).prev().attr('checked',true);
+			$(this).parent().parent().find('.radio_item').removeClass('current');
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+</script>
+<!--单选radio美化（自己写的） end-->
+
+<!--多选checkbox美化（自己写的） start-->
+<style>
+.check_box{text-align:center;}
+.check_box ul{}
+.check_box li{float:left;margin:0px 32px 20px 0;display:inline;}
+.check_box input{ display:none; }
+.check_box .check_item{ display:block;line-height: 20px; width:210px; height:85px;color:#666;cursor:pointer; font-size:14px; border-width:1px ; border-color:#dbdbdb; border-style:solid;; background:#f8f8f8; background-position:right bottom;
+-webkit-border-radius:5px;
+-moz-border-radius: 5px;
+border-radius: 5px;}
+.check_box .check_item .name{ height:40px; line-height:40px; font-size:18px; padding-top:10px; font-weight:700;}
+.check_box .check_item .desc{ height:20px; line-height:20px; color:#888;}
+.check_box .current{ border-color:#ff8a00; color:#ff8a00; background-color:#fff;}
+</style>
+<h1 class="demo_title">checkbox自定义美化</h1>
+<div class="check_box">
+	<ul class="clearfix">
+		<li>
+			<input type="checkbox" name="check" value="">
+			<a href="javascript:void(0);" class="check_item txt-c ease-1">
+				<h4 class="name">原创设计</h4>
+				<p class="desc">500元/面</p>
+			</a>
+		</li>
+		<li>
+			<input type="checkbox" name="check" value="" checked="checked">
+			<a href="javascript:void(0);" class="check_item txt-c ease-1">
+				<h4 class="name">原创设计</h4>
+				<p class="desc">500元/面</p>
+			</a>
+		</li>
+	</ul>
+</div>
+<script>
+$(function(){
+	/*多选 custom-js*/
+	$('.check_box input').each(function(){
+		if($(this).attr('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.check_box .check_item').click(function(){
+		if($(this).prev().attr('checked')){
+			$(this).prev().attr('checked',false);
+			$(this).removeClass('current');
+		}else{
+			$(this).prev().attr('checked',true);
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+</script>
+<!--多选checkbox美化（自己写的） end-->
+
+
+
+</body>
+</html>

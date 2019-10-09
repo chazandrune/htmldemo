@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>员工-我的-资料设定</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.feedback body {
+	background-color: #EFEFF4;
+}
+.feedback input,
+.feedback textarea {
+	border: none !important;
+}
+.feedback textarea {
+	height: 100px;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+.feedback .row {
+	width: 100%;
+	background-color: #fff;
+}
+.feedback p {
+	padding: 10px 15px 0;
+}
+.feedback .hidden {
+	display: none;
+}
+.feedback .image-list {
+	width: 100%;
+	height: 85px;
+	background-size: cover;
+	padding: 10px 10px;
+	overflow: hidden;
+}
+.feedback .image-item {
+	width: 65px;
+	height: 65px;
+	background-image: url(images/iconfont-tianjia.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	position: relative;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #e8e8e8;
+}
+.feedback .image-item input[type="file"] {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 0;
+}
+.feedback .image-item.space {border: none;}
+.feedback .image-item .image-close {
+	position: absolute;
+	display: inline-block;
+	right: -6px;
+	top: -6px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 12px;
+	background-color: #FF5053;
+	color: #f3f3f3;
+	border: solid 1px #FF5053;
+	font-size: 9px;
+	font-weight: 200;
+	z-index: 1;
+}
+.feedback .image-item.space .image-close {display: none;}
+#head {line-height: 40px;}
+#head-img1 {position: absolute;bottom: 10px;right: 40px;width: 40px;height: 40px;}
+.mui-input-row .mui-btn.btn-select{ width:50%; padding-right:40px; text-align:right; position:absolute; top:1px; right:0; border:0; color:#666; font-size:17px;}
+</style>
+</head>
+
+<body>
+
+<header class="mui-bar mui-bar-nav">
+<a class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+<h1 class="mui-title">资料设定</h1>
+</header>
+
+<div class="mui-content mui-scroll-wrapper feedback">
+<div class="mui-scroll">
+<form class="mui-content">
+	<p>基本信息（<span class="txt-red">重要</span>）</p>
+    <ul class="mui-table-view mui-input-group">
+        <li class="mui-table-view-cell">
+            <a id="head" class="mui-navigate-right">头像
+                <span class="mui-pull-right head avatar">
+                    <img class="head-img mui-action-preview avatar-radius" style="border:1px #dbdbdb solid;" id="head-img1" src="images/130x130.jpg">
+                    <input type="file" filenum='1' style="position:absolute;bottom:00px;right:00px;width:100%;height:100%; opacity:0; -webkit-opacity:0;"/>
+                </span>
+            </a>
+        </li>
+        <li class="mui-input-row">
+            <label>姓名</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="李思"/>
+        </li>
+        <li class="mui-input-row">
+            <label>公司</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="北京实创秦皇岛公司"/>
+        </li>
+        <li class="mui-input-row">
+            <label>职位</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="客户经理"/>
+        </li>
+        <li class="mui-input-row">
+            <label>座机号</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="010-1234567"/>
+        </li>
+        <li class="mui-input-row">
+            <label>手机号</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="13212341234"/>
+        </li>
+    </ul>
+    <p>银行卡信息（<span class="txt-red">重要</span>）</p>
+    <ul class="mui-table-view mui-input-group">
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            <label>银行</label><button id='showBankPicker' class="mui-btn mui-btn-block btn-select" type='button'>工商银行</button>
+            </div>
+        </li>
+        <li class="mui-input-row">
+            <label>开户行</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="工商银行九龙山支行"/>
+        </li>
+        <li class="mui-input-row">
+            <label>卡号</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="622212345678945618"/>
+        </li>
+    </ul>
+    <p>让客户更加了解你</p>
+    <ul class="mui-table-view mui-input-group">
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            	<label>出生日期</label><button id='demo2' data-options='{"type":"date","beginYear":2014,"endYear":2016}' class="btn mui-btn mui-btn-block btn-select" >选择日期</button>
+            </div>
+        </li>
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            <label>生肖</label><select class="mui-text-center txt-666" style="width:20%;">
+            	<option>鼠</option>
+            	<option>牛</option>
+            	<option>虎</option>
+            	<option>兔</option>
+            	<option>龙</option>
+            	<option>蛇</option>
+            	<option>马</option>
+            	<option>羊</option>
+            	<option>猴</option>
+            	<option>鸡</option>
+            	<option>狗</option>
+            	<option>猪</option>
+            </select>
+            </div>
+        </li>
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            <label>星座</label><select class="mui-text-center txt-666" style="width:30%;">
+            	<option>摩羯座</option>
+            	<option>天蝎座</option>
+            	<option>水瓶座</option>
+            	<option>白羊座</option>
+            	<option>金牛座</option>
+            	<option>双子座</option>
+            	<option>处女座</option>
+            	<option>天秤座</option>
+            </select>
+            </div>
+        </li>
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            <label>身材</label><button id='showUserPicker' class="mui-btn mui-btn-block btn-select" type='button'>请选择</button>
+            </div>
+        </li>
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            <label>个性</label><button id='showGexingPicker' class="mui-btn mui-btn-block btn-select" type='button'>文艺</button>
+            </div>
+        </li>
+    </ul>
+	<div class="mui-button-row mui-content-padded"><button type="submit" class=" mui-btn-block mui-btn-yellow">提 交</button></div>
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false //右滑关闭功能
+});
+ //初始化单页的区域滚动
+mui('.mui-scroll-wrapper').scroll();
+
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//身材选单
+					var userPicker = new $.PopPicker();
+					userPicker.setData([{
+						value: 'ywj',
+						text: '胖胖哒'
+					}, {
+						value: 'aaa',
+						text: '瘦瘦哒'
+					}, {
+						value: 'lj',
+						text: '壮壮哒'
+					}]);
+					var showUserPickerButton = doc.getElementById('showUserPicker');
+					var userResult = doc.getElementById('showUserPicker');
+					showUserPickerButton.addEventListener('tap', function(event) {
+						userPicker.show(function(items) {
+							userResult.innerText = JSON.stringify(items[0]['text']);
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//个性选单
+					var gexingPicker = new $.PopPicker();
+					gexingPicker.setData([{
+						value: 'ywj',
+						text: '文艺'
+					}, {
+						value: 'aaa',
+						text: '稳重'
+					}, {
+						value: 'lj',
+						text: '浮夸'
+					}, {
+						value: 'ymt',
+						text: '开朗'
+					}, {
+						value: 'shq',
+						text: '内秀'
+					}, {
+						value: 'zhbh',
+						text: '女汉子'
+					}, {
+						value: 'zhy',
+						text: '勇猛'
+					}]);
+					var showGexingPickerButton = doc.getElementById('showGexingPicker');
+					var gexingResult = doc.getElementById('showGexingPicker');
+					showGexingPickerButton.addEventListener('tap', function(event) {
+						gexingPicker.show(function(items) {
+							gexingResult.innerText = JSON.stringify(items[0]['text']);
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//银行选单
+					var bankPicker = new $.PopPicker();
+					bankPicker.setData([{
+						value: 'zgyh',
+						text: '中国银行'
+					}, {
+						value: 'aaa',
+						text: '中国工商银行'
+					}, {
+						value: 'lj',
+						text: '中国建设银行'
+					}, {
+						value: 'ymt',
+						text: '中国农业银行'
+					}, {
+						value: 'shq',
+						text: '中国工商银行'
+					}]);
+					var showBankPickerButton = doc.getElementById('showBankPicker');
+					var bankResult = doc.getElementById('showBankPicker');
+					showBankPickerButton.addEventListener('tap', function(event) {
+						bankPicker.show(function(items) {
+							bankResult.innerText = JSON.stringify(items[0]['text']);
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+				});
+			})(mui, document);
+			
+			
+			(function($) {
+				$.init();
+				var result = $('#demo2')[0];
+				var btns = $('.btn');
+				btns.each(function(i, btn) {
+					btn.addEventListener('tap', function() {
+						var optionsJson = this.getAttribute('data-options') || '{}';
+						var options = JSON.parse(optionsJson);
+						var id = this.getAttribute('id');
+						/*
+						 * 首次显示时实例化组件
+						 * 示例为了简洁，将 options 放在了按钮的 dom 上
+						 * 也可以直接通过代码声明 optinos 用于实例化 DtPicker
+						 */
+						var picker = new $.DtPicker(options);
+						picker.show(function(rs) {
+							/*
+							 * rs.value 拼合后的 value
+							 * rs.text 拼合后的 text
+							 * rs.y 年，可以通过 rs.y.vaue 和 rs.y.text 获取值和文本
+							 * rs.m 月，用法同年
+							 * rs.d 日，用法同年
+							 * rs.h 时，用法同年
+							 * rs.i 分（minutes 的第二个字母），用法同年
+							 */
+							result.innerText = '' + rs.text;
+							/* 
+							 * 返回 false 可以阻止选择框的关闭
+							 * return false;
+							 */
+							/*
+							 * 释放组件资源，释放后将将不能再操作组件
+							 * 通常情况下，不需要示放组件，new DtPicker(options) 后，可以一直使用。
+							 * 当前示例，因为内容较多，如不进行资原释放，在某些设备上会较慢。
+							 * 所以每次用完便立即调用 dispose 进行释放，下次用时再创建新实例。
+							 */
+							picker.dispose();
+						});
+					}, false);
+				});
+			})(mui);
+</script>
+<script type="text/javascript" src="js/LocalResizeIMG.js"></script>
+<script type="text/javascript" src="js/patch/mobileBUGFix.mini.js"></script>
+<script type="text/javascript">
+	$('input[type=file]').on('tap',function(){
+		var num = $(this).attr('filenum');
+		var nextnum = parseInt(num) +1;
+		$(this).localResizeIMG({
+			width: 50,
+			quality:1,
+			success:function(result){
+				var img = new Image();
+				img.src = result.base64;
+				$('#head-img'+num).attr('src',img.src);
+				console.log(result);
+			}
+		})
+	})
+</script>
+
+
+</body>
+</html>

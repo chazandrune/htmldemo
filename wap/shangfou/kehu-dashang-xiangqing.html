@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>客户-打赏-详情</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.feedback body {
+	background-color: #EFEFF4;
+}
+.feedback input,
+.feedback textarea {
+	border: none !important;
+}
+.feedback textarea {
+	height: 100px;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+.feedback .row {width: 100%;background-color: #fff;}
+.feedback p {	padding: 10px 15px 0;}
+.feedback .hidden {	display: none;}
+.swiper-container .swiper-slide{ text-align:center;}
+.swiper-container .avatar-radius{ width:70px; height:70px;}
+.mui-badge-yellow {color: #a06606;background-color: #ffefd5;}
+.mui-input-row.mui-input-range {padding-right: 0px;}
+.jieduanname{}
+</style>
+</head>
+
+<body>
+
+<div class="mui-content mui-scroll-wrapper feedback">
+<div class="mui-scroll">
+<form class="mui-content">
+	<div class="mui-table-view-cell jieduanname" style="background-color:#f39800; color:#fff;">
+    <h5 class="txt-white"><span class="mui-badge mui-badge-white mr10">5</span>木作墙、顶面造型</h5>
+    </div>
+	<p>当前阶段成员</p>
+    <!--头像滑动 start-->
+    <div class="row" style="padding:12px 0; border-bottom:1px #dbdbdb solid;">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="images/avatar.jpg" class="avatar-radius" /><h4 class="txt-333">李思</h4><h6>客户经理</h6></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/avatar.jpg" class="avatar-radius" /><h4 class="txt-333">李思</h4><h6>客户经理</h6></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/avatar.jpg" class="avatar-radius" /><h4 class="txt-333">李思</h4><h6>客户经理</h6></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/avatar.jpg" class="avatar-radius" /><h4 class="txt-333">李思</h4><h6>客户经理</h6></a></div>
+        </div>
+    </div>
+    </div>
+    <!--头像滑动 end-->
+    <p>对我们现阶段的工作满意吗？期待您来打赏~<br>向右滑动给团队整体打赏，后续我们自行分赃</p>
+    <div class="mui-table-view-cell row">
+    <h3 class="txt-c mb10">赏额：<span class="txt-yellow" id="block-range-val">500</span>元</h3>
+    <h5 class="txt-c mb20"><span class="mui-badge mui-badge-yellow" id="block-range-yuju">好高兴啊，爱你么么哒~</span></h5>
+    <h5 class="clearfix txt-c mb10"><span class="txt-888 mui-pull-left"><i class="iconfont icon-ma mr5"></i>0</span><span class="txt-888">满意度<span class="ml10" id="block-range-rank">50%</span></span><span class="txt-yellow mui-pull-right"><i class="iconfont icon-weixiao mr5"></i>1000</span></h5>
+    <div class="mui-input-row mui-input-range">
+        <input type="range" id='block-range' value="500" min="0" max="1000" >
+    </div>
+    </div>
+    <p>留言</p>
+	<div class="row mui-input-row">
+        <textarea id="question" class="mui-input-clear question" placeholder="您的留言对我们非常重要..."></textarea>
+    </div>
+	<div class="mui-button-row mui-content-padded"><button type="submit" class=" mui-btn-block mui-btn-blue">提 交</button></div>
+	<div class="mui-button-row mui-content-padded"><a data-href="kehu-dashang-chenggong.html" class="mui-btn mui-btn-block mui-btn-blue">模拟提交成功</a></div>
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false //右滑关闭功能
+});
+ //初始化单页的区域滚动
+mui('.mui-scroll-wrapper').scroll();
+
+//监听input事件，获取range的value值，也可以直接element.value获取该range的值
+var rangeList = document.querySelectorAll('input[type="range"]');
+for(var i=0,len=rangeList.length;i<len;i++){
+	rangeList[i].addEventListener('input',function(){
+		var bfb = this.value/this.max;
+		if(this.id.indexOf('field')>=0){
+			document.getElementById(this.id+'-input').value = this.value;
+		}else{
+			if(bfb==0){
+				document.getElementById(this.id+'-yuju').innerHTML = '只能喝西北风了T_T';
+			}else if(bfb>0&&bfb<0.5){
+				document.getElementById(this.id+'-yuju').innerHTML = '感谢您的赏金';
+			}else if(bfb>=0.5&&bfb<1){
+				document.getElementById(this.id+'-yuju').innerHTML = '再用力点';
+			}else if(bfb==1){
+				document.getElementById(this.id+'-yuju').innerHTML = '超开心，爱你么么哒~';
+			}
+			document.getElementById(this.id+'-val').innerHTML = this.value;
+			document.getElementById(this.id+'-rank').innerHTML = parseInt(bfb*100) +'%';
+		}
+		
+
+	});
+}
+</script>
+<script src="js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+	slidesPerView: 3.2,
+	paginationClickable: true,
+	spaceBetween: 0,
+	freeMode: true
+});
+</script>
+<script src="js/custom.js"></script>
+
+
+</body>
+</html>

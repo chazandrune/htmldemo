@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>瓷砖</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="站点描述" />
+<meta name="keywords" content="站点关键词" />
+<meta name="author" content="环宇威智制作" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<style>
+.products_list.mui-table-view{ background-color:transparent;}
+.products_list.mui-table-view:before,.products_list.mui-table-view:after{ height:0;}
+.products_list.mui-table-view.mui-grid-view .mui-table-view-cell{ padding:10px 0 0 10px; margin-right:0;}
+.products_list.mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn){ margin:-10px 0 0 -10px; padding-top:10px;}
+.products_list .pic{width:145px; height:145px; margin:0 auto;overflow:hidden;}
+.products_list .pic img{ display:block; width:100%; height:auto;}
+.products_list .title{ text-align:left; padding:0px 10px;height:50px; line-height:40px; background:#fff;}
+.products_list .title p{ color:#3e1f00; height:30px; line-height:30px; font-size:16px;}
+.products_list .title h6{ margin:0; font-size:12px; line-height:14px;}
+
+.shaixuan_list .label{ padding:10px; font-size:14px; color:#d38049;}
+.radio_box { padding:0 10px;}
+.radio_box .radio_item{	display: inline-block;*display:inline;*zoom:1;height: 35px; line-height:35px;border: 1px #7d2a10 solid;padding:0px 10px;color: #ffd427;cursor: pointer;font-size: 14px;background: #7d2a10; border-radius:5px; -webkit-border-radius:5px; margin:0 5px 10px 0;}
+.radio_box li {float: left;	display: inline;margin: 0px 10px 20px 0;}
+.radio_box input{display: none;}
+.radio_box .current	{background: #ffd427; border-color:#ffd427;color: #4f0202;}
+
+</style>
+</head>
+
+<body>
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+
+<!-- 侧边导航 start -->
+<aside id="offCanvasSide" class="mui-off-canvas-left nav_side">
+	<div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<div class="title txt-c">
+				<img src="images/sidenav_logo.png" style="width:60%" />
+			</div>
+			<div class="mui-content-padded">
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">瓷砖</a>
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">壁纸</a>
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">卫浴</a>
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">地板</a>
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">地毯</a>
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">灯具</a>
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">家具</a>
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">软饰</a>
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">饰品</a>
+				<a data-href="products.html" class="mui-btn mui-btn-block btn_flower">其他</a>
+			</div>
+			<div class="blank mb20"></div>
+		</div>
+	</div>
+</aside>
+<!-- 侧边导航 end -->
+
+
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+<header class="mui-bar mui-bar-nav mui-bar-tab functionbar">
+	<a class="mui-tab-item" href="#offCanvasSide"><i class="iconfont mr5">&#xe608;</i>类目</a>
+	<a class="mui-tab-item" data-href="products.html"><i class="iconfont mr5">&#xe607;</i>推荐</a>
+	<a class="mui-tab-item" href="#shaixuanPop"><i class="iconfont mr5">&#xe601;</i>筛选</a>
+</header>
+
+<nav class="mui-bar mui-bar-tab">
+<div class="swiper-container bottomnav">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide"><a class="txt-white" data-href="index.html"><i class="iconfont">&#xe602;</i><span class="title">首页</span></a></div>
+		<div class="swiper-slide"><a class="txt-white active" data-href="category.html"><i class="iconfont">&#xe600;</i><span class="title">产品</span></a></div>
+		<div class="swiper-slide"><a class="txt-white" data-href="cases.html"><i class="iconfont">&#xe605;</i><span class="title">案例</span></a></div>
+		<div class="swiper-slide"><a class="txt-white" data-href="###"><i class="iconfont">&#xe60a;</i><span class="title">查货</span></a></div>
+		<div class="swiper-slide"><a class="txt-white" data-href="designers.html"><i class="iconfont">&#xe603;</i><span class="title">设计师</span></a></div>
+		<div class="swiper-slide"><a class="txt-white" data-href="favs.html"><i class="iconfont">&#xe606;</i><span class="title">收藏夹</span></a></div>
+	</div>
+	<div class="btn-prev iconfont">&#xe60b;</div>
+	<div class="btn-next iconfont">&#xe60c;</div>
+</div>
+</nav>
+
+<!--内容区域 start-->
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+	<div class="mui-scroll">
+	
+		<!--分类列表 start-->
+		<ul class="mui-table-view mui-grid-view products_list">
+			<li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+				<a data-href="products-article.html"><div class="pic"><img src="images/pic_product_01.jpg" alt="东鹏瓷砖" /></div><div class="title"><p class="mui-ellipsis">东鹏瓷砖</p><h6>LVYA15122</h6></div></a>
+			</li>
+			<li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+				<a data-href="products-article.html"><div class="pic"><img src="images/pic_product_02.jpg" alt="青橙瓷砖" /></div><div class="title"><p class="mui-ellipsis">青橙瓷砖</p><h6>LVYA15122</h6></div></a>
+			</li>
+			<li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+				<a data-href="products-article.html"><div class="pic"><img src="images/pic_product_01.jpg" alt="东鹏瓷砖" /></div><div class="title"><p class="mui-ellipsis">东鹏瓷砖</p><h6>LVYA15122</h6></div></a>
+			</li>
+			<li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+				<a data-href="products-article.html"><div class="pic"><img src="images/pic_product_02.jpg" alt="青橙瓷砖" /></div><div class="title"><p class="mui-ellipsis">青橙瓷砖</p><h6>LVYA15122</h6></div></a>
+			</li>
+			<li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+				<a data-href="products-article.html"><div class="pic"><img src="images/pic_product_01.jpg" alt="东鹏瓷砖" /></div><div class="title"><p class="mui-ellipsis">东鹏瓷砖</p><h6>LVYA15122</h6></div></a>
+			</li>
+			<li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+				<a data-href="products-article.html"><div class="pic"><img src="images/pic_product_02.jpg" alt="青橙瓷砖" /></div><div class="title"><p class="mui-ellipsis">青橙瓷砖</p><h6>LVYA15122</h6></div></a>
+			</li>
+		</ul>
+		<!--分类列表 end-->
+		
+	</div>
+</div>
+<!--内容区域 end-->
+<div class="mui-modal" id="shaixuanPop">
+	<header class="mui-bar mui-bar-nav">
+		<a href="#shaixuanPop" class="mui-pull-right mui-btn-link">取消</a>
+		<h1 class="mui-title">筛选</h1>
+	</header>
+	
+	<div class="mui-content mui-scroll-wrapper" style="height:100%;">
+		<div class="mui-scroll">
+			
+			<form method="post">
+			<div class="shaixuan_list">
+				<div class="label">品牌</div>
+				<div class="radio_box mb10">
+					<label>
+						<input type="radio" name="brand" value="APPIANI" />
+						<a href="javascript:void(0);" class="radio_item"><span>APPIANI</span></a>
+					</label>
+					<label>
+						<input type="radio" name="brand" value="BARDELLI" />
+						<a href="javascript:void(0);" class="radio_item"><span>BARDELLI</span></a>
+					</label>
+					<label>
+						<input type="radio" name="brand" value="FABRESA" />
+						<a href="javascript:void(0);" class="radio_item"><span>FABRESA</span></a>
+					</label>
+					<label>
+						<input type="radio" name="brand" value="HANDTRADE" />
+						<a href="javascript:void(0);" class="radio_item"><span>HANDTRADE</span></a>
+					</label>
+					<label>
+						<input type="radio" name="brand" value="IRIS" />
+						<a href="javascript:void(0);" class="radio_item"><span>IRIS</span></a>
+					</label>
+					<label>
+						<input type="radio" name="brand" value="VENUS" />
+						<a href="javascript:void(0);" class="radio_item"><span>VENUS</span></a>
+					</label>
+				</div>
+				<div class="label">系列</div>
+				<div class="radio_box mb10">
+					<label>
+						<input type="radio" name="type" value="欧式古典" />
+						<a href="javascript:void(0);" class="radio_item"><span>欧式古典</span></a>
+					</label>
+					<label>
+						<input type="radio" name="type" value="现代简约" />
+						<a href="javascript:void(0);" class="radio_item"><span>现代简约</span></a>
+					</label>
+					<label>
+						<input type="radio" name="type" value="新古典" />
+						<a href="javascript:void(0);" class="radio_item"><span>新古典</span></a>
+					</label>
+					<label>
+						<input type="radio" name="type" value="美式乡村" />
+						<a href="javascript:void(0);" class="radio_item"><span>美式乡村</span></a>
+					</label>
+					<label>
+						<input type="radio" name="type" value="现代前卫" />
+						<a href="javascript:void(0);" class="radio_item"><span>现代前卫</span></a>
+					</label>
+					<label>
+						<input type="radio" name="type" value="地中海式" />
+						<a href="javascript:void(0);" class="radio_item"><span>地中海式</span></a>
+					</label>
+				</div>
+			</div>
+			<div class="mui-content-padded"><button class="mui-btn mui-btn-block mui-btn-yellow">确定</button></div>
+			</form>
+				
+		</div>
+	</div>
+</div>
+<!-- off-canvas backdrop -->
+<div class="mui-off-canvas-backdrop"></div>
+
+</div>
+<!-- 主页面容器 end -->
+
+
+</div>
+
+
+
+
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+	 pullRefresh: {
+            container: '#pullrefresh', //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+            up: {
+                contentrefresh: "正在读取...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+                contentnomore: '没有更多了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+                callback: add_more //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+            },
+			down: {
+				callback: pulldownRefresh
+			}
+        },
+});
+
+function pulldownRefresh() {
+		//这里写ajax
+	setTimeout(function() {
+		  if (true) {
+			  var nd = '<li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6"><a data-href="products-article.html"><div class="pic"><img src="images/pic_product_02.jpg" alt="刷新出来的青橙瓷砖" /></div><div class="title"><p class="mui-ellipsis">刷新出来的青橙瓷砖</p><h6>LVYA15122</h6></div></a></li>';
+			  Zepto('.products_list').prepend(nd);
+			mui('#pullrefresh').pullRefresh().endPulldownToRefresh(false); //参数为true代表没有更多数据了。
+		} else {
+			mui('#pullrefresh').pullRefresh().endPulldownToRefresh(true); //参数为true代表没有更多数据了。
+		}
+	}, 1500)
+}
+
+function add_more() {
+		//这里写ajax
+	setTimeout(function() {
+	  if (true) {
+			  var nd = '<li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6"><a data-href="products-article.html"><div class="pic"><img src="images/pic_product_02.jpg" alt="新加载青橙瓷砖" /></div><div class="title"><p class="mui-ellipsis">新加载青橙瓷砖</p><h6>LVYA15122</h6></div></a></li>';
+			  Zepto('.products_list').append(nd);
+		  mui('#pullrefresh').pullRefresh().endPullupToRefresh(false); //参数为true代表没有更多数据了。
+	  } else {
+		  mui('#pullrefresh').pullRefresh().endPullupToRefresh(true); //参数为true代表没有更多数据了。
+	  }
+	}, 1500)
+}
+</script>
+<!--每页必需 start-->
+<script src="js/custom.js"></script>
+<script>
+//底部导航滑动
+var navswiper = new Swiper('.bottomnav', {
+	slidesPerView:5,
+	//pagination: '.swiper-pagination',
+	//paginationClickable:true,
+	nextButton:'.bottomnav .btn-next',
+	prevButton:'.bottomnav .btn-prev',
+	//spaceBetween: 1,
+	loop: false
+});
+</script>
+<!--每页必需 end-->
+
+<script>
+$(function(){
+	$('.radio_box input').each(function(){
+		if($(this).attr('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	$('.radio_box .radio_item').on("tap",function(){
+		if($(this).hasClass('open')){
+			$('#'+$(this).attr('open1')).show();
+			$('#'+$(this).attr('open2')).show();
+		}else{
+			$('#'+$(this).attr('open1')).hide();
+			$('#'+$(this).attr('open2')).hide();
+		}
+		$(this).prev().trigger('tap');
+		$(this).parent().parent().find('.radio_item').removeClass('current');
+		$(this).addClass('current');
+		return false;
+	});		
+});
+
+</script>
+
+</body>
+</html>

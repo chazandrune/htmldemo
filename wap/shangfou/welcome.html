@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>欢迎</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+@-webkit-keyframes bouble {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-animation-timing-function: cubic-bezier(.08,.68,.80,1);
+		animation-timing-function: cubic-bezier(.08,.68,.70,1);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0,0);
+		transform: scale(0,0);
+	}
+	20% {
+		opacity: 1;
+		-webkit-transform: scale(1.3,1.3);
+		transform: scale(1.3,1.3);
+	}
+	65% {
+		-webkit-transform: scale(0.8,0.8);
+		transform: scale(0.8,0.8);
+	}
+	80% {
+		-webkit-transform: scale(1,1);
+		transform: scale(1,1);
+	}
+}
+@-webkit-keyframes moveright {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-animation-timing-function: cubic-bezier(.4,.41,.7,1.0);
+		animation-timing-function:cubic-bezier(.4,.41,.7,1.0);
+	}
+	0% {
+		-webkit-transform: translate3d(-30px, 0, 0);
+		transform: translate3d(-30px, 0, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@-webkit-keyframes movemove {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-animation-timing-function: cubic-bezier(.4,.41,.7,1.0);
+		animation-timing-function:cubic-bezier(.4,.41,.7,1.0);
+	}
+	0% {
+		-webkit-transform: translate3d(0px, 0, 0);
+		transform: translate3d(0px, 0, 0);
+	}
+	50% {
+		-webkit-transform: translate3d(-50px, 0, 0);
+		transform: translate3d(-50px, 0, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@-webkit-keyframes zoom {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-animation-timing-function: cubic-bezier(.4,.41,.7,1.0);
+		animation-timing-function:cubic-bezier(.4,.41,.7,1.0);
+	}
+	0% {
+		-webkit-transform: scale(1,1);
+		transform: scale(1,1);
+	}
+	50% {
+		-webkit-transform: scale(1.3,1.3);
+		transform: scale(1.3,1.3);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+
+.mui-slider{background-image:url(images/welcome-bg.jpg);background-size:cover; background-repeat:no-repeat; background-position:center;}
+.item-logo {width: 100%;height: 100%;position: relative; }
+.item-logo .logo {width: 100%;height: 200px; padding-top:30px; box-sizing:border-box;display: block;color: #fff;position: absolute;top: 45%;left: 0; margin-top:-100px;}
+.item-logo .logo img{}
+.item-logo .logo p{ margin-bottom:5px; line-height:20px;}
+.animate {position: absolute;left:0;top:0;bottom:0; right:0;width: 100%; height:100%;color: #fff;}
+.animated { text-align:center;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-play-state: paused;
+	-webkit-animation-fill-mode: both;
+}
+.animate .animated01 { 
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: 0s;
+}
+.animate .animated02 {
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: 0.8s;
+	display:block;
+}
+.animate .animated-img{position:absolute; top:20%; left:0; right:0;} 
+.animate .animated-txt{ position:absolute; top:70%; left:0; right:0;} 
+
+.mui-operate{ background-color:transparent; padding:0 5px; height:50px;-webkit-box-shadow:none;box-shadow:none;}
+.mui-operate ul{padding:0; margin:0;}
+.mui-operate li{ list-style:none; float:left; width:50%; box-sizing:border-box; padding:0 5px;}
+.mui-operate li.mui-pull-left a{
+	-webkit-animation-duration: 0.8s;
+	-webkit-animation-play-state: paused;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .5s;}
+.mui-operate li.mui-pull-right a{
+	-webkit-animation-duration: 0.8s;
+	-webkit-animation-play-state: paused;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .8s;}
+.animate .animated01-02{ 
+	-webkit-animation-name: moveright;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .5s;
+}
+.animate .animated02-01{ 
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .0s;
+}
+.animate .animated02-02{ 
+	-webkit-animation-name: bouble;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .3s;
+}
+.animate .animated03-01{ 
+	-webkit-animation-name: movemove;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .0s;
+}
+.animate .animated03-02{ 
+	-webkit-animation-name: zoom;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .1s;
+}
+.animate .animated03-03{ 
+	-webkit-animation-name: zoom;
+	-webkit-animation-play-state: running;
+	-webkit-animation-delay: .5s;
+}
+
+.mui-slider-indicator .mui-indicator{ background:rgba(0,0,0,.3);-webkit-box-shadow:none;box-shadow: none;}
+.mui-slider-indicator .mui-indicator.mui-active{-webkit-box-shadow: 0 0 1px 1px rgba(130,130,130,.7);box-shadow: 0 0 1px 1px rgba(130,130,130,.7);}
+</style>
+</head>
+
+<body>
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+<!--<div class="mui-bar mui-bar-footer mui-operate" style="bottom:20px;">
+<ul class="clearfix">
+	<li class="mui-pull-left"><a data-href="kehu-denglu.html" class="mui-btn mui-btn-yellow mui-btn-block">客户入口</a>
+	<li class="mui-pull-right"><a data-href="yuangong-denglu.html" class="mui-btn mui-btn-blue mui-btn-block " >员工入口</a>
+</li>
+</ul>
+</div>-->
+
+<div class="mui-slider mui-fullscreen">
+    <div class="mui-slider-group">
+        <!-- 第一张 -->
+        <div class="mui-slider-item">
+            <div class="item-logo" style="background-color: #ff4747">
+                <div class="animate guide-show">
+                    <div class="animated animated-img"><img src="images/welcome_01-1.png" class=""/></div>
+                    <div class="animated animated01-02 animated-img"><img src="images/welcome_01-2.png" class=""/></div>
+                    <h4 class="animated animated02 animated-txt">服务的不好，您扣钱</h4>
+                </div>
+            </div>
+        </div>
+        <!-- 第二张 -->
+        <div class="mui-slider-item">
+            <div class="item-logo" style="background-color: #67C962;">
+                <div id="tips-2" class="animate mui-hidden">
+                    <div class="animated animated-img"><img src="images/welcome_02-1.png" class=""/></div>
+                    <div class="animated animated02-01 animated-img"><img src="images/welcome_02-2.png" class=""/></div>
+                    <div class="animated animated02-02 animated-img"><img src="images/welcome_02-3.png" class=""/></div>
+                    <h4 class="animated animated02 animated-txt">服务的好，您推荐个客户呗！</h4>
+                </div>
+            </div>
+        </div>
+        <!-- 第三张 -->
+        <div class="mui-slider-item">
+            <div class="item-logo" style="background-color: #02C1ED;">
+                <div id="tips-3" class="animate mui-hidden">
+                    <div class="animated animated-img"><img src="images/welcome_03-1.png" class=""/></div>
+                    <div class="animated animated03-01 animated-img"><img src="images/welcome_03-2.png" class=""/></div>
+                    <div class="animated animated03-02 animated-img"><img src="images/welcome_03-3.png" class=""/></div>
+                    <div class="animated animated03-03 animated-img"><img src="images/welcome_03-4.png" class=""/></div>
+                    <h4 class="animated animated02 animated-txt">服务的好不好，您都可以槽</h4>
+                </div>
+            </div>
+        </div>
+        <!-- 第四张 start-->
+        <div class="mui-slider-item">
+            <div class="item-logo" style=" background-color:#fff;">
+                <div id="tips-4" class="animate mui-hidden">
+                	<div class="animated animated01 animated-img"><img src="images/logo-img.png" class=""/></div>
+                    <div class="mui-operate" style="position:absolute;bottom:30px; left:0; right:0;">
+                    <ul class="clearfix">
+                        <li class="mui-pull-left"><a data-href="kehu-denglu.html" class="mui-btn mui-btn-yellow mui-btn-block">客户入口</a>
+                        <li class="mui-pull-right"><a data-href="yuangong-denglu.html" class="mui-btn mui-btn-blue mui-btn-block " >员工入口</a>
+                    </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 第四张 end -->
+    </div>
+    <div class="mui-slider-indicator">
+        <div class="mui-indicator mui-active"></div>
+        <div class="mui-indicator"></div>
+        <div class="mui-indicator"></div>
+        <div class="mui-indicator"></div>
+    </div>
+</div>
+
+</div>
+<!-- 主页面容器 end -->
+
+
+
+
+
+<script src="js/mui.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+});
+
+//图片切换时，触发动画
+document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+	//注意slideNumber是从0开始的；
+	var index = event.detail.slideNumber+1;
+	if(index==2||index==3||index==4){
+		var item = document.getElementById("tips-"+index);
+		if(item.classList.contains("mui-hidden")){
+			item.classList.remove("mui-hidden");
+			item.classList.add("guide-show");
+		}
+	}
+});
+
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

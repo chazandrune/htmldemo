@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>员工-客户留言-详情</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.list-jieduan{ padding:20px 0;}
+.list-jieduan-item .sq{ display:none;}
+.list-jieduan-item.mui-active .ck{ display:none;}
+.list-jieduan-item.mui-active .sq{ display:inline;}
+.list-jieduan-item.mui-table-view-cell{ padding:0px 15px 10px; overflow:visible; background:none;}
+.list-jieduan-item.mui-table-view-cell>a:not(.mui-btn){ margin:0 -15px;}
+.list-jieduan-item.mui-table-view-cell .iconfont{ background:#efeff4;}
+.mui-table-view-cell.mui-collapse .mui-collapse-content{ background:none; margin:-11px -15px 0px 10px;}
+.list-jieduan.mui-table-view:after{ display:none;}
+.list-jieduan-item.mui-table-view-cell:after{position: absolute;right: auto; top:15px;bottom:0px;left: 22px;width: 1px; height:100%;content: '';background-color: #aaa;-webkit-transform: scaleY(1);transform: scaleY(1); z-index:-1;}
+</style>
+</head>
+
+<body>
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+<header class="mui-bar mui-bar-nav">
+<a class="mui-action-back mui-icon mui-icon-arrowleft"></a>
+<h1 class="mui-title">客户留言</h1>
+</header>
+
+
+
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper" style="padding-top:44px;">
+<div class="mui-scroll">
+	<div style=" padding:10px;background-color:#fff; position:relative;">
+    	<h6>合同编号：213782871  2015-05-01 11:32</h6>
+        <div class="clearfix"><h4 class="man-name txt-333 mui-pull-left"><i class="iconfont icon-peoplefill txt-888"></i>宋杨</h4></div>
+        <div class="clearfix"><h4 class="man-phone txt-333 mui-pull-left"><i class="iconfont icon-mobilefill txt-888"></i>13212341234</h4></div>
+        <a href="#dial" class="mui-btn mui-btn-link" style="position:absolute; right:20px; top:40%; "><i class="iconfont icon-dianhua" style="font-size:24px;"></i></a>
+    </div>
+    <ul class="mui-table-view list-jieduan" style="background-color:#efeff4;">
+        <li class="mui-table-view-cell mui-collapse list-jieduan-item txt-888">
+            <a href="#"><i class="iconfont icon-roundcheckfill txt-888 mr10"></i>签单合同<span class="mui-pull-right txt-blue font12 ck">查看留言</span><span class="mui-pull-right txt-blue font12 sq">收起留言</span></a>
+            <div class="mui-collapse-content">
+            	<p class="txt-888">暂无留言</p>
+            </div>
+        </li>
+        <li class="mui-table-view-cell mui-collapse list-jieduan-item txt-888">
+            <a href="#"><i class="iconfont icon-roundcheckfill txt-888 mr10"></i>签单合同<span class="mui-pull-right txt-blue font12 ck">查看留言</span><span class="mui-pull-right txt-blue font12 sq">收起留言</span></a>
+            <div class="mui-collapse-content">
+            	<p class="txt-333">服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情</p>
+            </div>
+        </li>
+        <li class="mui-table-view-cell mui-collapse list-jieduan-item txt-888">
+            <a href="#"><i class="iconfont icon-roundcheckfill txt-888 mr10"></i>基材到场<span class="mui-pull-right txt-blue font12 ck">查看留言</span><span class="mui-pull-right txt-blue font12 sq">收起留言</span></a>
+            <div class="mui-collapse-content">
+            	<p class="txt-333">服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情</p>
+            </div>
+        </li>
+        <li class="mui-table-view-cell mui-collapse list-jieduan-item txt-888">
+            <a href="#"><i class="iconfont icon-roundcheckfill txt-888 mr10"></i>签单合同<span class="mui-pull-right txt-blue font12 ck">查看留言</span><span class="mui-pull-right txt-blue font12 sq">收起留言</span></a>
+            <div class="mui-collapse-content">
+            	<p class="txt-333">服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
+
+</div>
+<!-- 主页面容器 end -->
+
+
+
+
+
+<div id="dial" class="mui-popover mui-popover-action mui-popover-bottom">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="tel:13212341234">拨打电话：13212341234</a></li>
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#dial"><b>取消</b></a></li>
+    </ul>
+</div>
+
+
+<script src="js/mui.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+	 pullRefresh: {
+            container: '#pullrefresh', //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+            down: {
+				callback: pulldownRefresh
+			}
+        },
+});
+
+function pulldownRefresh() {
+		//这里写ajax
+	setTimeout(function() {
+		if (true) {
+			  var nd = '<li class="mui-table-view-cell mui-collapse list-jieduan-item txt-888"><a href="#"><i class="iconfont icon-roundcheckfill txt-888 mr10"></i>签单合同<span class="mui-pull-right txt-blue font12 ck">查看留言</span><span class="mui-pull-right txt-blue font12 sq">收起留言</span></a><div class="mui-collapse-content"><p>服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情服务非常热情</p></div></li>';
+			  Zepto('.list-jieduan').prepend(nd);
+			mui('#pullrefresh').pullRefresh().endPulldownToRefresh(false); //参数为true代表没有更多数据了。
+		} else {
+			mui('#pullrefresh').pullRefresh().endPulldownToRefresh(true); //参数为true代表没有更多数据了。
+		}
+	}, 1500)
+}
+
+
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

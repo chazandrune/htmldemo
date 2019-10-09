@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>客户-推荐</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" type="text/css" href="css/mui.picker.min.css" />
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.feedback body {
+	background-color: #EFEFF4;
+}
+.feedback input,
+.feedback textarea {
+	border: none !important;
+}
+.feedback textarea {
+	height: 100px;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+.feedback .row {
+	width: 100%;
+	background-color: #fff;
+}
+.feedback p {
+	padding: 10px 15px 0;
+}
+.feedback .hidden {
+	display: none;
+}
+#head {line-height: 40px;}
+#head-img1 {position: absolute;bottom: 10px;right: 40px;width: 40px;height: 40px;}
+.mui-input-row .mui-btn.btn-select{ width:70%; padding-right:40px; text-align:right; position:absolute; top:1px; right:0; border:0; color:#666; font-size:17px;}
+</style>
+</head>
+
+<body>
+
+<header class="mui-bar mui-bar-nav">
+<a class="mui-action-back mui-icon mui-icon-back mui-pull-left"></a>
+<a href="#share" class="mui-btn mui-btn-link mui-pull-right">分享</a>
+<h1 class="mui-title">推荐</h1>
+</header>
+
+<div class="mui-content mui-scroll-wrapper feedback">
+<div class="mui-scroll">
+<div class="bigpic"><img src="images/pic_tuijian.jpg" style="width:100%;" /></div>
+<form class="mui-content">
+	<p>基本信息（<span class="txt-red">重要</span>）</p>
+    <ul class="mui-table-view mui-input-group">
+        <li class="mui-input-row">
+            <label>姓名</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="李思"/>
+        </li>
+        <li class="mui-input-row">
+            <label>手机号</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="13212341234"/>
+        </li>
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            <label>地区</label><button id='showCityPicker3' class="mui-btn mui-btn-block btn-select" type='button'>请选择</button>
+            </div>
+        </li>
+    </ul>
+    <p>房屋信息（选填）</p>
+    <ul class="mui-table-view mui-input-group">
+        <li class="mui-input-row">
+            <label>楼盘名称</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value="康馨家园"/>
+        </li>
+        <li class="mui-input-row">
+            <label>房屋面积</label><input type="text" class="mui-text-right txt-666" placeholder="请输入" value=""/>
+        </li>
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            <label>房屋状况</label><button id='showHousePicker' class="mui-btn mui-btn-block btn-select" type='button'>请选择</button>
+            </div>
+        </li>
+        <li class="mui-input-row">
+        	<div class="mui-navigate-right">
+            <label>居室</label><button id='showJushiPicker' class="mui-btn mui-btn-block btn-select" type='button'>请选择</button>
+            </div>
+        </li>
+    </ul>
+	<div class="mui-button-row mui-content-padded"><button type="submit" class=" mui-btn-block mui-btn-yellow">提 交</button></div>
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+<div id="share" class="mui-popover mui-popover-action mui-popover-bottom">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#">分享到朋友圈</a></li>
+        <li class="mui-table-view-cell"><a href="#">分享给QQ好友</a></li>
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#share"><b>取消</b></a></li>
+    </ul>
+</div>
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script src="js/mui.picker.min.js"></script>
+<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+<script>
+mui.init({
+	swipeBack:false //右滑关闭功能
+});
+ //初始化单页的区域滚动
+mui('.mui-scroll-wrapper').scroll();
+
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					//房屋状况选单
+					var housePicker = new $.PopPicker();
+					housePicker.setData([{
+						value: 'mpf',
+						text: '毛坯房'
+					}, {
+						value: 'jzf',
+						text: '简装房'
+					}, {
+						value: 'jzf',
+						text: '精装房'
+					}]);
+					var showHousePickerButton = doc.getElementById('showHousePicker');
+					var houseResult = doc.getElementById('showHousePicker');
+					showHousePickerButton.addEventListener('tap', function(event) {
+						housePicker.show(function(items) {
+							houseResult.innerText = JSON.stringify(items[0]['text']);
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//居室选单
+					var jushiPicker = new $.PopPicker();
+					jushiPicker.setData([{
+						value: 'ywj',
+						text: '一室一厅'
+					}, {
+						value: 'aaa',
+						text: '二室一厅'
+					}, {
+						value: 'lj',
+						text: '三室二厅'
+					}]);
+					var showJushiPickerButton = doc.getElementById('showJushiPicker');
+					var jushiResult = doc.getElementById('showJushiPicker');
+					showJushiPickerButton.addEventListener('tap', function(event) {
+						jushiPicker.show(function(items) {
+							jushiResult.innerText = JSON.stringify(items[0]['text']);
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+					//					//级联示例
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton = doc.getElementById('showCityPicker3');
+					var cityResult3 = doc.getElementById('showCityPicker3');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							cityResult3.innerText =  (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					//-----------------------------------------
+				});
+			})(mui, document);
+			
+			
+</script>
+
+
+</body>
+</html>

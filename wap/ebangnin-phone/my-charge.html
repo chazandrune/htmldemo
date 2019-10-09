@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html style=" font-size:100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>充值</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/my.css">
+<script src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+</head>
+
+<body class="page-my-charge">
+
+
+
+<!--主体start-->
+<div class="mainbody" style="top:.0rem; bottom:.0rem; left:0; right:0;">
+<div class="mainbody_scroll">
+
+<div class="part-01 mb10">
+	<div class="my-head">
+		<div class="blank10"></div>
+		<div class="txt-c"><img class="logo" src="images/logo_white.png" /></div>
+		<div class="txt-c my-head-id fs16"><i class="icon_ebn icon-ayi-user-white mr5"></i>137****1356</div>
+		<div class="blank10"></div>
+		<div class="blank10"></div>
+		<div class="headbottom"></div>
+	</div>
+	<ul class="ul_view">
+		<li class="ul_view_cell"><div class="ul_view_cell_a"><h1>账户余额（元）<span class="fr txt-blue fs28">120.00</span></h1></div></li>
+	</ul>
+</div>
+
+
+<div class="text_box pad10 mb10">
+	<div class="fs12 txt-888">账户充值</div>
+</div>
+
+<div class="part-02 mb20" id="list_scroll">
+
+<!--充值列表 start-->
+<div class="list_charge mb10">
+<div class="nr">
+	<ul>
+		<li><a href="###" class="item" onClick="tanchucharge(200);">
+			<div class="pic"><img src="images/icon_rmb_purple.png"></div>
+			<div class="txt">
+				<h1>充值200元</h1>
+				<p>赠送价值30元优惠券</p>
+			</div>
+			<span class="btn btn_small btn_purple_line ease-1">立即充值</span>
+		</a></li>
+		<li><a href="###" class="item">
+			<div class="pic"><img src="images/icon_rmb_blue.png"></div>
+			<div class="txt">
+				<h1>充值500元</h1>
+				<p>赠送价值30元优惠券</p>
+			</div>
+			<span class="btn btn_small btn_blue_line ease-1">立即充值</span>
+		</a></li>
+		<li><a href="###" class="item">
+			<div class="pic"><img src="images/icon_rmb_green.png"></div>
+			<div class="txt">
+				<h1>充值1000元</h1>
+				<p>赠送价值30元优惠券</p>
+			</div>
+			<span class="btn btn_small btn_green_line ease-1">立即充值</span>
+		</a></li>
+		<li><a href="###" class="item">
+			<div class="pic"><img src="images/icon_rmb_yellow.png"></div>
+			<div class="txt">
+				<h1>充值2000元</h1>
+				<p>赠送价值30元优惠券</p>
+			</div>
+			<span class="btn btn_small btn_yellow_line ease-1">立即充值</span>
+		</a></li>
+		<li><a href="###" class="item">
+			<div class="pic"><img src="images/icon_rmb_peach.png"></div>
+			<div class="txt">
+				<h1>充值3000元</h1>
+				<p>赠送价值30元优惠券</p>
+			</div>
+			<span class="btn btn_small btn_peach_line ease-1">立即充值</span>
+		</a></li>
+		<li><a href="###" class="item">
+			<div class="pic"><img src="images/icon_rmb_red.png"></div>
+			<div class="txt">
+				<h1>充值5000元</h1>
+				<p>赠送价值30元优惠券</p>
+			</div>
+			<span class="btn btn_small btn_red_line ease-1">立即充值</span>
+		</a></li>
+	</ul>
+</div>
+</div>
+<!--充值列表 start-->
+
+
+<!--输入充值额度 start-->
+<div class="login_box">
+<form method="post">
+<ul class="ul_view">
+	<li class="ul_view_cell">
+		<div class="form_item form_item_phone"><i class="icon_ebn icon-rmb"></i><input type="text" maxlength="11" class="input_text ease-1" placeholder="请输入充值金额" /><button type="submit" class="btn btn_submit btn_blue_line btn_small ease-1">立即充值</button></div>
+	</li>
+</ul>
+</form>
+</div>
+<!--输入充值额度 end-->
+
+
+
+</div>
+
+
+
+
+</div>
+</div>
+<!--主体end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--充值 弹窗start-->
+<div class="tc-box tc-charge blue radius-5" id="tc-charge-200">
+	<div class="bt"><h1>充值200元</h1><p>赠送价值30元优惠券</p><a href="###" class="tc-closebtn">×</a></div>
+	<div class="nr pad10">
+		<div class="blank10"></div>
+		<div class="text_box txt-666">
+			优惠券有效期3个月<br>
+			10元擦玻璃券1张，5元冰箱清洗券1张，5元日常保洁券1张，5元空调清洗券1张，5元油烟机清洗券1张
+		</div>
+		<div class="blank10"></div>
+	</div>
+	<div class="btns">
+		<ul class="clearfix">
+			<li><a href="###" class="btn tc-closebtn txt-666">不需要</a></li>
+			<li><a href="order-charge.html" class="btn txt-blue">去充值</a></li>
+		</ul>
+	</div>
+</div>
+<!--充值 弹窗end-->
+
+
+
+
+
+
+
+<script type="text/javascript">
+//弹出充值窗口函数
+function tanchucharge(i){
+	var charge = layer.open({
+		type: 1,
+		title: false,
+		closeBtn: false,
+		fix: false,
+		offset: 'auto',
+		area: ['2.8rem', 'auto'],
+		shade: [0.5, '#000'],
+		skin: 'layui-layer-custom',
+		shadeClose: false,
+		scrollbar: true,
+		shift:2,
+		content: $('#tc-charge-200'),
+		zIndex:9999
+	});
+	$('.tc-closebtn').on('click',function(){
+		layer.close(charge);
+	})
+}
+
+</script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

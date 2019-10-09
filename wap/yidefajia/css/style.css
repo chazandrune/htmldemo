@@ -1,0 +1,172 @@
+/*
+ *这是单独为hello mui准备的个性化css，可以覆盖标准mui的css定义；
+ * 在实际项目开发时，建议为App单独写一个css文件，从而实现项目的自定义皮肤功能；
+ * 
+ * */
+/*.mui-android header.mui-bar{
+	display: none;
+}
+.mui-android .mui-bar-nav~.mui-content{
+	padding: 0;
+}*/
+
+html,body {background-color: #fff; height:100%;}
+a{ /*color:#28a3f5;*/color:#6d1e1e;}
+a:active{ color:#c62121;}
+
+.ml10{ margin-left:10px;}
+.mr10{ margin-right:10px;}
+.ml5{ margin-left:5px;}
+.mr5{ margin-right:5px;}
+.mb10{ margin-bottom:10px;}
+.mb20{ margin-bottom:20px;}
+p{line-height:22px;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden; overflow:hidden;}
+.font12{ font-size:12px;}
+.txt-l{ text-align:left;}
+.txt-c{ text-align:center;}
+.txt-r{ text-align:right;}
+.txt-white{ color:#fff;}
+.txt-333{ color:#333;}
+.txt-666{ color:#666;}
+.txt-888{ color:#888;}
+.txt-red{ color:#900b0a;}
+.txt-darkred{ color:#421f05;}
+.txt-green{ color:#60c10a;}
+.txt-blue{ color:#329fc9;}
+.txt-yellow{ color:#ffd427;}
+.txt-black{ color:#333;}
+.ease-1{
+-webkit-transition:all 0.1s ease-out;
+-khtml-transition:all 0.1s ease-out;
+-moz-transition: all 0.1s ease-out;
+-o-transition: all 0.1s ease-out;
+transition: all 0.1s ease-out;}
+.ease-3{
+-webkit-transition:all 0.3s ease-out;
+-khtml-transition:all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;}
+.shadow-text-1{
+-moz-text-shadow:0 1px 0px rgba(0,0,0,.5);
+-webkit-text-shadow:0 1px 0px rgba(0,0,0,.5);
+text-shadow:0 1px 0px rgba(0,0,0,.5);}
+.blank{ height:10px;}
+.xuline{ border-bottom:1px #dbdbdb dashed; height:0; margin:10px 0;}
+.mui-badge-white{color: #f39800;background-color: #fff;}
+.mui-badge-green, .mui-badge-success{ background-color:#60c10a;}
+
+/*头部ui*/
+header.mui-bar{ background:#712705; border-bottom:1px #dfb00d solid;}
+header.mui-bar-nav{ box-shadow: 0 1px 5px rgba(0,0,0,.8);-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.8);  }
+header.mui-bar .mui-title{ height:100%; color:#fff;}header.mui-bar .mui-title img{ height:100%;}
+header.mui-bar a{}
+header.mui-bar .mui-btn-link {color:#ffd427;}
+header.mui-bar .mui-btn-link.mui-active, .mui-bar .mui-btn-link:active{ color:#fff;}
+
+.mui-segmented-control-tab{ background:#fff; color:#888;}
+.mui-segmented-control-tab.mui-segmented-control-inverted .mui-control-item.mui-active {color: #222;border-bottom: 2px solid #f39800;background: 0 0;}
+
+/*侧边ui*/
+.mui-off-canvas-left, .mui-off-canvas-right{ background-color:#4f0202; background-image:url(../images/sidenav_bg.jpg); background-size:100% auto; background-position:bottom center; background-repeat:no-repeat;}
+.nav_side .title{padding:10px;}
+.nav_side .title .tel{height:30px;line-height:30px;border:1px #ff8a00 solid;border-radius:5px;-webkit-border-radius:5px;overflow:hidden; display:inline-block;}
+.nav_side .title .tel span{ padding:0 10px; font-size:10px; display:block; float:left;}
+.nav_side .title .tel .label{ background:#ff8a00; color:#fff;}
+.nav_side .title .tel .value{ background:#fff; color:#ff8a00; font-size:14px;}
+.nav_side .iconfont{ color:#888;}
+.nav_side .mui-table-view-cell h5{ color:#333;}
+.nav_side .mui-table-view-cell.mui-active .iconfont{ color:#333;}
+.nav_side .copyright{ line-height:24px; padding:10px;}
+.nav_side .copyright p{ font-size:12px;}
+.mui-off-canvas-wrap.mui-active .mui-off-canvas-backdrop{ box-shadow:-1px 0 1px rgba(0,0,0,.3),1px 0 1px rgba(0,0,0,.3);background: rgba(0,0,0,.5);}
+
+/*底部ui*/
+.mui-bar{ background-color:#421f05; border-top:1px #7c3604 solid;}
+.mui-bar .bottomnav .swiper-slide{display: table-cell;overflow: hidden;height: 50px;text-align: center;vertical-align: middle;white-space: nowrap;text-overflow: ellipsis; color: #fff;}
+.mui-bar .bottomnav .swiper-slide a{ display:block; padding:5px 0;}
+.mui-bar .bottomnav .swiper-slide a:active,.mui-bar .bottomnav .swiper-slide a.active{ background-color:#c26d1a; color:#fff; background-image:url(../images/bottomnav_active.png); background-size:100% auto; background-position:bottom center; background-repeat:no-repeat;}
+.mui-bar .bottomnav .swiper-slide .iconfont{ font-size:24px; z-index:20; position:relative; width:24px; height:24px; top:2px;}
+.mui-bar .bottomnav .swiper-slide .title{font-size: 11px;display: block;overflow: hidden;text-overflow: ellipsis;}
+.bottomnav .btn-prev,.bottomnav .btn-next{position: absolute; top: 50%;width:20px;height: 50px;margin-top: -25px;z-index: 10;cursor: pointer; text-align:center; line-height:50px; font-size:12px; color:#ffd778; }
+.bottomnav .swiper-button-disabled{ opacity:0; -webkit-opacity:0;}
+.bottomnav .btn-prev{ left:0;}
+.bottomnav .btn-next{ right:0;}
+.mui-bar-tab .mui-tab-item.mui-active{ color:#f77913;}
+
+/*主体ui*/
+.mui-content{ background-image:url(../images/bg.jpg); background-size:cover; background-color:#4a0505;}
+.content_flower{ background-color:#fff; }
+.content_flower.flower_b{position:relative; border-bottom:1px #f2c030 solid;}
+.content_flower.flower_b:after{content:''; display:block; width:18px; height:11px; background:url(../images/flower_btn.png) no-repeat center;background-size:contain; position:absolute; bottom:-7px; left:50%; margin-left:-9px; transform:rotate(180deg);-webkit-transform:rotate(180deg);}
+.content_flower.flower_t{position:relative; border-top:1px #f2c030 solid;}
+.content_flower.flower_t:before{content:''; display:block; width:18px; height:11px; background:url(../images/flower_btn.png) no-repeat center;background-size:contain; position:absolute; top:-7px; left:50%; margin-left:-9px;}
+.text_box img{ max-width:100%;}
+
+/*控件ui*/
+.btn_flower{ border:1px #dda91a solid; background:url(../images/alpha_white10.png); color:#ffd427; position:relative; border-radius:5px;-webkit-border-radius:5px; box-shadow:0 0 10px rgba(0,0,0,.8);-webkit-box-shadow:0 0 10px rgba(0,0,0,.8);}
+.btn_flower:after{ content:''; display:block; width:18px; height:11px; background:url(../images/flower_btn.png) no-repeat center;background-size:contain; position:absolute; top:-7px; left:50%; margin-left:-9px;}
+.btn_flower:active{ color:#ffd427; background:#a82120;}
+.mui-btn-block{ padding:5px;}
+.mui-btn-outlined {background-color: #fff;}
+.mui-badge-danger, .mui-badge-red {color: #fff;background-color: #f33900;}
+.mui-btn-warning, .mui-btn-yellow{ color:#fff; background-color:#c26d1a; border-color:#c26d1a;}
+.mui-table-view-chevron .mui-table-view-cell>a:not(.mui-btn) {margin-right: -65px;}
+input:disabled, textarea:disabled{ background:#f8f8f8;}
+.mui-btn.btn-select:active{ background:none !important;}
+
+/*选项卡和筛选排序ui*/
+.functionbar.mui-bar-tab{ height:44px;}
+.functionbar.mui-bar-tab .mui-tab-item{ height:44px; color:#ffd427;}
+
+
+
+
+
+
+/*弹出ui（下拉）*/
+.mui-popover{ border-radius:0;width:auto;border:1px #dbdbdb solid;}
+.mui-popover .mui-scroll-wrapper { border-radius:0;}
+.mui-popover.popover-xiala{ min-height:200px;  width:310px;}
+.popover-xiala .cur{ color:#f39800;}
+.mui-popover.mui-bar-popover .mui-table-view{ width:auto; }
+.mui-popover .mui-popover-arrow.mui-bottom:after {  top: -24px; left: 0;border: 1px #dbdbdb solid;}
+.mui-modal{background:#4f0202; }
+.mui-modal header.mui-bar{ z-index:1000;}
+.mui-modal .mui-content{background:#4f0202;}
+.mui-modal .mui-bar{  border:0; box-shadow:none;}
+.mui-modal .mui-bar-footer{background-color:#;}
+.mui-pull{ color:#fff;}
+.mui-toast-container{bottom:50%; margin-bottom:-15px;text-align:center;}
+.mui-toast-message{display:inline-block;max-width:270px;margin:5px auto;padding:5px;color:#fff;border-radius:7px;background-color:transparent; background:url(../images/alpha_black50.png);}
+
+/*分页*/
+.pagelist{ padding:20px 0px 30px; text-align:center; position:relative;}
+.pagelist p a{ line-height:48px; display:inline-block;*display:inline;*zoom:1; width:48px; height:48px; border:1px solid; border-color:transparent; color:#fff; margin-right:10px; font-size:14px; text-align:center; font-family:Tahoma, Geneva, sans-serif; background:url(../images/alpha_black30.png) repeat;
+-webkit-transition:all 0.1s ease-out;
+-khtml-transition:all 0.1s ease-out;
+-moz-transition: all 0.1s ease-out;
+-o-transition: all 0.1s ease-out;
+transition: all 0.1s ease-out;
+-webkit-border-radius:50%;
+-moz-border-radius: 50%;
+border-radius: 50%;}
+.pagelist p a:hover{ border-color:#60c10a; background:#60c10a; color:#fff; z-index:1; }
+.pagelist p a.thisclass{ color:#ff8a00; background:none;}
+.pagelist p a.thisclass:hover{background:none; border-color:transparent;}
+
+.pagelist.white p a{ color:#fff;}
+.pagelist.white p a.thisclass{color:#ff8a00;}
+
+
+
+
+
+
+
+
+
+
+
+

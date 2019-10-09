@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script></head>
+
+<body>
+<!--大切换图start-->
+<div id="indexslider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(images/banner_01.jpg)">
+            <div class="txt-mask">
+            	<h1>专注于大型剧场整体解决方案的研发</h1>
+            	<p>天乐基业将继续秉承“以人为本，和谐发展”的核心价值观，发扬“意在创新，志在卓越”的企业精神，以发展为第一要务，以人才为第一资源，以创新为第一动力，以顾客满意为第一目标，竭诚为社会各界提供全方位的优质服务。</p>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(images/banner_02.jpg)">
+            <div class="txt-mask">
+            	<h1>专注于大型剧场整体解决方案的研发</h1>
+            	<p>天乐基业将继续秉承“以人为本，和谐发展”的核心价值观，发扬“意在创新，志在卓越”的企业精神，以发展为第一要务，以人才为第一资源，以创新为第一动力，以顾客满意为第一目标，竭诚为社会各界提供全方位的优质服务。</p>
+            </div>
+        </div>
+        <div class="swiper-slide" style="background-image:url(images/banner_03.jpg)">
+            <div class="txt-mask">
+            	<h1>专注于大型剧场整体解决方案的研发</h1>
+            	<p>天乐基业将继续秉承“以人为本，和谐发展”的核心价值观，发扬“意在创新，志在卓越”的企业精神，以发展为第一要务，以人才为第一资源，以创新为第一动力，以顾客满意为第一目标，竭诚为社会各界提供全方位的优质服务。</p>
+            </div>
+        </div>
+    </div>
+    <!-- Add Arrows -->
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>
+</div>
+<script>
+jQuery("#indexslider").slide({
+	titCell: ".hd ul",
+	autoPage: true,  //是否使用自动显示分页
+	mainCell:".swiper-wrapper",
+	autoPlay:true,
+	effect:"fade",   //特效left,leftLoop,topLoop,top,fade（支持响应窗口大小）,
+	easing:"easeOutCirc",  //缓动效果 easeInQuint,easeInBack,easeOutBounce,easeOutElastic
+	trigger:"mouseover",   //触发方式  mouseover,click
+	delayTime:1000,  //延迟时间
+	interTime:3000,  //间隔时间
+	pnLoop:false,   //前后按钮循环，默认true
+	mouseOverStop:true   //鼠标经过停止播放，默认true
+});
+</script>
+<!--大切换图start-->
+
+<div id="container">
+<!--头部start-->
+<div class="head" id="header">
+<div class="inner">
+	<a href="index.html" class="logo logo_w"><img src="images/logo_w.png" alt="天乐基业" /></a>
+	<a href="index.html" class="logo logo_b"><img src="images/logo.png" alt="天乐基业" /></a>
+    <ul class="nav">
+    	<li><a class="ease-1" href="list_yewu.html">业务范围</a></li>
+    	<li><a class="ease-1" href="list_image.html">项目案例</a></li>
+    	<li><a class="ease-1" href="danye.html">关于我们</a></li>
+    </ul>
+    <div class="tel fr"><h1>400-070-8366</h1></div>
+    <div class="searchbox fr radius-5">
+    	<form>
+        	<input type="submit" class="inputsubmit" value="" /><input type="text" class="inputtxt"  placeholder="请输入搜索内容"/>
+        </form>
+    </div>
+</div>
+</div>
+<!--头部end-->
+
+<!--主体start-->
+<div class="content" id="content">
+
+</div>
+<!--主体end-->
+
+<!--底部start-->
+<div class="foot" id="footer">
+<div class="inner clearfix">
+<div class="fl"><p>版权所有  北京天乐基业音视频技术开发有限公司</p></div>
+<div class="fr clearfix">
+	<p class="fl">Copyright © 2015  <a href="index.html">tl58.cn</a>  All Rights Reserved. 京ICP备11006357号-2</p>
+	<ul class="clearfix fr">
+    	<li><a href="#" class="weixin" title="微信"><em></em><div class="erweima"><i class="sanjiao"></i><img src="images/erweima.jpg" /></div></a></li>
+    	<li><a href="#" class="sina" title="微博"><em></em></a></li>
+    </ul>
+</div>
+</div>
+</div>
+<script>
+//微信二维码
+$(function(){
+	$('#footer .weixin').hover(function(){
+		$(this).find('.erweima').stop(true,true).fadeIn();
+	},function(){
+		$(this).find('.erweima').stop(true,true).fadeOut();
+	})
+})
+</script>
+<!--底部end-->
+
+<!--公共js-->
+<script type="text/javascript">
+$(".zScroll").niceScroll({  
+	cursorcolor:"#888888",  
+	cursoropacitymax:.5,  
+	touchbehavior:false,  
+	cursorwidth:"5px",  
+	cursorborder:"0",  
+	cursorborderradius:"5px"  
+}); 
+</script>
+<script>
+$('#listcontent .pcitem:nth-child(4n)').addClass('last');
+$('#rightcontent .pcitem:nth-child(2n)').addClass('last');
+//content 高度自适应
+var adjust= function(){
+	var h0 = $('#container').height();
+	var h1 = $('#header').height();
+	var h2 = $('#footer').height();
+	var h3 = $('#submenus').height()+20;
+	var h4 = $('#pagelist').height();
+	var h5 = $('#bigtitle').height();
+	var h = h0 - h1- h2 - h3- h4 - h5;
+	$('#content').css('height',h);
+	$('#content').css('top',h1+h3+h5);
+}
+adjust();
+window.onresize=adjust;
+</script>
+
+
+
+</body>
+</html>

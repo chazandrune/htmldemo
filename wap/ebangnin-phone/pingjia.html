@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html style=" font-size:100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>服务评价</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/my.css">
+<script src="js/jquery1.72.min.js"></script>
+
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="rating/jquery.raty.min.js"></script>
+</head>
+
+<body class="page-pingjia">
+
+<!--导航 手机版start-->
+<div class="bottombar">
+	<ul class="clearfix">
+		<li><a href="###" class="btn btn_middle btn_blue radius-5 ease-1" onClick="$('#form1').submit();">提 交</a></li>
+	</ul>
+</div>
+<!--导航手机版end-->
+
+
+<!--主体start-->
+<div class="mainbody" style="top:.0rem; bottom:.6rem; left:0; right:0;">
+<div class="mainbody_scroll">
+
+<form id="form1" method="post" onSubmit="return checkform()">
+<div class="part-01 mb10">
+	<ul class="ul_view mb10">
+		<li class="ul_view_cell"><div class="ul_view_cell_a">
+			<h1>
+				<span class="txt-888 fs12">服务评价：</span><div class="inlineblock star-rating" data-number="0" data-name="star"></div><span class="fr" id="hint"></span>
+			</h1>
+		</div></li>
+	</ul>
+	</div>
+
+<input type="submit" style="display:none;" />
+
+<div class="part-02 mb20" id="list_scroll">
+
+<ul class="ul_view">
+	<li class="ul_view_cell"><div class="ul_view_cell_a radio_box">
+		<div class="ul clearfix">
+			<label class="li">
+				<input type="radio" name="pingjia"  checked/>
+				<span class="radio_item radius-5 txt-c">满意</span>
+			</label>
+			<label class="li">
+				<input type="radio" name="pingjia" />
+				<span class="radio_item radius-5 txt-c">一般</span>
+			</label>
+			<label class="li">
+				<input type="radio" name="pingjia" />
+				<span class="radio_item radius-5 txt-c">不满意</span>
+			</label>
+		</div>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<textarea class="input_text" style="width:100%;" placeholder="评价内容" rows="5"></textarea>
+	</div></li>
+</ul>
+
+
+
+</div>
+
+</form>
+
+
+</div>
+</div>
+<!--主体end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//星级评分效果
+$('.star-rating').raty({
+	path: 'rating/img',
+	space: false,
+	target: '#hint',
+	targetKeep: true,
+	targetType: 'number',
+	targetFormat: '{score}分',
+	score: function() {
+		return $(this).attr('data-number');
+	},
+	//readOnly:true
+});
+
+$(function(){
+	/*单选 custom-js*/
+	$('.radio_box input').each(function(){
+		if($(this).attr('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.radio_box .radio_item').click(function(){
+		if($(this).prev().attr('checked')){
+			//$(this).prev().attr('checked',false);
+			//$(this).parent().parent().find('.radio_item').removeClass('current');
+		}else{
+			$(this).prev().attr('checked',true);
+			$(this).parent().parent().find('.radio_item').removeClass('current');
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+
+</script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

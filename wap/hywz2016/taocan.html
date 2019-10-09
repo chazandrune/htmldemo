@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>快捷套餐定制服务</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="环宇威智描述" />
+<meta name="keywords" content="环宇威智关键词" />
+<meta name="author" content="环宇威智制作" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.mui-content{ -webkit-user-select:text;user-select:text;}
+.mui-content{ background:#f8f8f8;}
+.bigtitle{ padding:20px 10px 5px; position:relative;}.bigtitle h2{ font-size:18px; color:#333; margin-bottom:0;}.bigtitle p{ margin-bottom:0;}
+.bigtitle:before{ content:''; display:block; width:100%; height:1px; background:#ccc; position:absolute;top:48px; left:50%; margin-left:60px;}
+.bigtitle:after{ content:''; display:block; width:100%; height:1px; background:#ccc; position:absolute;top:48px; right:50%; margin-right:60px;}
+.bigtitle.bigtitle-inverted{}
+.bigtitle.bigtitle-inverted h2{ color:#fff;}
+.bigtitle.bigtitle-inverted:before,.bigtitle.bigtitle-inverted:after{ background:#aaa;}
+
+
+.mui-off-canvas-wrap .mui-bar.mui-bar-header-secondary{ border-top-color:#fff; height:auto; padding:0;}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{ font-weight:bold;}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.item01.mui-active{ color:#529eda; border-bottom:2px #529eda solid; background:0 0;}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.item02.mui-active{ color:#eb6100; border-bottom:2px #eb6100 solid; background:0 0;}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.item03.mui-active{ color:#f55fa0; border-bottom:2px #f55fa0 solid; background:0 0;}
+
+
+.mui-table-view-cell.title{ background-color:#f3f3f3;}
+.mui-table h4, .mui-table h5, .mui-table .mui-h5, .mui-table .mui-h6, .mui-table p { margin-top: 0;}
+.mui-table h4 { line-height: 20px; font-weight:normal; font-size:14px;}
+.mui-badge-blue{ color: #fff; background-color: #529eda;}
+.mui-badge-yellow{ color: #fff; background-color: #eb6100;}
+.mui-badge-royal{ color: #fff; background-color: #f55fa0;}
+
+</style>
+</head>
+
+<body>
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+
+<!-- 侧边导航 start -->
+<aside id="offCanvasSide" class="mui-off-canvas-left nav_side">
+	<div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<div class="title">
+				<img src="images/logo-mobile.png" style="width:100%" />
+				<div class="tel"><span class="label">免费咨询热线</span><span class="value"><a data-href="tel:4000341020" class="txt-yellow">400-034-1020</a></span></div>
+			</div>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell">
+					<a data-href="index.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe623;</i>首页</a>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right"><i class="iconfont mr10">&#xe625;</i>服务</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell"><a data-href="taocan.html" class=""><h5>快捷建站套餐</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="service-01.html" class=""><h5>企业宣传营销定制</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="service-02.html" class=""><h5>集团官网高端定制</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="service-03.html" class=""><h5>电商交互平台定制</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="service-04.html" class=""><h5>移动微信app定制</h5></a></li>
+					</ul>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="cases.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe61e;</i>作品</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="flow.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe627;</i>流程</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="news.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe620;</i>新闻</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="about.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe61f;</i>关于</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="contact.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe629;</i>联络</a>
+				</li>
+			</ul>
+			<div class="copyright">
+				<p>Copyright © 2012-2016<br>版权所有 北京环宇威智科技有限公司</p>
+			</div>
+		</div>
+	</div>
+</aside>
+<!-- 侧边导航 end -->
+
+
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+<header class="mui-bar mui-bar-nav">
+	<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+	<a data-href="tel:4000341020" class="mui-icon mui-icon-phone-filled mui-pull-right"></a>
+	<h1 class="mui-title">快捷套餐定制服务</h1>
+</header>
+
+<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item" href="#Popover_services"><i class="mui-icon iconfont">&#xe625;</i><span class="mui-tab-label">服务</span></a>
+<a class="mui-tab-item" data-href="cases.html"><i class="mui-icon iconfont">&#xe61e;</i><span class="mui-tab-label">作品</span></a>
+<a class="mui-tab-item" data-href="about.html"><i class="mui-icon iconfont">&#xe61f;</i><span class="mui-tab-label">关于</span></a>
+<a class="mui-tab-item" data-href="contact.html"><i class="mui-icon iconfont">&#xe629;</i><span class="mui-tab-label">联络</span></a>
+</nav>
+
+<div class="mui-bar mui-bar-header-secondary">
+<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+	<a class="mui-control-item item01 ease-3 mui-active" href="#taocan-01">5860套餐</a>
+	<a class="mui-control-item item02 ease-3" href="#taocan-02">8800套餐</a>
+	<a class="mui-control-item item03 ease-3" href="#taocan-03">13800套餐</a>
+</div>
+</div>
+
+<!--内容区域 start-->
+<div class="mui-content mui-scroll-wrapper" id="scroll">
+<div class="mui-scroll">
+
+<div class="taocans">
+
+	<!--5860套餐 start-->
+	<div class="mui-control-content mui-active" id="taocan-01">
+		<div class="mui-content-padded">
+			<p><strong>适用对象：</strong><br>初创业、成长型企业，以展示公司形象及服务产品信息为主</p>
+		</div>
+		<ul class="mui-table-view mui-card mb20">
+			<li class="mui-table-view-cell title txt-c">
+				网站配置
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">站点栏目</span></h5>
+						<h4><span class="txt-red">20</span>个栏目以内(无限发布文章、图片)</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">网站主机</span></h5>
+						<h4><span class="txt-red">1G</span>高品质万网主机空间，确保<span class="txt-yellow">稳定、高速、稳定</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">顶级域名</span></h5>
+						<h4>1个，.com/.net/域名，优化域名解析速度和安全性</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">功能模块</span></h5>
+						<h4>新闻发布+产品展示+下载功能+留言功能</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">后台管理</span></h5>
+						<h4>登录面板，所见即所得，管理简便</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">免费赠送</span></h5>
+						<h4><span class="txt-red">网站统计、电子地图、在线客服、Q Q 交流、分享代码</span></h4>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="mui-table-view mui-card mb20">
+			<li class="mui-table-view-cell title txt-c">
+				网站制作
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">网站策划</span></h5>
+						<h4>根据用户提供的需求进行<span class="txt-red">免费策划</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">网站设计</span></h5>
+						<h4>专业设计师手工标准设计</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">网站特效</span></h5>
+						<h4>常规JS或简易FLASH动画切换效果</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">功能模块</span></h5>
+						<h4><span class="txt-yellow">兼容IE、火狐、谷歌、360等各大浏览器</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">SEO优化</span></h5>
+						<h4>站内全面优化，利于百度、谷歌等各大搜索引擎收录，独创算法高精度优化网站运行</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">开发语言</span></h5>
+						<h4>PHP+Mysql数据库</h4>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="mui-table-view mui-card mb20">
+			<li class="mui-table-view-cell title txt-c">
+				网站后期
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">制作周期</span></h5>
+						<h4>15个工作日</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">售后服务</span></h5>
+						<h4>7*24小时保证网站正常运行，免费服务热线<a data-href="tel:4000341020" class="txt-yellow">400-034-1020</a></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">远程指导</span></h5>
+						<h4>网站上线后，售后工程师远程指导后台操作</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-blue">技术支持</span></h5>
+						<h4><span class="txt-yellow">1年免费维护，免费网站定期备份；免费搜索引擎提交</span></h4>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="mui-card mb20"><a data-href="tel:4000341020" class="mui-btn mui-btn-block mui-btn-yellow" style="margin-bottom:0;">立即咨询</a></div>
+	</div>
+	<!--5860套餐 end-->
+
+	<!--8800套餐 start-->
+	<div class="mui-control-content" id="taocan-02">
+		<div class="mui-content-padded">
+			<p><strong>适用对象：</strong><br>发展中、已具有一定规模企业，对网站的设计和功能有较高要求</p>
+		</div>
+		<ul class="mui-table-view mui-card mb20">
+			<li class="mui-table-view-cell title txt-c">
+				网站配置
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">站点栏目</span></h5>
+						<h4><span class="txt-red">20</span>个栏目以内(无限发布文章、图片)</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">网站主机</span></h5>
+						<h4><span class="txt-red">2G</span>高品质万网主机空间，确保<span class="txt-yellow">稳定、高速、稳定</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">顶级域名</span></h5>
+						<h4>1个，.com/.net/域名，优化域名解析速度和安全性</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">功能模块</span></h5>
+						<h4>新闻发布+产品展示+下载功能+留言功能<span class="txt-red">+根据您的需求定制一个功能</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">后台管理</span></h5>
+						<h4>登录面板，所见即所得，管理简便</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">免费赠送</span></h5>
+						<h4><span class="txt-red">网站统计、电子地图、在线客服、Q Q 交流、分享代码</span></h4>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="mui-table-view mui-card mb20">
+			<li class="mui-table-view-cell title txt-c">
+				网站制作
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">网站策划</span></h5>
+						<h4>根据用户提供的需求进行<span class="txt-red">免费策划</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">网站设计</span></h5>
+						<h4>专业设计师手工标准设计</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">网站特效</span></h5>
+						<h4>常规JS或简易FLASH动画切换效果</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">功能模块</span></h5>
+						<h4><span class="txt-yellow">兼容IE、火狐、谷歌、360等各大浏览器</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">SEO优化</span></h5>
+						<h4>站内全面优化，利于百度、谷歌等各大搜索引擎收录，独创算法高精度优化网站运行</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">开发语言</span></h5>
+						<h4>PHP+Mysql数据库</h4>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="mui-table-view mui-card mb20">
+			<li class="mui-table-view-cell title txt-c">
+				网站后期
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">制作周期</span></h5>
+						<h4>21个工作日</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">售后服务</span></h5>
+						<h4>7*24小时保证网站正常运行，免费服务热线<a data-href="tel:4000341020" class="txt-yellow">400-034-1020</a></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">远程指导</span></h5>
+						<h4>网站上线后，售后工程师远程指导后台操作</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-yellow">技术支持</span></h5>
+						<h4><span class="txt-yellow">1年免费维护，免费网站定期备份；免费搜索引擎提交</span></h4>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="mui-card mb20"><a data-href="tel:4000341020" class="mui-btn mui-btn-block mui-btn-yellow" style="margin-bottom:0;">立即咨询</a></div>
+	</div>
+	<!--8800套餐 end-->
+
+	<!--13800套餐 start-->
+	<div class="mui-control-content" id="taocan-03">
+		<div class="mui-content-padded">
+			<p><strong>适用对象：</strong><br>中等或较大规模企业，结合企业VI视觉设计，展现企业品牌形象</p>
+		</div>
+		<ul class="mui-table-view mui-card mb20">
+			<li class="mui-table-view-cell title txt-c">
+				网站配置
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">站点栏目</span></h5>
+						<h4><span class="txt-red">无限制</span>(无限发布文章、图片)</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">网站主机</span></h5>
+						<h4><span class="txt-red">2G</span>高品质万网主机空间，确保<span class="txt-yellow">稳定、高速、稳定</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">顶级域名</span></h5>
+						<h4>1个，.com/.net/域名，优化域名解析速度和安全性</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">功能模块</span></h5>
+						<h4>新闻发布+产品展示+下载功能+留言功能<span class="txt-red">+会员功能（会员注册、会员登录）+评论功能+权限访问功能</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">后台管理</span></h5>
+						<h4>登录面板，所见即所得，管理简便</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">免费赠送</span></h5>
+						<h4><span class="txt-red">网站统计、电子地图、在线客服、Q Q 交流、分享代码</span></h4>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="mui-table-view mui-card mb20">
+			<li class="mui-table-view-cell title txt-c">
+				网站制作
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">网站策划</span></h5>
+						<h4>根据用户提供的需求进行<span class="txt-red">免费策划</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">网站设计</span></h5>
+						<h4>专业设计师手工标准设计</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">网站特效</span></h5>
+						<h4>常规JS或简易FLASH动画切换效果</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">功能模块</span></h5>
+						<h4><span class="txt-yellow">兼容IE、火狐、谷歌、360等各大浏览器</span></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">SEO优化</span></h5>
+						<h4>站内全面优化，利于百度、谷歌等各大搜索引擎收录，独创算法高精度优化网站运行</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">开发语言</span></h5>
+						<h4>PHP+Mysql数据库</h4>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul class="mui-table-view mui-card mb20">
+			<li class="mui-table-view-cell title txt-c">
+				网站后期
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">制作周期</span></h5>
+						<h4>27个工作日</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">售后服务</span></h5>
+						<h4>7*24小时保证网站正常运行，免费服务热线<a data-href="tel:4000341020" class="txt-yellow">400-034-1020</a></h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">远程指导</span></h5>
+						<h4>网站上线后，售后工程师远程指导后台操作</h4>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<div class="mui-table">
+					<div class="mui-table-cell">
+						<h5><span class="mui-badge mui-badge-royal">技术支持</span></h5>
+						<h4><span class="txt-yellow">1年免费维护，免费网站定期备份；免费搜索引擎提交</span></h4>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="mui-card mb20"><a data-href="tel:4000341020" class="mui-btn mui-btn-block mui-btn-yellow" style="margin-bottom:0;">立即咨询</a></div>
+	</div>
+	<!--13800套餐 end-->
+
+</div>
+
+</div>
+</div>
+<!--内容区域 end-->
+<!-- off-canvas backdrop -->
+<div class="mui-off-canvas-backdrop"></div>
+
+</div>
+<!-- 主页面容器 end -->
+
+</div>
+
+<div id="share" class="mui-popover mui-popover-action mui-popover-bottom">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="tel:4000341020">拨号：400-034-1020</a></li>
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#share"><b>取消</b></a></li>
+    </ul>
+</div>
+
+<div id="Popover_services" class="mui-popover mui-bar-popover">
+	<div class="mui-popover-arrow"></div>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a data-href="service-01.html">企业宣传、营销定制</a></li>
+        <li class="mui-table-view-cell"><a data-href="service-02.html">集团官网高端定制</a></li>
+        <li class="mui-table-view-cell"><a data-href="service-03.html">电商、交互平台定制</a></li>
+        <li class="mui-table-view-cell"><a data-href="service-04.html">H5、微信app定制</a></li>
+        <li class="mui-table-view-cell"><a data-href="taocan.html">快捷套餐服务</a></li>
+    </ul>
+</div>
+
+
+<!--可拖动的块 代码开始 -->
+<style>
+/*可拖动块样式*/
+@-webkit-keyframes touch {
+0%,50%,100%{-webkit-transition-timing-function:cubic-bezier(.64,0,.37,1);transition-timing-function:cubic-bezier(.64,0,.37,1);}
+0% {-webkit-transform:scale(0.8,0.8);transform:scale(0.8,0.8);-webkit-opacity:0;opacity:0;}
+10% {-webkit-opacity:1;opacity:1;}
+100% {-webkit-transform:scale(1.5,1.5);transform:scale(1.5,1.5);-webkit-opacity:0;opacity:0;}
+}
+@keyframes touch {
+0%,50%,100%{-webkit-transition-timing-function:cubic-bezier(.64,0,.37,1);transition-timing-function:cubic-bezier(.64,0,.37,1);}
+0% {-webkit-transform:scale(0.8,0.8);transform:scale(0.8,0.8);-webkit-opacity:0;opacity:0;}
+10% {-webkit-opacity:1;opacity:1;}
+100% {-webkit-transform:scale(1.5,1.5);transform:scale(1.5,1.5);-webkit-opacity:0;opacity:0;}
+}
+#touch {width: 50px;height: 50px;position: absolute;right:15px;bottom: 80px;margin-left:-25px;margin-top:-25px;z-index: 999999;cursor: move;}
+#touch .btn{ display:block; line-height:50px; text-align:center; width:100%; height:100%; border-radius:50%;-webkit-border-radius:50%; background:#888; color:#fff;opacity:0.7;-webkit-opacity:0.7; box-shadow:0 0 10px rgba(0,0,0,0.3);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.3);}
+#touch .btn:active{opacity:0.9;-webkit-opacity:0.9;}
+/*#touch .btn:before,#touch .btn:after{content:''; position:absolute;left:0px;top:0px; width:44px; height:44px; border:3px #60c10a solid; border-radius:50%;-webkit-border-radius:50%; animation-name:touch; animation-iteration-count:infinite;-webkit-animation-name:touch; -webkit-animation-iteration-count:infinite;-webkit-animation-duration:2s;animation-duration:2s;}
+*/#touch .btn:after{ animation-delay:1000ms;-webkit-animation-delay:1000ms;}
+#touch .iconfont{font-size:30px; }
+</style>
+<div id="touch">
+	<a data-href="###" class="btn ease-3"><i class="iconfont">&#xe630;</i></a>
+</div>
+<script>
+var touchdiv = document.getElementById('touch');
+touchdiv.addEventListener('touchmove',function(event) {
+	event.preventDefault(); //阻止其他事件
+	// 如果这个元素的位置内只有一个手指的话
+	if (event.targetTouches.length == 1) {
+		var touch = event.targetTouches[0];
+		// 把元素放在手指所在的位置
+		touchdiv.style.left = touch.pageX + 'px';
+		touchdiv.style.top = touch.pageY + 'px';
+		touchdiv.style.background = "";
+	}else{
+		return false;
+	}
+});
+</script>
+<!--可拖动的块 代码结束 -->
+
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+	gestureConfig:{
+		tap: true, //默认为true
+		doubletap: true, //默认为false
+		longtap: true, //默认为false
+		swipe: true, //默认为true
+		drag: true, //默认为true
+		hold:false,//默认为false，不监听
+		release:false//默认为false，不监听
+	}
+});
+</script>
+<script>
+$("#touch").on("tap",function(){
+	mui("#scroll").scroll().scrollTo(0,0,1000);
+})
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

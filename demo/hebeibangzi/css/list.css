@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+html{ height:100%; overflow-x:hidden;}
+body{ height:100%; background:#fff url(../images/bg.jpg) repeat;}
+.foot{}
+
+
+.zhuti{min-height:500px;}
+
+/*信息列表页*/
+.list_article{ padding:30px 30px 0; margin-bottom:10px;}
+.list_article ul{ border-bottom:1px #888 dotted; padding-bottom:15px;}
+.list_article li{ height:40px; overflow:hidden; position:relative; line-height:40px;}
+.list_article li a{ width:80%; display:block; float:left; display:inline; padding-left:20px; background:url(../images/dot.png) no-repeat left center; color:#333; font-size:14px; line-height:40px;}
+.list_article li a:hover{ color:#ea1a00;}
+.list_article li .date{ position:absolute; right:0; top:0; color:#888; font-size:14px;}
+
+#pagelist{ padding:0 20px; height:50px; font-size:14px; color:#666; margin-bottom:10px;}
+#pagelist a{ line-height:50px; padding:4px 8px; color:#888; margin:10px;}
+#pagelist a:hover{ color:#ea1a00;}
+#pagelist a.thisclass{ color:#ea1a00;}
+
+
+/*信息详情页*/
+.page-article .title{  padding:30px 20px 0px; margin-bottom:20px;}
+.page-article .title h1{ color:#7b0e00; font-size:24px; line-height:30px; margin-bottom:20px;}
+.page-article .title p{ color:#666; font-size:14px;border-bottom:1px #888 dotted; padding-bottom:10px;}
+.page-article .operate{font-size:16px;border-bottom:1px #888 dotted; padding:30px 0 10px; line-height:40px; overflow:hidden;}
+.page-article .operate .sharebox{ width:250px;}
+.page-article .morearticle{*height:160px; margin-bottom:20px; padding:10px 0;}
+.page-article .morearticle li{ float:left; display:inline; width:50%;}
+.page-article .morearticle ul{ border-bottom:0;}
+
+
+
+/*剧目列表页*/
+.page-list-pics{ padding:0 0 10px;}
+.page-list-pics .list_pics{ padding:20px 0 0;}
+.page-list-pics .list_pics ul{ width:110%;}
+.page-list-pics .list_pics li{ float:left; display:inline; margin:0 20px 20px 0;}
+.page-list-pics .list_pics .item{ display:block; border:1px #aaa solid; width:318px; height:278px; background:#fff; position:relative;}
+.page-list-pics .list_pics .item .tc_bg{ position:absolute; display:block; width:15px; height:15px; background-position:top left; background-repeat:no-repeat;}
+.page-list-pics .list_pics .item .tc_bg_01{ background-image:url(../images/diaohua_01.png); left:-1px; top:-1px;}
+.page-list-pics .list_pics .item .tc_bg_02{ background-image:url(../images/diaohua_02.png); right:-1px; top:-1px;}
+.page-list-pics .list_pics .item .tc_bg_03{ background-image:url(../images/diaohua_03.png); right:-1px; bottom:-1px;}
+.page-list-pics .list_pics .item .tc_bg_04{ background-image:url(../images/diaohua_04.png); left:-1px; bottom:-1px;}
+.page-list-pics .list_pics .item .pic{ margin:19px auto 5px; width:280px; height:210px; overflow:hidden;overflow:hidden; position:relative; background-color:#000;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;}
+.page-list-pics .list_pics .item .pic img{ width:100%; height:auto;}
+.page-list-pics .list_pics .item .pic .icon{display:block; position:absolute; left:50%; top:-50px; width:24px; height:24px; margin-left:-12px; z-index:1; font-size:24px; color:#fff;}
+.page-list-pics .list_pics .item .txt .title{ height:40px; padding:0 20px; line-height:40px; font-size:14px; color:#333;}
+.page-list-pics .list_pics .item:hover{ border-color:#ea1a00;}
+.page-list-pics .list_pics .item:hover .tc_bg{ background-position:bottom left;}
+.page-list-pics .list_pics .item:hover .pic img{
+filter: alpha(opacity=30);/* internet explorer */
+-khtml-opacity: 0.3;     /* khtml, old safari */
+-moz-opacity: 0.3;      /* mozilla, netscape */
+opacity: 0.3;}
+.page-list-pics .list_pics .item:hover .pic .icon{ top:50%; margin-top:-12px;
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=4);
+-moz-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);}
+.page-list-pics .list_pics .item:hover .txt .title{ color:#ea1a00;} 
+
+
+/*选段列表页*/
+.page-list-xuanduan{}
+.page-list-xuanduan .jumu{ padding:40px 0 0 30px; margin-bottom:50px;}
+.page-list-xuanduan .jumu .pic{ width:280px; margin-bottom:15px;}
+.page-list-xuanduan .jumu .pic img{ width:100%; height:auto;}
+.page-list-xuanduan .jumu .txt h1{ font-size:22px; color:#7b0e00; line-height:30px; margin-bottom:15px;}
+.page-list-xuanduan .jumu .txt p{ font-size:14px; line-height:22px; color:#888;}
+.page-list-xuanduan .list_article ul{ border:0;}
+
+
+/*刊物列表页*/
+.page-list-books{ padding:0 0 10px;}
+.page-list-books .list_pics{ padding:20px 0 0;}
+.page-list-books .list_pics ul{ width:110%;}
+.page-list-books .list_pics li{ float:left; display:inline; margin:0 20px 20px 0;}
+.page-list-books .list_pics .item{ display:block;  width:320px; height:380px; position:relative;}
+.page-list-books .list_pics .item .pic{ margin:19px auto 0px; width:240px; height:320px; padding:0 10px 10px 0;  overflow:hidden;overflow:hidden; position:relative; background:url(../images/book_bg.png) no-repeat left top;}
+.page-list-books .list_pics .item .pic img{ width:100%; height:auto;}
+.page-list-books .list_pics .item .pic .book_bg1{display:block; background:url(../images/book_bg1.jpg) no-repeat center; position:absolute; right:10px; top:0px; width:20px; height:20px; z-index:1; }
+.page-list-books .list_pics .item .txt .title{ height:40px; padding:0 20px; line-height:40px; font-size:14px; color:#333;}
+.page-list-books .list_pics .item:hover{ border-color:#ea1a00;}
+.page-list-books .list_pics .item:hover .pic img{
+filter: alpha(opacity=80);/* internet explorer */
+-khtml-opacity: 0.8;     /* khtml, old safari */
+-moz-opacity: 0.8;      /* mozilla, netscape */
+opacity: 0.8;}
+.page-list-books .list_pics .item:hover .pic .icon{ top:50%; margin-top:-12px;
+filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=4);
+-moz-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);}
+.page-list-books .list_pics .item:hover .txt .title{ color:#ea1a00;} 
+
+
+/*艺术家列表页*/
+.shaixuan{ padding:10px 30px;}
+.shaixuan ul{ overflow:hidden;}
+.shaixuan li{ float:left; display:inline; margin-right:20px;}
+.shaixuan li a{ display:block; height:40px; padding:0 30px 0 10px; line-height:40px; font-size:14px; color:#888; position:relative;}
+.shaixuan li a .dotarrow{ display:block; width:11px; height:11px; background:url(../images/dot_arrow.jpg) no-repeat top center; position:absolute; right:10px; top:50%; margin-top:-5px;}
+.shaixuan li.cur a { color:#ea1a00;}
+.shaixuan li.cur a .dotarrow{ background-position:bottom center;}
+.shaixuan li a:hover{ color:#ea1a00;}
+.page-list-artists .list_artists{ padding:0 30px;}
+.page-list-artists .list_artists .item{ height:230px; margin-bottom:20px; position:relative; border-bottom:1px #888 dotted;}
+.page-list-artists .list_artists .item .pic{ width:210px; height:210px; background:#fff; overflow:hidden; position:absolute; left:0; top:0;}
+.page-list-artists .list_artists .item .pic a{ display:block; width:100%; height:100%;}
+.page-list-artists .list_artists .item .pic a img{ width:100%; height:auto;}
+.page-list-artists .list_artists .item .pic a:hover{
+filter: alpha(opacity=80);/* internet explorer */
+-khtml-opacity: 0.8;     /* khtml, old safari */
+-moz-opacity: 0.8;      /* mozilla, netscape */
+opacity: 0.8;}
+.page-list-artists .list_artists .item .txt{ padding-left:240px;}
+.page-list-artists .list_artists .item .txt .title{ font-size:22px; color:#333; margin-bottom:20px; height:40px; line-height:40px; }
+.page-list-artists .list_artists .item .txt .title a{ color:#333;}
+.page-list-artists .list_artists .item .txt .title a:hover{ color:#ea1a00;}
+.page-list-artists .list_artists .item .txt .desc{ color:#666; line-height:26px; font-size:14px; height:78px; overflow:hidden; margin-bottom:20px;}
+.page-list-artists .list_artists .item .txt .detail{ position:absolute; bottom:20px; left:240px; }
+.page-list-artists .list_artists .item .txt .detail a{ display:block; height:40px; line-height:40px; width:100px; text-align:center; padding:0; }
+ 

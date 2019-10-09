@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>案例详情</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="站点描述" />
+<meta name="keywords" content="站点关键词" />
+<meta name="author" content="环宇威智制作" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<style>
+.banner{ background-color:#fff; max-height:320px;}
+.banner .swiper-slide{ text-align:center;}
+.banner img { display:block; margin:0 auto; max-width:100%; height: auto; max-height:320px; }
+.banner .swiper-pagination { text-align: center; padding: 0 10px; }
+.banner .swiper-pagination-bullet { background: #000; border: 1px #ff902c solid; opacity: 0.5; -webkit-opacity: 0.5; }
+.banner.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet { margin: 0 3px; }
+.banner .swiper-pagination-bullet-active { background: #ff902c; opacity: 1; -webkit-opacity: 1; }
+
+/*图片预览*/
+.mui-preview-image.mui-fullscreen { position: fixed; z-index: 20; background-color: #000; }
+.mui-preview-header,
+.mui-preview-footer { position: absolute; width: 100%; left: 0; z-index: 10; }
+.mui-preview-header { height: 44px; top: 0; }
+.mui-preview-footer { height: 50px; bottom: 0px; }
+.mui-preview-header .mui-preview-indicator { display: block; line-height: 25px; color: #fff; text-align: center; margin: 15px auto 4; width: 100%; background-color: rgba(0, 0, 0, 0.4); border-radius: 12px; font-size: 16px; }
+.mui-preview-image { display: none; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.mui-preview-image.mui-preview-in { -webkit-animation-name: fadeIn; animation-name: fadeIn; }
+.mui-preview-image.mui-preview-out { background: none; -webkit-animation-name: fadeOut; animation-name: fadeOut; }
+.mui-preview-image.mui-preview-out .mui-preview-header,
+ .mui-preview-image.mui-preview-out .mui-preview-footer { display: none; }
+.mui-zoom-scroller { position: absolute; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; justify-content: center; left: 0; right: 0; bottom: 0; top: 0; width: 100%; height: 100%; margin: 0; -webkit-backface-visibility: hidden; }
+.mui-zoom { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
+.mui-slider .mui-slider-group .mui-slider-item img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img { width: 100%; }
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item { display: inline-table; }
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img { display: table-cell; vertical-align: middle; }
+.mui-preview-loading { position: absolute; width: 100%; height: 100%; top: 0; left: 0; display: none; }
+.mui-preview-loading.mui-active { display: block; }
+.mui-preview-loading .mui-spinner-white { position: absolute; top: 50%; left: 50%; margin-left: -25px; margin-top: -25px; height: 50px; width: 50px; }
+.mui-preview-image img.mui-transitioning { -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease; transition: transform 0.5s ease, opacity 0.5s ease; }
+@-webkit-keyframes fadeIn {
+0% { opacity: 0;}
+100% { opacity: 1;}
+}
+@keyframes fadeIn { 
+0% {opacity: 0;}
+100% { opacity: 1;}
+}
+@-webkit-keyframes fadeOut { 
+0% { opacity: 1;}
+100% { opacity: 0;}
+}
+@keyframes fadeOut {
+0% { opacity: 1;}
+100% { opacity: 0;}
+}
+p img { max-width: 100%; height: auto; }
+
+/*正文*/
+.headline{ padding:10px 10px 0;}
+
+</style>
+</head>
+
+<body>
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+
+<!-- 侧边导航 start -->
+<aside id="offCanvasSide" class="mui-off-canvas-right nav_side">
+	<div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<div class="title">
+				<a data-href="index.html"><img src="images/logo-mobile-white.png" style="width:100%" /></a>
+			</div>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell">
+					<a data-href="index.html" class="mui-navigate-right">首页</a>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right">走进金鹏</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell"><a data-href="about.html" class="mui-navigate-right"><h5>金鹏简介</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="about.html" class="mui-navigate-right"><h5>企业文化</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="about.html" class="mui-navigate-right"><h5>组织架构</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="about.html" class="mui-navigate-right"><h5>资质认定</h5></a></li>
+					</ul>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right">涉及领域</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell"><a data-href="business-article.html" class="mui-navigate-right"><h5>房地产开发</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="business-article.html" class="mui-navigate-right"><h5>房地产经纪</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="business-article.html" class="mui-navigate-right"><h5>物业管理</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="business-article.html" class="mui-navigate-right"><h5>房地产相关衍生行业</h5></a></li>
+					</ul>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="cases2.html" class="mui-navigate-right">电商及渠道</a>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right">服务项目</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell"><a data-href="cases.html" class="mui-navigate-right"><h5>热销楼盘</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="cases.html" class="mui-navigate-right"><h5>承接项目</h5></a></li>
+					</ul>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right">新闻中心</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell"><a data-href="news.html" class="mui-navigate-right"><h5>金鹏动态</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="news.html" class="mui-navigate-right"><h5>行业新闻</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="news.html" class="mui-navigate-right"><h5>数据中心</h5></a></li>
+					</ul>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="about.html" class="mui-navigate-right">加入金鹏</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="contact.html" class="mui-navigate-right">联系我们</a>
+				</li>
+			</ul>
+			<div class="copyright">
+				<p>版权所有<br>北京金鹏房地产集团<br>Copyright © 2016 jinpengdichan.com<br></p>
+			</div>
+		</div>
+	</div>
+</aside>
+<!-- 侧边导航 end -->
+
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+<header class="mui-bar mui-bar-nav">
+	<button class="mui-action-back mui-btn mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>返回</button>
+	<a href="#offCanvasSide" class="mui-icon mui-icon-bars mui-pull-right"></a>
+	<h1 class="mui-title"><a href="#topPopover">热销楼盘<i class="iconfont">&#xe624;</i></a></h1>
+</header>
+	
+<!--内容区域 start-->
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+	<div class="mui-scroll">
+		
+		<!--banner start-->
+		<div class="swiper-container banner">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a data-href="###"><img src="images/pic_case-01.jpg" data-preview-src="" data-preview-group="1" alt=""></a>
+				</div>
+				<div class="swiper-slide">
+					<a data-href="###"><img src="images/pic_case-01.jpg" data-preview-src="" data-preview-group="1" alt=""></a>
+				</div>
+				<div class="swiper-slide">
+					<a data-href="###"><img src="images/pic_case-01.jpg" data-preview-src="" data-preview-group="1" alt=""></a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<!--banner end-->
+
+		<div class="headline">
+			<h3 class="txt-orangedark mb10">恒天枫溪郡</h3>
+			<p class="txt-orange mui-ellipsis"><span class="mui-badge mui-badge-yellow mr10">电商奖励 6万抵16万</span><span class="mui-badge mui-badge-yellow mr10">渠道奖励 3万</span></p>
+			<p class="txt-888"><span class="mr10"><i class="iconfont mr5">&#xe625;</i>项目面积</span><span class="txt-333">35万平</span></p>
+			<p class="txt-888"><span class="mr10"><i class="iconfont mr5">&#xe626;</i>开发主体</span><span class="txt-333">中国恒天集团</span></p>
+			<p class="txt-888"><span class="mr10"><i class="iconfont mr5">&#xe628;</i>销售热线</span><span class="txt-333">0316-5989666</span></p>
+			<p class="txt-888"><span class="mr10"><i class="iconfont mr5">&#xe602;</i>项目位置</span><span class="txt-333">霸州国际温泉公园泰山路与龙江西路交汇处</span></p>
+		</div>
+		
+		<div class="contentline">
+			<div class="text_box txt-darkred">
+				<!--正文开始-->
+				<P>　　霸州市瑞和恒达房地产开发有限公司是中国恒天地产有限公司的子公司，中国恒天地产有限公司的母公司是中国恒天集团是国务院国资委直接监管下的116家独资大型中央企业之一，成立于1998年9月，由中国纺织机械、中国纺织工业对外经济合作公司、中国化纤总公司、中国服装集团、中国丝绸工业总公司等多家公司组建而成。</P>
+<P>　　中国恒天集团现有二级子公司19家，拥有上市公司6家，员工逾6万余人。中国恒天业务包括纺织机械、纺织及贸易、商用车三大主业，暨纺织机械、纺织贸易、新型纤维材料、商用车及重工机械、地产和投资六大业务单元。</P>
+<P>　　中国恒天地产有限公司在北京、咸阳、延吉等地都有成功开发房地产项目的成功经验，近年来，在南昌、泗阳、嘉善、渭南等地新增了多个项目。随着公司规模的急剧扩张，项目数量和种类的不断增多，公司的业务范围呈现出以北京为中心，向全国辐射的良好局面。</P>
+				<!--正文结束-->
+			</div>
+			<div class="blank"></div>
+		</div>
+		<div class="blank "></div>
+		
+		<div class="syyxyy mui-table" style="padding:5px;">
+			<div class="mui-table-cell" style="padding:5px;"><a data-href="###" class="mui-btn mui-btn-block">上一个</a></div>
+			<div class="mui-table-cell" style="padding:5px;"><a data-href="###" class="mui-btn mui-btn-block">下一个</a></div>
+		</div>
+		<div class="blank"></div>
+		
+	</div>
+</div>
+<!--内容区域 end-->
+<!-- off-canvas backdrop -->
+<div class="mui-off-canvas-backdrop"></div>
+
+</div>
+<!-- 主页面容器 end -->
+
+</div>
+
+
+<!--下拉菜单 start-->
+<div id="topPopover" class="mui-popover mui-popover-bottom popover-xiala">
+<div class="mui-scroll-wrapper">
+	<div class="mui-scroll">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<a data-href="cases.html">热销楼盘</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a data-href="cases.html">承接项目</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+<!--下拉菜单 end-->
+
+
+<script src="js/mui.zoom.js"></script> 
+<script src="js/mui.previewimage.js"></script> 
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+});
+mui.previewImage();
+
+//banner滑动
+var bannerswiper = new Swiper('.banner', {
+	slidesPerView:1,
+	pagination: '.swiper-pagination',
+	paginationClickable:true,
+	//nextButton:'.item-partner .swiper-button-next',
+	//prevButton:'.item-partner .swiper-button-prev',
+	//spaceBetween: 1,
+	loop: false
+});
+
+</script> 
+<!--每页必需 start--> 
+<script src="js/custom.js"></script> 
+
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{ height:100%;}
+body{ height:100%; position:relative;}
+
+.zt_con .inner{ width:100%; height:100%;}
+
+.zt_mlt-01{ height:347px; background:#efe6cf;}
+.zt_mlt-01 .inner{ background:url(../images/zt_mlt-01.jpg) no-repeat center top;}
+.zt_mlt-01 .inner .w1000{ position:relative; height:100%;}
+.zt_mlt-01 .inner .w1000 a{ position:absolute; bottom:49px; right:0; width:263px; height:67px; line-height:67px; text-align:center; color:#ffa200; font-size:24px; background:url(../images/zt_mlt-01-01.jpg) no-repeat center;}
+.zt_mlt-01 .inner .w1000 a .icon{ font-size:32px; }
+.zt_mlt-01 .inner .w1000 a:hover{ color:#fff;}
+
+.zt_mlt-02{ height:519px; background:url(../images/zt_mlt-bg2.jpg) repeat-x top; position:relative;}
+.zt_mlt-02 .inner{ height:570px; background:url(../images/zt_mlt-02.png) no-repeat center bottom; left:0; right:0; bottom:0; position:absolute;}
+
+.zt_mlt-03{ height:413px; background:#efe6cf;}
+.zt_mlt-03 .inner{ background:url(../images/zt_mlt-03.jpg) no-repeat center top;}
+
+.zt_mlt-04{ height:706px; background:#450800;}
+.zt_mlt-04 .inner{ background:url(../images/zt_mlt-04.jpg) no-repeat center top;}
+.zt_mlt-04 .inner p{ padding-left:250px; padding-top:70px; height:130px; margin-bottom:23px; width:670px; color:#fff; text-indent:2em; font-size:20px; line-height:30px;}
+
+.zt_mlt-05{ height:104px; background:#ffa200;}
+.zt_mlt-05 .inner{ background:url(../images/zt_mlt-05.jpg) no-repeat center top;}
+
+.zt_mlt-06{ height:412px; padding:10px 0; background:#fafafa;}
+.zt_mlt-06 .inner{ width:1040px;}
+.zt_mlt-06 .inner li{ float:left; display:inline; margin:0 5px;}
+.zt_mlt-06 .inner .item{ width:250px; height:412px;}
+.zt_mlt-06 .inner .item_01{ background:url(../images/zt_mlt-06-01.jpg) no-repeat center top;}
+.zt_mlt-06 .inner .item_02{ background:url(../images/zt_mlt-06-02.jpg) no-repeat center top;}
+.zt_mlt-06 .inner .item_03{ background:url(../images/zt_mlt-06-03.jpg) no-repeat center top;}
+.zt_mlt-06 .inner .item_04{ background:url(../images/zt_mlt-06-04.jpg) no-repeat center top;}
+.zt_mlt-06 .inner .item h1{ text-align:center; font-size:24px; color:#941d0d; padding-top:240px; height:30px; line-height:30px; margin-bottom:10px;}
+.zt_mlt-06 .inner .item p{ font-size:16px; color:#333; line-height:26px; padding:0 20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

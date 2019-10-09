@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html style=" font-size:100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>订单提交</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/mui.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/mui.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript" src="js/payfor.js"></script>
+<script type="text/javascript" src="rating/jquery.raty.min.js"></script>
+</head>
+
+<body class="page-service-yuyue">
+
+<!--导航 手机版start-->
+<div class="bottombar">
+	<ul class="clearfix">
+		<li><a href="###" class="btn btn_middle btn_blue radius-5 ease-1" onClick="$('#form1').submit();">提交订单</a></li>
+	</ul>
+</div>
+<!--导航手机版end-->
+
+
+<!--主体start-->
+<div class="mainbody" style="top:0rem; bottom:.6rem; left:0; right:0;">
+	<div class="blank10"></div>
+	
+<!--表单 start-->
+<form id="form1" method="post">
+<ul class="ul_view ul_view_group mb10">
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1><i class="icon_ebn icon-local mr5"></i>服务地址</h1>
+		<p class="mar0 txt-666 fs12"><i class="icon_ebn mr5"></i>北京市朝阳区林达海渔广场2号楼1807</p>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1><i class="icon_ebn icon-time mr5"></i>服务时间</h1>
+		<p class="mar0 txt-666 fs12"><i class="icon_ebn mr5"></i>2016/08/16 12:00-14:00</p>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1><i class="icon_ebn icon-order mr5"></i>服务类型<span class="fr txt-888 fs12">日常保洁</span></h1>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1><i class="icon_ebn mr5"></i><span class="txt-333 fs14">日常保洁</span><span class="fr txt-333 fs14 ml10">¥<span class="ml5">90</span></span><span class="fr txt-888 fs14">×3（小时）</span></h1>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1><i class="icon_ebn mr5"></i><span class="txt-333 fs14">日常保洁</span><span class="fr txt-333 fs14 ml10">¥<span class="ml5">90</span></span><span class="fr txt-888 fs14">×3（小时）</span></h1>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1><i class="icon_ebn mr5"></i><span class="txt-333 fs14">日常保洁</span><span class="fr txt-333 fs14 ml10">¥<span class="ml5">90</span></span><span class="fr txt-888 fs14">×3（小时）</span></h1>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<div class="text_box beizhu_box txt-333"><input type="text" class=" radius-5" placeholder="备注信息，例如 请携带好工具" /></div>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1><i class="icon_ebn icon-youhuiquan-blue mr5"></i>优惠券<span class="fr fs14">- ¥10</span></h1>
+	</div></li>
+</ul>
+<ul class="ul_view">
+	<li class="ul_view_cell"><div class="ul_view_cell_a">
+		<h1><span class="fs12">原价 ¥80<span class="ml5 mr5">-</span>共优惠 ¥10</span><span class="fr fs12">总计<span class="txt-red ml5 fs16">¥80.00</span></span></h1>
+	</div></li>
+	<li class="ul_view_cell"><div class="ul_view_cell_a" >
+		<h1><i class="icon_ebn icon-vip mr5"></i>支付方式</h1>
+		<div class="blank10"></div>
+		<div class="beizhu_box">
+			<div class="switch_box">
+				<ul class="ul">
+					<li class="li">
+						<input type="radio" name="paytype" checked/>
+						<div class="switch_item"><h2>余额支付<span class="txt-red">（可用余额 ¥0.00）</span></h2><i class="icon_ebn icon-checkbox"></i></div>
+					</li>
+					<li class="li">
+						<input type="radio" name="paytype" />
+						<div class="switch_item"><h2>微信支付</h2><i class="icon_ebn icon-checkbox"></i></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div></li>
+</ul>
+<input type="submit" style="display:none;">
+</form>
+<!--表单 end-->
+<!--注意start-->
+<div class="text_box pad10 mb10">
+	<div class="fs12 txt-888"></div>
+</div>
+<div class="blank10"></div>
+<div class="blank10"></div>
+<!--注意end-->
+
+
+
+
+
+
+</div>
+<!--主体end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$(function(){
+	/*单选 custom-js*/
+	$('.switch_box input').each(function(){
+		if($(this).prop('checked')){
+			$(this).next().addClass('current');
+		}
+	})
+	
+	$('.switch_box .switch_item').click(function(){
+		if($(this).prev().prop('checked')){
+			//$(this).prev().prop('checked',false);
+			//$(this).removeClass('current');
+		}else{
+			$(this).prev().prop('checked',true);
+			$(this).parent().parent().find('.switch_item').removeClass('current');
+			$(this).addClass('current');
+		}
+		return false;
+	});	
+})
+</script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>客户-第一次</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.mui-bar-nav~.mui-content .mui-pull-top-pocket{ top:130px;}
+.list-diyici {background: #efeff4;}
+.list-diyici:before,.list-diyici:after{display:none;}
+.list-diyici .list-diyici-item {position: relative;border: 1px #e4b86e solid;margin-bottom: 10px;background: #fff5e5;}
+.list-diyici .list-diyici-item a.mui-active{ background:#fff;}
+.list-diyici .list-diyici-item h4{ color:#a96a00;}
+.list-diyici .list-diyici-item .iconfont{ color:#f6e2c1; font-size:80px; position:absolute; right:5px; top:30px; transform:rotate(15deg); -webkit-transform:rotate(15deg);}
+</style>
+</head>
+
+<body>
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+
+<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item" data-href="kehu-dashang.html"><i class="mui-icon iconfont icon-dashang"></i><span class="mui-tab-label">打赏</span></a>
+<a class="mui-tab-item mui-active" data-href="kehu-diyici.html"><i class="mui-icon iconfont icon-upstage"></i><span class="mui-tab-label">第一次</span></a>
+<a class="mui-tab-item" data-href="kehu-tuijian.html"><i class="mui-icon iconfont icon-friendfamous"></i><span class="mui-tab-label">推荐</span></a>
+<a class="mui-tab-item" data-href="kehu-wode.html"><i class="mui-icon iconfont icon-my"></i><span class="mui-tab-label">我的</span></a>
+</nav>
+
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper" style="padding-top:0px;">
+<div class="mui-scroll">
+	<div class="mui-table-view mb10">
+    	<div class="mui-table-view-cell"><h5 class="txt-666"><i class="iconfont icon-likefill txt-red mr5"></i>亲~您有<span class="txt-yellow">5</span>个第一次献给了我们哦~<a href="#share" class="txt-blue">分享一下</a></h5></div>
+    </div>
+    <ul class="mui-table-view list-diyici">
+        <li class="mui-table-view-cell list-diyici-item mui-card">
+            <a href="#">
+        	<h4>第一次分享实创资讯</h4>
+            <p class="txt-666">2015-05-04</p>
+            <i class="iconfont icon-upstagefill"></i>
+            </a>
+        </li>
+        <li class="mui-table-view-cell list-diyici-item mui-card">
+            <a href="#">
+        	<h4>第一次分享实创资讯</h4>
+            <p class="txt-666">2015-05-04</p>
+            <i class="iconfont icon-upstagefill"></i>
+            </a>
+        </li>
+        <li class="mui-table-view-cell list-diyici-item mui-card">
+            <a href="#">
+        	<h4>第一次分享实创资讯</h4>
+            <p class="txt-666">2015-05-04</p>
+            <i class="iconfont icon-upstagefill"></i>
+            </a>
+        </li>
+        <li class="mui-table-view-cell list-diyici-item mui-card">
+            <a href="#">
+        	<h4>第一次分享实创资讯</h4>
+            <p class="txt-666">2015-05-04</p>
+            <i class="iconfont icon-upstagefill"></i>
+            </a>
+        </li>
+        <li class="mui-table-view-cell list-diyici-item mui-card">
+            <a href="#">
+        	<h4>第一次分享实创资讯</h4>
+            <p class="txt-666">2015-05-04</p>
+            <i class="iconfont icon-upstagefill"></i>
+            </a>
+        </li>
+        <li class="mui-table-view-cell list-diyici-item mui-card">
+            <a href="#">
+        	<h4>第一次分享实创资讯</h4>
+            <p class="txt-666">2015-05-04</p>
+            <i class="iconfont icon-upstagefill"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+
+</div>
+<!-- 主页面容器 end -->
+
+
+
+
+
+
+<div id="share" class="mui-popover mui-popover-action mui-popover-bottom">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#">分享到朋友圈</a></li>
+        <li class="mui-table-view-cell"><a href="#">分享给QQ好友</a></li>
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#share"><b>取消</b></a></li>
+    </ul>
+</div>
+
+<script src="js/mui.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+	 pullRefresh: {
+            container: '#pullrefresh', //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+            up: {
+                contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+                contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+                callback: add_more //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+            }
+        },
+});
+
+function add_more() {
+		//这里写ajax
+	  if (true) {
+			  var nd = '';
+			  Zepto('.list-diyici').append(nd);
+		  mui('#pullrefresh').pullRefresh().endPullupToRefresh(false); //参数为true代表没有更多数据了。
+	  } else {
+		  mui('#pullrefresh').pullRefresh().endPullupToRefresh(true); //参数为true代表没有更多数据了。
+	  }
+}
+
+
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

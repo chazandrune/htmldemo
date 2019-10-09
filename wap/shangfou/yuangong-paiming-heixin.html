@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>员工-排名-黑心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+</style>
+</head>
+
+<body>
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+<header class="mui-bar">
+<!--<a class="mui-action-back mui-icon mui-icon-arrowleft"></a>
+<h1 class="mui-title">排名</h1>-->
+
+<div class="mui-bar mui-plus-hidden" style="background-color:#f39800; height:40px; top:0px;">
+<a data-href="yuangong-paiming-jiangjinchi.html" class="mui-icon mui-pull-right mui-icon-info-filled"></a>
+<h1 class="mui-title"><i class="iconfont icon-sfsiconzongjiangjin mr10"></i><span class="font12 mr10">奖金池余额</span>4897<span class="font12">元</span></h1
+></div>
+
+<div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-tab" style="top:40px;">
+<a class="mui-control-item" data-href="yuangong-paiming-shangjin.html">赏金排名</a>
+<a class="mui-control-item" data-href="yuangong-paiming-hongxin.html">红心排名</a>
+<a class="mui-control-item mui-active" data-href="yuangong-paiming-heixin.html">黑心排名</a>
+</div>
+</header>
+
+<div class="sortandsearch" style="top:80px;">
+<a class="sort-item ease-3" href="#popover_0">所属<i class="iconfont icon-xiala"></i></a>
+<a class="sort-item ease-3" href="#popover_1">职位<i class="iconfont icon-xiala"></i></a>
+<form><div class="mui-input-row mui-search ease-3"><input type="search" class="mui-input-clear" placeholder="搜索"></div></form>
+</div>
+
+<div class="mui-bar paiming-my">
+<div class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge mui-badge-inverted">1561</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>564</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">我的排名</h4>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div></div>
+<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item mui-active" data-href="yuangong-paiming-shangjin.html"><i class="mui-icon iconfont icon-rank"></i><span class="mui-tab-label">排名</span></a>
+<a class="mui-tab-item" data-href="yuangong-hetong.html"><i class="mui-icon iconfont icon-form"></i><span class="mui-tab-label">合同</span></a>
+<a class="mui-tab-item" data-href="yuangong-zhishiku.html"><i class="mui-icon iconfont icon-read"></i><span class="mui-tab-label">知识库</span></a>
+<a class="mui-tab-item" data-href="yuangong-wode.html"><i class="mui-icon iconfont icon-my"></i><span class="mui-tab-label">我的</span></a>
+</nav>
+
+<div id="pullrefresh" class="mui-content mui-scroll-wrapper" style="top:100px;padding-top:36px; padding-bottom:100px;">
+<div class="mui-scroll">
+    <ul class="mui-table-view list-paiming">
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge paiming-num-1">1</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge paiming-num-2">2</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge paiming-num-3">3</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge mui-badge-inverted">4</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge mui-badge-inverted">5</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge mui-badge-inverted">6</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge mui-badge-inverted">7</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge mui-badge-inverted">8</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge mui-badge-inverted">9</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+        <li class="list-paiming-item mui-table-view-cell mui-media">
+            <a data-href="javascript:void(0);">
+            <div class="paiming-num mui-ellipsis"><span class="mui-badge mui-badge-inverted">10</span></div>
+            <div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div>
+            <div class="mui-table">
+            	<div class="mui-table-cell">
+                	<img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg">
+                    <div class="mui-media-body">
+                    	<h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4>
+                        <p class="mui-ellipsis">北京实创秦皇岛公司</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+
+</div>
+<!-- 主页面容器 end -->
+
+
+
+
+
+
+<div id="popover_0" class="mui-popover popover-xiala">
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell cur"><a data-href="#">全部<span class="mui-icon mui-icon-checkmarkempty mui-pull-right"></span></a></li>
+                <li class="mui-table-view-cell"><a data-href="#">北京实创秦皇岛公司</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">北京实创秦皇岛公司</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">北京实创秦皇岛公司</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">北京实创秦皇岛公司</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">北京实创秦皇岛公司</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="popover_1" class="mui-popover popover-xiala">
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell cur"><a data-href="#">全部<span class="mui-icon mui-icon-checkmarkempty mui-pull-right"></span></a></li>
+                <li class="mui-table-view-cell"><a data-href="#">客户经理</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">设计师</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">实小创</a></li>
+                <li class="mui-table-view-cell"><a data-href="#">实小妹</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="js/mui.min.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+	 pullRefresh: {
+            container: '#pullrefresh', //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+            up: {
+                contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+                contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+                callback: add_more //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+            }
+        },
+});
+
+function add_more() {
+		//这里写ajax
+	  if (true) {
+			  var nd = '<li class="list-paiming-item mui-table-view-cell mui-media"><a data-href="javascript:void(0);"><div class="paiming-num mui-ellipsis"><span class="mui-badge mui-badge-inverted">10</span></div><div class="paiming-canshu txt-black"><i class="iconfont icon-likefill mr5"></i>1531</div><div class="mui-table"><div class="mui-table-cell"><img class="mui-media-object mui-pull-left avatar-radius" src="images/avatar.jpg"><div class="mui-media-body"><h4 class="mui-ellipsis">李思<span class="font12 txt-888 ml10">客户经理</span></h4><p class="mui-ellipsis">北京实创秦皇岛公司</p></div></div></div></a></li>';
+			  Zepto('.list-paiming').append(nd);
+		  mui('#pullrefresh').pullRefresh().endPullupToRefresh(false); //参数为true代表没有更多数据了。
+	  } else {
+		  mui('#pullrefresh').pullRefresh().endPullupToRefresh(true); //参数为true代表没有更多数据了。
+	  }
+}
+
+    //触发第一页
+    if (mui.os.plus) {
+        mui.plusReady(function() {
+            setTimeout(function() {
+                mui('#pullrefresh').pullRefresh().pullupLoading();
+            }, 1000);
+
+        });
+    } else {
+        mui.ready(function() {
+            mui('#pullrefresh').pullRefresh().pullupLoading();
+        });
+    }
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

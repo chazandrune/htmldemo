@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+ 
+html{overflow-x:hidden;}
+*{margin:0;padding:0;word-break:break-all;}
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+i,em{ font-style:normal;}
+body{padding:0px;margin:0; font-family:Microsoft YaHei,"微软雅黑",SimSun,"宋体";font-size:12px; background:#fff; color:#333;}
+a{text-decoration:none;}
+img{ border:none;}
+img.lazy{ background:url(../images/loading.gif) no-repeat center;}
+li{ list-style:none;}
+input,button {outline: none; border:0;font-family:Microsoft YaHei,"微软雅黑",SimSun,"宋体";}
+textarea {outline: none;}
+.clr{ clear:both;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden; overflow:hidden;}
+
+
+
+.w980{ width:980px;}
+.w1000{ width:1000px;}
+.w1200{ width:1200px;}
+.mar0{ margin:0 auto;}
+.ml10{ margin-left:10px;}
+.mr10{ margin-right:10px;}
+.mb10{ margin-bottom:10px;}
+.fl{ float:left;}
+.fr{ float:right;}
+.ease-1{
+-webkit-transition:all 0.1s ease-out;
+-khtml-transition:all 0.1s ease-out;
+-moz-transition: all 0.1s ease-out;
+-o-transition: all 0.1s ease-out;
+transition: all 0.1s ease-out;}
+.radius-5{
+-webkit-border-radius:5px;
+-moz-border-radius: 5px;
+border-radius: 5px;}
+.shadow-box-5{
+-moz-box-shadow:0px 0px 5px rgba(0,0,0,0.5) inset;
+-webkit-box-shadow:0px 0px 5px rgba(0,0,0,0.5) inset;
+box-shadow:0px 0px 5px rgba(0,0,0,0.5) inset;}
+.shadow-text-1{
+-moz-text-shadow:0 1px 0px rgba(0,0,0,.5);
+-webkit-text-shadow:0 1px 0px rgba(0,0,0,.5);
+text-shadow:0 1px 0px rgba(0,0,0,.5);}
+.text-overflow{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.txt-white{ color:#fff;}
+.txt-green{ color:#8fc31f;}
+a.txt-white{color:#fff;}
+a.txt-white:hover{ color:#f8f8f8;}
+a.txt-green{color:#8fc31f;}
+a.txt-green:hover{ color:#3f9521;}
+.txt-l{ text-align:left;}
+.txt-c{ text-align:center;}
+.txt-r{ text-align:right;}
+
+body{ background:#f8f8f8;}
+
+.head{ background:#000; color:#fff; line-height:50px;}
+.head h1{ padding:0 20px; float:left; display:inline;}
+.head p{ padding:0 20px; color:#888; font-size:14px; float:left; display:inline;}
+
+
+.nav{ height:50px; line-height:50px; background:#333;}
+.nav a{ padding:0 30px; color:#fff; float:left; font-size:14px;}
+.nav a:hover{ background:#5dbd03;}
+
+
+.main .hd a{ display:inline-block; *display:inline;*zoom:1; margin:5px; height:40px; line-height:40px; font-size:14px; border:1px #fff solid; background:#f3f3f3; color:#666; padding:0 20px;}
+.main .hd a:hover{ color:#5dbd03;}
+.main .hd a.on{ border-color:#5dbd03; color:#5dbd03; background:#fff;}
+.main{ padding:10px 0 20px; min-height:400px;}
+.main ul{ overflow:hidden;}
+.main li{ float:left; display:inline; width:25%;}
+.main li .item{ padding:10px;}
+.main li a{ display:block; margin:0 auto; height:100px; padding:10px 20px; line-height:100px;overflow:hidden; border:1px #dbdbdb solid; background:#eee; color:#333; }
+.main li a .title{ font-size:16px; height:30px; line-height:30px;}
+.main li a .date{ font-size:14px; color:#888; line-height:20px;}
+.main li a:hover{ background:#fff; border:1px #5dbd03 solid; color:#5dbd03;}
+
+
+
+.foot{ text-align:center; padding:20px 0; color:#888;}
+.foot a{ color:#333;}
+.foot a:hover{ color:#111;}
+
+
+.layui-layer-custom {box-shadow: none !important;background: none !important;}
+/*表单 table*/
+.biaodan table th,.biaodan table td{ padding:8px 8px; line-height:24px; font-size:14px;}
+.biaodan table th{ font-size:14px; color:#333; text-align:right; font-weight:normal; width:120px; vertical-align:top; line-height:40px;}
+.biaodan table .needdot{ margin-right:10px; color:#de0000;}
+.biaodan table .lastfont{ color:#aaa;}
+.biaodan table .lastfont a{ color:#00a0ea;}
+.biaodan table .lastfont a:hover{ color:#0088c7;}
+.biaodan table .btn{ padding:8px 40px;}
+
+.ctrl-box { padding:20px 0 30px; background:#fff;}
+.ctrl-box .title{ height:50px; line-height:50px; font-size:20px;}
+.ctrl-box .btn{ width:200px; height:40px;}
+
+
+@media(max-width:767px){
+.head h1{ padding:0 10px; font-size:16px; }
+.head p{ padding:0 20px; font-size:12px;}
+.nav a{ padding:0 10px;}
+.main li{ float:none; display:inline; width:100%;}
+
+
+}

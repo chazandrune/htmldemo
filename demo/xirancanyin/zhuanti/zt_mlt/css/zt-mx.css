@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{ height:100%;}
+body{ height:100%; position:relative;}
+
+
+.zt_mx-01{ height:599px; background:#6c1307; position:relative;}
+.zt_mx-01 .inner{ background:url(../images/zt_mx-01.jpg) no-repeat center top;}
+.zt_mx-01 .inner .up{ height:45px; width:100%; background:url(../images/zt_mx-01-02.png) repeat top; position:absolute; top:0; left:0; right:0;}
+.zt_mx-01 .inner .down{ height:45px; width:100%; background:url(../images/zt_mx-01-03.png) repeat bottom; position:absolute; bottom:0; left:0; right:0;}
+
+
+.zt_mx-02{ height:437px; background:#ddb56f; position:relative;}
+.zt_mx-02 .inner{ background:url(../images/zt_mx-02.jpg) no-repeat center bottom; }
+
+.zt_mx-03{ height:500px; background:#6c1307;}
+.zt_mx-03 .inner{ background:url(../images/zt_mx-03.jpg) no-repeat center top;}
+
+.zt_mx-04{ height:350px; padding:9px 0 20px; background:#ffefd3;}
+.zt_mx-04 .inner{ width:1020px;}
+.zt_mx-04 .inner li{ float:left; display:inline; margin:0 5px;}
+.zt_mx-04 .inner .item{ width:330px; height:350px;}
+.zt_mx-04 .inner .item_01{ background:url(../images/zt_mx-04-01.png) no-repeat center top;}
+.zt_mx-04 .inner .item_02{ background:url(../images/zt_mx-04-02.png) no-repeat center top;}
+.zt_mx-04 .inner .item_03{ background:url(../images/zt_mx-04-03.png) no-repeat center top;}
+.zt_mx-04 .inner .item p{ font-size:20px; color:#931302; line-height:30px; padding:187px 20px;}
+
+.zt_mx-05{ height:182px; background:url(../images/zt_mx-05-01.jpg) repeat center top;}
+.zt_mx-05 .inner{ background:url(../images/zt_mx-05.jpg) no-repeat center top;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+/*信息列表*/
+.page-list-article{}
+.newslist{}
+.newslist .block{}
+.newslist .item{ padding:20px 0 20px 2px; position:relative; background:#fff; margin-bottom:20px;}
+.newslist .item .item_l{ width:720px; border-right:1px #dbdbdb solid; float:left;}
+.newslist .item .item_l .title{ padding:0px 20px; margin-bottom:10px; line-height:30px; font-size:20px;}
+.newslist .item .item_l .title a:hover{ color:#df6c10;}
+.newslist .item .item_l .desc{ padding:0 20px;}
+.newslist .item .item_l .desc .pic{ display:block; width:250px;}
+.newslist .item .item_l .desc .pic:hover{  opacity:.8;filter: alpha(opacity=80);-khtml-opacity: .8;-moz-opacity: .8; }
+.newslist .item .item_l .desc .pic img{ width:100%; height:auto;}
+.newslist .item .item_l .desc .txt{ display:block; width:410px; font-size:14px; line-height:25px; color:#666; }
+.newslist .item .item_l .desc .txt p{ margin-bottom:10px;height:75px; overflow:hidden;}
+.newslist .item .item_r{}
+.newslist .item .date{ text-align:center; color:#888;}
+.newslist .item .date h1{ font-size:32px; line-height:40px;}
+.newslist .item .date p{ height:20px; line-height:20px; font-size:12px;}
+.newslist .item .detail{ display:block; width:120px; height:40px; line-height:40px; text-align:center; position:absolute;right:0px; bottom:20px; color:#aaa;}
+.newslist .item .detail .iconfont{ font-size:32px;}
+.newslist .item .detail:hover{ color:#128cc9;}
+.newslist .item.hover{-moz-box-shadow:0px 0px 30px rgba(0,0,0,0.3);-webkit-box-shadow:0px 0px 30px rgba(0,0,0,0.3);box-shadow:0px 0px 30px rgba(0,0,0,0.3);behavior:url(ie-css3.htc);zoom:1;}
+
+
+/*图文页*/
+.page-list-image{}
+.imglist ul{ width:110%;}
+.imglist .block{ float:left; *display:inline; *zoom:1;}
+.imglist .item{ width:270px; display:block; background:#fff; margin:0 15px 15px 0;}
+.imglist .item .pic{ width:100%; height:270px; overflow:hidden;
+display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;}
+.imglist .item .pic img{ max-width:100%; height:auto;}
+.imglist .item .title{ padding:0 20px; }
+.imglist .item .title h3{height:50px; line-height:50px; overflow:hidden; font-size:16px;}
+.imglist .item .title .line{ width:20px;  border-bottom:2px #128cc9 solid; margin:0 auto;}
+.imglist .item.hover{-moz-box-shadow:0px 0px 30px rgba(0,0,0,0.3);-webkit-box-shadow:0px 0px 30px rgba(0,0,0,0.3);box-shadow:0px 0px 30px rgba(0,0,0,0.3);behavior:url(ie-css3.htc);zoom:1;}
+
+
+
+/*详情页*/
+.page-article .part-left-container{ background:#fff; margin-bottom:20px; }
+.articlearticle{}
+.articlearticle .article_title{}
+.articlearticle .article_title h1{ font-size:32px; line-height:40px; color:#01324a; padding:10px 20px 20px;}
+.articlearticle .article_title .sub{ background:#f3f3f3; border-top:1px #dbdbdb solid; border-bottom:1px #dbdbdb solid; padding:10px 20px; line-height:20px; font-size:14px; color:#888; }
+.articlearticle .article_title .sub span{ margin-right:20px;}
+.articlearticle .article_title .sub .iconfont{ color:#128cc9;}
+.articlearticle .danye_title{ height:130px; background:url(../images/bg_danye_title.jpg) no-repeat left top; background-size:cover; padding:0 20px; position:relative;}
+.articlearticle .danye_title h1{ padding:20px 0 20px;}
+.articlearticle .danye_title .line{ width:90px;}
+.articlearticle .danye_title .line i{ background-color:#ffcd33;}
+.articlearticle .danye_title .sub{ position:absolute; right:20px; bottom:15px; color:#fff; text-align:right;}
+.articlearticle .danye_title .sub h3{ font-size:14px; opacity:.8;filter: alpha(opacity=80);-khtml-opacity: .8;-moz-opacity: .8;}
+.articlearticle .danye_title .sub p{ font-size:12px; opacity:.3;filter: alpha(opacity=30);-khtml-opacity: .3;-moz-opacity: .3;   }
+.articlearticle .text_box{ padding:20px; background:#fff;}
+.articlearticle .sharebox{ padding:50px 20px 10px; height:30px;}
+.sharebox .bdsharebuttonbox .title{ line-height:16px; height:16px;margin:6px 10px 6px 0;}
+.sharebox .bdsharebuttonbox a .iconfont{ font-size:16px;color:#fff; }
+.articlearticle .syyxyy{ border-top:1px #dbdbdb solid; padding:20px 20px 5px; line-height:20px;}
+.articlearticle .syyxyy p{ margin-bottom:15px;}
+
+.formbox{ }
+.formbox .bt span{ float:right; line-height:16px; margin-top:-8px; padding:0 10px; background:#fff; color:#aaa; font-size:12px;}
+.formbox .nr{padding:20px 20px 40px;}
+.formbox .part-01{ float:left; width:300px;}
+.formbox .part-02{ float:right; width:480px;}
+.formbox .form_item{ width:100%; position:relative;}
+.formbox .form_item p{ height:40px; line-height:40px; padding:0 12px;}
+.formbox .form_item input{ width:274px;}
+.formbox .form_item textarea{ width:454px; height:186px;}
+.formbox .form_item .Validform_checktip{ position:absolute; right:10px; bottom:40px; height:40px; line-height:40px;}
+.formbox .submit_form{ font-size:0; padding:20px 0;}
+.formbox .submit_form .btn_submit{ font-size:14px; padding:0 30px; margin-left:20px;}
+.formbox .hints p{ margin-bottom:10px; line-height:20px;}
+
+
+
+

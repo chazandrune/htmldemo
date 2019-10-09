@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>定制开发-环宇威智</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="环宇威智描述" />
+<meta name="keywords" content="环宇威智关键词" />
+<meta name="author" content="环宇威智制作" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<style>
+.mui-content{ -webkit-user-select:text;user-select:text;}
+.mui-content{ background:#fff;}
+.bigtitle{ padding:20px 10px 5px; position:relative;}.bigtitle h2{ font-size:18px; color:#333; margin-bottom:0;}.bigtitle p{ margin-bottom:0;}
+.bigtitle:before{ content:''; display:block; width:100%; height:1px; background:#ccc; position:absolute;top:48px; left:50%; margin-left:60px;}
+.bigtitle:after{ content:''; display:block; width:100%; height:1px; background:#ccc; position:absolute;top:48px; right:50%; margin-right:60px;}
+.bigtitle.bigtitle-inverted{}
+.bigtitle.bigtitle-inverted h2{ color:#fff;}
+.bigtitle.bigtitle-inverted:before,.bigtitle.bigtitle-inverted:after{ background:#aaa;}
+
+
+
+.contact .mui-input-row label{ color:#666;}
+.contact .radio_box{ position:absolute; height:40px; line-height:40px; font-size:14px; right:0; top:0;}
+.contact .radio_box{text-align:center;}
+.contact .radio_box ul{ margin:0; padding:0;}
+.contact .radio_box li{float:left;display:inline;}
+.contact .radio_box input{display:none;}
+.contact .radio_box .radio_item{ display:inline-block; height:40px; width:80px; line-height:40px; padding:0px 10px; color:#333;cursor:pointer; }
+.contact .radio_box .current{ display:none;}
+.contact .radio_box .radio_item span{}
+
+#fullpage{ height:100%;}
+#fullpage .swiper-slide{ position:relative; overflow:hidden; height:auto; }
+#fullpage .swiper-slide .pic{  bottom:0;left:0; right:0;-webkit-animation-play-state:paused;animation-play-state:paused;	}
+#fullpage .swiper-slide .pic img{ width:100%; height:auto; vertical-align:bottom;}
+#fullpage .swiper-slide .txt{ top:0; left:0; right:0; padding:10px 20px;-webkit-animation-play-state:paused;animation-play-state:paused;}
+#fullpage .swiper-pagination-bullet{ border:1px #aaa solid; background:#aaa;-webkit-transition:all 0.3s ease-out;-moz-transition: all 0.3s ease-out;transition: all 0.3s ease-out;}
+#fullpage .swiper-pagination-bullet-active{ border-color:#60c10a; background:#fff;}
+#fullpage .swiper-slide-active .pic{ -webkit-animation-play-state:running;animation-play-state:running;}
+#fullpage .swiper-slide-active .txt{ -webkit-animation-play-state:running;animation-play-state:running;}
+
+.advatages{ background-color:transparent;}
+.advatages:before{ background-color:transparent;}
+.advatages .item{ position:relative; padding:10px; background:url(images/alpha_white80.png); margin-bottom:1px; }
+.advatages .item.mui-table-view-cell:after{ background-color:transparent;}
+.advatages .item .icon{ padding:20px; display:inline; }
+.advatages .item .icon .iconfont{ width:50px; height:50px; line-height:48px;text-align:center;font-size:2em; border-radius:50%; -webkit-border-radius:50%;  color:#48587b;}
+.advatages .item .text h5{ color:#333;}
+.advatages .item .text h6{ line-height:20px;}
+.advatages .item_l .icon{ float:left; margin-right:10px;}
+.advatages .item_l .text{ text-align:left;}
+.advatages .item_r .icon{ float:right; margin-left:10px;}
+.advatages .item_r .text{ text-align:right;}
+.advatages .item.mui-active{ background-color:#fff;}
+.advatages .item.mui-active .icon .iconfont{}
+
+
+.yingxiao_icons.mui-grid-view.mui-grid-9{ background-color:#fff; border-color:#fff;}
+.yingxiao_icons.mui-grid-view.mui-grid-9 .mui-table-view-cell{ padding:5px; border-color:#fff;-webkit-animation-name: fadeIn;	animation-name: fadeIn;-webkit-animation-duration:0.5s;animation-duration:0.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.yingxiao_icons.mui-grid-view.mui-grid-9 .mui-table-view-cell>a:not(.mui-btn){ padding:0;}
+.yingxiao_icons.mui-grid-view.mui-grid-9 .mui-table-view-cell img{ width:80%;}
+.yingxiao_icons.mui-grid-view.mui-grid-9 .mui-table-view-cell:nth-child(2){-webkit-animation-delay:300ms;animation-delay:300ms;}
+.yingxiao_icons.mui-grid-view.mui-grid-9 .mui-table-view-cell:nth-child(3){-webkit-animation-delay:500ms;animation-delay:500ms;}
+.yingxiao_icons.mui-grid-view.mui-grid-9 .mui-table-view-cell:nth-child(4){-webkit-animation-delay:700ms;animation-delay:700ms;}
+.yingxiao_icons.mui-grid-view.mui-grid-9 .mui-table-view-cell:nth-child(5){-webkit-animation-delay:900ms;animation-delay:900ms;}
+.yingxiao_icons.mui-grid-view.mui-grid-9 .mui-table-view-cell:nth-child(6){-webkit-animation-delay:1100ms;animation-delay:1100ms;}
+/*上一个下一个箭头*/
+@-webkit-keyframes gotobtn {
+0%,50%,100%{
+-webkit-transition-timing-function:cubic-bezier(.64,0,.37,1);
+-moz-transition-timing-function:cubic-bezier(.64,0,.37,1);
+-o-transition-timing-function:cubic-bezier(.64,0,.37,1);
+transition-timing-function:cubic-bezier(.64,0,.37,1);
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+0% {
+-webkit-transform: translate3d(0px, 3px, 0);
+-moz-transform: translate3d(0px, 3px, 0);
+-o-transform: translate3d(0px, 3px, 0);
+transform: translate3d(0px, 3px, 0);}
+50% {
+-webkit-transform: translate3d(-0px, -3px, 0);
+-moz-transform: translate3d(-0px, -3px, 0);
+-o-transform: translate3d(-0px, -3px, 0);
+transform: translate3d(-0px, -3px, 0);}
+100% {
+-webkit-transform: translate3d(0px, 3px, 0);
+-moz-transform: translate3d(0px, 3px, 0);
+-o-transform: translate3d(0px, 3px, 0);
+transform: translate3d(0px, 3px, 0);}
+}
+@keyframes gotobtn {
+0%,50%,100%{
+-webkit-transition-timing-function:cubic-bezier(.64,0,.37,1);
+-moz-transition-timing-function:cubic-bezier(.64,0,.37,1);
+-o-transition-timing-function:cubic-bezier(.64,0,.37,1);
+transition-timing-function:cubic-bezier(.64,0,.37,1);
+-webkit-animation-duration:2s;
+-moz-animation-duration:2s;
+-o-animation-duration:2s;
+animation-duration:2s;
+}
+0% {
+-webkit-transform: translate3d(0px, 3px, 0);
+-moz-transform: translate3d(0px, 3px, 0);
+-o-transform: translate3d(0px, 3px, 0);
+transform: translate3d(0px, 3px, 0);}
+50% {
+-webkit-transform: translate3d(-0px, -3px, 0);
+-moz-transform: translate3d(-0px, -3px, 0);
+-o-transform: translate3d(-0px, -3px, 0);
+transform: translate3d(-0px, -3px, 0);}
+100% {
+-webkit-transform: translate3d(0px, 3px, 0);
+-moz-transform: translate3d(0px, 3px, 0);
+-o-transform: translate3d(0px, 3px, 0);
+transform: translate3d(0px, 3px, 0);}
+}
+.btn_goto{display:block; width:50px; height:40px; position:absolute; line-height:40px; font-size:18px; color:#fff; text-align:left;}
+.btn_goto.btn_go_u{ bottom:0; top:auto; left:50%; margin-left:-25px;}
+.btn_goto.btn_go_d{ top:0; bottom:auto; left:50%; margin-left:-25px;}
+.btn_goto .mui-icon{width:40px; text-align:center; height:40px; line-height:40px; position:absolute; bottom:0; left:50%; margin-left:-20px; font-size:18px;
+-webkit-animation-name:gotobtn;
+-moz-animation-name:gotobtn;
+-ms-animation-name:gotobtn;
+-o-animation-name:gotobtn;
+animation-name:gotobtn;
+-webkit-animation-iteration-count:infinite;
+animation-iteration-count:infinite;
+-webkit-animation-play-state: running;}
+.btn_goto .mui-icon:nth-child(1){bottom:0px;-webkit-animation-delay:300ms;animation-delay:300ms;}
+.btn_goto .mui-icon:nth-child(2){bottom:5px;-webkit-animation-delay:500ms;animation-delay:500ms;}
+.btn_goto .mui-icon:nth-child(3){bottom:10px;-webkit-animation-delay:700ms;animation-delay:700ms;}
+</style>
+</head>
+
+<body>
+<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+
+<!-- 侧边导航 start -->
+<aside id="offCanvasSide" class="mui-off-canvas-left nav_side">
+	<div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<div class="title">
+				<img src="images/logo-mobile.png" style="width:100%" />
+				<div class="tel"><span class="label">免费咨询热线</span><span class="value"><a data-href="tel:4000341020" class="txt-yellow">400-034-1020</a></span></div>
+			</div>
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell">
+					<a data-href="index.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe623;</i>首页</a>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right"><i class="iconfont mr10">&#xe625;</i>服务</a>
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell"><a data-href="taocan.html" class=""><h5>快捷建站套餐</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="service-01.html" class=""><h5>企业宣传营销定制</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="service-02.html" class=""><h5>集团官网高端定制</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="service-03.html" class=""><h5>电商交互平台定制</h5></a></li>
+						<li class="mui-table-view-cell"><a data-href="service-04.html" class=""><h5>移动微信app定制</h5></a></li>
+					</ul>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="cases.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe61e;</i>作品</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="flow.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe627;</i>流程</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="news.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe620;</i>新闻</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="about.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe61f;</i>关于</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a data-href="contact.html" class="mui-navigate-right"><i class="iconfont mr10">&#xe629;</i>联络</a>
+				</li>
+			</ul>
+			<div class="copyright">
+				<p>Copyright © 2012-2016<br>版权所有 北京环宇威智科技有限公司</p>
+			</div>
+		</div>
+	</div>
+</aside>
+<!-- 侧边导航 end -->
+
+
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+<header class="mui-bar mui-bar-nav">
+	<a href="#offCanvasSide" class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+	<a data-href="tel:4000341020" class="mui-icon mui-icon-phone-filled mui-pull-right"></a>
+	<h1 class="mui-title">集团官网高端定制</h1>
+</header>
+
+<nav class="mui-bar mui-bar-tab">
+<a class="mui-tab-item" href="#Popover_services"><i class="mui-icon iconfont">&#xe625;</i><span class="mui-tab-label">服务</span></a>
+<a class="mui-tab-item" data-href="cases.html"><i class="mui-icon iconfont">&#xe61e;</i><span class="mui-tab-label">作品</span></a>
+<a class="mui-tab-item" data-href="about.html"><i class="mui-icon iconfont">&#xe61f;</i><span class="mui-tab-label">关于</span></a>
+<a class="mui-tab-item" data-href="contact.html"><i class="mui-icon iconfont">&#xe629;</i><span class="mui-tab-label">联络</span></a>
+</nav>
+
+<!--内容区域 start-->
+<div class="mui-content" style="height:100%;">
+<!--fullpage start-->
+<div class="swiper-container" id="fullpage">
+<div class="swiper-pagination"></div>
+<div style=" position:absolute; width:100%;height:220%;top:-10%;bottom:-10%;left:0;background:url(images/bg_service_02.jpg); background-position:top center; background-size:cover;" data-swiper-parallax="-40%" data-swiper-parallax-duration="1000"></div>
+<div class="swiper-wrapper">
+	<!--第0屏start-->
+	<div class="section section_01 swiper-slide">
+			<div class="txt animated fadeInDown txt-c">
+				<div class="blank"></div>
+				<div class="blank"></div>
+				<div class="mui-content-padded">
+					<h3 class="txt-white shadow-text-1">集团官网高端定制</h3>	
+					<h6 class="txt-white shadow-text-1">高端定制一体化服务</h6>
+				</div>
+				<div class="blank"></div>
+				<div class="blank"></div>
+				<div class="blank"></div>
+			</div>
+			<div class="pic animated fadeInUp mui-content-padded">
+				<div class="advatages mui-table-view">
+					<div class="item item_l mui-table-view-cell">
+						<div class="icon"><span class="mui-icon iconfont ease-3">&#xe645;</span></div>
+						<div class="text">
+							<h5>形象展示平台</h5>
+							<h6>传递企业的价值观与核心理念，社会责任和未来发展。展示集团品牌形象</h6>
+						</div>
+					</div>
+					<div class="item item_l mui-table-view-cell">
+						<div class="icon"><span class="mui-icon iconfont ease-3">&#xe642;</span></div>
+						<div class="text">
+							<h5>业务推介平台</h5>
+							<h6>对于集团的主营业务及重点项目进行推介，增强投资者信心，赢得社会美誉度</h6>
+						</div>
+					</div>
+					<div class="item item_l mui-table-view-cell">
+						<div class="icon"><span class="mui-icon iconfont ease-3">&#xe640;</span></div>
+						<div class="text">
+							<h5>人才储备平台</h5>
+							<h6>为集团及下属机构建立人力资源平台，及时发布招聘信息，建立人才储备，为集团获得长远竞争力</h6>
+						</div>
+					</div>
+					<div class="item item_l mui-table-view-cell">
+						<div class="icon"><span class="mui-icon iconfont ease-3">&#xe643;</span></div>
+						<div class="text">
+							<h5>投资者沟通平台</h5>
+							<h6>介绍上市公司业绩及年报等，增强投资者信心，赢得公众信赖</h6>
+						</div>
+					</div>
+					<div class="item item_l mui-table-view-cell">
+						<div class="icon"><span class="mui-icon iconfont ease-3">&#xe641;</span></div>
+						<div class="text">
+							<h5>舆论宣传平台</h5>
+							<h6>宣传集团及下属机构的出色业绩、公益投入、社会回馈等，塑造集团的可信赖的公众形象</h6>
+						</div>
+					</div>
+				</div>
+				<div class="blank"></div>
+			</div>
+	</div>
+	<!--第0屏end-->
+
+	<!--第一屏start-->
+	<div class="section section_01 swiper-slide" style="background:url(images/group_pic_01.jpg); background-size:cover;">
+		<div class="txt">
+			<div class="bt mb20">
+				<h2 class="txt-white">核心</h2>
+			</div>
+			<div class="nr">
+				<p class="txt-white">综合企业文化、行业特色、管理理念和文化底蕴，结合企业VI（企业视觉识别系统），整合公司各类优势资源到企业门户之下，树立集团企业品牌形象，集团企业及下属企业网站群统一规划，形成集团整体影响力，促进企业核心竞争力的提升。</p>
+			</div>
+		</div>
+	</div>
+	<!--第一屏end-->
+	<!--第一屏start-->
+	<div class="section section_01 swiper-slide" style="background:url(images/group_pic_02.jpg); background-size:cover;">
+		<div class="txt">
+			<div class="bt mb20">
+				<h2 class="txt-white">目标</h2>
+			</div>
+			<div class="nr">
+				<p class="txt-white">极高的稳定性、易用性，完善的日常管理体系，成熟的信息发布系统。集团网站的管理不仅仅是平台的建设问题，更重要的是管理体系的建立，没有完善的管理体现功能再强大，页面再美观的网站也不过是空中楼阁。全方位、人性化为集团与客户提供业务咨询与服务。</p>
+			</div>
+		</div>
+	</div>
+	<!--第一屏end-->
+	<!--第一屏start-->
+	<div class="section section_01 swiper-slide" style="background:url(images/group_pic_03.jpg); background-size:cover;">
+		<div class="txt">
+			<div class="bt mb20">
+				<h2 class="txt-white">原则</h2>
+			</div>
+			<div class="nr">
+				<p class="txt-white">系统先进性、网络系统可靠性、高效易维护性，全面符合国家信息安全政策的整体安全解决方案，适应国际互联网、业务专网等多层面的安全要求，支持应用层的快速开发和灵活部署</p>
+			</div>
+		</div>
+	</div>
+	<!--第一屏end-->
+	<!--第一屏start-->
+	<div class="section section_01 swiper-slide">
+		<div class="blank"></div>
+		<div class="pic">
+		<a data-href="cases.html" class="mui-btn mui-btn-block mui-btn-link txt-white" style="margin-bottom:0;">查看案例</a>
+		</div>
+	</div>
+	<!--第一屏end-->
+	<!--第一屏start-->
+	<div class="section section_01 swiper-slide">
+		<div class="pic">
+		<a data-href="cases.html" class="btn_goto btn_go_d ease-1">
+			<i class="mui-icon mui-icon-arrowdown animated infinite"></i>
+			<i class="mui-icon mui-icon-arrowdown animated infinite"></i>
+			<i class="mui-icon mui-icon-arrowdown animated infinite"></i>
+		</a>
+		</div>
+		<div class="blank"></div>
+		<div class="blank"></div>
+		<div class="blank"></div>
+		<div class="blank"></div>
+	</div>
+	<!--第一屏end-->
+	
+
+	<!--第四屏start-->
+	<div class="section section_02 swiper-slide" style="background:url(images/alpha_black50.png)">
+		<div class="bigtitle bigtitle-inverted txt-c"><h2>联系我们</h2><p>CONTACT</p></div>
+		<div class="blank"></div>
+		<div class="contact">
+			<div class="blank"></div>
+			<div class="mui-content-padded">
+				<p><i class="iconfont txt-888 mr10">&#xe62a;</i>24小时免费咨询热线</p>
+				<h3 class="txt-white"><a data-href="tel:400-034-1020" class="txt-white">400-034-1020</a></h3>
+				<div class="blank"></div>
+				<p><i class="iconfont txt-888 mr10">&#xe62b;</i>技术支持</p>
+				<h4 class="txt-white"><a data-href="tel:01056036226" class="txt-white">010-56036226</a></h4>
+				<div class="blank"></div>
+				<p>北京环宇威智科技有限公司<br>
+					地址：北京市朝阳区林达海渔广场2号楼1807<br>
+					邮箱：huanyuweizhi@163.com<br>
+					传真：400-034-1020转3</p>
+			</div>
+		</div>
+		<div class="blank"></div>
+		<div class="blank"></div>
+	</div>
+	<!--第四屏end-->
+
+</div>
+</div>
+<!--fullpage end-->
+</div>
+<!--内容区域 end-->
+<!-- off-canvas backdrop -->
+<div class="mui-off-canvas-backdrop"></div>
+
+</div>
+<!-- 主页面容器 end -->
+
+</div>
+
+<div id="share" class="mui-popover mui-popover-action mui-popover-bottom">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="tel:4000341020">拨号：400-034-1020</a></li>
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#share"><b>取消</b></a></li>
+    </ul>
+</div>
+
+<div id="Popover_services" class="mui-popover mui-bar-popover">
+	<div class="mui-popover-arrow"></div>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a data-href="service-01.html">企业宣传、营销定制</a></li>
+        <li class="mui-table-view-cell"><a data-href="service-02.html">集团官网高端定制</a></li>
+        <li class="mui-table-view-cell"><a data-href="service-03.html">电商、交互平台定制</a></li>
+        <li class="mui-table-view-cell"><a data-href="service-04.html">H5、微信app定制</a></li>
+        <li class="mui-table-view-cell"><a data-href="taocan.html">快捷套餐服务</a></li>
+    </ul>
+</div>
+
+
+
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+});
+
+</script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script>
+//fullpageswiper
+var fullpageswiper = new Swiper('#fullpage', {
+	direction:'vertical',
+	//pagination: '.swiper-pagination',
+	slidesPerView:"auto",
+	paginationClickable:true,
+	nextButton:'.item-partner .swiper-button-next',
+	prevButton:'.item-partner .swiper-button-prev',
+	spaceBetween: 0,
+	loop: false,
+	resistanceRatio : 0.8,
+	freeMode : true,
+	parallax:true,
+	autoHeight: true
+});
+$("#fullpage").on('tap','.btn_go_u',function(){
+	fullpageswiper.slideNext();
+})
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

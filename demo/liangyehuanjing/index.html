@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no" />
+<title>首页-良业</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/custom-ui.css">
+<link type="text/css" rel="stylesheet" href="css/animate.min.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<link type="text/css" rel="stylesheet" href="css/response.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript" src="js/adjust.js"></script>
+<!--[if IE]><script type="text/javascript" src=”js/html5.js”></script>
+<script type="text/javascript" src="js/jquery.JPlaceholder.js"></script>
+<![endif]-->
+</head>
+
+<body class="page-index">
+<!--[if lte IE 9]>
+<div class="ie7_hints">温馨提示：您所使用的浏览器版本过低，为保证账户安全和浏览体验建议升级为最新版本浏览器</div>
+<![endif]-->
+
+<!--top start-->
+<div class="topbar">
+<div class="w1200 mar0 clearfix">
+	<div class="fl"><span>您好，欢迎进入良业官方网站</span></div>
+	<div class="fr">
+		<a href="20years.html" class="btn_20years"><img src="images/year20th.png" alt="逐光20年" /></a>
+		<a href="about.html">关于良业</a>
+		<a href="news.html">媒体资讯</a>
+	</div>
+	<div class="clr"></div>
+</div>
+</div>
+<!--top end-->
+
+
+
+<!--头部 手机版start-->
+<div class="head-phone phone fixed">
+<h1 class="text-overflow">
+<a href="index.html"><img src="images/logo-mobile.png"  alt="良业"/><i class="iconfont">&#xe63b;</i></a></h1>
+<a href="###" class="head-btn head-btn-r sidemenu_btn_01"><i class="iconfont">&#xe673;</i></a>
+</div>
+<div class="nav_mask phone"></div>
+<!--<ul class="nav_phone_ul phone">
+	<li><a href="###">关于我们</a></li>
+</ul>-->
+<script type="text/javascript">
+$(function(){
+	$('.menu_btn').click(function(){
+		$('.nav_mask').slideToggle(0);
+		$('.nav_phone_ul').slideToggle(300);
+		$('.menu_btn').toggleClass('on');
+		$('html').css('overflow-y','hidden');
+	});
+	$('.nav_mask').click(function(){
+		$('.nav_mask').slideToggle(0);
+		$('.nav_phone_ul').slideToggle(300);
+		$('.menu_btn').toggleClass('on');
+		$('html').css('overflow-y','auto');
+	});
+})
+</script>
+<!--头部 手机版end-->
+<!--导航 手机版start-->
+<!--<div class="bottombar phone">
+	<ul class="clearfix">
+    	<li><a href="index.html">
+        	<i class="iconfont">&#xe618;</i>
+            立即预约
+        </a></li>
+    	<li><a href="tel:400-105-9788">
+        	<i class="iconfont">&#xe66e;</i>
+            免费热线
+        </a></li>
+    </ul>
+</div>-->
+<!--导航手机版end-->
+<!--手机版 侧边分类及侧边搜索 start-->
+<script>
+$(function(){
+	$('.sidemenu_btn_01').click(function(){
+		$('.sidemenu_mask').fadeIn(300);
+		$('.sidemenu').animate({'right':'0%','opacity':'1'},500);
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','hidden');
+	});
+	$('.sidemenu_btn_02').click(function(){
+		$('.sidemenu_mask').fadeIn(300);
+		$('.sidesearch').animate({'bottom':'0%','opacity':'1'},500);
+		$('.searchinput_phone').focus();
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','hidden');
+	});
+	$('.sidemenu_mask').click(function(){
+		$('.sidemenu_mask').fadeOut(300);
+		$('.sidemenu').animate({'right':'-70%','opacity':'0'},500);
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','auto');
+	});
+	$('.sidemenu_close').click(function(){
+		$('.sidemenu_mask').fadeOut(300);
+		$('.sidemenu').animate({'right':'-70%','opacity':'0'},500);
+		$('.sidesearch').animate({'bottom':'100%','opacity':'0'},500);
+		$('.searchinput_phone').val("");
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','auto');
+	});
+})
+</script>
+<div class="sidemenu_mask phone"></div>
+<div class="sidemenu phone">
+	<div class="head-phone">
+		<h1><a href="20years.html"><img src="images/year20th@2x.png" alt="逐光20年" /></a></h1>
+		<a href="###" class="head-btn head-btn-r sidemenu_close"><i class="iconfont">&#xe613;</i></a>
+	</div>
+	<h3><a href="index.html">首页</a></h3>
+	<ul></ul>
+	<h3 class="hassub"><a href="zhanlve.html">战略<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="zhanlve-article.html" class="ease-1">服务内涵</a></li>
+		<li><a href="zhanlve-article.html" class="ease-1">主要载体</a></li>
+	</ul>
+	<h3 class="hassub"><a href="moshi.html">模式<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="moshi-article.html" class="ease-1">投资</a></li>
+		<li><a href="moshi-article.html" class="ease-1">建设</a></li>
+		<li><a href="moshi-article.html" class="ease-1">运营</a></li>
+	</ul>
+	<h3 class="hassub"><a href="jishu.html">技术<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="jishu-article.html" class="ease-1">技术集成</a></li>
+		<li><a href="jishu-article.html" class="ease-1">系统整合</a></li>
+	</ul>
+	<h3 class="hassub"><a href="guanli.html">管理<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="guanli-article.html" class="ease-1">平台整合</a></li>
+		<li><a href="guanli-article.html" class="ease-1">管理模式</a></li>
+		<li><a href="guanli-article.html" class="ease-1">文化理念</a></li>
+	</ul>
+	<h3 class="hassub"><a href="cases.html">业绩<i class="iconfont ease-3">&#xe63b;</i></a></h3>
+	<ul>
+		<li><a href="cases-list.html" class="ease-1">基础光环境</a></li>
+		<li><a href="cases-list.html" class="ease-1">文旅光环境</a></li>
+		<li><a href="cases-list.html" class="ease-1">商业光环境</a></li>
+		<li><a href="cases-list.html" class="ease-1">办公光环境</a></li>
+		<li><a href="cases-list.html" class="ease-1">智慧光环境</a></li>
+	</ul>
+	<h3><a href="about.html">关于良业</a></h3>
+	<ul></ul>
+	<h3><a href="news.html">媒体资讯</a></h3>
+	<ul></ul>
+</div>
+<script type="text/javascript">
+/*jQuery(".sidemenu").slide({
+	titCell:"h3", //鼠标触发对象
+	targetCell:"ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+	effect:"slideDown", //targetCell下拉效果
+	delayTime:500 , //效果时间
+	triggerTime:100, //鼠标延迟触发时间（默认150）
+	defaultPlay:false,//默认是否执行效果（默认true）
+	returnDefault:true, //鼠标从.sideMen移走后返回默认状态（默认false）
+	trigger:"click"
+});*/
+/*$(".sidemenu .hassub").click(function(){
+	$(this).next('ul').stop(true,true).slideToggle();
+	$(this).stop(true,true).toggleClass("on");
+})*/
+</script>
+<!--手机版 侧边分类及侧边搜索 end-->
+
+
+
+
+
+<!--头部 & banner start-->
+<div class="section index_banner pc">
+
+<!--头部start-->
+<div class="head ease-3" id="head">
+<div class="w1200 clearfix mar0">
+	<div class="line"><div class="img"></div></div>
+	<div class="fl"><a class="logo" href="index.html" title="良业"><img src="images/logo.png" class="ease-3" alt="良业" /></a></div>
+	<a href="20years.html" class="btn_20years"><img src="images/year20th.png" alt="逐光20年" /></a>
+	<div class="fr">
+	<!--导航start-->
+	<div class="navbox">
+		<ul class="clearfix nav_shu">
+			<li class="nLi"><h3><a class="ease-1" href="index.html">首 页</a></h3>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="zhanlve.html">战 略</a></h3>
+				<ul class="sub">
+					<li><a href="zhanlve-article.html" class="ease-3">服务内涵</a></li>
+					<li><a href="zhanlve-article.html" class="ease-3">主要载体</a></li>
+				</ul>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="moshi.html">模 式</a></h3>
+				<ul class="sub">
+					<li><a href="moshi-article.html" class="ease-3">投资</a></li>
+					<li><a href="moshi-article.html" class="ease-3">建设</a></li>
+					<li><a href="moshi-article.html" class="ease-3">运营</a></li>
+				</ul>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="jishu.html">技 术</a></h3>
+				<ul class="sub">
+					<li><a href="jishu-article.html" class="ease-3">技术集成</a></li>
+					<li><a href="jishu-article.html" class="ease-3">系统整合</a></li>
+				</ul>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="guanli.html">管 理</a></h3>
+				<ul class="sub">
+					<li><a href="guanli-article.html" class="ease-3">平台整合</a></li>
+					<li><a href="guanli-article.html" class="ease-3">管理模式</a></li>
+					<li><a href="guanli-article.html" class="ease-3">文化理念</a></li>
+				</ul>
+			</li>
+			<li class="nLi hassub"><h3><a class="ease-1" href="cases.html">业 绩</a></h3>
+				<ul class="sub">
+					<li><a href="cases-list.html" class="ease-3">基础光环境</a></li>
+					<li><a href="cases-list.html" class="ease-3">文旅光环境</a></li>
+					<li><a href="cases-list.html" class="ease-3">商业光环境</a></li>
+					<li><a href="cases-list.html" class="ease-3">办公光环境</a></li>
+					<li><a href="cases-list.html" class="ease-3">智慧光环境</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!--导航end-->
+	</div>
+</div>
+</div>
+<!--头部end-->
+
+<!--大切换图start-->
+<div id="indexslider">
+    <div class="swiper-wrapper">
+		
+        <div class="swiper-slide" style=" background-image:url(images/banner_01.jpg);"><a href="###"></a></div>
+		
+    </div>
+    <!--<div class="hd ease-3 txt-c">
+    	<ul></ul>
+    </div>
+    <a class="arrow prev ease-3 radius-5" href="javascript:void(0)"><i class="iconfont">&#xe60f;</i></a>
+    <a class="arrow next ease-3 radius-5" href="javascript:void(0)"><i class="iconfont">&#xe610;</i></a>-->
+</div>
+<!--大切换图start-->
+</div>
+<script type="text/javascript">
+//banner
+$(function(){
+	var mousetime = 0;
+	$(document).mousemove(function(){
+		clearInterval(mousetime);
+		$("#indexslider").find(".arrow").addClass('arrow_show');
+		$("#indexslider").find(".hd").addClass('hd_show');
+		mousetime = setInterval("$('#indexslider').click();",2000)
+	});
+	$("#indexslider").click(function(){
+		$(this).find('.arrow').removeClass('arrow_show');
+		$(this).find('.hd').removeClass('hd_show');
+	})
+})
+$("#indexslider").slide({
+	titCell: ".hd ul",
+	prevCell:'.prev',
+	nextCell:'.next',
+	autoPage: true,  //是否使用自动显示分页
+	mainCell:".swiper-wrapper",
+	autoPlay:true,
+	effect:"fold",   //特效left,leftLoop,topLoop,top,fade（支持响应窗口大小）,
+	easing:"easeOutCirc",  //缓动效果 easeInQuint,easeInBack,easeOutBounce,easeOutElastic
+	trigger:"click",   //触发方式  mouseover,click
+	delayTime:1000,  //延迟时间
+	interTime:5000,  //间隔时间
+	triggerTime:0,
+	pnLoop:true,   //前后按钮循环，默认true
+	mouseOverStop:true   //鼠标经过停止播放，默认true
+	/*startFun:function(i,c,slider, titCell, mainCell, targetCell, prevCell, nextCell){
+		$('#indexslider .swiper-wrapper .swiper-slide').eq(i).addClass("enter").siblings().removeClass("enter");
+	}*/
+});
+</script>
+<!--banner end-->
+
+
+<!--banner phone start-->
+<div class="section index_banner_phone phone">
+<!--大切换图start-->
+<div class="banner_index_phone">
+	<div class="slider_default" id="indexslider_phone">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide swiper-no-swiping" style="background-image:url(images/banner_01.jpg);"><a href="###"></a></div>
+		</div>
+		<!--<div class="hd txt-c">
+			<ul></ul>
+		</div>-->
+	</div>
+</div>
+<!--大切换图start-->
+</div>
+<script>
+//首页手机版 js
+//banner phone
+var bannerswiper = new Swiper('#indexslider_phone', {
+	pagination: '.banner_index_phone .hd',
+	//paginationClickable: '.hd',
+	//effect: 'fade',
+	//fade:{crossFade: false},
+	autoplay: false,
+	autoplayDisableOnInteraction : false,
+	speed:1000,
+	loop:true
+});
+</script>
+<!--banner phone start-->
+
+
+<!--four containers start-->
+<div class="section fourcons">
+	<ul class="clearfix">
+		<li class="block block_01 animated fadeInUp">
+			<a class="item ease-3" href="zhanlve.html">
+				<div class="pic" style="background-image:url(images/pic_index_01.jpg);"></div>
+				<div class="txt txt-white">
+					<h3>战略创新</h3>
+					<p>城市光环境运营商</p>
+				</div>
+				<div class="light"></div>
+			</a>
+		</li>
+		<li class="block block_02 animated fadeInUp">
+			<a class="item ease-3" href="moshi.html">
+				<div class="pic" style="background-image:url(images/pic_index_02.jpg);"></div>
+				<div class="txt txt-333">
+					<h3>商业模式创新</h3>
+					<p>光环境+PPP模式</p>
+				</div>
+				<div class="light"></div>
+			</a>
+		</li>
+		<li class="block block_03 animated fadeInUp">
+			<a class="item ease-3" href="jishu.html">
+				<div class="pic" style="background-image:url(images/pic_index_03.jpg);"></div>
+				<div class="txt txt-white">
+					<h3>技术创新</h3>
+					<p>优异的技术集成和系统整合能力</p>
+				</div>
+				<div class="light"></div>
+			</a>
+		</li>
+		<li class="block block_04 animated fadeInUp">
+			<a class="item ease-3" href="guanli.html">
+				<div class="pic" style="background-image:url(images/pic_index_04.jpg);"></div>
+				<div class="txt txt-333">
+					<h3>管理文化创新</h3>
+					<p>标准化+模块化+专业化</p>
+				</div>
+				<div class="light"></div>
+			</a>
+		</li>
+		<li class="clr"></li>
+	</ul>
+</div>
+<!--four containers end-->
+
+
+<!--three containers start-->
+<div class="section threecons">
+	<ul class="clearfix">
+		<li class="block">
+			<a href="##" class="item">
+				<div class="pic pic01" style="background-image:url(images/pic_index_three_01.jpg);"></div>
+				<div class="pic pic02" style="background-image:url(images/pic_index_three_01.jpg);"></div>
+				<div class="txt ease-3">
+					<h3>城市文化旅游夜景观光带</h3>
+					<div class="line ease-3"><em></em></div>
+					<p>城市夜景光带设计作为城市夜景观设计中不可分割的一部分，对美化城市夜景观环境起着重要作用。优秀的城市夜景光带设计，它不仅体现了一个城市夜景观的品味、特点，更重要的是能表现出该城市的内涵，还充分地体现了夜景照明设计中功能性和艺术性的统一。</p>
+				</div>
+			</a>
+		</li>
+		<li class="block">
+			<a href="##" class="item">
+				<div class="pic pic01" style="background-image:url(images/pic_index_three_02.jpg);"></div>
+				<div class="pic pic02" style="background-image:url(images/pic_index_three_02.jpg);"></div>
+				<div class="txt ease-3">
+					<h3>城市大型灯光山水秀</h3>
+					<div class="line ease-3"><em></em></div>
+					<p>运用魔幻而灵动的国际最新多媒体创新技术手段，水、火、雾、舞与声、光、电、气、4D动画相结合，艺术、创意、科技多形式相融合，演绎符合主题蕴意的城市文化，展示历史文化名城、红色旅游胜地、生态自然城市等特色文化内涵，融入特色本土元素。</p>
+				</div>
+			</a>
+		</li>
+		<li class="block">
+			<a href="##" class="item">
+				<div class="pic pic01" style="background-image:url(images/pic_index_three_03.jpg);"></div>
+				<div class="pic pic02" style="background-image:url(images/pic_index_three_03.jpg);"></div>
+				<div class="txt ease-3">
+					<h3>城市路灯基础照明</h3>
+					<div class="line ease-3"><em></em></div>
+					<p>路灯照明作为城市基础建设的重要方面，直接影响到人们的生活质量。科技的进步，城市路灯照明控制系统逐渐发展为自动化、智能化，保障城市的正常运转，提高城市居民的生活质量。</p>
+				</div>
+			</a>
+		</li>
+		<li class="clr"></li>
+	</ul>
+</div>
+<!--three containers end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--footer start-->
+<div class="footer">
+
+<div class="foot">
+	<div class="w1200 mar0 clearfix">
+		<div class="foot_l">
+			<div class="foot_nav">
+				<a href="news-article.html" class="ease-1">法律条款</a>
+				<a href="contact.html" class="ease-1">联系我们</a>
+				<a href="join.html" class="ease-1">良人招聘</a>
+				<a href="download.html" class="ease-1">下载中心</a>
+			</div>
+			<div class="foot_infos">
+				<dl>
+					<dt><i class="iconfont">&#xe661;</i></dt>
+					<dd>官网：<a href="##" class="ease-1">www.landsky.cn</a></dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont">&#xe607;</i></dt>
+					<dd>电话：86-10-85862288</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont">&#xe662;</i></dt>
+					<dd>电话：86-10-85885958</dd>
+				</dl>
+			</div>
+			<div class="flinks">
+				<span class="title"><i class="iconfont mr10">&#xe688;</i>友情链接</span>
+				<a href="##" class="ease-1">中国照明网</a>
+				<a href="##" class="ease-1">阿拉丁照明网</a>
+				<a href="##" class="ease-1">携程网</a>
+				<a href="##" class="ease-1">去哪儿网</a>
+				<a href="##" class="ease-1">驴妈妈网</a>
+				<a href="##" class="ease-1">韩美林官方网站</a>
+			</div>
+		</div>
+		<div class="foot_r">
+			<a href="##" class="foot_logo"><img src="images/foot_logo.png" /></a>
+			<div class="functions">
+				<a href="##" class="item inlineblock ease-1 item_weixin"><i class="iconfont ease-1">&#xe609;</i><p class="ease-1">微信</p><div class="hide"><img src="images/erweima.jpg" /></div></a>
+				<a href="##" class="item inlineblock ease-1 item_mail"><i class="iconfont ease-1">&#xe60b;</i><p class="ease-1">邮箱</p></a>
+				<a href="##" class="item inlineblock ease-1 item_oa"><i class="iconfont ease-1">&#xe646;</i><p class="ease-1">OA</p></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div class="copyright">
+	<div class="w1200 mar0 clearfix">
+		<p class="txt-888 txt-c">版权所有 北京良业环境技术有限公司 Copyright © 2017 All Rights Reserved.  京ICP备13006032号-1</p>
+	</div>
+</div>
+<!--footer end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--右侧漂浮 公共 start-->
+<div class="fixed fixed_box fixed_box_r green">
+    <div class="item item_top item_open">
+        <a href="###" class="item_a ease-1">
+            <i class="icon iconfont">&#xe60d;</i>
+        </a>
+    </div>
+</div>
+<!--右侧漂浮 公共 end-->
+
+<script type="text/javascript">
+
+</script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>

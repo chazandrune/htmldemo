@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>产品详情</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="站点描述" />
+<meta name="keywords" content="站点关键词" />
+<meta name="author" content="环宇威智制作" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<style>
+.banner{ background-color:#fff; max-height:320px;}
+.banner .swiper-slide{ text-align:center;}
+.banner img { display:block; margin:0 auto; max-width:100%; height: auto; max-height:320px; }
+.banner .swiper-pagination { text-align: center; padding: 0 10px; }
+.banner .swiper-pagination-bullet { background: #000; border: 1px #1e78dc solid; opacity: 0.5; -webkit-opacity: 0.5; }
+.banner.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet { margin: 0 3px; }
+.banner .swiper-pagination-bullet-active { background: #1e78dc; opacity: 1; -webkit-opacity: 1; }
+
+
+/*图片预览*/
+.mui-preview-image.mui-fullscreen { position: fixed; z-index: 20; background-color: #000; }
+.mui-preview-header,
+.mui-preview-footer { position: absolute; width: 100%; left: 0; z-index: 10; }
+.mui-preview-header { height: 44px; top: 0; }
+.mui-preview-footer { height: 50px; bottom: 0px; }
+.mui-preview-header .mui-preview-indicator { display: block; line-height: 25px; color: #fff; text-align: center; margin: 15px auto 4; width: 100%; background-color: rgba(0, 0, 0, 0.4); border-radius: 12px; font-size: 16px; }
+.mui-preview-image { display: none; -webkit-animation-duration: 0.5s; animation-duration: 0.5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+.mui-preview-image.mui-preview-in { -webkit-animation-name: fadeIn; animation-name: fadeIn; }
+.mui-preview-image.mui-preview-out { background: none; -webkit-animation-name: fadeOut; animation-name: fadeOut; }
+.mui-preview-image.mui-preview-out .mui-preview-header,
+ .mui-preview-image.mui-preview-out .mui-preview-footer { display: none; }
+.mui-zoom-scroller { position: absolute; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-align: center; -webkit-align-items: center; align-items: center; -webkit-box-pack: center; -webkit-justify-content: center; justify-content: center; left: 0; right: 0; bottom: 0; top: 0; width: 100%; height: 100%; margin: 0; -webkit-backface-visibility: hidden; }
+.mui-zoom { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; }
+.mui-slider .mui-slider-group .mui-slider-item img { width: auto; height: auto; max-width: 100%; max-height: 100%; }
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img { width: 100%; }
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item { display: inline-table; }
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img { display: table-cell; vertical-align: middle; }
+.mui-preview-loading { position: absolute; width: 100%; height: 100%; top: 0; left: 0; display: none; }
+.mui-preview-loading.mui-active { display: block; }
+.mui-preview-loading .mui-spinner-white { position: absolute; top: 50%; left: 50%; margin-left: -25px; margin-top: -25px; height: 50px; width: 50px; }
+.mui-preview-image img.mui-transitioning { -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease; transition: transform 0.5s ease, opacity 0.5s ease; }
+@-webkit-keyframes fadeIn {
+0% { opacity: 0;}
+100% { opacity: 1;}
+}
+@keyframes fadeIn { 
+0% {opacity: 0;}
+100% { opacity: 1;}
+}
+@-webkit-keyframes fadeOut { 
+0% { opacity: 1;}
+100% { opacity: 0;}
+}
+@keyframes fadeOut {
+0% { opacity: 1;}
+100% { opacity: 0;}
+}
+p img { max-width: 100%; height: auto; }
+
+/*正文*/
+.headline{ padding:10px 10px 0;}
+.contentline{ border-top:2px #1e78dc solid; background-color:#fff; padding:10px; border-bottom:1px #dbdbdb solid;}
+
+</style>
+</head>
+
+<body>
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+<header class="mui-bar mui-bar-nav">
+	<a class="mui-action-back mui-icon mui-icon-arrowleft mui-pull-left"></a>
+	<a href="#topPopover" class="mui-icon mui-icon-arrowdown mui-pull-right"></a>
+	<h1 class="mui-title">产品详情</h1>
+</header>
+	
+	<!--内容区域 start-->
+	<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+		<div class="mui-scroll">
+			
+			<!--banner start-->
+			<div class="swiper-container banner">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a data-href="###"><img src="images/pic_product_big-01.jpg" data-preview-src="" data-preview-group="1" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<a data-href="###"><img src="images/pic_product_big-01.jpg" data-preview-src="" data-preview-group="1" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<a data-href="###"><img src="images/pic_product_big-01.jpg" data-preview-src="" data-preview-group="1" alt=""></a>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+			<!--banner end-->
+			
+			<div class="headline">
+				<h3 class="txt-blue mb10">DK-61A型“五线谱电教板”</h3>
+				<p><i class="iconfont mr5">&#xe606;</i>教育部装备目录指定产品</p>
+			</div>
+			
+			<div class="blank "></div>
+			<div class="contentline">
+				<div class="text_box txt-darkred">
+					<!--正文开始-->
+					<P>　　品牌：“三芙”</P>
+<P>　　型号：DK-61A</P>
+<P>　　市场价：6580元</P>
+<P>　　(一)主要参数</P>
+<P>　　1、产品规格：1800mm×900mm×60mm(长×宽×高)</P>
+<P>　　外箱尺寸：1810mm×1030mm×80mm(长×宽×高)</P>
+<P>　　2、净重：15kg</P>
+<P>　　毛重：18kg</P>
+<P>　　3、键盘：61键电钢琴键盘。</P>
+<P>　　4、五线谱表：一组可书写的大谱表,采用白色书写面板，黑色水笔书写，清洁、卫生、方便擦涂。</P>
+<P>　　5、音色：128种GM音色+1组键盘打击乐器音色。</P>
+<P>　　6、节奏：内置节奏1350种。</P>
+<P>　　7、示范曲：内置歌曲522首。</P>
+<P>　　8、变调：五线谱12种变调，并以列表显示调名(键盘全乐理教学)。</P>
+<P>　　9、调号转换：电教鞭上具有升调“#”、降调“b”转换功能键。</P>
+<P>　　10、和弦方式：可演示任意和旋，并且具有和弦操作快捷键，可在控制面板上直接操作“启动、停止和弦”、“增强和弦”、“消除和弦”。</P>
+<P>　　11、录音：具有录音功能，可录制多个音频文件，录制完后自动命名该文件，而后保存为MIDI格式的音频文件，并能以列表方式显示，可录制的曲目数量以物理存储器容量为上限。(理论超过一万首)</P>
+<P>　　12、节拍速度：可在40-280/每分钟范围可调，具有“正常拍速”快捷键，以适应不同风格的内置节拍。</P>
+<P>　　13、显示：控制面板上采用一块26万色3.5寸彩色液晶触摸屏，所有音色、曲目、录音、和弦以及USB曲目均为中文显示，方便快捷。</P>
+<P>　　14、操作：具有嵌入式的中文linux计算机软件控制系统，触摸操作直观便捷，各项功能均在彩色液晶触摸屏上触摸操作。</P>
+<P>　　15、面板设有三组8级LED显示音量快捷调节键，分别是MP3音量、节拍音量、键盘音量。</P>
+<P>　　16、主音量：可在0-31范围选择。</P>
+<P>　　17、拓展功能：具有USB2.0接口，支持用户U盘，可读取u盘中的MP3文件和MIDI乐曲文件。</P>
+<P>　　18、便捷操作：使用者可接入鼠标对电教板进行直接操作。</P>
+<P>　　19、外接接口：通用USB2.0输入;线路输入输出。</P>
+<P>　　20、该示教板以键盘为核心，面板上贴有调的五度循环贴图，方便乐理知识的教学，将键盘、谱表、调名、调号巧妙的联系到一起，乐理演示简捷直观，乐理解析清析易懂。</P>
+<P>　　21、具有键位与五线谱对应的双色LED指示灯，可对照键盘与五线谱相应的位置。</P>
+<P>　　22、具有135×125mm的简谱显示窗口，7根LED数码管光源，在电子教鞭演示五线谱过程中可直接显示相对应的简谱。</P>
+<P>　　(二)主要性能</P>
+<P>　　1、产品性能：小字一组a音位440Hz，音准误差为±4音分;音域：G～a4;可选择调号不少于12种、内置节拍的速度为40～240拍/分。</P>
+<P>　　2、采用44.1KHz/16位 双声道立体声音频编解码芯片;64和弦/128种GM音色+1组键盘打击乐器音色的MIDI合成器芯片</P>
+<P>　　3、采用至少400MHz-ARM中央处理器，以及至少64MB的物理内存硬件模式。</P>
+<P>　　4、扬声器功放75w*2</P>
+<P>　　5、电源：普通市电220v电压</P>
+<P>　　6、该电教板保留了五线谱电教板的教鞭教学功能和可(白板笔)书写功能，成为教鞭与键盘可同时教学的独特产品，将并键盘、五线谱表、调名、调号、音名等集成于一体，使本来分别独立的乐理元素在该示教板上被有机的联系到了一起，相互关系一目了然，提高了乐理的可视性和直观性。该示教板将键盘立起来，面向学生，可以一览无余的展示老师的演奏指法及技巧，教学直观， 大大提高了教学质量和速度。把听、唱、奏、读、写五大要素集于一身，实现真正的全面乐理教学。易学、易懂、易操作，音乐老师很容易上手和掌握</P>
+<P>　　7、产品符合《JY 0001-2003 教学仪器设备产品一般质量要求》和《教学仪器设备安全要求》(GB 21746-2008)。</P>
+					<!--正文结束-->
+				</div>
+				<div class="blank"></div>
+			</div>
+			<div class="blank "></div>
+			
+			<div class="headline">
+				<p>如果您有兴趣可以在下方留言哦~</p>
+			</div>
+						
+			<form>
+			<div class="mui-input-group">
+				<div class="mui-input-row">
+					<label class="txt-blue">姓名：</label>
+					<input type="text" placeholder="请填写您的姓名" />
+				</div>
+				<div class="mui-input-row">
+					<label class="txt-blue">电话：</label>
+					<input type="text" placeholder="请填写您的手机号码" />
+				</div>
+				<div class="mui-input-row" style="height:auto;">
+					<label class="txt-blue">内容：</label>
+					<textarea rows="3" placeholder="请填写留言内容"></textarea>
+				</div>
+			</div>
+			<div class="mui-content-padded"><button class="mui-btn mui-btn-block mui-btn-blue">提 交</button></div>
+			</form>
+			<div class="blank"></div>
+			<div class="blank"></div>
+			
+		</div>
+	</div>
+	<!--内容区域 end-->
+	
+</div>
+<!-- 主页面容器 end --> 
+
+
+
+<!--下拉菜单 start-->
+<div id="topPopover" class="mui-popover mui-popover-bottom popover-xiala">
+<div class="mui-scroll-wrapper">
+	<div class="mui-scroll">
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<a data-href="products.html">五线谱电教板系列</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a data-href="products.html">电钢管理控制系统</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a data-href="products.html">MIDI作曲系统</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a data-href="products.html">中小学常用乐器</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a data-href="products.html">教学黑板系列</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a data-href="products.html">键盘类乐器</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</div>
+<!--下拉菜单 end-->
+
+
+
+<script src="js/mui.zoom.js"></script> 
+<script src="js/mui.previewimage.js"></script> 
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+});
+mui.previewImage();
+</script> 
+<!--每页必需 start--> 
+<script src="js/custom.js"></script> 
+<script>
+//banner滑动
+var bannerswiper = new Swiper('.banner', {
+	slidesPerView:1,
+	pagination: '.swiper-pagination',
+	paginationClickable:true,
+	//nextButton:'.item-partner .swiper-button-next',
+	//prevButton:'.item-partner .swiper-button-prev',
+	//spaceBetween: 1,
+	loop: false
+});
+
+</script>
+</body>
+</html>

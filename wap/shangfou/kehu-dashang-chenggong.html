@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>客户-打赏-成功</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.feedback body {
+	background-color: #EFEFF4;
+}
+.feedback input,
+.feedback textarea {
+	border: none !important;
+}
+.feedback textarea {
+	height: 100px;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+.feedback .row {width: 100%;background-color: #fff;}
+.feedback p {	padding: 10px 15px 0;}
+.feedback .hidden {	display: none;}
+.chart{ height:200px; }
+</style>
+</head>
+
+<body>
+
+<div class="mui-content mui-scroll-wrapper feedback">
+<div class="mui-scroll">
+<div class="mui-content">
+	<div class="row txt-c" style="padding:30px 0 30px; position:relative;">
+				<div class="chart" id="pieChart"></div>
+        <h4 class="txt-666">成功打赏 <span class="txt-yellow">900元</span></h4>
+        <h5 class="txt-888">他们被扣掉了 <span class="txt-666">100元</span></h5>
+    </div>
+    <p>您还可以</p>
+	<div class="mui-button-row mui-content-padded"><a data-href="kehu-tuijian.html" class="mui-btn mui-btn-block mui-btn-blue">推荐客户</a><a href="#share" class="mui-btn mui-btn-block mui-btn-white">分享给好友</a></div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div id="share" class="mui-popover mui-popover-action mui-popover-bottom">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#">分享到朋友圈</a></li>
+        <li class="mui-table-view-cell"><a href="#">分享给QQ好友</a></li>
+    </ul>
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell"><a href="#share"><b>取消</b></a></li>
+    </ul>
+</div>
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/mui.min.js"></script>
+<script>
+mui.init({
+	swipeBack:false //右滑关闭功能
+});
+ //初始化单页的区域滚动
+mui('.mui-scroll-wrapper').scroll();
+
+</script>
+<script src="libs/echarts-all.js"></script>
+<script>
+var labelTop = {
+    normal : {
+		color:'#72bad6',
+        label : {
+            show : true,
+            position : 'center',
+            formatter : '{b}',
+            textStyle: {
+                baseline : 'bottom',
+				color:'#666',
+				fontSize:16,
+            }
+        },
+        labelLine : {
+            show : false
+        }
+    }
+};
+var labelFromatter = {
+    normal : {
+        label : {
+            formatter : function (params){
+                return 100 - params.value + '%'
+            },
+            textStyle: {
+                baseline : 'top'
+            }
+        }
+    },
+}
+var labelBottom = {
+    normal : {
+        color: '#eee',
+        label : {
+            show : true,
+            position : 'center',
+			textStyle: {
+				color:'#f39800',
+				fontSize:16,
+            }
+        },
+        labelLine : {
+            show : false
+        }
+    },
+
+};
+	var getOption = function(chartType) {
+		var chartOption =  {
+			calculable: false,
+			series: [{
+				name: '访问来源',
+				type:  'pie',
+				radius: [75,70],
+				center: ['50%', '50%'],
+				itemStyle : labelFromatter,
+				data : [
+					{name:'other', value:10, itemStyle : labelBottom},
+					{name:'满意度', value:90,itemStyle : labelTop}
+				]
+			}]
+		} 
+		return chartOption;
+	};
+	var byId = function(id) {
+		return document.getElementById(id);
+	};
+	var pieChart = echarts.init(byId('pieChart'));
+	pieChart.setOption(getOption('pie'));
+</script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>

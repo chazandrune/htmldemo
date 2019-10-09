@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>资讯详情</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="description" content="站点描述" />
+<meta name="keywords" content="站点关键词" />
+<meta name="author" content="环宇威智制作" />
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="stylesheet" href="css/mui.min.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<style>
+.banner{ background-color:#fff;}
+.banner img { display:block; width: 100%; height: auto; }
+.banner .swiper-pagination { text-align: center; padding: 0 10px; }
+.banner .swiper-pagination-bullet { background: #000; border: 1px #ff902c solid; opacity: 0.5; -webkit-opacity: 0.5; }
+.banner.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet { margin: 0 3px; }
+.banner .swiper-pagination-bullet-active { background: #ff902c; opacity: 1; -webkit-opacity: 1; }
+
+.operatebar{ text-align:center; padding:0 10px;}
+.operatebar .mui-btn-link{ width:20%; line-height:1;}
+.operatebar .mui-btn-link .iconfont{ font-size:24px;z-index:20;position:relative; width:24px; height:24px;position:relative;top:2px; color:#fff;}
+.operatebar .mui-btn-link .title{ display:block; height:20px; font-size:11px; line-height:20px; overflow:hidden; text-overflow:ellipsis; color:#fff;}
+.operatebar .btn_fav{ width:55%;}
+.operatebar .btn_fav.on{background-color: #ffd427;border-color:#ffd427; color:#4f0202;}
+
+
+/*正文*/
+.headline{ padding:10px 10px 0;}
+
+</style>
+</head>
+
+<body>
+<!-- 主页面容器 start -->
+<div class="mui-inner-wrap">
+
+	<nav class="mui-bar mui-bar-tab operatebar">
+		<a href="#baomingPop" class="mui-btn mui-btn-block mui-btn-yellow">我要参与</a>
+	</nav>
+
+	<!--内容区域 start-->
+	<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+		<div class="mui-scroll">
+			
+			<div class="headline content_flower flower_b">
+				<h3 class="txt-darkred mb20">春节预订8大特权大礼！</h3>
+				<p>2015-12-14 14:12:15<a data-href="activities.html" class="mui-pull-right txt-red">返回全部活动</a></p>
+				<div class="xuline"></div>
+				<div class="blank"></div>
+				<div class="text_box txt-darkred">
+					<!--正文 开始-->
+					<img src="images/pic_activity_01.jpg"/>
+					活动时间：<br>
+					即日起至2016年1月31日<br>
+					<br>
+					活动内容：<br>
+					元旦疯抢惠!2016第一批特权样板房抢定，超出想象的特惠，就等你来抢! 原价69800元德系整装，元旦特价专场仅需 49800 元。抢到就等于赚到！<br>
+					<!--正文 结束-->
+				</div>
+				<div class="blank mb10"></div>
+			</div>
+			
+			<div class="blank mb10"></div>
+			
+			<div class="mui-content-padded">
+			<p class="txt-yellow">上一篇：<a data-href="news-article.html" class="txt-yellow">上一篇资讯标题资讯标题资讯标题资讯标题资讯标题</a></p>
+			<p class="txt-yellow">下一篇：<a data-href="news-article.html" class="txt-yellow">下一篇资讯标题资讯标题资讯标题资讯标题资讯标题</a></p>
+			</div>
+		</div>
+	</div>
+	<!--内容区域 end-->
+	
+</div>
+<!-- 主页面容器 end --> 
+
+
+<div id="baomingPop" class="mui-popover mui-popover-action mui-popover-bottom">
+    <div class="mui-content content_flower flower_t" style="background: #4f0202;">
+    	<div class="mui-content-padded" style="padding:10px; margin:0;">
+			<form method="post">
+			<p style=" padding:0 10px; color:#d38049;">您的姓名</p>
+			<div class="mui-input-row"><input type="text" placeholder="请输入您的姓名"/></div>
+			<p style=" padding:0 10px; color:#d38049;">您的手机</p>
+			<div class="mui-input-row"><input type="text" placeholder="请输入您的手机号码"/></div>
+			<p style=" padding:0 10px; color:#d38049;">您的QQ</p>
+			<div class="mui-input-row"><input type="text" placeholder="请输入您的QQ号码"/></div>
+			<p style=" padding:0 10px; color:#d38049;">已有<span class="ml5 mr5 txt-yellow">53</span>人报名成功</p>
+			<div class="mui-button-row"><button type="submit" class="mui-btn mui-btn-yellow mui-btn-block">立即报名</button></div>
+			</form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+mui.init({
+	swipeBack:false, //右滑关闭功能
+});
+</script> 
+<!--每页必需 start--> 
+<script src="js/custom.js"></script> 
+<script>
+//底部导航滑动
+var navswiper = new Swiper('.bottomnav', {
+	slidesPerView:5,
+	//pagination: '.swiper-pagination',
+	//paginationClickable:true,
+	nextButton:'.bottomnav .btn-next',
+	prevButton:'.bottomnav .btn-prev',
+	//spaceBetween: 1,
+	loop: false
+});
+</script> 
+<!--每页必需 end--> 
+
+</body>
+</html>

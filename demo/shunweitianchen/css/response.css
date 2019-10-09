@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+@media(max-width:1200px){
+/*公共*/
+.w1200{width:90%;}
+
+/*首页*/
+#fullpage .cases .inner {margin-left: 0; left:5%;}
+#fullpage .cases .nr .item { width:100%;}
+#fullpage .contact .form li { width:33.3%;}
+#fullpage .contact .form .item{ margin-right:0;}
+#fullpage .contact .form .item .inp{ width:100%; box-sizing:border-box; height:50px;}
+#fullpage .contact .form .radio_box li{ width:auto;}
+#fullpage .contact .select{width:100%;}
+.footer_2 li{ width:33.3%;}
+.footer_2 .item{ margin-right:0; width:100%;}
+
+
+/*案例*/
+.page-case .list_cases .inner{ width:940px;}
+.page-case .list_cases li{ width:33.3%;}
+.page-case .list_cases .item{ margin-bottom:15px; width:300px; height:200px;}
+.page-case .list_cases .item .pic2{ height:160px;}
+
+.page-case_article .main .inner{ width:90%;}
+.page-case_article .main .part-l,.page-case_article .main .part-r{ width:100%;}
+.page-case_article .caseinfo{ position:static; width:100%; margin-bottom:50px; }
+.page-case_article .btn_gowidth{ display:none;}
+
+/*新闻*/
+.page-news .list_news li{ width:100%; float:none;}
+
+.page-news_article .main .inner{ width:90%;}
+.page-news_article .main .part-l,.page-news_article .main .part-r{ width:100%;}
+.page-news_article .caseinfo{ position:static; width:100%; margin-bottom:50px; }
+.page-news_article .btn_gowidth{ display:none;}
+
+}
+
+
+
+@media(min-width:1300px){
+/*.fixed_box_l{ right:50%; bottom:10px; margin-right:-670px; display:block;}*/
+}

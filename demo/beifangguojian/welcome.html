@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no" />
+<title>欢迎进入北方国建</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/custom-ui.css">
+<link type="text/css" rel="stylesheet" href="css/animate.min.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/welcome.css">
+<link type="text/css" rel="stylesheet" href="css/response.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script>
+//在页面未加载完毕之前显示的loading Html自定义内容
+var _LoadingHtml = '<div id="LoadingBar"><div class="div txt-c animated fadeIn"><div class="load-container load8"><div class="loader">Loading</div></div><p>正在进入</p><span id="cantwaiting"></span></div></div>';
+//呈现loading效果
+document.write(_LoadingHtml);
+</script>
+
+</head>
+
+<body class="page-welcome">
+<script>
+function cantwaiting(){
+	$("#LoadingBar").fadeOut(30);
+}
+function loadcomplete(){
+	setTimeout(function(){
+		$("#LoadingBar").fadeOut(100);
+		$(".item_planet_01").animate({left:"-120px",opacity:"1"},1000,function(){
+			$(".item_planet_02").animate({right:"-300px",opacity:"1"},1000,function(){
+				$(".item_earth").animate({bottom:"-90px",opacity:"1"},1000,function(){
+					$(".section_front").animate({bottom:"-90px",opacity:"1"},1000)
+				})
+				$(".item_sunlight").animate({bottom:"-90px",opacity:"1"},1000)
+			})
+		})
+	},300)
+}
+window.onload=function(){
+	$("#LoadingBar p").html("正在进入");
+	loadcomplete();
+}
+</script>
+
+
+
+
+<!--主体start-->
+
+<div class="banner_welcome" id="scene">
+
+
+<div class="section section_bg layer" data-depth="0.10">
+	<div class="background"></div>
+</div>
+
+<div class="section section_01 layer" data-depth="0.4">
+        <img src="images/welcome_earth.png" class="item item_earth animated " alt="地球" />
+</div>
+
+<div class="section section_01 layer" data-depth="0.2">
+        <img src="images/welcome_planet_01.png" class="item item_planet_01 animated " alt="火星" />
+</div>
+
+<div class="section section_01 layer" data-depth="0.3">
+        <img src="images/welcome_planet_02.png" class="item item_planet_02 animated " alt="土星" />
+</div>
+
+<div class="section section_01 layer" data-depth="0.8">
+        <img src="images/sunlight.png" class="item item_sunlight animated " alt="太阳光" />
+</div>
+
+
+
+
+
+<div class="section section_front layer" data-depth="0.2">
+	<div class="common">
+		<div class="con">
+			<div class="txt-c">
+				<div class="pic mb10"><img src="images/logo-big.png" alt="北方国建" /></div>
+				<div class="gj_line"><em class="dot dot01"></em><em class="dot dot02"></em><em class="dotline dotline01"></em><em class="dotline dotline02"></em></div>
+			</div>
+		</div>
+		<div class="txt-c">
+			<a href="index.html" class="btn_submit btn_big btn_enter ease-3 shadow-text-1">
+			<span>点击进入</span>
+			<em class="corner corner1"><i></i></em>
+			<em class="corner corner2"><i></i></em>
+			<em class="corner corner3"><i></i></em>
+			<em class="corner corner4"><i></i></em>
+			</a>
+		</div>
+	</div>
+	<div class="copyright txt-c">Copyright © 2015-2017<br />版权所有 北京北方国建控股集团有限公司 </div>
+</div>
+
+
+
+</div>
+
+<!--主体end-->
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/jquery.parallax.js"></script>
+<script>
+//重力视差
+$('#scene').parallax({
+	scalarX: 5,
+	scalarY: 10,
+	frictionX: 0.1,
+	frictionY: 0.1
+});
+
+</script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>

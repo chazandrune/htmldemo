@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1, user-scalable=no" />
+<title>解决方案-详情</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/custom-ui.css">
+<link type="text/css" rel="stylesheet" href="css/animate.min.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/phone.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+</head>
+
+<body class="page-article">
+<!--头部 手机版start-->
+<div class="head-phone fixed">
+<h1 class="text-overflow">
+<a href="index.html"><img src="images/logo.png"  alt="塞科凯尔"/><i class="iconfont">&#xe63b;</i></a></h1>
+<a href="###" class="head-btn head-btn-r sidemenu_btn_01"><i class="iconfont">&#xe673;</i></a>
+</div>
+<div class="phone" style="height:.5rem"></div>
+<div class="nav_mask phone"></div>
+<ul class="nav_phone_ul phone">
+	<li><a href="###">关于我们</a></li>
+</ul>
+<script type="text/javascript">
+$(function(){
+	$('.menu_btn').click(function(){
+		$('.nav_mask').slideToggle(0);
+		$('.nav_phone_ul').slideToggle(300);
+		$('.menu_btn').toggleClass('on');
+		$('html').css('overflow-y','hidden');
+	});
+	$('.nav_mask').click(function(){
+		$('.nav_mask').slideToggle(0);
+		$('.nav_phone_ul').slideToggle(300);
+		$('.menu_btn').toggleClass('on');
+		$('html').css('overflow-y','auto');
+	});
+})
+</script>
+<!--头部 手机版end-->
+<!--导航 手机版start-->
+<div class="bottombar phone">
+	<ul class="clearfix">
+    	<li class="item_tel"><a href="tel:400-123-1234">
+        	<i class="iconfont mr10">&#xe607;</i>400-123-1234
+        </a></li>
+    	<li class="item_wx"><a href="###" onclick="tanchuerweima();">
+        	<i class="iconfont">&#xe609;</i>
+        </a></li>
+    	<li class="item_qq"><a href="http://wpa.qq.com/msgrd?v=3&uin=12345678&site=qq&menu=yes">
+        	<i class="iconfont">&#xe606;</i>
+        </a></li>
+    </ul>
+</div>
+<div class="tc-mask"></div>
+<div class="tc-erweima"><div class="pic"><img src="images/erweima.jpg" /></div><div class="txt">长按二维码可以关注我们哦！</div></div>
+<script>
+//弹出二维码
+function tanchuerweima(){
+	$(".tc-mask").fadeIn(100);
+	$(".tc-erweima").fadeIn(300);
+}
+$(".tc-mask").click(function(){
+	$(".tc-mask").fadeOut(100);
+	$(".tc-erweima").fadeOut(300);
+})
+</script>
+<!--导航手机版end-->
+<!--手机版 侧边分类及侧边搜索 start-->
+<script>
+$(function(){
+	$('.sidemenu_btn_01').click(function(){
+		$('.sidemenu_mask').fadeIn(300);
+		$('.sidemenu').animate({'left':'30%'},300);
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','hidden');
+	});
+	$('.sidemenu_mask').click(function(){
+		$('.sidemenu_mask').fadeOut(300);
+		$('.sidemenu').animate({'left':'100%'},300);
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','auto');
+	});
+	$('.sidemenu_close').click(function(){
+		$('.sidemenu_mask').fadeOut(300);
+		$('.sidemenu').animate({'left':'100%'},300);
+		$('.sidesearch').animate({'left':'100%'},300);
+		$('.searchinput_phone').val("");
+		//$('.sidemenu_btn_01').toggleClass('on');
+		$('html').css('overflow-y','auto');
+	});
+})
+</script>
+<div class="sidemenu_mask phone"></div>
+<div class="sidemenu phone">
+	<div class="head-phone searchbox">
+		<form method="post">
+			<input type="text" placeholder="在这里搜索" />
+			<i class="iconfont">&#xe60a;</i>
+		</form>
+		<a href="###" class="head-btn head-btn-r sidemenu_close"><i class="iconfont">&#xe613;</i></a>
+	</div>
+	<div class="sidenavbox">
+		<h3><a href="index.html">首页</a></h3>
+		<ul></ul>
+		<h3 class="hassub"><a href="##">医疗器械制造<i class="iconfont icon1">&#xe641;</i><i class="iconfont icon2">&#xe642;</i></a></h3>
+		<ul>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>我们的能力</a></li>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>产品设计</a></li>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>标准流程</a></li>
+			<li><a href="course.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>解决方案</a></li>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>知识产权保护</a></li>
+		</ul>
+		<h3 class="hassub"><a href="##">医用管材<i class="iconfont icon1">&#xe641;</i><i class="iconfont icon2">&#xe642;</i></a></h3>
+		<ul>
+			<li><a href="products-article.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>球囊料管</a></li>
+			<li><a href="products-article.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>多腔管</a></li>
+			<li><a href="products-article.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>编织管</a></li>
+			<li><a href="products-article.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>多层管</a></li>
+			<li><a href="products-article.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>高性能管材挤出</a></li>
+		</ul>
+		<h3 class="hassub"><a href="##">注塑及模具<i class="iconfont icon1">&#xe641;</i><i class="iconfont icon2">&#xe642;</i></a></h3>
+		<ul>
+			<li><a href="products-article.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>高精度医疗模具</a></li>
+			<li><a href="products-article.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>洁净间注塑</a></li>
+			<li><a href="products-article.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>快速原型</a></li>
+			<li><a href="products-article.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>工装制具</a></li>
+		</ul>
+		<h3 class="hassub"><a href="##">质量控制<i class="iconfont icon1">&#xe641;</i><i class="iconfont icon2">&#xe642;</i></a></h3>
+		<ul>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>质量控制体系</a></li>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>环境控制</a></li>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>法规及认证</a></li>
+		</ul>
+		<h3 class="hassub"><a href="##">关于我们<i class="iconfont icon1">&#xe641;</i><i class="iconfont icon2">&#xe642;</i></a></h3>
+		<ul>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>企业介绍</a></li>
+			<li><a href="news.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>新闻及活动</a></li>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>招贤纳士</a></li>
+		</ul>
+		<h3 class="hassub"><a href="##">联系我们<i class="iconfont icon1">&#xe641;</i><i class="iconfont icon2">&#xe642;</i></a></h3>
+		<ul>
+			<li><a href="danye.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>联系方式</a></li>
+			<li><a href="download.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>联系方式</a></li>
+			<li><a href="liuyan.html" class="ease-1"><i class="iconfont mr5">&#xe63c;</i>在线留言</a></li>
+		</ul>
+	</div>
+	<div class="sharebox">
+		<!--百度分享代码start-->
+		<div class="bdsharebuttonbox">
+			<div class="item"><a href="###" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></div>
+			<div class="item"><a href="###" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a></div>
+			<div class="item"><a href="###" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></div>
+			<div class="item"><a href="###" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+		</div>
+		<script>
+		window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+		</script> 
+		<!--百度分享代码end-->
+	</div>
+</div>
+<script type="text/javascript">
+/*jQuery(".sidemenu").slide({
+	titCell:"h3", //鼠标触发对象
+	targetCell:"ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
+	effect:"slideDown", //targetCell下拉效果
+	delayTime:0 , //效果时间
+	triggerTime:100, //鼠标延迟触发时间（默认150）
+	defaultPlay:false,//默认是否执行效果（默认true）
+	returnDefault:true, //鼠标从.sideMen移走后返回默认状态（默认false）
+	trigger:"click"
+});*/
+$(".sidemenu h3.hassub").click(function(){
+	if($(this).next("ul").is(":visible")){
+		$(this).removeClass("on");
+		$(this).next("ul").hide();
+	}else{
+		$(this).addClass("on");
+		$(this).next("ul").show();
+	}
+})
+</script>
+<!--手机版 侧边分类及侧边搜索 end-->
+
+
+
+
+<!--content start-->
+<div class="content">
+	<div class="banner_small">
+		<img src="images/banner_small_01_phone.jpg">
+	</div>
+	<div class="positionbar">
+		<p><a data-href="index.html"><i class="iconfont mr5">&#xe624;</i>首页</a>><a data-href="##">医疗器械制造</a>><a data-href="##">解决方案</a></p>
+	</div>
+	
+	<!--文章内容 start-->
+	<div class="articlearticle">
+		
+		<div class="article_title">
+			<h1>球囊料管解决方案</h1>
+			<div class="sub">
+				<span><i class="iconfont mr5">&#xe611;</i>2016-05-04 12:15</span>
+				<span><i class="iconfont mr5">&#xe677;</i>医疗器械</span>
+				<span class="clicknum"><i class="iconfont mr5">&#xe651;</i>点击13212</span>
+			</div>
+		</div>
+		<div class="text_box">
+			<!--正文开始-->
+			正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正<br />
+			<img src="images/banner_01_phone.jpg" />
+			<!--正文结束-->
+		</div>
+		<div class="pad20"><div class="line"></div></div>
+		<div class="syyxyy">
+			<p><a href="###" class="ease-1 txt-333"><span class="txt-blue">上一篇：</span>标题标题标题标题标题标题标题标题标题标题标题标题</a></p>
+			<p><a href="###" class="ease-1 txt-333"><span class="txt-blue">下一篇：</span>标题标题标题标题标题标题标题标题标题标题标题标题</a></p>
+		</div>
+		<div class="pad20">
+			<a href="news.html" class="btn_back btn_submit btn_middle btn_blue_line radius-5 ease-1">返回列表</a>
+		</div>
+	</div>
+	<!--文章内容 end-->
+	
+	<!--相关推荐 start-->
+	<div class="relatebox">
+		<div class="bt_normal mb20">
+			<h2>相关推荐</h2>
+		</div>
+		<div class="nr">
+			<div class="swiper-container" id="swiperproduct">
+				<div class="swiper-wrapper">
+				
+					<div class="swiper-slide">
+						<a class="item" href="###">
+							<div class="pic" style="background-image:url(images/product-pic01.jpg)"></div>
+							<div class="txt txt-c">
+								<h4>解决方案</h4>
+								<p>塞科凯尔与众多医疗企业的研发部门合作，为其新产品的研发，提供快捷的帮助服务，为企业研发助力</p>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="item" href="###">
+							<div class="pic" style="background-image:url(images/product-pic01.jpg)"></div>
+							<div class="txt txt-c">
+								<h4>解决方案</h4>
+								<p>塞科凯尔与众多医疗企业的研发部门合作，为其新产品的研发，提供快捷的帮助服务，为企业研发助力</p>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="item" href="###">
+							<div class="pic" style="background-image:url(images/product-pic01.jpg)"></div>
+							<div class="txt txt-c">
+								<h4>解决方案</h4>
+								<p>塞科凯尔与众多医疗企业的研发部门合作，为其新产品的研发，提供快捷的帮助服务，为企业研发助力</p>
+							</div>
+						</a>
+					</div>
+					<div class="swiper-slide">
+						<a class="item" href="###">
+							<div class="pic" style="background-image:url(images/product-pic01.jpg)"></div>
+							<div class="txt txt-c">
+								<h4>解决方案</h4>
+								<p>塞科凯尔与众多医疗企业的研发部门合作，为其新产品的研发，提供快捷的帮助服务，为企业研发助力</p>
+							</div>
+						</a>
+					</div>
+					
+				</div>
+				<a href="###" class="arrow button-prev"><i class="iconfont">&#xe60f;</i></a>
+				<a href="###" class="arrow button-next"><i class="iconfont">&#xe610;</i></a>
+			</div>
+		</div>
+	</div>
+	<!--相关推荐 end-->
+
+	<!--底部 start-->
+	<div class="contactbox">
+		<div class="bt_normal mb20">
+			<h2>联系我们</h2>
+		</div>
+		<div class="nr">
+			<dl>
+				<dt><i class="iconfont">&#xe607;</i></dt>
+				<dd><a href="tel:400-123-1234" class="txt-blue">400-123-1234</a></dd>
+			</dl>
+			<dl>
+				<dt><i class="iconfont">&#xe60b;</i></dt>
+				<dd><a href="mailto:postermaster@sciencare.com" class="txt-blue">postermaster@sciencare.com</a></dd>
+			</dl>
+			<dl>
+				<dt><i class="iconfont">&#xe662;</i></dt>
+				<dd>+86010123456789</dd>
+			</dl>
+			<dl>
+				<dt><i class="iconfont">&#xe603;</i></dt>
+				<dd>北京市朝阳区测试街测试路123号</dd>
+			</dl>
+			<div class="sociallinks">
+				<a href="###" class="bds_twi"><i class="iconfont">&#xe65d;</i></a>
+				<a href="###" class="bds_fbook"><i class="iconfont">&#xe65e;</i></a>
+				<a href="###" class="bds_tsina"><i class="iconfont">&#xe60c;</i></a>
+				<a href="###" class="bds_weixin"><i class="iconfont">&#xe609;</i></a>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="pad20">
+				Copyright © 2016 版权所有 塞科凯尔<br>
+				京ICP备12345678号<br>
+				<a href="sitemap.html">网站地图</a><em>|</em><a href="###">隐私声明</a>
+			</div>
+		</div>
+	</div>
+	<!--底部 end-->
+	
+	
+	
+</div>
+<!--content end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+//product swiper
+var productswiper = new Swiper('#swiperproduct', {
+	//direction:'vertical',
+	//pagination: '.swiper-pagination',
+	slidesPerView:1,
+	paginationClickable:true,
+	nextButton:'#swiperproduct .button-next',
+	prevButton:'#swiperproduct .button-prev',
+	spaceBetween: 0,
+	loop: false
+});
+
+
+</script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+</html>

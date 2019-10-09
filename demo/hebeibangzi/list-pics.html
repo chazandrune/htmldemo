@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>剧目列表页</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<link type="text/css" rel="stylesheet" href="css/custom-ui.css">
+<link type="text/css" rel="stylesheet" href="css/iconfont.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/list.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+</head>
+
+<body>
+<!--头部start-->
+<div class="head" style="background-image:url(images/head_bg.jpg);">
+<div class="w1000 mar0">
+	<a href="index.html" class="logo"><img src="images/logo.png" alt="北京河北梆子剧团" /></a>
+    <div class="top">
+    	<ul>
+            <li><a href="###" class="link-a" onclick="tanchuzhuce()">注册</a>|<a href="###" class="link-a" onclick="tanchudenglu()">登录</a></li>
+            <li><a href="###" class="link-a" onclick="SetHome(document.title,window.location)">设为首页</a>|<a href="###" class="link-a" onclick="shoucang(document.title,window.location)">加入收藏</a></li>
+            <li><a href="danye.html" class="link-a">联系我们</a><a href="###" class="link-i link-weixin"><i class="icon iconfont">&#xe606;</i><div class="erweima"><img src="images/erweima.jpg" /></div></a><a href="http://weibo.com" class="link-i" target="_blank"><i class="icon iconfont">&#xe608;</i></a><a href="http://www.taobao.com" class="link-i" target="_blank"><i class="icon iconfont">&#xe60f;</i></a></li>
+        </ul>
+    </div>
+    <div class="searchbox clearfix">
+        <button type="submit" class="fr inputsubmit ease-1"><i class="icon iconfont">&#xe610;</i></button>
+        <input type="text" class="fr inputtxt ease-1" placeholder="请输入关键词" x-webkit-speech/>
+    </div>
+</div>
+</div>
+<!--头部end-->
+
+<!--导航start-->
+<div class="nav">
+<div class="w1000 mar0">
+	<ul>
+        <li class="nLi"><h3><a href="index.html" class="ease-1 shadow-text-1"><span>首 页</span></a></h3></li>
+        <li class="nLi"><h3><a href="danye.html" class="ease-1 shadow-text-1"><span>剧团介绍</span></a></h3></li>
+        <li class="nLi"><h3><a href="list-article.html" class="ease-1 shadow-text-1"><span>剧团动态</span></a></h3></li>
+        <li class="nLi"><h3><a href="list-article.html" class="ease-1 shadow-text-1"><span>演出预告</span></a></h3></li>
+        <li class="nLi"><h3><a href="list-pics.html" class="ease-1 shadow-text-1"><span>精彩剧目</span></a></h3></li>
+        <li class="nLi"><h3><a href="list-artists.html" class="ease-1 shadow-text-1"><span>群星璀璨</span></a></h3></li>
+        <li class="nLi"><h3><a href="list-pics.html" class="ease-1 shadow-text-1"><span>视频欣赏</span></a></h3></li>
+        <li class="nLi"><h3><a href="list-pics.html" class="ease-1 shadow-text-1"><span>音效选段</span></a></h3></li>
+        <li class="nLi"><h3><a href="list-books.html" class="ease-1 shadow-text-1"><span>刊物阅读</span></a></h3></li>
+        <li class="nLi"><h3><a href="###" class="ease-1 shadow-text-1" onclick="tanchuliuyan()"><span>留言互动</span></a></h3></li>
+    </ul>
+</div>
+</div>
+<!--导航end-->
+
+<div class="position">
+<div class="w1000 mar0">
+	<div class="inner clearfix">
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+        <h3 class="fl">视频欣赏</h3>
+        <p class="fr"><a href="index.html">首页</a>><a href="list-pics.html">视频欣赏</a>><a href="article.html">《王宝钏》选段一</a></p>
+    </div>
+</div>
+</div>
+
+
+<!--主体start-->
+<div class="zhuti page-list-pics">
+<div class="w1000 mar0">
+
+<div class="list_pics">
+<ul class="clearfix">
+	<li><a href="list-xuanduan.html" class="item">
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="pic"><img src="images/pic_jumu_01.jpg" alt="《忒拜城》" class="ease-3" /><i class="icon iconfont ease-3">&#xe610;</i></div>
+        <div class="txt"><h3 class="title text-overflow txt-c">《忒拜城》</h3></div>
+    </a></li>
+	<li><a href="list-xuanduan.html" class="item">
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="pic"><img src="images/pic_jumu_02.jpg" alt="《王宝钏》" class="ease-3" /><i class="icon iconfont ease-3">&#xe610;</i></div>
+        <div class="txt"><h3 class="title text-overflow txt-c">《王宝钏》</h3></div>
+    </a></li>
+	<li><a href="list-xuanduan.html" class="item">
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="pic"><img src="images/pic_jumu_03.jpg" alt="《大刀王怀女》" class="ease-3" /><i class="icon iconfont ease-3">&#xe610;</i></div>
+        <div class="txt"><h3 class="title text-overflow txt-c">《大刀王怀女》</h3></div>
+    </a></li>
+	<li><a href="list-xuanduan.html" class="item">
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="pic"><img src="images/pic_jumu_04.jpg" alt="《陈三两》" class="ease-3" /><i class="icon iconfont ease-3">&#xe610;</i></div>
+        <div class="txt"><h3 class="title text-overflow txt-c">《陈三两》</h3></div>
+    </a></li>
+	<li><a href="list-xuanduan.html" class="item">
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="pic"><img src="images/pic_jumu_05.jpg" alt="《清风亭》" class="ease-3" /><i class="icon iconfont ease-3">&#xe610;</i></div>
+        <div class="txt"><h3 class="title text-overflow txt-c">《清风亭》</h3></div>
+    </a></li>
+	<li><a href="list-xuanduan.html" class="item">
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="pic"><img src="images/pic_jumu_01.jpg" alt="《忒拜城》" class="ease-3" /><i class="icon iconfont ease-3">&#xe610;</i></div>
+        <div class="txt"><h3 class="title text-overflow txt-c">《忒拜城》</h3></div>
+    </a></li>
+</ul>
+</div>
+
+<!--分页start-->
+<div id="pagelist">
+<div class="inner">
+	<p><a href="##">首页</a><a href="##">上一页</a><a href="##" class="thisclass">1</a><a href="##">2</a><a href="##">3</a><a href="##">4</a><a href="##">5</a><a href="##">下一页</a><a href="##">末页</a></p>
+</div>
+</div>
+<!--分页end-->
+
+</div>
+</div>
+<!--主体start-->
+
+
+<!--底部start-->
+<div class="foot">
+<div class="w1000 mar0">
+	<p>北京市河北梆子剧团版权所有  2011-2015 All Rights Reserved</p>
+    <p><span class="mr20">地址：北京市宣武区安平里3号</span><span class="mr20">电话：010-63036962</span>京ICP备12345678号</p>
+</div>
+</div>
+<!--底部end-->
+
+
+<script type="text/javascript" src="js/custom.js"></script>
+<!--留言弹窗start-->
+<div class="tc-box" id="liuyan-box">
+	<div class="inner">
+    	<div class="tc_title">留言互动</div>
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="tc_con clearfix">
+        	<div class="fr w290">
+            	<div class="pl50">
+                <div class="hints">
+                	<i class="icon iconfont mr10">&#xe60e;</i>温馨提示：<br />
+                    1、请确保信息的真实性，以便我们能够及时与您取得联系<br />
+                    2、为安全起见，请勿填写任何银行卡或密码等隐私信息<br />
+                </div>
+                </div>
+            </div>
+            <div class="fl w500">
+                <div class="biaodan">
+                <form id="form1" method="post">
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th>主题</th>
+                          <td><input type="text" class="input_text" style="width:282px;" placeholder="留言主题" /></td>
+                      </tr>
+                      <tr>
+                          <th>内容</th>
+                          <td><textarea type="text" class="input_text" style="width:300px; height:170px; resize:none;" placeholder="如果您有任何问题或者想说的话欢迎在此留言"></textarea></td>
+                      </tr>
+                  </table>
+                  <div class="blank"></div>
+                  <div class="blank"></div>
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th></th>
+                          <td><button type="submit" class="btn btn_red">提 交</button><button type="reset" class="btn btn_white" href="###">清 空</button></td>
+                      </tr>
+                  </table>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--留言弹窗end-->
+
+<!--登录弹窗start-->
+<div class="tc-box" id="denglu-box">
+	<div class="inner">
+    	<div class="tc_title">登 录</div>
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="tc_con clearfix">
+            <div class="w500">
+                <div class="biaodan">
+                <form id="form1" method="post">
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th>用户名</th>
+                          <td><input type="text" class="input_text" style="width:282px;" placeholder="6-16位字母数字" /></td>
+                      </tr>
+                      <tr>
+                          <th>密码</th>
+                          <td><input type="password" class="input_text" style="width:282px;" placeholder="6-16位字母数字" /></td>
+                      </tr>
+                  </table>
+                  <div class="blank"></div>
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th></th>
+                          <td><button type="submit" class="btn btn_red">登 录</button><a class="link-red ml10" href="###" onclick="tanchuzhaohui()">忘记密码？</a></td>
+                      </tr>
+                  </table>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--登录弹窗end-->
+
+<!--注册弹窗start-->
+<div class="tc-box" id="zhuce-box">
+	<div class="inner">
+    	<div class="tc_title">注 册</div>
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="tc_con clearfix">
+            <div class="w500">
+                <div class="biaodan">
+                <form id="form1" method="post">
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th><span class="needdot">*</span>用户名</th>
+                          <td><input type="text" class="input_text" style="width:282px;" placeholder="6-16位字母数字" /></td>
+                      </tr>
+                      <tr>
+                          <th><span class="needdot">*</span>密码</th>
+                          <td><input type="password" class="input_text" style="width:282px;" placeholder="6-16位字母数字" /></td>
+                      </tr>
+                      <tr>
+                          <th><span class="needdot">*</span>确认密码</th>
+                          <td><input type="password" class="input_text" style="width:282px;" placeholder="再次输入密码" /></td>
+                      </tr>
+                      <tr>
+                          <th><span class="needdot">*</span>电子邮箱</th>
+                          <td><input type="text" class="input_text" style="width:282px;" placeholder="用于找回密码" /></td>
+                      </tr>
+                      <tr>
+                          <th>手机号码</th>
+                          <td><input type="text" class="input_text" style="width:282px;" placeholder="手机号码" /></td>
+                      </tr>
+                      <tr>
+                          <th><span class="needdot">*</span>验证码</th>
+                          <td><div class="yzm"><input type="text" class="input_text" style="width:282px;" placeholder="" value="" datatype="*" nullmsg=" " errormsg=" "/><img src="images/yanzhengma.jpg" alt="点击切换验证码" title="点击切换验证码" ></div></td>
+                      </tr>
+                  </table>
+                  <div class="blank"></div>
+                  <div class="blank"></div>
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th></th>
+                          <td><button type="submit" class="btn btn_red">同意协议并注册</button><a class="link-txt ml10" href="###">《服务协议》</a></td>
+                      </tr>
+                  </table>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--注册弹窗end-->
+
+
+<!--找回密码弹窗start-->
+<div class="tc-box" id="zhaohui-box">
+	<div class="inner">
+    	<div class="tc_title">找回密码</div>
+    	<div class="tc_bg tc_bg_01"></div>
+    	<div class="tc_bg tc_bg_02"></div>
+    	<div class="tc_bg tc_bg_03"></div>
+    	<div class="tc_bg tc_bg_04"></div>
+    	<div class="tc_con clearfix">
+            <div class="w500">
+                <div class="biaodan">
+                <form id="form1" method="post">
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th>用户名</th>
+                          <td><input type="text" class="input_text" style="width:282px;" placeholder="请填写注册的用户名" /></td>
+                      </tr>
+                      <tr>
+                          <th>电子邮箱</th>
+                          <td><input type="password" class="input_text" style="width:282px;" placeholder="请填写注册的邮箱" /></td>
+                      </tr>
+                  </table>
+                  <div class="blank"></div>
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th></th>
+                          <td><button type="submit" class="btn btn_red">提 交</button><a class="link-red ml10" href="###" onclick="tanchudenglu()">返回登录</a></td>
+                      </tr>
+                  </table>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--找回密码弹窗end-->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>首页</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/iconfont.css">
+<link type="text/css" rel="stylesheet" href="css/custom-ui.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/shadowbox.css" />
+<link type="text/css" rel="stylesheet" href="css/index.css">
+<script type="text/javascript" src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+</head>
+
+<body>
+<div class="body-inner">
+
+<!--左侧start-->
+<div class="leftpart">
+<!--大切换图start-->
+<div id="indexslider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(images/banner_01.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(images/banner_02.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(images/banner_01.jpg)"></div>
+    </div>
+	<div class="hd">
+    	<ul></ul>
+    </div>
+    <!-- Add Arrows -->
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>
+</div>
+<script>
+jQuery("#indexslider").slide({
+	titCell: ".hd ul",
+	autoPage: true,  //是否使用自动显示分页
+	mainCell:".swiper-wrapper",
+	autoPlay:true,
+	effect:"fold",   //特效left,leftLoop,topLoop,top,fade（支持响应窗口大小）,
+	easing:"easeOutCirc",  //缓动效果 easeInQuint,easeInBack,easeOutBounce,easeOutElastic
+	trigger:"mouseover",   //触发方式  mouseover,click
+	delayTime:1000,  //延迟时间
+	interTime:5000,  //间隔时间
+	pnLoop:false,   //前后按钮循环，默认true
+	mouseOverStop:true   //鼠标经过停止播放，默认true
+});
+</script>
+<!--大切换图end-->
+
+<!--镂空图案start-->
+<div class="lk_01"></div>
+<div class="lk_02"></div>
+<!--镂空图案end-->
+
+<!--新闻start-->
+<div class="news-box">
+	<div class="inner clearfix">
+    	<div class="pic fl"><a href="article.html"><img src="images/pic_news_01.jpg" alt="新闻标题" /></a></div>
+    	<div class="txt fr">
+        	<h4 class="title text-overflow"><a class="ease-1" href="article.html">加盟云顶麻辣烫加盟云顶麻辣烫</a></h4>
+        	<p class="desc">简介文字文字摘要新闻内容文字摘要测试文字测试文字简介文字简介文字文字摘要新闻内容文字摘要测试文字测试文字简介文字</h4>
+        	<p class="pl10"><a class="link-red ease-1" href="article.html">更多详情</a></h4>
+        </div>
+    </div>
+    <div class="switch">
+    	<a href="###" class="btn_open" title="点击展开"><i class="icon iconfont">&#xe60c;</i></a>
+    	<a href="###" class="btn_close" title="点击收起"><i class="icon iconfont">&#xe60b;</i></a>
+    </div>
+</div>
+<script>
+$(function(){
+	$('.news-box .btn_open').click(function(){
+		$('.news-box').addClass('open');
+		$('.news-box').animate({left:0},500);
+	})
+	$('.news-box .btn_close').click(function(){
+		$('.news-box').removeClass('open');
+		$('.news-box').animate({left:-420},500);
+	})
+	$('.news-box .btn_open').trigger('click');
+	setTimeout(function(){$('.news-box .btn_close').trigger('click')},5000);
+})
+</script>
+<!--新闻end-->
+
+
+</div>
+<!--左侧end-->
+
+<!--右侧start-->
+<div class="rightpart w290">
+<div class="logo-box">
+	<a class="logo" href="index.html" title="首页"><img src="images/logo.png" alt="熙然餐饮" /><i class="icon iconfont">&#xe604;</i></a>
+</div>
+
+<!--导航start-->
+<div class="nav-box">
+    <div class="lk_03"></div>
+    <div class="lk_04"></div>
+    <ul>
+        <li class="nLi"><h3><a href="danye-about.html" class="ease-3 shadow-text-1"><span>关于我们</span><div class="liner liner-l ease-1"></div><div class="liner liner-r ease-1"></div></a></h3></li>
+        <li class="nLi"><h3><a href="list-food.html" class="ease-3 shadow-text-1"><span>美食展示</span><div class="liner liner-l ease-1"></div><div class="liner liner-r ease-1"></div></a></h3></li>
+        <li class="nLi"><h3><a href="list-store.html" class="ease-3 shadow-text-1"><span>店面展示</span><div class="liner liner-l ease-1"></div><div class="liner liner-r ease-1"></div></a></h3></li>
+        <li class="nLi"><h3><a href="list-news.html" class="ease-3 shadow-text-1"><span>新闻中心</span><div class="liner liner-l ease-1"></div><div class="liner liner-r ease-1"></div></a></h3></li>
+        <li class="nLi"><h3><a href="danye-business.html" class="ease-3 shadow-text-1"><span>经营理念</span><div class="liner liner-l ease-1"></div><div class="liner liner-r ease-1"></div></a></h3></li>
+        <li class="nLi"><h3><a href="danye-join.html" class="ease-3 shadow-text-1"><span>加盟合作</span><div class="liner liner-l ease-1"></div><div class="liner liner-r ease-1"></div></a></h3></li>
+        <li class="nLi"><h3><a href="danye-contact.html" class="ease-3 shadow-text-1"><span>联系我们</span><div class="liner liner-l ease-1"></div><div class="liner liner-r ease-1"></div></a></h3></li>
+    </ul>
+</div>
+<!--导航end-->
+
+<!--加盟热线start-->
+<div class="tel-box">
+	<h4><i class="icon iconfont mr10">&#xe605;</i>加盟热线</h4>
+    <p><span class="mr10">18210866671</span><span class="mr10">17710510685</span></p>
+</div>
+<!--加盟热线end-->
+
+<!--底部start-->
+<div class="foot-box">
+	<div class="contacticons">
+    	<ul>
+        	<li class="item dropdown item_weixin">
+                <div class="dt"><a href="#" class="link ease-1"><i class="iconfont icon">&#xe606;</i></a></div>
+                <div class="dd dropdown-layer"><div class="dd-spacer"></div><div class="dd-spacer2"></div><div class="dd-inner"><img src="images/erweima.jpg" /></div></div>
+            </li>
+            <li class="item"><a href="tencent://Message/?Uin=675833078&websiteName=网站标题=&Menu=yes" class="link ease-1"><i class="iconfont icon">&#xe600;</i></a></li>
+            <li class="item"><a href="###" class="link ease-1" onclick="tanchuliuyan()"><i class="iconfont icon">&#xe601;</i></a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+    	<p>COPYRIGHT ©2015  熙然餐饮管理有限公司</p>
+    </div>
+</div>
+<!--底部end-->
+
+</div>
+<!--右侧end-->
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/custom.js"></script>
+<script>
+$(function(){
+	$('.dropdown').hover(function(){
+		$(this).addClass('hover');
+		$(this).find('.dropdown-layer').stop(true,true).fadeIn(50);
+	},function(){
+		$(this).removeClass('hover');
+		$(this).find('.dropdown-layer').stop(true,true).delay(500).fadeOut(300);
+	})
+})
+</script>
+<div class="liuyan-box" id="liuyan-box">
+	<div class="inner">
+    	<div class="tc_bg_01"></div>
+    	<div class="tc_con clearfix">
+        	<div class="fl w290">
+            	<div class="pl50">
+            	<div class="bt_title txt-l mb20">
+                	<img src="images/title_liuyanban.png" />
+                </div>
+                <div class="hints">
+                	温馨提示：<br />
+                    1、请确保信息的真实性，以便我们能够及时与您取得联系<br />
+                    2、为安全起见，请勿填写任何银行卡或密码等隐私信息<br />
+                </div>
+                </div>
+            </div>
+            <div class="fr w500">
+                <div class="biaodan">
+                <form id="form1" method="post">
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th>真实姓名</th>
+                          <td><input type="text" class="input_text" style="width:282px;" placeholder="" value="" /></td>
+                      </tr>
+                      <tr>
+                          <th>性别</th>
+                          <td>
+                          <div class="radio_box">
+                          <ul class="clearfix">
+                           <li>
+                            <input type="radio" name="sex" value="先生" checked="checked" />
+                            <a href="javascript:void(0);" class="radio_item"><span>先生</span></a>
+                           </li>
+                           <li>
+                            <input type="radio" name="sex" value="女士" />
+                            <a href="javascript:void(0);" class="radio_item"><span>女士</span></a>
+                           </li>
+                          </ul>
+                          </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>联系电话</th>
+                          <td><input type="text" class="input_text" style="width:282px;" placeholder="" /></td>
+                      </tr>
+                      <tr>
+                          <th>QQ</th>
+                          <td><input type="text" class="input_text" style="width:282px;" placeholder="" /></td>
+                      </tr>
+                      <tr>
+                          <th>留言内容</th>
+                          <td><textarea type="text" class="input_text" style="width:300px;" placeholder="如果您还有其他问题可以在此备注"></textarea></td>
+                      </tr>
+                  </table>
+                  <table width="100%" cellspacing="0" border="0">
+                      <tr>
+                          <th></th>
+                          <td><button type="submit" class="btn btn_red">提 交</button><a class="btn btn_white box-closebtn" href="###">取 消</a></td>
+                      </tr>
+                  </table>
+                </form>
+                </div>
+            </div>
+        </div>
+    	<div class="tc_bg_02"></div>
+    </div>
+</div>
+
+</body>
+</html>

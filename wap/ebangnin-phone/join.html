@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html style=" font-size:100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="full-screen" content="yes">
+<meta name="x5-fullscreen" content="true">
+<meta name="browsermode" content="application">
+<meta name="x5-page-mode" content="app">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>阿姨报名</title>
+<meta name="description" content="网站描述" />
+<meta name="keywords" content="网站关键词" />
+<meta name="author" content="环宇威智制作" />
+<link type="text/css" rel="stylesheet" href="css/mui.css">
+<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<link type="text/css" rel="stylesheet" href="css/my.css">
+<script src="js/jquery1.72.min.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<style>
+.mui-input-group .icon_ebn{ vertical-align:middle; margin-top:-.03rem;}
+</style>
+</head>
+
+<body class="page-my-address-article">
+
+<!--导航 手机版start-->
+<div class="bottombar">
+	<ul class="clearfix">
+    	<li><a href="###" class="btn btn_middle btn_yellow radius-5 ease-1" onClick="$('#form1').submit();">立即提交</a></li>
+		<!--下面是结束服务按钮-->
+    	<!--<li><a href="###" class="btn btn_middle btn_blue radius-5 ease-1">结束服务</a></li>-->
+    </ul>
+</div>
+<!--导航手机版end-->
+
+
+
+<!--主体start-->
+<div class="mainbody" style="top:.0rem; bottom:.0rem; left:0; right:0;">
+
+<div class="blank10"></div>
+<div class="part-02 mb10">
+
+<form id="form1" onSubmit="return checkform();">
+<div class="mui-input-group mb10">
+	<div class="mui-input-row">
+		<label><i class="icon_ebn icon-ayi-user mr5"></i>姓名</label>
+		<input type="text" id="ayi_name" placeholder="请填写您的姓名">
+	</div>
+	<div class="mui-input-row">
+		<label><i class="icon_ebn icon-tel mr5"></i>电话</label>
+		<input type="text" id="ayi_tel" placeholder="请填写您的联系电话">
+	</div>
+</div>
+<div class="mui-input-group mb10" style="background-image:url(images/bg_logo.png); background-repeat: no-repeat; background-position: bottom center; background-size:contain;">
+	<div class="mui-input-row">
+		<label>年龄</label>
+		<input type="text" id="ayi_age" placeholder="请填写您的年龄">
+	</div>
+	<div class="mui-input-row">
+		<label>性别</label>
+		<select id="ayi_sex" placeholder="性别" >
+			<option value="1">先生</option>
+			<option value="0">女士</option>
+		</select>
+	</div>
+	<div class="mui-input-row">
+		<label>籍贯</label>
+		<input type="text" id="ayi_nativeplace" placeholder="请填写您的籍贯" >
+	</div>
+	<div class="mui-input-row">
+		<label>工作年限</label>
+		<input type="text" id="ayi_workyear" placeholder="请填写您的工作年限" >
+	</div>
+	<div>
+		<textarea id="address_add" placeholder="留言内容" rows="4"></textarea>
+	</div>
+	<input type="submit" style="display:none;">
+</div>
+</form>
+<div class="pad10 mb10">
+	<a href="tel:123456789" class="btn btn_submit btn_middle btn_blue radius-5" style="width:100%;">联系我们</a>
+</div>
+
+</div>
+
+
+</div>
+<!--主体end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+function checkform(){
+	var ayi_name = $("#ayi_name").val();
+	var ayi_tel = $("#ayi_tel").val();
+	var ayi_age = $("#ayi_age").val();
+	var ayi_sex = $("#ayi_sex").val();
+	var ayi_nativeplace = $("#ayi_nativeplace").val();
+	var ayi_workyear = $("#ayi_workyear").val();
+	if(ayi_name == ''){
+		layer.msg('请填写您的姓名');
+		return false;
+	}
+	if(ayi_tel == ''){
+		layer.msg('请填写联系电话')
+		return false;
+	}
+	if(ayi_age == ''){
+		layer.msg('请填写您的年龄')
+		return false;
+	}
+	if(ayi_sex == ''){
+		layer.msg('请选择您的性别')
+		return false;
+	}
+	if(ayi_nativeplace == ''){
+		layer.msg('请填写您的籍贯')
+		return false;
+	}
+	if(ayi_workyear == ''){
+		layer.msg('请填写您的工作年限')
+		return false;
+	}
+	layer.msg('提交成功')
+	return false;
+}
+</script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.section{ width:100%;background-repeat:no-repeat;background-position:top center; background-size:auto;}
+
+.section_01{ height:692px; background-image:url(../images/jdf_01.jpg);  }
+
+.section_02{ height:423px; background-image:url(../images/jdf_02.jpg);  }
+.section_02 .w1200{ position:relative; height:100%;}
+.section_02 .videobox{ position:absolute; left:528px; top:-49px;  }
+.section_02 .txt{ color:#fff; font-size:16px;position:absolute; left:80px; top:0px; height:60px; line-height:60px;}
+
+.section_03{ height:1480px; background-image:url(../images/jdf_03.jpg);  }
+.section_03 .w1200{ position:relative; height:100%;}
+.section_03 .txt-333{ position:absolute; font-size:12px; width:318px;line-height:22px;}
+.section_03 .txt_01{left:40px;top:118px;}
+
+
+.section_04{ height:1227px; background-image:url(../images/jdf_04.jpg);  }
+.section_04 .w1200{ position:relative; height:100%;}
+.section_04 .txt-white{ position:absolute; font-size:14px; width:510px;line-height:26px;}
+.section_04 .txt_01{left:657px;top:230px;}
+.section_04 .txt_02{right:657px;top:420px;}
+.section_04 .txt_03{left:657px;top:600px;}
+.section_04 .txt_04{right:657px;top:790px;}
+.section_04 .txt_05{left:657px;top:980px;}
+
+.section_05{ height:1938px; background-image:url(../images/jdf_05.jpg);  }
+.section_05 .w1200{ position:relative; height:100%;}
+.section_05 ul li{ float:left; display:inline;}
+.section_05 .item{ width:300px;height:325px;}
+.section_05 .item .icon{ display:block; width:105px; height:130px; margin:0 auto; background-image:url(../images/sprite.png); background-repeat:no-repeat;}
+.section_05 .item .icon_01{ background-position:0 -30px;}
+.section_05 .item .icon_02{ background-position:-105px -30px;}
+.section_05 .item .icon_03{ background-position:-210px -30px;}
+.section_05 .item .icon_04{ background-position:-315px -30px;}
+.section_05 .item .icon_05{ background-position:-420px -30px;}
+.section_05 .item .icon_06{ background-position:-525px -30px;}
+.section_05 .item .icon_07{ background-position:-630px -30px;}
+.section_05 .item .icon_08{ background-position:-735px -30px;}
+.section_05 .item .icon_09{ background-position:-840px -30px;}
+.section_05 .item .icon_10{ background-position:-945px -30px;}
+.section_05 .item .icon_11{ background-position:-1050px -30px;}
+.section_05 .item .icon_12{ background-position:-1155px -30px;}
+.section_05 .item h2{ font-size:22px; line-height:50px; color:#007cc3;}
+.section_05 .item p{ padding:0 20px; font-size:14px; line-height:26px;}
+.section_05 .txt-white{ position:absolute; width:277px; font-size:14px; line-height:26px; }
+.section_05 .txt_01{ left:75px; top:1510px;}
+.section_05 .txt_02{ left:490px; top:1510px;}
+.section_05 .txt_03{ left:75px; top:1741px;}
+.section_05 .txt_04{ left:490px; top:1741px;}
+
+.section_06{ height:961px; background-image:url(../images/jdf_06.jpg);  }
+
+.section_07{ height:526px; background-image:url(../images/jdf_07.jpg);  }
+
+.section_07 .slide_yunsu{ position:relative;}
+.slide_yunsu{ position:relative;}
+.slide_yunsu .tempWrap{ width:100% !important; overflow:hidden;}
+.slide_yunsu .arrow{ position:absolute; left:-80px; top:70px; display:none; width:45px; height:80px; background:url(../images/arrow_left.png) no-repeat center; z-index:99;filter: alpha(opacity=50); -khtml-opacity: 0.5;-moz-opacity: 0.5;opacity: 0.5;}
+.slide_yunsu .sNext{ left:auto; right:-70px; background:url(../images/arrow_right.png) no-repeat center;  }
+.slide_yunsu .sPrev:hover,.slide_yunsu .sNext:hover{filter: alpha(opacity=80);-khtml-opacity: 0.8;-moz-opacity: 0.8;opacity: 0.8;}
+.slide_yunsu .bd li{  margin:0 20px 0 0; float:left; _display:inline; padding-bottom:10px; overflow:hidden; }
+.slide_yunsu .bd li .item{ display:block; width:190px; height:280px; position:relative; overflow:hidden; cursor:default;}
+.slide_yunsu .bd li .item .pic{ width:100%; height:280px; overflow:hidden; background-position:center; background-size:cover; background-repeat:no-repeat; display:table-cell; vertical-align:middle;}
+.slide_yunsu .bd li .item .pic img{ width:100%; height:auto;}
+.slide_yunsu .bd li .item .txt{  width:80%; padding:10% 10% 0; height:100%; position:absolute; left:0; right:0; top:158px;line-height:26px; overflow:hidden;color:#fff; font-size:14px;background:url(images/alpha_black80.png) repeat;}
+.slide_yunsu .bd li .item:hover .txt{ top:0;}
+
+.section_08{ height:714px; background-image:url(../images/jdf_08.jpg);  }
+.section_08 p{ font-size:16px; line-height:30px;}
+
+
+
+
+
+
+.foot_fixed{ height:80px; background:url(../images/alpha_black50.png) repeat; width:100%; bottom:0; left:0; right:0;}
+.foot_fixed .inputbox{ height:40px; margin:20px;}
+.inputbox .text-input{ width:157px; height:30px; line-height:30px; padding:5px 15px; display:inline; border-radius:20px 0 0 20px;-webkit-border-radius:20px 0 0 20px; -moz-border-radius:20px 0 0 20px; font-size:14px;}
+.inputbox .btn-submit{ position:relative; height:40px; width:107px; padding-left:15px; display:inline; line-height:40px; font-size:14px; color:#fff; background:#11aee8; text-shadow:0 -1px 0px #0c79a2;border-radius:0 20px 20px 0;-webkit-border-radius:0 20px 20px 0; -moz-border-radius:0 20px 20px 0;}
+.inputbox .btn-submit .icon{ display:block; position:absolute; left:13px; top:13px; width:16px; height:16px; background:url(../images/sprite.png) no-repeat 0px -160px;}
+.inputbox .btn-submit:hover{ background:#00baff;}
+.inputbox .btn-submit:active{ background:#017dc3;}
+.foot_fixed .item{ padding:20px 20px 20px 10px; display:block; position:relative;}
+.foot_fixed .btn{ height:40px; line-height:40px; color:#fff; background:#ff9600; font-size:14px;text-shadow:0 -1px 0px #0c79a2;border-radius:20px;-webkit-border-radius:20px; -moz-border-radius:20px; padding:0 20px 0 40px; position:relative;}
+.foot_fixed .btn .icon{ display:block; position:absolute; left:13px; top:13px; width:16px; height:16px; background:url(../images/sprite.png) no-repeat;}
+.foot_fixed .btn-zixun .icon{ background-position:-16px -160px;}
+.foot_fixed .btn-dianmian .icon{ background-position:-32px -160px;}
+.foot_fixed .btn:hover{ background:#ff6000;}
+.foot_fixed .item .hover{ display:none; position:absolute; bottom:80px; right:0; background:url(../images/alpha_black50.png); width:335px; height:80px;}
+.foot_fixed .item:hover .hover{ display:block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

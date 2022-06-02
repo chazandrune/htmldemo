@@ -2,6 +2,7 @@
 
 #### 介绍
 平时工作中做过的静态页集合
+预览地址：[https://chazandrune.github.io/htmldemo](https://chazandrune.github.io/htmldemo);
 
 #### 软件架构
 哇啦哇啦哇啦

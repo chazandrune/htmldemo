@@ -1,0 +1,31 @@
+{
+"ninjalist_s": [
+    { "ninjaid": "90102", "ninjaname": "千手柱间[秽土转生]", "suipianname": "秽土柱间碎片", "ninjarank": "S", "suipiannum": "0", "suipianneed": "100", "p_x": "-1584", "p_y": "0" }
+  ],
+  "ninjalist_a": [
+    { "ninjaid": "90181", "ninjaname": "波风水门[青年]", "suipianname": "青年水门碎片", "ninjarank": "A", "suipiannum": "0", "suipianneed": "40", "p_x": "-3120", "p_y": "-48", "new":"new" },
+    { "ninjaid": "90034", "ninjaname": "我爱罗[疾风传]", "suipianname": "疾风传我爱罗碎片", "ninjarank": "A", "suipiannum": "0", "suipianneed": "40", "p_x": "-240", "p_y": "-48", "longname": "text_l" }
+  ],
+  "ninjalist_b": [
+    { "ninjaid": "900100", "ninjaname": "漩涡鸣人[疾风传]", "suipianname": "疾风传鸣人碎片", "ninjarank": "B", "suipiannum": "0", "suipianneed": "--", "p_x": "0", "p_y": "-96" },
+    { "ninjaid": "900100", "ninjaname": "勘九郎[疾风传]", "suipianname": "疾风传勘九郎碎片", "ninjarank": "B", "suipiannum": "0", "suipianneed": "--", "p_x": "-1440", "p_y": "-96", "longname": "text_l" },
+    { "ninjaid": "900100", "ninjaname": "春野樱[疾风传]", "suipianname": "疾风传樱碎片", "ninjarank": "B", "suipiannum": "0", "suipianneed": "--", "p_x": "-48", "p_y": "-96" },
+    { "ninjaid": "900100", "ninjaname": "木叶丸[疾风传]", "suipianname": "疾风传木叶丸碎片", "ninjarank": "B", "suipiannum": "0", "suipianneed": "--", "p_x": "-144", "p_y": "-96", "longname": "text_l" },
+    { "ninjaid": "900100", "ninjaname": "山中井野[疾风传]", "suipianname": "疾风传井野碎片", "ninjarank": "B", "suipiannum": "0", "suipianneed": "--", "p_x": "-528", "p_y": "-96" },
+    { "ninjaid": "900100", "ninjaname": "惠比寿", "suipianname": "惠比寿碎片", "ninjarank": "B", "suipiannum": "0", "suipianneed": "--", "p_x": "-192", "p_y": "-96" }
+  ],
+  "ninjalist_c": [
+    { "ninjaid": "900100", "ninjaname": "伊鲁卡", "suipianname": "伊鲁卡碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-48", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "多由也", "suipianname": "多由也碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-96", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "犬冢牙", "suipianname": "牙碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-1056", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "日向花火", "suipianname": "花火碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-192", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "勘九郎", "suipianname": "勘九郎碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-624", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "次郎坊", "suipianname": "次郎坊碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-384", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "鬼童丸", "suipianname": "鬼童丸碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-144", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "水木", "suipianname": "水木碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-576", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "漩涡鸣人", "suipianname": "鸣人碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-0", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "春野樱", "suipianname": "樱碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-432", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "漩涡鸣人[忍者学员]", "suipianname": "忍者学员鸣人碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-336", "p_y": "-144" },
+    { "ninjaid": "900100", "ninjaname": "静音", "suipianname": "静音碎片", "ninjarank": "C", "suipiannum": "0", "suipianneed": "--", "p_x": "-480", "p_y": "-144" }
+  ]
+}
